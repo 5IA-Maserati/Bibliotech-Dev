@@ -31,6 +31,7 @@ npm test           # run tests
 ```markdown
 Update .gitignore
 ```
+
 Examples:
 - `Add config file`
 - `Delete /res`

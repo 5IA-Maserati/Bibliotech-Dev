@@ -4,11 +4,8 @@ echo "Checking unauthorized executables..."
 failed=false
 
 for file in $(find . -type f \( -iname "*.exe" -o -iname "*.bat" -o -iname "*.sh" \)); do
-  # Remove leading ./
-  file_clean="${file#./}"
-
   # Allow scripts only in scripts/ folder
-  if [[ "$file" != scripts/* ]]; then
+  if [[ "$file" != ./scripts/* ]]; then
     echo "Unauthorized executable found: $file"
     failed=true
   fi

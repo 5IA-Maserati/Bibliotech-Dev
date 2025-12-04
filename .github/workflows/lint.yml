@@ -1,0 +1,48 @@
+name: Lint Repository
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - '**.md'
+      - '**.json'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️ Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2️ Setup Node.js (for markdownlint)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3️ Install markdownlint-cli
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+
+      # 4️ Lint Markdown files
+      - name: Lint Markdown files
+        run: npx markdownlint '**/*.md' --ignore node_modules
+
+      # 5 Check filenames
+      - name: Check filenames
+        run: bash scripts/lint/check-filenames.sh
+
+      # 6 Check for empty files
+      - name: Check empty files
+        run: bash scripts/lint/check-empty-files.sh
+
+      # 7 Check for duplicate files
+      - name: Check duplicate files
+        run: bash scripts/lint/check-duplicate-files.sh
+
+      # 8 Validate JSON files
+      - name: Validate JSON files
+        run: bash scripts/lint/check-json.sh

@@ -4,7 +4,7 @@ echo "Checking for empty files..."
 
 failed=false
 
-for file in $(find . -type f \( -name "*.md" -o -name "*.svg" -o -name "*.png" -o -name "*.fig" -o -name "*.xd" \)); do
+for file in $(find . -type f \( -name "*.md" -o -name "*.htm" -o -name "*.html" -o -name "*.json" -o -name "*.css" -o -name "*.js" -o -name "*.sql" -o -name "*.pdf" -o -name "*.mdf" -o -name "*.txt" \)); do
   if [ ! -s "$file" ]; then
     echo "Empty file found: $file"
     failed=true

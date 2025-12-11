@@ -5,12 +5,12 @@ echo "Checking filenames in development folders..."
 invalid=false
 
 # Folders to check
-DESIGN_FOLDERS="assets docs src tests"
+DEV_FOLDERS="assets docs src tests"
 
 # Allowed extensions
 EXTENSIONS="htm|html|json|css|js|sql|pdf|md|mdf|txt"
 
-for folder in $DESIGN_FOLDERS; do
+for folder in $DEV_FOLDERS; do
   if [ -d "$folder" ]; then
     while IFS= read -r file; do
       basename=$(basename "$file")

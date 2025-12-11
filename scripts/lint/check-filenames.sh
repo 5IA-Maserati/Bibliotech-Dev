@@ -1,14 +1,14 @@
 #!/bin/bash
 
-echo "Checking filenames in design folders..."
+echo "Checking filenames in development folders..."
 
 invalid=false
 
 # Folders to check
-DESIGN_FOLDERS="assets components branding mockups prototypes templates"
+DESIGN_FOLDERS="assets docs src tests"
 
 # Allowed extensions
-EXTENSIONS="png|jpg|jpeg|svg|fig|xd|pdf|md"
+EXTENSIONS="htm|html|json|css|js|sql|pdf|md|mdf|txt"
 
 for folder in $DESIGN_FOLDERS; do
   if [ -d "$folder" ]; then

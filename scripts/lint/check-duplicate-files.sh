@@ -15,7 +15,7 @@ while IFS= read -r file; do
   else
     filehashes[$hash]=$file
   fi
-done < <(find . -type f \( -name "*.md" -o -name "*.svg" -o -name "*.png" -o -name "*.fig" -o -name "*.xd" \))
+done < <(find . -type f \( -name "*.md" -o -name "*.htm" -o -name "*.html" -o -name "*.json" -o -name "*.css" -o -name "*.js" -o -name "*.sql" -o -name "*.pdf" -o -name "*.mdf" -o -name "*.txt" \))
 
 if [ "$failed" = true ]; then
   echo "Duplicate file check failed."

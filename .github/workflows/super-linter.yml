@@ -1,0 +1,25 @@
+name: Super-Linter
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  lint:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️ Checkout repo
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2️ Run Super-Linter only on filtered files
+      - name: Run Super-Linter
+        uses: github/super-linter@v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: false
+          LOG_LEVEL: WARN

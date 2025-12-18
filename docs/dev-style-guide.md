@@ -68,7 +68,7 @@ Organize the repository into clear folders:
 - Use descriptive names for test files:
   - `api/user.test.js`
   - `db/migration.test.sql`
-- Write tests for all new features and bug fixes.
+- Write tests for all new features and bugfixes.
 - Run all tests before creating a PR or merging to `main`.
 
 ---

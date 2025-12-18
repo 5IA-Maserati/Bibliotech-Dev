@@ -20,7 +20,7 @@ This repository contains the development codebase for Bibliotech Dev. It include
 
 ## Overview
 
-This repo provides the foundation for developing and maintaining Bibliotech Dev. The repository is structured to support modular development of backend, frontend, and database components, with clear workflows and coding standards.
+This repository provides the foundation for developing and maintaining Bibliotech Dev. The repository is structured to support modular development of backend, frontend, and database components, with clear workflows and coding standards.
 
 ---
 

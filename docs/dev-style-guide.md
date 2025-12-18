@@ -4,27 +4,7 @@ This guide describes coding conventions, project structure, and best practices f
 
 ---
 
-## 1. Project Structure
-
-Organize the repository into clear folders:
-
-```bash
-├── src/ # Source code
-│ ├── api/ # API endpoints
-│ ├── db/ # Database schema, migrations, seeds
-│ └── frontend/ # Frontend components or pages
-├── scripts/ # Utility scripts
-├── tests/ # Automated tests
-├── docs/ # Documentation, style guides
-├── assets/ # Images, icons, static files
-├── .github/workflows/ # GitHub Actions workflows
-├── package.json # Project dependencies (if Node.js)
-└── README.md
-```
-
----
-
-## 2. Naming Conventions
+## 1. Naming Conventions
 
 ### Files & Folders
 - Use **lowercase** letters.
@@ -39,7 +19,7 @@ Organize the repository into clear folders:
 
 ---
 
-## 3. Coding Standards
+## 2. Coding Standards
 
 - Use **2 spaces** for indentation (or 4 spaces depending on the language, but be consistent).
 - Always add meaningful **comments** for complex logic.
@@ -49,7 +29,7 @@ Organize the repository into clear folders:
 
 ---
 
-## 4. Commits & Git
+## 3. Commits & Git
 
 - Keep commit messages clear and concise.
 - Examples:
@@ -62,7 +42,7 @@ Organize the repository into clear folders:
 
 ---
 
-## 5. Testing
+## 4. Testing
 
 - Place tests in the `tests/` folder corresponding to the code location.
 - Use descriptive names for test files:
@@ -73,7 +53,7 @@ Organize the repository into clear folders:
 
 ---
 
-## 6. Linting & Formatting
+## 5. Linting & Formatting
 
 - Lint code according to the project’s `.eslintrc`, `.stylelintrc`, or equivalent.
 - Run linters before committing.
@@ -82,7 +62,7 @@ Organize the repository into clear folders:
 
 ---
 
-## 7. Security & Quality
+## 6. Security & Quality
 
 - Sanitize user inputs.
 - Avoid committing sensitive information (API keys, passwords, credentials).
@@ -91,7 +71,7 @@ Organize the repository into clear folders:
 
 ---
 
-## 8. Documentation
+## 7. Documentation
 
 - Update `README.md` and `docs/` when adding or changing features.
 - Include code examples, usage instructions, and explanations.

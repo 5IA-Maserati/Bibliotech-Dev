@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Catalogo Bibliotecario - Esempio</title>
+  <link rel="stylesheet" href="path/to/your/styles.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Catalogo della Biblioteca (Esempio)</h1>
+      <p>Pagina dimostrativa con ricerca, filtri e stato di disponibilità.</p>
+    </div>
+  </header> 
+
+  
+
+  <main class="container">
+    <div class="search-bar">
+      <input id="q" placeholder="Cerca per titolo, autore o ISBN" aria-label="Cerca libri">
+      <div class="filters">
+        <select id="genre"> 
+          <option value="">Tutti i generi</option>
+          <option>Romanzo</option>
+          <option>Saggistica</option>
+          <option>Storia</option>
+          <option>Fantascienza</option>
+          <option>Ragazzi</option>
+        </select>
+        <select id="sort">  <!-- sort per titolo (alfabetico) e anno -->
+          <option value="title">Ordina: Titolo</option>
+          <option value="year-desc">Anno (più recente)</option>
+          <option value="year-asc">Anno (più vecchio)</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="results" class="book-grid" aria-live="polite"></div>
+
+    <footer>
+      <p>Mostrate <span id="count">0</span> voci. Questo è solo un prototipo — integrare con backend per dati reali.</p> <!-- da rimuovere una volta creata la pagina finita-->
+    </footer>
+  </main>
+
+  <script src="../js/search.js"></script>
+</body>
+</html>

@@ -16,15 +16,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
-    padding: 15px 5%;
-    background-color: var(--azzurrino-grigio);
-    border-bottom: 2px solid #b0bec5;
-=======
     padding: 1rem 5%;
     background-color:#51758D;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
->>>>>>> 566f76d2440e63439d57e6ecf0ffa7a2a2ec1dfd
 }
 
 .logo-area {

@@ -1,4 +1,4 @@
-# Ruoli sito
+# Site roles
 
 Nappi - Index Page
 
@@ -9,5 +9,6 @@ Amos - books catalogue
 Pare - sungular book page
 
 Redin - profile and "cart"
+
 
 

@@ -1,17 +1,14 @@
-/* Palette Azzurro */
 :root {
-    --azzurro-bg: #e3f2fd;
-    --azzurro-chiaro: #b3e5fc;
-    --azzurro-medio: #0288d1;
+    --azzurrino-grigio: #cfd8dc; /* Il colore azzurrino grigino richiesto */
     --azzurro-scuro: #01579b;
-    --bianco: #ffffff;
+    --azzurro-medio: #0288d1;
+    --bianco: #fff;
 }
 
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: var(--azzurro-bg);
-    color: #333;
+    background-color: #f5f7f9;
 }
 
 /* Header */
@@ -20,137 +17,150 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: var(--bianco);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color:#51758D;
+    box-shadow: 0 2px 10px rgba(0,0,0,10%);
 }
 
 .logo-area {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .logo-placeholder {
-    width: 50px;
-    height: 50px;
-    background-color: var(--azzurro-medio);
+    width: 60px;
+    height: 40px;
+    background-color: var(--azzurro-scuro);
     color: white;
+    font-size: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    font-weight: bold;
+    border-radius: 4px;
 }
 
-.site-name {
-    font-size: 1.5rem;
-    font-weight: bold;
+.main-title {
     color: var(--azzurro-scuro);
+    margin: 0;
+    letter-spacing: 3px;
+    font-size: 2rem;
 }
 
-.btn-accedi {
+.btn-accedi-text {
+    text-decoration: none;
+    color: var(--azzurro-scuro);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.btn-accedi-text:hover {
+    text-decoration: underline;
+}
+
+/* Sotto-Header Bottoni */
+.quick-nav {
+    display: flex;
+    gap: 20px;
+    padding: 15px 5%;
+}
+
+.btn-nav {
+    padding: 10px 20px;
     background-color: var(--azzurro-medio);
     color: white;
     text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background 0.3s;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.btn-accedi:hover {
+.btn-nav:hover {
     background-color: var(--azzurro-scuro);
 }
 
-/* Main Layout */
+/* Layout Centrale Orari */
 .content-wrapper {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 40px;
-    padding: 40px 5%;
-    min-height: 400px;
-}
-
-/* Sidebar Pulsanti */
-.sidebar {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    padding: 50px 5%;
 }
 
-.card-small {
+.orari-mega-container {
+    display: flex;
     background-color: var(--bianco);
-    height: 100px;
+    border: 2px solid var(--azzurrino-grigio);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 10px 20px rgba(0,0,0,5%);
+}
+
+.orari-label {
+    flex: 1;
+    background-color: var(--azzurro-scuro);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    color: var(--azzurro-medio);
-    font-weight: bold;
-    font-size: 1.2rem;
-    border: 2px solid var(--azzurro-chiaro);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.card-small:hover {
-    transform: scale(1.1);
-    background-color: var(--azzurro-medio);
-    color: white;
-    font-size: 1.4rem;
-}
-
-/* Orari (Rettangolo grosso) */
-.orari-card {
-    background-color: var(--bianco);
+    text-align: center;
     padding: 40px;
-    border-radius: 20px;
-    border-left: 10px solid var(--azzurro-medio);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.orari-card h2 {
-    color: var(--azzurro-scuro);
-    margin-top: 0;
+.orari-box {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.orari-grid {
-    margin: 20px 0;
-    font-size: 1.2rem;
+.orari-grid p {
+    margin: 10px 0;
+    font-size: 1.1rem;
 }
 
-/* Rullino Foto (Slider Animato) */
-.photo-slider {
+/* Slider Animato 3 a 3 */
+.photo-slider-container {
+    width: 100%;
     overflow: hidden;
-    background: var(--azzurro-chiaro);
-    padding: 20px 0;
-    margin-top: 40px;
+    background: #eee;
+    margin: 50px 0;
+    height: 250px;
 }
 
 .slider-track {
     display: flex;
-    width: calc(300px * 8); /* Regola in base al numero di foto */
-    animation: scroll 20s linear infinite;
+    width: 300%; /* Tre gruppi di slide */
+    animation: slideSteps 15s infinite cubic-bezier(0.85, 0, 0.15, 1);
 }
 
-.slider-track img {
-    width: 300px;
+.slide-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.slide-group img {
+    width: 30%;
     height: 200px;
-    margin: 0 10px;
-    border-radius: 10px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-300px * 4)); }
+/* Animazione per mostrare 3 foto alla volta */
+@keyframes slideSteps {
+    0%, 30% { transform: translateX(0); }
+    33%, 63% { transform: translateX(-33.33%); }
+    66%, 96% { transform: translateX(-66.66%); }
+    100% { transform: translateX(0); }
 }
 
 /* Footer */
 .footer {
     background-color: var(--azzurro-scuro);
     color: white;
-    padding: 30px 5%;
+    padding: 40px 5%;
     text-align: center;
-    margin-top: 0;
 }

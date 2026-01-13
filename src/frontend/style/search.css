@@ -1,4 +1,4 @@
-@import "./common.css";
+@import url("./common.css");
 
 /* Search Page Styles */
 
@@ -168,6 +168,8 @@ footer span {
 }
 
 /* Responsive Design */
+
+/* stylelint-disable media-feature-range-notation */
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.5rem;
@@ -193,6 +195,8 @@ footer span {
     grid-template-columns: 1fr;
   }
 }
+
+/* stylelint-enable media-feature-range-notation */
 
 /* Utilities */
 [aria-live="polite"] {

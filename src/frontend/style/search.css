@@ -12,7 +12,7 @@ body {
 
 /* 1. Barra Grigina (Loghi) */
 .top-bar {
-    background-color: #eeeeee; /* Grigino */
+    background-color: #eee; /* Grigino */
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
 }
@@ -52,12 +52,7 @@ body {
     color: #333;
 }
 
-.divider {
-    width: 1px;
-    height: 30px;
-    background-color: #ccc;
-    margin-right: 20px;
-}
+
 
 .nav-buttons {
     display: flex;
@@ -141,7 +136,7 @@ body {
     background: white;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
     text-align: center;
 }
 

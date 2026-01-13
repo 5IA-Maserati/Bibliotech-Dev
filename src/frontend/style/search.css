@@ -52,12 +52,7 @@ body {
     color: #333;
 }
 
-.divider {
-    width: 1px;
-    height: 30px;
-    background-color: #ccc;
-    margin-right: 20px;
-}
+
 
 .nav-buttons {
     display: flex;

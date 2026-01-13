@@ -97,6 +97,12 @@ main {
   border-left-color: var(--azzurro-medio);
 }
 
+.cta-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+
 .info-box.hours h2 {
   color: var(--azzurro-medio);
 }
@@ -123,9 +129,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.location-info p {
-  margin: 0.5rem 0;
-}
+
 
 .map-placeholder {
   background: linear-gradient(135deg, #f0f5fa 0%, #e5ebf2 100%);
@@ -163,10 +167,15 @@ main {
   color: var(--text-light);
 }
 
-.location-note p:first-child {
-  color: var(--azzurro-scuro);
-  font-weight: 600;
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
 }
+
+
+
 
 .info-box p:last-child {
   margin-bottom: 0;
@@ -224,7 +233,7 @@ main {
   font-size: 1.2rem;
 }
 
-.info-box.warning .donate-list li:before {
+.info-box.warning .donate-list li::before {
   content: "✕";
   color: #f44336;
 }
@@ -238,16 +247,8 @@ main {
   margin-top: 2rem;
 }
 
-.cta-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
 
-.cta-section p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
-}
+
 
 .btn-primary,
 .btn-secondary {
@@ -296,9 +297,19 @@ footer p {
   margin: 0.5rem 0;
 }
 
+.location-info p {
+  margin: 0.5rem 0;
+}
+
+
 .info-box p {
   color: var(--text-light);
   margin-bottom: 0.8rem;
+}
+
+.location-note p:first-child {
+  color: var(--azzurro-scuro);
+  font-weight: 600;
 }
 
 

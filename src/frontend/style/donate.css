@@ -91,14 +91,7 @@ main {
   font-size: 1.5rem;
 }
 
-.info-box p {
-  color: var(--text-light);
-  margin-bottom: 0.8rem;
-}
 
-.info-box p:last-child {
-  margin-bottom: 0;
-}
 
 .info-box.hours {
   border-left-color: var(--azzurro-medio);
@@ -175,6 +168,11 @@ main {
   font-weight: 600;
 }
 
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+
 .hours-table {
   display: flex;
   flex-direction: column;
@@ -217,7 +215,7 @@ main {
   color: var(--text-light);
 }
 
-.donate-list li:before {
+.donate-list li::before {
   content: "✓";
   position: absolute;
   left: 0;
@@ -297,6 +295,12 @@ footer {
 footer p {
   margin: 0.5rem 0;
 }
+
+.info-box p {
+  color: var(--text-light);
+  margin-bottom: 0.8rem;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

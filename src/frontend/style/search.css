@@ -1,11 +1,15 @@
 /* Search Page Styles */
 
 :root {
-  --muted: #888;
-  --border: #ddd;
-  --bg-light: #f9f9f9;
+  --main-color: #51758D;
+  --azzurro-scuro: #5a7b94;
+  --azzurro-medio: #6995ad;
+  --azzurrino-grigio: #cfd8dc;
+  --bianco: #fff;
+  --muted: #666;
+  --border: var(--azzurrino-grigio);
+  --bg-light: #f5f7f9;
   --text-dark: #333;
-  --accent: #4CAF50;
 }
 
 * {
@@ -22,7 +26,7 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--azzurro-scuro) 0%, var(--main-color) 100%);
   color: white;
   padding: 2rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -73,8 +77,8 @@ main {
 
 .search-bar input:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  border-color: var(--azzurro-medio);
+  box-shadow: 0 0 0 3px rgba(105, 149, 173, 0.1);
 }
 
 .filters {
@@ -95,8 +99,8 @@ main {
 
 .filters select:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  border-color: var(--azzurro-medio);
+  box-shadow: 0 0 0 3px rgba(105, 149, 173, 0.1);
 }
 
 .book-grid {
@@ -146,8 +150,8 @@ main {
 
 .tag {
   display: inline-block;
-  background-color: #e8f5e9;
-  color: #2e7d32;
+  background-color: #e8f0f7;
+  color: var(--azzurro-scuro);
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -164,13 +168,13 @@ main {
 }
 
 .status.available {
-  background-color: #e8f5e9;
-  color: #2e7d32;
+  background-color: #e8f0f7;
+  color: var(--azzurro-scuro);
 }
 
 .status.unavailable {
   background-color: #ffebee;
-  color: #c62828;
+  color: #d32f2f;
 }
 
 footer {

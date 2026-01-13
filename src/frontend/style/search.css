@@ -78,7 +78,7 @@ main {
 .search-bar input:focus {
   outline: none;
   border-color: var(--azzurro-medio);
-  box-shadow: 0 0 0 3px rgba(105, 149, 173, 0.1);
+  box-shadow: 0 0 0 3px rgb(105 149 173 / 10%);
 }
 
 .filters {
@@ -100,7 +100,7 @@ main {
 .filters select:focus {
   outline: none;
   border-color: var(--azzurro-medio);
-  box-shadow: 0 0 0 3px rgba(105, 149, 173, 0.1);
+  box-shadow: 0 0 0 3px rgb(105 149 173 / 10%);
 }
 
 .book-grid {
@@ -116,11 +116,11 @@ main {
   border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0 0 0 0 / 5%);
+  box-shadow: 0 1px 3px rgb(0 0 0 0 / 5%);
 }
 
 .book:hover {
-  box-shadow: 0 8px 16px rgba(0 0 0 / 15%);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
   transform: translateY(-2px);
 }
 

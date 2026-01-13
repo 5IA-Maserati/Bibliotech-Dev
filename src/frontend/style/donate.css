@@ -163,12 +163,6 @@ main {
 }
 
 
-.cta-section p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
-}
-
 
 .hours-table {
   display: flex;
@@ -287,6 +281,13 @@ footer p {
 
 .location-info p {
   margin: 0.5rem 0;
+}
+
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
 }
 
 

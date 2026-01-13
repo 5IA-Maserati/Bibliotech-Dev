@@ -25,7 +25,7 @@ header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   padding: 2rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
   margin-bottom: 2rem;
 }
 
@@ -53,7 +53,7 @@ main {
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
   margin-bottom: 2rem;
   display: flex;
   gap: 1rem;
@@ -74,7 +74,7 @@ main {
 .search-bar input:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  box-shadow: 0 0 0 3px rgb(76 175 80 / 10%);
 }
 
 .filters {
@@ -96,7 +96,7 @@ main {
 .filters select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  box-shadow: 0 0 0 3px rgb(76 175 80 / 10%);
 }
 
 .book-grid {
@@ -112,11 +112,11 @@ main {
   border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0 0 0 0 / 5%);
 }
 
 .book:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(0 0 0 / 15%);
   transform: translateY(-2px);
 }
 
@@ -126,7 +126,7 @@ main {
   color: var(--text-dark);
   margin-bottom: 0.5rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

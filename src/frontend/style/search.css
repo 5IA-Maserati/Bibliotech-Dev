@@ -1,36 +1,11 @@
+@import "./common.css";
+
 /* Search Page Styles */
 
-:root {
-  --main-color: #51758D;
-  --azzurro-scuro: #5a7b94;
-  --azzurro-medio: #6995ad;
-  --azzurrino-grigio: #cfd8dc;
-  --bianco: #fff;
-  --muted: #666;
-  --border: var(--azzurrino-grigio);
-  --bg-light: #f5f7f9;
-  --text-dark: #333;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-dark);
-  line-height: 1.6;
-}
 
 header {
-  background: linear-gradient(135deg, var(--azzurro-scuro) 0%, var(--main-color) 100%);
-  color: white;
   padding: 2rem 0;
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
-  margin-bottom: 2rem;
 }
 
 header h1 {

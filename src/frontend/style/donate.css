@@ -48,7 +48,7 @@ main {
   background: #f5f5f5;
   padding: 1.5rem;
   border-radius: 8px;
-  border-left: 5px solid var(--azzurro-scuro);
+  border-left: 5px solid var(--dark-light-blue);
   transition: all 0.3s ease;
 }
 
@@ -58,7 +58,7 @@ main {
 }
 
 .info-box h2 {
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -66,7 +66,7 @@ main {
 
 
 .info-box.hours {
-  border-left-color: var(--azzurro-medio);
+  border-left-color: var(--medium-blue);
 }
 
 .cta-section h2 {
@@ -76,16 +76,16 @@ main {
 
 
 .info-box.hours h2 {
-  color: var(--azzurro-medio);
+  color: var(--medium-blue);
 }
 
 .info-box.highlight {
-  border-left-color: var(--azzurro-medio);
+  border-left-color: var(--medium-blue);
   background: #f0f5fa;
 }
 
 .info-box.highlight h2 {
-  color: var(--azzurro-medio);
+  color: var(--medium-blue);
 }
 
 .info-box.warning {
@@ -108,7 +108,7 @@ main {
   border-radius: 6px;
   padding: 2rem;
   text-align: center;
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
   font-weight: 5;
   margin-top: 1rem;
 }
@@ -131,7 +131,7 @@ main {
   padding: 1rem;
   border-radius: 6px;
   margin-top: 1rem;
-  border-left: 4px solid var(--azzurro-medio);
+  border-left: 4px solid var(--medium-blue);
 }
 
 
@@ -159,7 +159,7 @@ main {
 
 .hour-row .time {
   background: #e8f0f7;
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-weight: 500;
@@ -182,7 +182,7 @@ main {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -193,7 +193,7 @@ main {
 }
 
 .cta-section {
-  background: linear-gradient(135deg, var(--azzurro-scuro) 0%, var(--main-color) 100%);
+  background: linear-gradient(135deg, var(--dark-light-blue) 0%, var(--main-color) 100%);
   color: white;
   padding: 2rem;
   border-radius: 8px;
@@ -220,7 +220,7 @@ main {
 
 .btn-primary {
   background: white;
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
 }
 
 .btn-primary:hover {
@@ -275,7 +275,7 @@ footer p {
 
 
 .location-note p:first-child {
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
   font-weight: 600;
 }
 

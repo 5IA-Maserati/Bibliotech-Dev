@@ -52,7 +52,7 @@ main {
 
 .search-bar input:focus {
   outline: none;
-  border-color: var(--azzurro-medio);
+  border-color: var(--medium-blue);
   box-shadow: 0 0 0 3px rgb(105 149 173 / 10%);
 }
 
@@ -74,7 +74,7 @@ main {
 
 .filters select:focus {
   outline: none;
-  border-color: var(--azzurro-medio);
+  border-color: var(--medium-blue);
   box-shadow: 0 0 0 3px rgb(105 149 173 / 10%);
 }
 
@@ -126,7 +126,7 @@ main {
 .tag {
   display: inline-block;
   background-color: #e8f0f7;
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -144,7 +144,7 @@ main {
 
 .status.available {
   background-color: #e8f0f7;
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
 }
 
 .status.unavailable {

@@ -1,6 +1,6 @@
 :root {
     --main-color: #51758D; /* IIS A Maserati ahh color */
-    --light-gray-blue: #cfd8dc; /* Il colore azzurrino grigino richiesto */
+    --light-gray-blue: #cfd8dc; 
     --dark-light-blue: #5a7b94;
     --medium-blue: #6995ad;
     --white: #fff;
@@ -79,7 +79,7 @@ body {
     background-color: var(--dark-light-blue);
 }
 
-/* Layout Centrale Orari */
+/* Time Central Layout */
 .content-wrapper {
     display: flex;
     justify-content: center;
@@ -121,7 +121,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* Slider Animato 3 a 3 */
+/* Animated Slider 3 to 3 */
 .photo-slider-container {
     width: 100%;
     overflow: hidden;
@@ -132,7 +132,7 @@ body {
 
 .slider-track {
     display: flex;
-    width: 300%; /* Tre gruppi di slide */
+    width: 300%; /* Slide in group of three */
     animation: slide-steps 15s infinite cubic-bezier(0.85, 0, 0.15, 1);
 }
 
@@ -151,7 +151,7 @@ body {
     border-radius: 10px;
 }
 
-/* Animazione per mostrare 3 foto alla volta */
+/* Animation for sliding 3 photos at a time */
 @keyframes slide-steps {
     0%, 30% { transform: translateX(0); }
     33%, 63% { transform: translateX(-33.33%); }

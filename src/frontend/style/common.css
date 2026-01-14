@@ -7,16 +7,16 @@ Who set them in Italian im going to die changing them
 
 :root {
   --main-color: #51758d;
-  --azzurro-scuro: #5a7b94;
-  --azzurro-medio: #6995ad;
-  --azzurrino-grigio: #cfd8dc;
-  --bianco: #fff;
+  --dark-light-blue: #5a7b94;
+  --medium-blue: #6995ad;
+  --light-gray-blue: #cfd8dc;
+  --white: #fff;
   --text-dark: #333;
   --text-light: #666;
   --muted: #666;
   --bg-light: #f5f7f9;
-  --bg-white: var(--bianco);
-  --border: var(--azzurrino-grigio);
+  --bg-white: var(--white);
+  --border: var(--light-gray-blue);
   --shadow: 0 2px 10px rgb(0 0 0 / 10%);
 }
 
@@ -37,7 +37,7 @@ body {
 header {
   background: linear-gradient(
     135deg,
-    var(--azzurro-scuro) 0%,
+    var(--dark-light-blue) 0%,
     var(--main-color) 100%
   );
   color: white;

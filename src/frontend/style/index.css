@@ -1,9 +1,9 @@
 :root {
     --main-color: #51758D; /* IIS A Maserati ahh color */
-    --azzurrino-grigio: #cfd8dc; /* Il colore azzurrino grigino richiesto */
-    --azzurro-scuro: #5a7b94;
-    --azzurro-medio: #6995ad;
-    --bianco: #fff;
+    --light-gray-blue: #cfd8dc; /* Il colore azzurrino grigino richiesto */
+    --dark-light-blue: #5a7b94;
+    --medium-blue: #6995ad;
+    --white: #fff;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
 .logo-placeholder {
     width: 60px;
     height: 40px;
-    background-color: var(--azzurro-scuro);
+    background-color: var(--dark-light-blue);
     color: white;
     font-size: 0.7rem;
     display: flex;
@@ -41,7 +41,7 @@ body {
 
 .main-title {
     text-align: center;
-    color: var(--azzurro-scuro);
+    color: var(--dark-light-blue);
     margin: 0;
     letter-spacing: 3px;
     font-size: 2rem;
@@ -49,7 +49,7 @@ body {
 
 .btn-accedi-text {
     text-decoration: none;
-    color: var(--azzurro-scuro);
+    color: var(--dark-light-blue);
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -67,7 +67,7 @@ body {
 
 .btn-nav {
     padding: 10px 20px;
-    background-color: var(--azzurro-medio);
+    background-color: var(--medium-blue);
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -76,7 +76,7 @@ body {
 }
 
 .btn-nav:hover {
-    background-color: var(--azzurro-scuro);
+    background-color: var(--dark-light-blue);
 }
 
 /* Layout Centrale Orari */
@@ -88,8 +88,8 @@ body {
 
 .orari-mega-container {
     display: flex;
-    background-color: var(--bianco);
-    border: 2px solid var(--azzurrino-grigio);
+    background-color: var(--white);
+    border: 2px solid var(--light-gray-blue);
     border-radius: 15px;
     overflow: hidden;
     width: 100%;
@@ -99,7 +99,7 @@ body {
 
 .orari-label {
     flex: 1;
-    background-color: var(--azzurro-scuro);
+    background-color: var(--dark-light-blue);
     color: white;
     display: flex;
     align-items: center;
@@ -161,7 +161,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--azzurro-scuro);
+    background-color: var(--dark-light-blue);
     color: white;
     padding: 40px 5%;
     text-align: center;

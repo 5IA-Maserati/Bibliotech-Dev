@@ -1,0 +1,24 @@
+name: Link Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run link checker
+        uses: lycheeverse/lychee-action@v1
+        with:
+          fail: true
+          args: >
+            --verbose
+            --no-progress
+            --exclude-mail
+            --accept 200,429
+            .

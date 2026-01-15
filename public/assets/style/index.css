@@ -8,13 +8,15 @@
 
 
 body {
+    height: 100%;
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #f5f7f9;
+    margin-bottom: 0px;
 }
 
 
-/* CSS divider to replace <hr> elements visually */
+/* CSS divider to replace <hr> */
 .css-divider {
     width: 60%;
     height: 4px;
@@ -170,24 +172,11 @@ body {
     100% { transform: translateX(0); }
 }
 
-/* Footer */
+
 .footer {
-    background-color: var(--dark-light-blue);
-    color: white;
-    padding: 24px 0 20px;
+    height: 150px;
+    padding: 20px 5%;
     text-align: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    z-index: 100;
-    box-shadow: 0 -2px 16px rgb(0 0 0 / 12%);
-    border-top: 2px solid var(--light-gray-blue);
-    font-size: 1.08rem;
-    letter-spacing: 0.5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    color: white;
+    background-color: var(--dark-light-blue);
 }

@@ -38,6 +38,7 @@ jobs:
         if: steps.calibre.outputs.markdown != ''
         uses: peter-evans/create-pull-request@v4
         with:
+          token: ${{ secrets.GH_PAT }}
           title: Compressed Images
           branch-suffix: timestamp
           commit-message: Compressed Images

@@ -21,9 +21,11 @@ exclude = [
   "^http://localhost",
   "^http://127.0.0.1",
 
-  # Internal links
+  # Internal links (runner mirror)
   "CONTRIBUTING.md",
-  "LICENSE"
+  "LICENSE",
+  "/home/runner/work/Bibliotech-Dev/Bibliotech-Dev/LICENSE",
+  "/home/runner/work/Bibliotech-Dev/Bibliotech-Dev/CONTRIBUTING.md"
 ]
 
 # Ignore specific links

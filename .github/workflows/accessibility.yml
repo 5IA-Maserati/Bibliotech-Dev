@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 env:
   PATH_TO_SCAN: "."
   REPORT_FILE: "accessibility-report.json"

@@ -23,7 +23,7 @@ exclude = [
 
   # Internal links (runner mirror)
   "CONTRIBUTING.md",
-  "LICENSE"
+  "LICENSE",
   "/home/runner/work/Bibliotech-Dev/Bibliotech-Dev/LICENSE",
   "/home/runner/work/Bibliotech-Dev/Bibliotech-Dev/CONTRIBUTING.md"
 ]

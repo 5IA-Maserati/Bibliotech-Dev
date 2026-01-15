@@ -53,7 +53,7 @@ jobs:
 
       # 6. Upload HTML reports as artifacts
       - name: Upload Accessibility Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: accessibility-reports
           path: accessibility-reports/*.html

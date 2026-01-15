@@ -39,17 +39,17 @@ jobs:
         run: |
           mkdir -p accessibility-reports
           FAIL=0
+          # Find all HTML files
+          HTML_FILES=$(find . -name "*.html")
           for FILE in $HTML_FILES; do
             echo "Testing $FILE"
-            # Run pa11y and generate HTML report for each file
             pa11y "file://$(pwd)/$FILE" --reporter html --output "accessibility-reports/pa11y-$(basename $FILE).html" || FAIL=1
           done
-          
-          # Fail the job if any accessibility issues were found
           if [ $FAIL -eq 1 ]; then
             echo "Some accessibility issues were found."
             exit 1
           fi
+
 
       # 6. Upload HTML reports as artifacts
       - name: Upload Accessibility Reports

@@ -28,7 +28,7 @@ jobs:
           url: ${{ env.PATH_TO_SCAN }}
           report: ${{ env.REPORT_FILE }}
 
-      # 3. Upload accessibility report artifact if it exists
+      # 3. Upload accessibility report artifact
       - name: Upload accessibility report artifact
         if: ${{ steps.a11ychecker.outcome != 'success' && env.REPORT_FILE != '' }}
         uses: actions/upload-artifact@v4
@@ -37,6 +37,24 @@ jobs:
           path: ${{ env.REPORT_FILE }}
           if-no-files-found: warn
 
-      # 4. Output artifact info
+      # 4. Fail job if accessibility issues found
+      - name: Fail job if accessibility issues detected
+        run: |
+          # Check if jq is installed
+          if ! command -v jq &> /dev/null; then
+            echo "jq is required but not installed. Installing..."
+            sudo apt-get update && sudo apt-get install -y jq
+          fi
+
+          # Count number of issues in JSON report
+          ISSUES=$(jq 'length' ${{ env.REPORT_FILE }})
+          echo "Found $ISSUES accessibility issues."
+
+          if [ "$ISSUES" -gt 0 ]; then
+            echo "Accessibility issues detected. Failing the job."
+            exit 1
+          fi
+
+      # 5. Output artifact info
       - name: Output artifact path
         run: echo "Accessibility report saved at ${{ env.REPORT_FILE }}"

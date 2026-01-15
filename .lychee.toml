@@ -25,3 +25,9 @@ exclude = [
   "CONTRIBUTING.md",
   "LICENSE"
 ]
+
+# Ignore specific links
+exclude-url = [
+  "CONTRIBUTING.md",
+  "LICENSE"
+]

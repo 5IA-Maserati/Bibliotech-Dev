@@ -8,11 +8,15 @@ on:
     branches:
       - main
 
+env:
+  PATH_TO_SCAN: "."
+  REPORT_FILE: "accessibility-report.json"
+
 jobs:
   accessibility:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout repository
+      # 1. Checkout the repository
       - uses: actions/checkout@v4
 
       # 2. Run be-a11y on local files
@@ -21,17 +25,18 @@ jobs:
         uses: be-lenka/be-a11y@v2.2.8
         continue-on-error: true
         with:
-          url: ${{ github.event.inputs.path }}
-          report: ${{ github.event.inputs.report }}
+          url: ${{ env.PATH_TO_SCAN }}
+          report: ${{ env.REPORT_FILE }}
 
-      # 3. Upload accessibility report if exists
+      # 3. Upload accessibility report artifact if it exists
       - name: Upload accessibility report artifact
-        if: steps.a11ychecker.outcome != 'success' && ${{ github.event.inputs.report != '' }}
+        if: ${{ steps.a11ychecker.outcome != 'success' && env.REPORT_FILE != '' }}
         uses: actions/upload-artifact@v4
         with:
           name: accessibility-report
-          path: ${{ github.event.inputs.report }}
+          path: ${{ env.REPORT_FILE }}
+          if-no-files-found: warn
 
       # 4. Output artifact info
       - name: Output artifact path
-        run: echo "Accessibility report saved at ${{ github.event.inputs.report }}"
+        run: echo "Accessibility report saved at ${{ env.REPORT_FILE }}"

@@ -20,4 +20,8 @@ exclude = [
   # Local dev links
   "^http://localhost",
   "^http://127.0.0.1",
+
+  # Internal links
+  "CONTRIBUTING.md",
+  "LICENSE"
 ]

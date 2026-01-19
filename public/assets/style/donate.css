@@ -209,11 +209,11 @@ main {
 }
 
 .hour-row .time {
-  background: #e8f0f7;
-  color: var(--dark-light-blue);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-weight: 500;
+  background: var(--medium-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
   font-size: 0.9rem;
 }
 

@@ -66,6 +66,16 @@ main {
   margin-bottom: 0.8rem;
 }
 
+.location-info p {
+  margin: 0.5rem 0;
+  color: var(--text-light);
+}
+
+.location-note p {
+  margin: 0.5rem 0;
+  color: var(--text-light);
+}
+
 .info-box p:last-child {
   margin-bottom: 0;
 }
@@ -101,22 +111,12 @@ main {
   margin-bottom: 1rem;
 }
 
-.location-info p {
-  margin: 0.5rem 0;
-  color: var(--text-light);
-}
-
 .location-note {
   background: #f0f5fa;
   padding: 1rem;
   border-radius: 6px;
   margin-top: 1rem;
   border-left: 4px solid var(--medium-blue);
-}
-
-.location-note p {
-  margin: 0.5rem 0;
-  color: var(--text-light);
 }
 
 .location-note p:first-child {
@@ -168,14 +168,6 @@ main {
   fill: var(--dark-light-blue);
 }
 
-.map-info {
-  padding: 0.75rem 1rem;
-  background: #f5f7f9;
-  text-align: center;
-  border-top: 1px solid #e0e0e0;
-  font-size: 0.85rem;
-}
-
 .map-info p {
   margin: 0.25rem 0;
   color: var(--text-light);
@@ -184,6 +176,14 @@ main {
 .map-info p:first-child {
   font-weight: 600;
   color: var(--text-dark);
+}
+
+.map-info {
+  padding: 0.75rem 1rem;
+  background: #f5f7f9;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.85rem;
 }
 
 /* Hours Table */
@@ -244,16 +244,6 @@ main {
   color: #f44336;
 }
 
-/* CTA Section */
-.cta-section {
-  background: linear-gradient(135deg, var(--dark-light-blue) 0%, var(--main-color) 100%);
-  color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
 .cta-section h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
@@ -263,6 +253,20 @@ main {
   font-size: 1rem;
   margin-bottom: 1.5rem;
   opacity: 0.9;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--dark-light-blue) 0%, var(--main-color) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 /* Buttons */
@@ -309,10 +313,6 @@ footer {
   font-size: 0.95rem;
   background-color: var(--dark-light-blue);
   margin-top: 2rem;
-}
-
-footer p {
-  margin: 0.5rem 0;
 }
 
 /* Responsive Design */

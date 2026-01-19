@@ -1,0 +1,1 @@
+# Little guide for installing npm

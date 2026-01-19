@@ -1,0 +1,35 @@
+################################
+# Lychee configuration
+################################
+
+# Ignore mailto:
+exclude_mail = true
+
+# Timeout for CI
+timeout = 20
+max_retries = 2
+
+# HTTP status accepted
+accept = [200, 429]
+
+################################
+# EXCLUSIONS
+################################
+
+exclude = [
+  # Local dev links
+  "^http://localhost",
+  "^http://127.0.0.1",
+
+  # Internal links (runner mirror)
+  "CONTRIBUTING.md",
+  "LICENSE",
+  "/home/runner/work/Bibliotech-Dev/Bibliotech-Dev/LICENSE",
+  "/home/runner/work/Bibliotech-Dev/Bibliotech-Dev/CONTRIBUTING.md"
+]
+
+# Ignore specific links
+exclude-url = [
+  "CONTRIBUTING.md",
+  "LICENSE"
+]

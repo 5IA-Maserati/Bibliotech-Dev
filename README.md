@@ -116,11 +116,11 @@ Refer to `.github/workflows/` for detailed configurations.
 
 ## Contributing
 
-Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines. All work is done directly on main; no forks or feature branches are required.
+Please refer to [CONTRIBUTING.md](https://github.com/5IA-Maserati/.github/blob/main/.github/CONTRIBUTING.md) for contribution guidelines. All work is done directly on main; no forks or feature branches are required.
 
 ## License
 
-This repository is licensed under the [MIT License](LICENSE),
+This repository is licensed under the [MIT License](LICENSE.txt),
 
 
 

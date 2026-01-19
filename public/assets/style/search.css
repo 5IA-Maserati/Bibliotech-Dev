@@ -1,36 +1,11 @@
+@import url("./common.css");
+
 /* Search Page Styles */
 
-:root {
-  --main-color: #51758D;
-  --azzurro-scuro: #5a7b94;
-  --azzurro-medio: #6995ad;
-  --azzurrino-grigio: #cfd8dc;
-  --bianco: #fff;
-  --muted: #666;
-  --border: var(--azzurrino-grigio);
-  --bg-light: #f5f7f9;
-  --text-dark: #333;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-dark);
-  line-height: 1.6;
-}
 
 header {
-  background: linear-gradient(135deg, var(--azzurro-scuro) 0%, var(--main-color) 100%);
-  color: white;
   padding: 2rem 0;
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
-  margin-bottom: 2rem;
 }
 
 header h1 {
@@ -77,8 +52,8 @@ main {
 
 .search-bar input:focus {
   outline: none;
-  border-color: var(--azzurro-medio);
-  box-shadow: 0 0 0 3px rgba(105, 149, 173, 0.1);
+  border-color: var(--medium-blue);
+  box-shadow: 0 0 0 3px rgb(105 149 173 / 10%);
 }
 
 .filters {
@@ -99,8 +74,8 @@ main {
 
 .filters select:focus {
   outline: none;
-  border-color: var(--azzurro-medio);
-  box-shadow: 0 0 0 3px rgba(105, 149, 173, 0.1);
+  border-color: var(--medium-blue);
+  box-shadow: 0 0 0 3px rgb(105 149 173 / 10%);
 }
 
 .book-grid {
@@ -116,11 +91,11 @@ main {
   border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0 0 0 0 / 5%);
+  box-shadow: 0 1px 3px rgb(0 0 0 0 / 5%);
 }
 
 .book:hover {
-  box-shadow: 0 8px 16px rgba(0 0 0 / 15%);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
   transform: translateY(-2px);
 }
 
@@ -151,7 +126,7 @@ main {
 .tag {
   display: inline-block;
   background-color: #e8f0f7;
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -169,7 +144,7 @@ main {
 
 .status.available {
   background-color: #e8f0f7;
-  color: var(--azzurro-scuro);
+  color: var(--dark-light-blue);
 }
 
 .status.unavailable {
@@ -193,7 +168,9 @@ footer span {
 }
 
 /* Responsive Design */
-@media (max-width <= 768px) {
+
+/* stylelint-disable media-feature-range-notation */
+@media (max-width: 768px) {
   header h1 {
     font-size: 1.5rem;
   }
@@ -218,6 +195,8 @@ footer span {
     grid-template-columns: 1fr;
   }
 }
+
+/* stylelint-enable media-feature-range-notation */
 
 /* Utilities */
 [aria-live="polite"] {

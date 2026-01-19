@@ -126,11 +126,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--light-gray-blue); /* Aggiungi una bordatura */
+    border-radius: 10px; /* Aggiungi un bordo arrotondato */
 }
 
 .orari-grid p {
     margin: 10px 0;
     font-size: 1.1rem;
+}
+
+.orari-nav {
+  padding: 10px 20px;
+  background-color: var(--medium-blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.orari-nav:hover {
+  background-color: var(--dark-light-blue);
 }
 
 /* Animated Slider 3 to 3 */

@@ -1,0 +1,105 @@
+@import url("./common.css");
+
+/* Booking Page Styles */
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  color: var(--dark-light-blue);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* Description section */
+.description {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  margin-bottom: 2rem;
+  border-left: 5px solid var(--dark-light-blue);
+}
+
+.description p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Button styles */
+button,
+a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--dark-light-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+button:hover,
+a:hover {
+  background-color: var(--dark-light-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgb(90 123 148 / 20%);
+}
+
+button:active,
+a:active {
+  transform: translateY(0);
+}
+
+/* Link to search */
+a {
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .description {
+    padding: 1.5rem;
+  }
+
+  .description p {
+    font-size: 0.95rem;
+  }
+
+  button,
+  a {
+    width: 100%;
+    padding: 1rem;
+    margin-right: 0;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+  }
+}

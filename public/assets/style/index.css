@@ -59,7 +59,7 @@ body {
 
 .btn-accedi-text {
     text-decoration: none;
-    color: var(--dark-light-blue);
+    color: white;
     font-weight: bold;
     font-size: 1.1rem;
 }

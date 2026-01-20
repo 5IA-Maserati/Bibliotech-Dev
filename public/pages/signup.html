@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrazione | Biblioteca Digitale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style/login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-card">
+        <h1>Registrazione</h1>
+        <p class="subtitle">Crea un nuovo account</p>
+
+        <form id="registerForm">
+            <div class="input-group">
+                <input type="text" required>
+                <label>Nome</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" required>
+                <label>Cognome</label>
+            </div>
+
+            <div class="input-group">
+                <input type="date" required>
+                <label class="fixed">Data di nascita</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" required>
+                <label>Password</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="confirmPassword" required>
+                <label>Conferma password</label>
+            </div>
+
+            <button type="submit">Registrati</button>
+        </form>
+
+        <a href="login.html" class="back-link">← Torna al login</a>
+    </div>
+</div>
+
+<script src="../assets/js/signup.js"></script>
+</body>
+</html>

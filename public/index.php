@@ -11,10 +11,11 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Scolastica</title>
-
-    <!-- CSS principale -->
-    <link rel="stylesheet" href="/assets/style/index.css">
+    <!-- Stylesheet: main page styles -->
+    <link rel="stylesheet" href="assets/style/index.css">
 </head>
+
+
 <body>
 
     <!-- Header: site logo area and login button -->
@@ -23,23 +24,27 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
             <div class="logo-placeholder" aria-hidden="true">LOGO 1</div>
             <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
         </div>
-
-        <a href="pages/login.html" class="btn-accedi-text">
+        <!-- Primary action: login -->
+        <a  href="pages/login.html" class="btn-accedi-text">
             Accedi all'area riservata
         </a>
     </header>
 
-    <!-- Quick navigation -->
+    <!-- Quick navigation: important page links -->
     <nav class="quick-nav" role="navigation" aria-label="Navigazione rapida">
         <a href="pages/booking.html" class="btn-nav">Restituisci Libro</a>
         <a href="pages/search.html" class="btn-nav">Cerca</a>
     </nav>
 
+    <!-- Main title -->
     <h1 class="main-title">BIBLIOTECA SCOLASTICA</h1>
 
+    <!-- CSS divider replaces <hr> for visual separation -->
     <div class="css-divider" aria-hidden="true"></div>
 
+    <!-- Main content wrapper -->
     <main class="content-wrapper" role="main">
+        <!-- Library opening hours section -->
         <section class="orari-mega-container" aria-labelledby="orari-biblioteca">
             <div class="orari-label">
                 <h2 id="orari-biblioteca">ORARI<br>BIBLIOTECA</h2>
@@ -47,18 +52,15 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
 
             <div class="orari-box">
                 <div class="orari-grid">
-                    <div class="orari-nav" aria-hidden="true">
-                        <strong>Lun - Ven:</strong> 09:00 - 13:00
-                    </div>
+                    <div class="orari-nav" aria-hidden="true"><strong>Lun - Ven:</strong> 09:00 - 13:00</div>
                     <div class="css-divider" aria-hidden="true"></div>
-                    <div class="orari-nav" aria-hidden="true">
-                        <strong>Sab - Dom:</strong> Chiuso
-                    </div>
+                    <div class="orari-nav" aria-hidden="true"><strong>Sab - Dom:</strong> Chiuso</div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Photo slider (decorative content) -->
     <section class="photo-slider-container" aria-label="Galleria fotografica della biblioteca">
         <div class="slider-track">
             <div class="slide-group">
@@ -66,9 +68,22 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
                 <img src="assets/img/common/img-2.jpg" alt="Area lettura della biblioteca">
                 <img src="assets/img/common/img-3.jpg" alt="Ingresso della biblioteca">
             </div>
+
+            <div class="slide-group">
+                <img src="assets/img/common/img-4.jpg" alt="Sezione consultazione">
+                <img src="assets/img/common/img-5.jpg" alt="Scaffali della biblioteca">
+                <img src="assets/img/common/img-6.jpg" alt="Seconda area scaffali">
+            </div>
+
+            <div class="slide-group">
+                <img src="assets/img/common/img-7.jpg" alt="Sezione consultazione">
+                <img src="assets/img/common/img-8.jpg" alt="Scaffali della biblioteca">
+                <img src="assets/img/common/img-9.jpg" alt="Seconda area scaffali">
+            </div>
         </div>
     </section>
 
+    <!-- Footer: contact and location -->
     <footer class="footer" role="contentinfo">
         <div class="footer-info">
             <p><strong>Istituto Scolastico Superiore</strong></p>

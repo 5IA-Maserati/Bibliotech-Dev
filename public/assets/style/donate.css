@@ -113,10 +113,7 @@ footer p {
   color: var(--text-light);
 }
 
-.map-info p:first-child {
-  font-weight: 600;
-  color: var(--text-dark);
-}
+
 
 .map-info {
   padding: 0.75rem 1rem;
@@ -161,27 +158,6 @@ footer p {
   margin: 0.5rem 0;
   color: var(--text-light);
 }
-
-
-.map-info p {
-  margin: 0.25rem 0;
-  color: var(--text-light);
-}
-
-.map-info {
-  padding: 0.75rem 1rem;
-  background: #f5f7f9;
-  text-align: center;
-  border-top: 1px solid #e0e0e0;
-  font-size: 0.85rem;
-}
-
-.map-info p:first-child {
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-
 
 
 .info-box p:last-child {
@@ -234,6 +210,12 @@ footer p {
   color: var(--dark-light-blue);
   font-weight: 600;
 }
+
+.map-info p:first-child {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
 
 /* Map Styles */
 .map-container {

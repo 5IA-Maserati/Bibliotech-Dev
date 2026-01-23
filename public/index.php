@@ -33,7 +33,8 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
     <!-- Quick navigation: important page links -->
     <nav class="quick-nav" role="navigation" aria-label="Navigazione rapida">
         <a href="pages/booking.html" class="btn-nav">Restituisci Libro</a>
-        <a href="pages/search.html" class="btn-nav">Cerca</a>
+        <a href="pages/donate.html" class="btn-nav">Dona Libro</a>
+        <a href="pages/booking.html" class="btn-nav">Vai a Catalogo</a>
     </nav>
 
     <!-- Main title -->

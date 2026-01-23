@@ -1,8 +1,22 @@
 <?php
-
 declare(strict_types=1);
 
-require_once __DIR__ . '/../src/php/bootstrap.php';
+/**
+ * -------------------------------------------------
+ * Define absolute project root (NO path traversal)
+ * -------------------------------------------------
+ *
+ * dirname(__DIR__) resolves to /project-root
+ * This is safe, deterministic, and portable
+ */
+define('PROJECT_ROOT', dirname(__DIR__));
+
+/**
+ * -------------------------------------------------
+ * Load bootstrap FIRST (headers, config, autoload)
+ * -------------------------------------------------
+ */
+require_once PROJECT_ROOT . '/src/php/bootstrap.php';
 
 ?>
 <!DOCTYPE html>
@@ -11,41 +25,39 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Scolastica</title>
-    <!-- Stylesheet: main page styles -->
-    <link rel="stylesheet" href="assets/style/index.css">
-</head>
 
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/assets/style/index.css">
+</head>
 
 <body>
 
-    <!-- Header: site logo area and login button -->
+    <!-- Header -->
     <header class="navbar" role="banner">
         <div class="logo-area">
             <div class="logo-placeholder" aria-hidden="true">LOGO 1</div>
             <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
         </div>
-        <!-- Primary action: login -->
-        <a  href="pages/login.html" class="btn-accedi-text">
+
+        <a href="/pages/login.php" class="btn-accedi-text">
             Accedi all'area riservata
         </a>
     </header>
 
-    <!-- Quick navigation: important page links -->
+    <!-- Quick navigation -->
     <nav class="quick-nav" role="navigation" aria-label="Navigazione rapida">
-        <a href="pages/booking.html" class="btn-nav">Restituisci Libro</a>
-        <a href="pages/donate.html" class="btn-nav">Dona Libro</a>
-        <a href="pages/search.html" class="btn-nav">Cerca</a>
+        <a href="/pages/booking.php" class="btn-nav">Restituisci Libro</a>
+        <a href="/pages/donate.php" class="btn-nav">Dona Libro</a>
+        <a href="/pages/search.php" class="btn-nav">Cerca</a>
     </nav>
 
-    <!-- Main title -->
+    <!-- Title -->
     <h1 class="main-title">BIBLIOTECA SCOLASTICA</h1>
 
-    <!-- CSS divider replaces <hr> for visual separation -->
     <div class="css-divider" aria-hidden="true"></div>
 
-    <!-- Main content wrapper -->
+    <!-- Main content -->
     <main class="content-wrapper" role="main">
-        <!-- Library opening hours section -->
         <section class="orari-mega-container" aria-labelledby="orari-biblioteca">
             <div class="orari-label">
                 <h2 id="orari-biblioteca">ORARI<br>BIBLIOTECA</h2>
@@ -53,23 +65,22 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
 
             <div class="orari-box">
                 <div class="orari-grid">
-                    <div class="orari-nav" aria-hidden="true"><strong>Lun - Ven:</strong> 09:00 - 13:00</div>
+                    <div class="orari-nav"><strong>Lun - Ven:</strong> 09:00 - 13:00</div>
                     <div class="css-divider" aria-hidden="true"></div>
-                    <div class="orari-nav" aria-hidden="true"><strong>Sab - Dom:</strong> Chiuso</div>
+                    <div class="orari-nav"><strong>Sab - Dom:</strong> Chiuso</div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Photo slider (decorative content) -->
+    <!-- Photo slider -->
     <section class="photo-slider-container" aria-label="Galleria fotografica della biblioteca">
         <div class="slider-track">
             <div class="slide-group">
-                <img src="assets/img/common/library-1.jpg" alt="Copertina della biblioteca">
-                <img src="assets/img/common/library-2.jpg" alt="Area lettura della biblioteca">
-                <img src="assets/img/common/library-3.jpg" alt="Ingresso della biblioteca">
+                <img src="/assets/img/common/library-1.jpg" alt="Copertina della biblioteca">
+                <img src="/assets/img/common/library-2.jpg" alt="Area lettura della biblioteca">
+                <img src="/assets/img/common/library-3.jpg" alt="Ingresso della biblioteca">
             </div>
-
             <div class="slide-group">
                 <img src="assets/img/common/library-4.jpg" alt="Sezione consultazione">
                 <img src="assets/img/common/library-5.jpg" alt="Scaffali della biblioteca">
@@ -84,7 +95,7 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
         </div>
     </section>
 
-    <!-- Footer: contact and location -->
+    <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="footer-info">
             <p><strong>Istituto Scolastico Superiore</strong></p>
@@ -95,3 +106,8 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
 
 </body>
 </html>
+
+
+
+
+

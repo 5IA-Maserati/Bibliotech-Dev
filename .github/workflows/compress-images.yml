@@ -28,10 +28,10 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           compressOnly: true
-          jpegQuality: 70
-          pngQuality: 70
-          webpQuality: 70
-          avifQuality: 60
+          jpegQuality: 75
+          pngQuality: 75
+          webpQuality: 75
+          avifQuality: 65
 
           
       - name: Create New Pull Request If Needed

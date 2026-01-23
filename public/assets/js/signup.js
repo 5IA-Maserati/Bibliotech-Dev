@@ -2,7 +2,7 @@ document.getElementById("register-form").addEventListener("submit", function (e)
     e.preventDefault();
 
     const password = document.getElementById("password").value;
-    const confirm = document.getElementById("confirmPassword").value;
+    const confirm = document.getElementById("confirm-password").value;
 
     if (password !== confirm) {
         alert("Le password non coincidono");

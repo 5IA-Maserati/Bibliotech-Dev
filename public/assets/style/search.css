@@ -24,6 +24,7 @@
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+
   /* Stile predefinito (Pulsante Home) */
   border: 1px solid var(--medium-blue);
   color: var(--medium-blue);
@@ -212,6 +213,8 @@ footer span {
   color: var(--text-dark);
 }
 
+/* stylelint-disable media-feature-range-notation */
+
 /* Responsive Design */
 
 @media (max-width: 768px) {
@@ -239,6 +242,9 @@ footer span {
     grid-template-columns: 1fr;
   }
 }
+
+/* stylelint-enable media-feature-range-notation */
+
 
 /* Utilities */
 [aria-live="polite"] {

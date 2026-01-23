@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<header class="navbar" role="banner">
+    <div class="logo-area">
+        <div class="logo-placeholder" aria-hidden="true">LOGO 1</div>
+        <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
+    </div>
+    <div class="container">
+        <h1>Biblioteca Digitale</h1>
+        <p>Accedi o registrati per entrare nella piattaforma</p>
+    </div>
+</header>
+
 <div class="login-container">
     <div class="login-card">
         <h1>Biblioteca Digitale</h1>
@@ -24,15 +35,18 @@
                 <label>Password</label>
             </div>
 
-            <div class="buttons">
-                <button type="submit">Accedi</button>
-                <a href="signup.html" class="register-btn">Registrati</a>
-            </div>
-        </form>
+            <button type="submit">Accedi</button>
 
-        <p class="footer-text">© 2026 Biblioteca Scolastica</p>
+            <a href="signup.html" class="back-link">Registrati</a>
+            <a href="../index.php" class="home-btn">Torna alla Home</a>
+        </form>
     </div>
 </div>
+
+<footer>
+    <p>&copy; 2026 Biblioteca Scolastica. Tutti i diritti riservati.</p>
+    <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
+</footer>
 
 <script src="../assets/js/login.js"></script>
 </body>

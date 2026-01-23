@@ -11,6 +11,6 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
 
   // Simulazione login
   alert('Login effettuato con successo!');
-    
+
   // Qui in futuro potrai collegare un backend
 });

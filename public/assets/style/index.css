@@ -75,10 +75,6 @@ body {
     padding: 15px 5%;
 }
 
-.btn-nav:last-child {
-    margin-left: auto;
-}
-
 .btn-nav {
     padding: 10px 20px;
     background-color: var(--medium-blue);
@@ -88,6 +84,12 @@ body {
     font-weight: 500;
     transition: 0.3s;
 }
+
+.btn-nav:last-child {
+    margin-left: auto;
+}
+
+
 
 .btn-nav:hover {
     background-color: var(--dark-light-blue);

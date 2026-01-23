@@ -1,13 +1,14 @@
-document.getElementById("register-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+document.getElementById('register-form').addEventListener('submit', function (e) {
+  e.preventDefault()
 
-    const password = document.getElementById("password").value;
-    const confirm = document.getElementById("confirm-password").value;
+  const password = document.getElementById('password').value
+  const confirm = document.getElementById('confirm-password').value
 
-    if (password !== confirm) {
-        alert("Le password non coincidono");
-        return;
-    }
-
-    alert("Registrazione completata!");
-});
+  if (password !== confirm) {
+    // eslint-disable-next-line no-undef
+    alert('Le password non coincidono')
+    return
+  }
+  // eslint-disable-next-line no-undef
+  alert('Registrazione completata!')
+})

@@ -65,21 +65,21 @@ require_once __DIR__ . '/../src/php/bootstrap.php';
     <section class="photo-slider-container" aria-label="Galleria fotografica della biblioteca">
         <div class="slider-track">
             <div class="slide-group">
-                <img src="assets/img/common/img-1.jpg" alt="Copertina della biblioteca">
-                <img src="assets/img/common/img-2.jpg" alt="Area lettura della biblioteca">
-                <img src="assets/img/common/img-3.jpg" alt="Ingresso della biblioteca">
+                <img src="assets/img/common/library-1.jpg" alt="Copertina della biblioteca">
+                <img src="assets/img/common/library-2.jpg" alt="Area lettura della biblioteca">
+                <img src="assets/img/common/library-3.jpg" alt="Ingresso della biblioteca">
             </div>
 
             <div class="slide-group">
-                <img src="assets/img/common/img-4.jpg" alt="Sezione consultazione">
-                <img src="assets/img/common/img-5.jpg" alt="Scaffali della biblioteca">
-                <img src="assets/img/common/img-6.jpg" alt="Seconda area scaffali">
+                <img src="assets/img/common/library-4.jpg" alt="Sezione consultazione">
+                <img src="assets/img/common/library-5.jpg" alt="Scaffali della biblioteca">
+                <img src="assets/img/common/library-6.jpg" alt="Seconda area scaffali">
             </div>
 
             <div class="slide-group">
-                <img src="assets/img/common/img-7.jpg" alt="Sezione consultazione">
-                <img src="assets/img/common/img-8.jpg" alt="Scaffali della biblioteca">
-                <img src="assets/img/common/img-9.jpg" alt="Seconda area scaffali">
+                <img src="assets/img/common/library-7.jpg" alt="Sezione consultazione">
+                <img src="assets/img/common/library-8.jpg" alt="Scaffali della biblioteca">
+                <img src="assets/img/common/library-9.jpg" alt="Seconda area scaffali">
             </div>
         </div>
     </section>

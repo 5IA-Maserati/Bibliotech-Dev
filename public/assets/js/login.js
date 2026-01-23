@@ -1,18 +1,19 @@
-document.getElementById('login-form').addEventListener('submit', function (e) {
+// Select the registration form and attach an event listener to it
+document.getElementById('register-form').addEventListener('submit', function (e) {
+  // Prevent the form from submitting
   e.preventDefault()
 
-  const username = document.getElementById('username').value
+  // Get the password and confirm password values from the form
   const password = document.getElementById('password').value
+  const confirm = document.getElementById('confirm-password').value
 
-  if (username === '' || password === '') {
-    // eslint-disable-next-line no-undef
-    alert('Compila tutti i campi')
+  // Check if the password and confirm password values match
+  if (password !== confirm) {
+    // If they don't match, display an alert and return to prevent further execution
+    alert('Le password non coincidono')
     return
   }
-
-  // Simulazione login
-  // eslint-disable-next-line no-undef
-  alert('Login effettuato con successo!')
-
-  // Qui in futuro potrai collegare un backend
+  
+  // If the passwords match, display a success message
+  alert('Registrazione completata!')
 })

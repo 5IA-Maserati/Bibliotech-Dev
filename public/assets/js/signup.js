@@ -1,4 +1,4 @@
-document.getElementById("registerForm").addEventListener("submit", function (e) {
+document.getElementById("register-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const password = document.getElementById("password").value;

@@ -3,20 +3,10 @@ declare(strict_types=1);
 
 /**
  * -------------------------------------------------
- * Define absolute project root (NO path traversal)
- * -------------------------------------------------
- *
- * dirname(__DIR__) resolves to /project-root
- * This is safe, deterministic, and portable
- */
-define('PROJECT_ROOT', dirname(__DIR__));
-
-/**
- * -------------------------------------------------
  * Load bootstrap FIRST (headers, config, autoload)
  * -------------------------------------------------
  */
-require_once PROJECT_ROOT . '/src/php/bootstrap.php';
+require_once __DIR__ . '/bootstrap.php';
 
 ?>
 <!DOCTYPE html>
@@ -39,16 +29,16 @@ require_once PROJECT_ROOT . '/src/php/bootstrap.php';
             <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
         </div>
 
-        <a href="/pages/login.php" class="btn-accedi-text">
+        <a href="/pages/login.html" class="btn-accedi-text">
             Accedi all'area riservata
         </a>
     </header>
 
     <!-- Quick navigation -->
     <nav class="quick-nav" role="navigation" aria-label="Navigazione rapida">
-        <a href="/pages/booking.php" class="btn-nav">Restituisci Libro</a>
-        <a href="/pages/donate.php" class="btn-nav">Dona Libro</a>
-        <a href="/pages/search.php" class="btn-nav">Cerca</a>
+        <a href="/pages/booking.html" class="btn-nav">Restituisci Libro</a>
+        <a href="/pages/donate.html" class="btn-nav">Dona Libro</a>
+        <a href="/pages/search.html" class="btn-nav">Cerca</a>
     </nav>
 
     <!-- Title -->

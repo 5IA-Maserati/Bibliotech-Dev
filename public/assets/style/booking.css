@@ -59,6 +59,10 @@ a {
   text-decoration: none;
 }
 
+a {
+  margin-bottom: 1rem;
+}
+
 button:hover,
 a:hover {
   background-color: var(--dark-light-blue);
@@ -71,10 +75,8 @@ a:active {
   transform: translateY(0);
 }
 
-/* Link to search */
-a {
-  margin-bottom: 1rem;
-}
+
+/* stylelint-disable media-feature-range-notation */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -103,3 +105,5 @@ a {
     font-size: 0.95rem;
   }
 }
+
+/* stylelint-enable media-feature-range-notation */

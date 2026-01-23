@@ -23,7 +23,7 @@ body {
     background: #fff;
     padding: 40px 30px;
     border-radius: 14px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 40px rgb(0 0 0 / 8%);
     text-align: center;
 }
 

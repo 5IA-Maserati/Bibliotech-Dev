@@ -1,4 +1,14 @@
 <?php
+
+/**
+ * -------------------------------------------------
+ * Bootstrap file
+ *
+ * Security headers and runtime safety configuration.
+ * This file MUST be included before any output.
+ * -------------------------------------------------
+ */
+
 declare(strict_types=1);
 
 /**

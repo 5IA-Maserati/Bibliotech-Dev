@@ -1,12 +1,18 @@
 <?php
-declare(strict_types=1);
 
 /**
  * -------------------------------------------------
- * Load bootstrap FIRST (headers, config, autoload)
+ * Application entry point
+ *
+ * Loads bootstrap (headers, config, autoload)
+ * before any output is sent.
  * -------------------------------------------------
  */
+
+declare(strict_types=1);
+
 require_once __DIR__ . '/bootstrap.php';
+
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +29,7 @@ require_once __DIR__ . '/bootstrap.php';
 <body>
 
     <!-- Header -->
-    <header class="navbar" role="banner">
+    <header class="navbar">
         <div class="logo-area">
             <div class="logo-placeholder" aria-hidden="true">LOGO 1</div>
             <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
@@ -35,7 +41,7 @@ require_once __DIR__ . '/bootstrap.php';
     </header>
 
     <!-- Quick navigation -->
-    <nav class="quick-nav" role="navigation" aria-label="Navigazione rapida">
+    <nav class="quick-nav" aria-label="Navigazione rapida">
         <a href="/pages/booking.html" class="btn-nav">Restituisci Libro</a>
         <a href="/pages/donate.html" class="btn-nav">Dona Libro</a>
         <a href="/pages/search.html" class="btn-nav">Cerca</a>
@@ -47,7 +53,7 @@ require_once __DIR__ . '/bootstrap.php';
     <div class="css-divider" aria-hidden="true"></div>
 
     <!-- Main content -->
-    <main class="content-wrapper" role="main">
+    <main class="content-wrapper">
         <section class="orari-mega-container" aria-labelledby="orari-biblioteca">
             <div class="orari-label">
                 <h2 id="orari-biblioteca">ORARI<br>BIBLIOTECA</h2>
@@ -86,7 +92,7 @@ require_once __DIR__ . '/bootstrap.php';
     </section>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <div class="footer-info">
             <p><strong>Istituto Scolastico Superiore</strong></p>
             <p>Via della Scuola, 123 - 00100 Città (Prov)</p>

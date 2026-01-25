@@ -19,7 +19,7 @@ header {
     background-color: #5f7f97;
     color: white;
     padding: 1.5rem 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgb(0,0,0,15%);
 }
 
 header .navbar {
@@ -67,7 +67,7 @@ header p {
     max-width: 420px;
     padding: 40px 30px;
     border-radius: 14px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgb(0,0,0,10%);
     text-align: center;
 }
 

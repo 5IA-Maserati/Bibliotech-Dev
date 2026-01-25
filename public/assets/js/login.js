@@ -13,7 +13,7 @@ document.getElementById('register-form').addEventListener('submit', function (e)
     alert('Le password non coincidono')
     return
   }
-  
+
   // If the passwords match, display a success message
   alert('Registrazione completata!')
 })

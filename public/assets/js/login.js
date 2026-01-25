@@ -17,3 +17,4 @@ document.getElementById('register-form').addEventListener('submit', function (e)
   // If the passwords match, display a success message
   alert('Registrazione completata!')
 })
+

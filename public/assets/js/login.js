@@ -12,9 +12,9 @@ document.getElementById('register-form').addEventListener('submit', function (e)
     // If they don't match, display an alert and return to prevent further execution
     alert('Le password non coincidono')
     return
-  }
+}
 
   // If the passwords match, display a success message
   alert('Registrazione completata!')
+  
 })
-

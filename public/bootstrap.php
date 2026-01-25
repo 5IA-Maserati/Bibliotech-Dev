@@ -20,11 +20,13 @@ declare(strict_types=1);
 header(
     "Content-Security-Policy: "
     . "default-src 'self'; "
-    . "style-src 'self'; "
+    . "style-src 'self' 'unsafe-inline'; "
     . "script-src 'self'; "
     . "img-src 'self'; "
     . "font-src 'self'; "
-    . "frame-src 'none'"
+    . "frame-src 'self'; "
+    . "object-src 'none'; "
+    . "base-uri 'self';"
 );
 
 header('X-Content-Type-Options: nosniff');

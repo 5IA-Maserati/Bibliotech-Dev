@@ -1,0 +1,13 @@
+{
+  "threshold": 10,
+  "minLines": 5,
+  "minTokens": 70,
+  "absolute": true,
+  "exitCode": 1,
+  "ignore": [
+    "node_modules/**",
+    ".git/**",
+    "dist/**",
+    "build/**"
+  ]
+}

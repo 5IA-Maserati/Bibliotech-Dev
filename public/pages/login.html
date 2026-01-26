@@ -8,16 +8,11 @@
 </head>
 <body>
 
-<header class="navbar">
-    <div class="logo-area">
-        <div class="logo-placeholder" aria-hidden="true">LOGO 1</div>
-        <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
-    </div>
-    <div class="container">
-        <h1>Biblioteca Digitale</h1>
-        <p>Accedi o registrati per entrare nella piattaforma</p>
-    </div>
-</header>
+<?php
+$title = 'Biblioteca Digitale';
+$subtitle = 'Accedi o registrati per entrare nella piattaforma';
+include '../includes/header.php';
+?>
 
 <div class="login-container">
     <div class="login-card">
@@ -25,15 +20,21 @@
         <p class="subtitle">Accesso studenti e docenti</p>
 
         <form id="login-form">
-            <div class="input-group">
-                <input type="text" id="username" required aria-label="Inserisci il tuo username">
-                <label for="username">Username</label>
-            </div>
+            <?php
+            $type = 'text';
+            $id = 'username';
+            $label = 'Username';
+            $aria_label = 'Inserisci il tuo username';
+            include '../includes/form-input.php';
+            ?>
 
-            <div class="input-group">
-                <input type="password" id="password" required aria-label="Inserisci la tua password">
-                <label for="password">Password</label>
-            </div>
+            <?php
+            $type = 'password';
+            $id = 'password';
+            $label = 'Password';
+            $aria_label = 'Inserisci la tua password';
+            include '../includes/form-input.php';
+            ?>
 
             <button type="submit">Accedi</button>
 

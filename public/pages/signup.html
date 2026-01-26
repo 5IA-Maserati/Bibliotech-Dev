@@ -8,16 +8,11 @@
 </head>
 <body>
 
-<header class="navbar">
-    <div class="logo-area">
-        <div class="logo-placeholder">LOGO 1</div>
-        <div class="logo-placeholder">LOGO 2</div>
-    </div>
-    <div class="container">
-        <h1>Biblioteca Digitale</h1>
-        <p>Accedi o registrati per entrare nella piattaforma</p>
-    </div>
-</header>
+<?php
+$title = 'Biblioteca Digitale';
+$subtitle = 'Accedi o registrati per entrare nella piattaforma';
+include '../includes/header.php';
+?>
 
 <div class="login-container">
     <div class="login-card">
@@ -25,35 +20,53 @@
         <p class="subtitle">Crea un nuovo account</p>
 
         <form id="register-form">
-            <div class="input-group">
-                <input type="text" id="nome" required aria-label="Inserisci il tuo nome">
-                <label for="nome">Nome</label>
-            </div>
+            <?php
+            $type = 'text';
+            $id = 'nome';
+            $label = 'Nome';
+            $aria_label = 'Inserisci il tuo nome';
+            include '../includes/form-input.php';
+            ?>
 
-            <div class="input-group">
-                <input type="text" id="cognome" required aria-label="Inserisci il tuo cognome">
-                <label for="cognome">Cognome</label>
-            </div>
+            <?php
+            $type = 'text';
+            $id = 'cognome';
+            $label = 'Cognome';
+            $aria_label = 'Inserisci il tuo cognome';
+            include '../includes/form-input.php';
+            ?>
 
-            <div class="input-group">
-                <input type="date" id="data-nascita" required aria-label="Inserisci la tua data di nascita">
-                <label class="fixed" for="data-nascita">Data di nascita</label>
-            </div>
+            <?php
+            $type = 'date';
+            $id = 'data-nascita';
+            $label = 'Data di nascita';
+            $aria_label = 'Inserisci la tua data di nascita';
+            include '../includes/form-input.php';
+            ?>
 
-            <div class="input-group">
-                <input type="email" id="email" required aria-label="Inserisci la tua email">
-                <label for="email">Email</label>
-            </div>
+            <?php
+            $type = 'email';
+            $id = 'email';
+            $label = 'Email';
+            $aria_label = 'Inserisci la tua email';
+            include '../includes/form-input.php';
+            ?>
 
-            <div class="input-group">
-                <input type="password" id="password" required aria-label="Inserisci la tua password">
-                <label for="password">Password</label>
-            </div>
+            <?php
+            $type = 'password';
+            $id = 'password';
+            $label = 'Password';
+            $aria_label = 'Inserisci la tua password';
+            include '../includes/form-input.php';
+            ?>
 
-            <div class="input-group">
-                <input type="password" id="confirm-password" required aria-label="Conferma la tua password">
-                <label for="confirm-password">Conferma password</label>
-            </div>
+            <?php
+            $type = 'password';
+            $id = 'confirm-password';
+            $label = 'Conferma password';
+            $aria_label = 'Conferma la tua password';
+            include '../includes/form-input.php';
+            ?>
 
             <button type="submit">Registrati</button>
         </form>

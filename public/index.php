@@ -35,7 +35,7 @@ require_once __DIR__ . '/bootstrap.php';
             <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
         </div>
 
-        <a href="/pages/login.html" class="btn-accedi-text">
+        <a href="/pages/login.php" class="btn-accedi-text">
             Accedi all'area riservata
         </a>
     </header>
@@ -43,8 +43,8 @@ require_once __DIR__ . '/bootstrap.php';
     <!-- Quick navigation -->
     <nav class="quick-nav" aria-label="Navigazione rapida">
         <a href="/pages/booking.html" class="btn-nav">Restituisci Libro</a>
-        <a href="/pages/donate.html" class="btn-nav">Dona Libro</a>
-        <a href="/pages/search.html" class="btn-nav">Cerca</a>
+        <a href="/pages/donate.php" class="btn-nav">Dona Libro</a>
+        <a href="/pages/search.php" class="btn-nav">Cerca</a>
     </nav>
 
     <!-- Title -->

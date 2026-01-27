@@ -1,3 +1,14 @@
+<?php
+$title = 'Dona un Libro alla Biblioteca';
+$subtitle = 'Aiutaci a crescere: condividi i tuoi libri con la comunità';
+$show_nav = true;
+$nav_items = [
+    '../index.php' => 'Home',
+    'search.php' => 'Torna al Catalogo'
+];
+include '../includes/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -13,16 +24,7 @@
 </head>
 <body>
 
-<!-- <?php
-$title = 'Dona un Libro alla Biblioteca';
-$subtitle = 'Aiutaci a crescere: condividi i tuoi libri con la comunità';
-$show_nav = true;
-$nav_items = [
-    '../index.php' => 'Home',
-    'search.html' => 'Torna al Catalogo'
-];
-include '../includes/header.php';
-?> -->
+
 
 <main class="container">
     <section class="donate-section">
@@ -107,7 +109,7 @@ include '../includes/header.php';
                     Scopri di Più
                 </button>
 
-                <a href="search.html" class="btn-secondary">Torna al Catalogo</a>
+                <a href="search.php" class="btn-secondary">Torna al Catalogo</a>
             </div>
 
         </div>

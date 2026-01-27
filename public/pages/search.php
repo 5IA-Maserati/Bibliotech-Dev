@@ -1,3 +1,9 @@
+<?php
+$title = 'Catalogo';
+$show_nav = false;
+include '../includes/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -8,16 +14,12 @@
 </head>
 <body>
 
-<?php
-$title = 'Catalogo';
-$show_nav = false;
-include '../includes/header.php';
-?>
+
 
   <nav class="action-bar">
     <div class="nav-buttons">
       <a href="../index.php" class="btn-nav">Home</a>
-      <a href="donate.html" class="btn-nav donate">Dona un libro</a>
+      <a href="donate.php" class="btn-nav donate">Dona un libro</a>
     </div>
   </nav>
 

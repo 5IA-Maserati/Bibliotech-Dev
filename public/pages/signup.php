@@ -11,6 +11,7 @@ include '../includes/header.php';
     <title>Registrazione | Biblioteca Digitale</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/style/login.css">
+    <link rel="stylesheet" href="../assets/style/validation.css">
 </head>
 <body>
 
@@ -83,6 +84,7 @@ include '../includes/header.php';
     <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
 </footer>
 
+<script src="../assets/js/form-validator.js"></script>
 <script src="../assets/js/signup.js"></script>
 </body>
 </html>

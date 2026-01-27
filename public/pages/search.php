@@ -11,6 +11,7 @@ include '../includes/header.php';
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Catalogo Bibliotecario</title>
   <link rel="stylesheet" href="../assets/style/search.css">
+  <link rel="stylesheet" href="../assets/style/validation.css">
 </head>
 <body>
 
@@ -54,6 +55,7 @@ include '../includes/header.php';
     </footer>
   </main>
 
+  <script src="../assets/js/form-validator.js"></script>
   <script src="../assets/js/search.js"></script>
 </body>
 </html>

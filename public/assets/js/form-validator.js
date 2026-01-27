@@ -46,6 +46,28 @@ const FormValidator = {
       maxLength: 255,
       pattern: /^[a-zA-Z0-9àèéìòù\s\-',.&()]*$/,
       message: 'La ricerca contiene caratteri non validi'
+    },
+    'book-title': {
+      minLength: 1,
+      maxLength: 255,
+      pattern: /^[a-zA-Z0-9àèéìòù\s\-',.&:()]+$/,
+      message: 'Il titolo del libro contiene caratteri non validi'
+    },
+    'student-name': {
+      minLength: 2,
+      maxLength: 50,
+      pattern: /^[a-zA-Zàèéìòù\s'-]+$/,
+      message: 'Il nome deve contenere solo lettere e spazi'
+    },
+    'student-email': {
+      pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      message: 'Inserisci un indirizzo email valido'
+    },
+    'booking-date': {
+      minLength: 10,
+      maxLength: 10,
+      pattern: /^\d{4}-\d{2}-\d{2}$/,
+      message: 'Inserisci una data valida'
     }
   },
 

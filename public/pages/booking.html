@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prenotazione</title>
     <link rel="stylesheet" href="../assets/style/booking.css">
+    <link rel="stylesheet" href="../assets/style/validation.css">
 </head>
 <body>
     <div class="container">
@@ -14,10 +15,58 @@
             <p>Descrizione del libro</p>
         </div>
 
-        <a>Prenota</a>
+        <form id="booking-form">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="book-title" 
+                    placeholder="Titolo libro" 
+                    required
+                    aria-label="Titolo del libro"
+                >
+                <label for="book-title">Titolo del libro</label>
+            </div>
 
-        <a href = "search.php">Torna all'elenco libri</a>
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="student-name" 
+                    placeholder="Nome studente" 
+                    required
+                    aria-label="Nome dello studente"
+                >
+                <label for="student-name">Nome</label>
+            </div>
+
+            <div class="input-group">
+                <input 
+                    type="email" 
+                    id="student-email" 
+                    placeholder="Email" 
+                    required
+                    aria-label="Email dello studente"
+                >
+                <label for="student-email">Email</label>
+            </div>
+
+            <div class="input-group">
+                <input 
+                    type="date" 
+                    id="booking-date" 
+                    required
+                    aria-label="Data di prenotazione"
+                >
+                <label for="booking-date">Data di prenotazione</label>
+            </div>
+
+            <button type="submit">Prenota</button>
+        </form>
+
+        <a href="search.php">Torna all'elenco libri</a>
         <a href="../index.php">Torna alla home</a>
     </div>
+
+    <script src="../assets/js/form-validator.js"></script>
+    <script src="../assets/js/booking.js"></script>
 </body>
 </html>

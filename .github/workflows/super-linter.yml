@@ -24,4 +24,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
-          JSCPD_THRESHOLD: 10
+          VALIDATE_JSCPD: true
+          JSCPD_ARGUMENTS: "--threshold 10"

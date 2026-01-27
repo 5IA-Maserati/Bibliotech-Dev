@@ -1,19 +1,29 @@
-// Select the registration form and attach an event listener to it
-document.getElementById('register-form').addEventListener('submit', function (e) {
-  // Prevent the form from submitting
+/**
+ * Login Form Validation and Submission
+ */
+
+// Select the login form and attach event listener
+document.getElementById('login-form').addEventListener('submit', function (e) {
+  // Prevent default form submission
   e.preventDefault()
 
-  // Get the password and confirm password values from the form
-  const password = document.getElementById('password').value
-  const confirm = document.getElementById('confirm-password').value
-
-  // Check if the password and confirm password values match
-  if (password !== confirm) {
-    // If they don't match, display an alert and return to prevent further execution
-    alert('Le password non coincidono')
+  // Validate all fields
+  const validation = FormValidator.validateForm('login-form')
+  
+  if (!validation.valid) {
+    console.error('Form validation failed:', validation.errors)
+    // Errors are already displayed by markFieldError
     return
   }
 
-  // If the passwords match, display a success message
-  alert('Registrazione completata!')
+  // Sanitize all inputs
+  const sanitizedData = FormValidator.sanitizeForm('login-form')
+  
+  // Show success message (in production, send to server)
+  console.log('Sanitized form data:', sanitizedData)
+  alert('Login completato!')
 })
+
+// Enable real-time validation on blur
+FormValidator.enableRealTimeValidation('login-form')
+

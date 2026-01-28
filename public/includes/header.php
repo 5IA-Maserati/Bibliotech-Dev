@@ -1,15 +1,17 @@
 <?php
 /**
  * Reusable header component
- * Parameters:
- * - $title: Page title (required)
- * - $subtitle: Page subtitle (optional)
- * - $show_nav: Whether to show quick-nav (optional, default false)
+ *
+ * @var string $title
+ * @var string|null $subtitle
+ * @var bool|null $show_nav
+ * @var array<string, string>|null $nav_items
  */
-$title = $title ?? 'Biblioteca Digitale';
-$subtitle = $subtitle ?? '';
-$show_nav = $show_nav ?? false;
-$nav_items = $nav_items ?? [];
+
+$title = isset($title) ? $title : 'Biblioteca Digitale';
+$subtitle = isset($subtitle) ? $subtitle : null;
+$show_nav = isset($show_nav) ? $show_nav : false;
+$nav_items = isset($nav_items) ? $nav_items : [];
 ?>
 
 <header class="navbar">
@@ -17,18 +19,22 @@ $nav_items = $nav_items ?? [];
         <div class="logo-placeholder" aria-hidden="true">LOGO 1</div>
         <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
     </div>
+
     <div class="container">
-        <h1><?php echo htmlspecialchars($title); ?></h1>
-        <?php if ($subtitle): ?>
-            <p><?php echo htmlspecialchars($subtitle); ?></p>
+        <h1><?= htmlspecialchars($title) ?></h1>
+
+        <?php if ($subtitle !== null && $subtitle !== ''): ?>
+            <p><?= htmlspecialchars($subtitle) ?></p>
         <?php endif; ?>
     </div>
 </header>
 
-<?php if ($show_nav && !empty($nav_items)): ?>
+<?php if ($show_nav === true && $nav_items !== []): ?>
 <nav class="quick-nav" aria-label="Navigazione rapida">
     <?php foreach ($nav_items as $link => $label): ?>
-        <a href="<?php echo htmlspecialchars($link); ?>" class="btn-nav"><?php echo htmlspecialchars($label); ?></a>
+        <a href="<?= htmlspecialchars($link) ?>" class="btn-nav">
+            <?= htmlspecialchars($label) ?>
+        </a>
     <?php endforeach; ?>
 </nav>
 <?php endif; ?>

@@ -1,28 +1,39 @@
 <?php
-
 declare(strict_types=1);
+
 session_start();
 header('Content-Type: application/json');
 
-require_once __DIR__ . '/src/db/db.php';
+require_once __DIR__ . '/../db/db.php';
 
-$data = json_decode(file_get_contents('php://input'), true);
+/** @var PDO $pdo */
 
-$email = trim($data['email'] ?? '');
-$password = $data['password'] ?? '';
+$rawInput = file_get_contents('php://input');
+$data = json_decode($rawInput, true);
 
-if (empty($email) || empty($password)) {
+if (!is_array($data)) {
+    http_response_code(400);
+    echo json_encode(['error' => 'JSON non valido']);
+    exit;
+}
+
+$email = isset($data['email']) ? trim((string) $data['email']) : '';
+$password = isset($data['password']) ? (string) $data['password'] : '';
+
+if ($email === '' || $password === '') {
     http_response_code(400);
     echo json_encode(['error' => 'Inserisci email e password']);
     exit;
 }
 
-$stmt = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+$stmt = $pdo->prepare(
+    'SELECT id, password, role FROM users WHERE email = :email'
+);
 $stmt->execute(['email' => $email]);
 
 $user = $stmt->fetch();
 
-if (!$user || !password_verify($password, $user['password'])) {
+if ($user === false || !password_verify($password, $user['password'])) {
     http_response_code(401);
     echo json_encode(['error' => 'Email o password errati']);
     exit;
@@ -33,5 +44,5 @@ $_SESSION['role'] = $user['role'];
 
 echo json_encode([
     'success' => true,
-    'role' => $user['role']
+    'role' => $user['role'],
 ]);

@@ -1,29 +1,31 @@
 <?php
 /**
  * Reusable form input component
- * Parameters:
- * - $type: Input type (text, password, email, etc.) - default: text
- * - $id: Input ID and name
- * - $label: Label text
- * - $placeholder: Placeholder text (optional)
- * - $required: Whether field is required (optional, default: true)
- * - $aria_label: Aria label for accessibility (optional)
+ *
+ * @var string|null $type
+ * @var string $id
+ * @var string $label
+ * @var string|null $placeholder
+ * @var bool|null $required
+ * @var string|null $aria_label
  */
-$type = $type ?? 'text';
-$id = $id ?? '';
-$label = $label ?? '';
-$placeholder = $placeholder ?? '';
-$required = $required ?? true;
-$aria_label = $aria_label ?? $label;
+
+$type = isset($type) ? $type : 'text';
+$placeholder = isset($placeholder) ? $placeholder : null;
+$required = isset($required) ? $required : true;
+$aria_label = isset($aria_label) ? $aria_label : $label;
 ?>
 
 <div class="input-group">
     <input
-        type="<?php echo htmlspecialchars($type); ?>"
-        id="<?php echo htmlspecialchars($id); ?>"
-        <?php if ($required): ?>required<?php endif; ?>
-        <?php if (!empty($placeholder)): ?>placeholder="<?php echo htmlspecialchars($placeholder); ?>"<?php endif; ?>
-        <?php if (!empty($aria_label)): ?>aria-label="<?php echo htmlspecialchars($aria_label); ?>"<?php endif; ?>
+        type="<?= htmlspecialchars($type) ?>"
+        id="<?= htmlspecialchars($id) ?>"
+        name="<?= htmlspecialchars($id) ?>"
+        <?= $required === true ? 'required' : '' ?>
+        <?= $placeholder !== null && $placeholder !== '' ? 'placeholder="' . htmlspecialchars($placeholder) . '"' : '' ?>
+        <?= $aria_label !== null && $aria_label !== '' ? 'aria-label="' . htmlspecialchars($aria_label) . '"' : '' ?>
     >
-    <label for="<?php echo htmlspecialchars($id); ?>"><?php echo htmlspecialchars($label); ?></label>
+    <label for="<?= htmlspecialchars($id) ?>">
+        <?= htmlspecialchars($label) ?>
+    </label>
 </div>

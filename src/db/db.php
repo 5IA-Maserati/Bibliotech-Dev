@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+/**
+ * Database connection
+ *
+ * @var PDO $pdo
+ */
+
 $host = 'localhost';
 $db = 'bibliotech';
 $user = 'root';
@@ -15,6 +21,7 @@ $options = [
 ];
 
 try {
+    /** @var PDO $pdo */
     $pdo = new PDO($dsn, $user, $password, $options);
 } catch (PDOException $e) {
     http_response_code(500);

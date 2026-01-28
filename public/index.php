@@ -35,9 +35,16 @@ require_once __DIR__ . '/bootstrap.php';
             <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
         </div>
 
-        <a href="/pages/login.php" class="btn-accedi-text">
-            Accedi all'area riservata
-        </a>
+        <?php if (isset($_SESSION['user'])) : ?>
+            <a href="/auth/logout.php" class="btn-accedi-text">
+                Logout
+            </a>
+        <?php else : ?>
+            <a href="/pages/login.php" class="btn-accedi-text">
+                Accedi all'area riservata
+            </a>
+        <?php endif; ?>
+        
     </header>
 
     <!-- Quick navigation -->

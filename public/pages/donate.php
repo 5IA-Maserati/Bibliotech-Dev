@@ -16,16 +16,13 @@ include '../includes/header.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dona un Libro - Biblioteca</title>
 
-    <!-- Leaflet CSS (locale) -->
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="../assets/libs/leaflet/leaflet.css">
-    <script src="../assets/libs/leaflet/leaflet.js"></script>
 
     <!-- Donate page CSS -->
     <link rel="stylesheet" href="../assets/style/donate.css">
 </head>
 <body>
-
-
 
 <main class="container">
     <section class="donate-section">
@@ -52,7 +49,7 @@ include '../includes/header.php';
                 </div>
 
                 <div class="map-container">
-                    <div id="map"></div>
+                    <div id="map" style="height: 400px;"></div>
                 </div>
 
                 <div class="location-note">
@@ -62,55 +59,6 @@ include '../includes/header.php';
                         subito a destra. Il nostro staff ti guiderà nel processo di donazione e catalogazione.
                     </p>
                 </div>
-            </div>
-
-            <div class="info-box hours">
-                <h2>🕒 Orari di Apertura</h2>
-                <div class="hours-table">
-                    <div class="hour-row">
-                        <span class="day">Lunedì - Venerdì:</span>
-                        <span class="time">09:00 - 13:00</span>
-                    </div>
-                    <div class="hour-row">
-                        <span class="day">Sabato - Domenica:</span>
-                        <span class="time">Chiuso</span>
-                    </div>
-                    <div class="hour-row">
-                        <span class="day">Festivi:</span>
-                        <span class="time">Chiuso</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-box highlight">
-                <h2>💡 Cosa Puoi Donare</h2>
-                <ul class="donate-list">
-                    <li>Libri in buone condizioni</li>
-                    <li>Qualsiasi genere: romanzi, saggistica, storia, fantascienza, ragazzi, ecc.</li>
-                    <li>Libri in italiano e in altre lingue</li>
-                    <li>Enciclopedie e opere di riferimento</li>
-                </ul>
-            </div>
-
-            <div class="info-box warning">
-                <h2>⚠️ Cosa Non Accettiamo</h2>
-                <ul class="donate-list">
-                    <li>Libri danneggiati, sporchi o con pagine mancanti</li>
-                    <li>Libri fortemente sottolineati o annotati</li>
-                    <li>Fumetti e riviste (in generale)</li>
-                </ul>
-            </div>
-
-            <div class="cta-section">
-                <h2>Sei Pronto a Donare?</h2>
-                <p>Raccogli i tuoi libri e vieni a trovarci durante gli orari di apertura!</p>
-
-                <button class="btn-primary"
-                    onclick="alert('Grazie per il tuo interesse! Visita la biblioteca negli orari indicati.')">
-                    Scopri di Più
-                </button>
-
-                <a href="search.php" class="btn-secondary">Torna al Catalogo</a>
             </div>
 
         </div>
@@ -123,7 +71,7 @@ include '../includes/header.php';
 </footer>
 
 <!-- Leaflet JS -->
-<script src= "../assets/js/libs/dist/leaflet.js"></script>
+<script src="../assets/libs/leaflet/leaflet.js"></script>
 
 <!-- Donate page JS -->
 <script src="../assets/js/donate.js"></script>

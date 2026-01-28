@@ -2,7 +2,7 @@
 /**
  * Reusable header component
  *
- * @var string $title
+ * @var string|null $title
  * @var string|null $subtitle
  * @var bool|null $show_nav
  * @var array<string, string>|null $nav_items

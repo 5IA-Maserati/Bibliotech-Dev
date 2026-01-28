@@ -12,7 +12,7 @@ input.error {
 input.error:focus {
   outline: none;
   border-color: #d32f2f !important;
-  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+  box-shadow: 0 0 0 3px rgb(211 47 47 / 10%)
 }
 
 /* Error message styling */
@@ -42,7 +42,7 @@ input.error:focus {
 .input-group input:focus {
   outline: none;
   border-color: #4CAF50;
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  box-shadow: 0 0 0 3px rgb(76 175 80 / 10%)
 }
 
 .input-group label {

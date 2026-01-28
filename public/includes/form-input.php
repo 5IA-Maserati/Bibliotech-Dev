@@ -2,30 +2,36 @@
 /**
  * Reusable form input component
  *
- * @var string|null $type
- * @var string $id
- * @var string $label
- * @var string|null $placeholder
- * @var bool|null $required
- * @var string|null $aria_label
+ * @param string $id The ID of the input
+ * @param string $label The label text
+ * @param string $type The input type (default: 'text')
+ * @param string|null $placeholder Optional placeholder text
+ * @param bool $required Whether the input is required (default: true)
+ * @param string|null $aria_label Optional ARIA label (defaults to $label)
  */
 
-$type = isset($type) ? $type : 'text';
-$placeholder = isset($placeholder) ? $placeholder : null;
-$required = isset($required) ? $required : true;
-$aria_label = isset($aria_label) ? $aria_label : $label;
+declare(strict_types=1);
+
+// Ensure required variables exist
+$id = $id ??= '';
+$label = $label ??= '';
+$type = $type ??= 'text';
+$placeholder = $placeholder ??= '';
+$required = $required ??= true;
+$aria_label = $aria_label ??= $label;
+
 ?>
 
 <div class="input-group">
     <input
-        type="<?= htmlspecialchars($type) ?>"
-        id="<?= htmlspecialchars($id) ?>"
-        name="<?= htmlspecialchars($id) ?>"
-        <?= $required === true ? 'required' : '' ?>
-        <?= $placeholder !== null && $placeholder !== '' ? 'placeholder="' . htmlspecialchars($placeholder) . '"' : '' ?>
-        <?= $aria_label !== null && $aria_label !== '' ? 'aria-label="' . htmlspecialchars($aria_label) . '"' : '' ?>
+        type="<?= htmlspecialchars($type, ENT_QUOTES, 'UTF-8') ?>"
+        id="<?= htmlspecialchars($id, ENT_QUOTES, 'UTF-8') ?>"
+        name="<?= htmlspecialchars($id, ENT_QUOTES, 'UTF-8') ?>"
+        <?= $required ? 'required' : '' ?>
+        <?= $placeholder !== '' ? 'placeholder="' . htmlspecialchars($placeholder, ENT_QUOTES, 'UTF-8') . '"' : '' ?>
+        <?= $aria_label !== '' ? 'aria-label="' . htmlspecialchars($aria_label, ENT_QUOTES, 'UTF-8') . '"' : '' ?>
     >
-    <label for="<?= htmlspecialchars($id) ?>">
-        <?= htmlspecialchars($label) ?>
+    <label for="<?= htmlspecialchars($id, ENT_QUOTES, 'UTF-8') ?>">
+        <?= htmlspecialchars($label, ENT_QUOTES, 'UTF-8') ?>
     </label>
 </div>

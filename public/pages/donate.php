@@ -17,7 +17,8 @@ include '../includes/header.php';
     <title>Dona un Libro - Biblioteca</title>
 
     <!-- Leaflet CSS (locale) -->
-    <link rel="stylesheet" href="../assets/js/libs/dist/leaflet.css">
+    <link rel="stylesheet" href="../assets/libs/leaflet/leaflet.css">
+    <script src="../assets/libs/leaflet/leaflet.js"></script>
 
     <!-- Donate page CSS -->
     <link rel="stylesheet" href="../assets/style/donate.css">
@@ -121,8 +122,8 @@ include '../includes/header.php';
     <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
 </footer>
 
-<!-- Leaflet JS (locale) -->
-<script src="../assets/js/libs/dist/leaflet.js"></script>
+<!-- Leaflet JS -->
+<script src= "../assets/js/libs/dist/leaflet.js"></script>
 
 <!-- Donate page JS -->
 <script src="../assets/js/donate.js"></script>

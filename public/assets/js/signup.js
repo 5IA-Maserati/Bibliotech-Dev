@@ -1,3 +1,5 @@
+/* global FormValidator, alert */
+
 /**
  * Registration Form Validation and Submission
  */

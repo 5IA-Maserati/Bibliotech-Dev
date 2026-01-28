@@ -1,54 +1,54 @@
+/* eslint-env browser */
+/* global FormValidator */
+
 /**
  * Search Form Validation and Functionality
  */
 
-// Get search input and button elements
-const searchInput = document.getElementById('q');
-const searchButton = document.querySelector('.btn-search');
-const genreFilter = document.getElementById('genre');
-const sortFilter = document.getElementById('sort');
+const searchInput = document.getElementById('q')
+const searchButton = document.querySelector('.btn-search')
 
-// Add search validation on button click
-searchButton.addEventListener('click', function (e) {
-  e.preventDefault();
+// Filtri (attualmente non usati, ma previsti)
+const _genreFilter = document.getElementById('genre')
+const _sortFilter = document.getElementById('sort')
 
-  // Validate search input
-  const searchValue = searchInput.value.trim();
+if (searchInput && searchButton) {
+  // Add search validation on button click
+  searchButton.addEventListener('click', function (e) {
+    e.preventDefault()
 
-  if (searchValue === '') {
-    FormValidator.markFieldError('q', 'Inserisci un termine di ricerca');
-    return;
-  }
+    const searchValue = searchInput.value.trim()
 
-  // Validate search input against pattern
-  const validation = FormValidator.validateField('q');
+    if (searchValue === '') {
+      FormValidator.markFieldError('q', 'Inserisci un termine di ricerca')
+      return
+    }
 
-  if (!validation.valid) {
-    FormValidator.markFieldError('q', validation.message);
-    return;
-  }
+    const validation = FormValidator.validateField('q')
 
-  // Sanitize search input
-  const sanitizedSearch = FormValidator.sanitize(searchValue);
-  console.log('Performing search for:', sanitizedSearch);
+    if (!validation.valid) {
+      FormValidator.markFieldError('q', validation.message)
+      return
+    }
 
-  // Clear error on successful validation
-  FormValidator.clearFieldError('q');
+    const sanitizedSearch = FormValidator.sanitize(searchValue)
+    console.log('Performing search for:', sanitizedSearch)
 
-  // TODO: Perform actual search operation here
-  // For now, just log the sanitized search term
-});
+    FormValidator.clearFieldError('q')
+    // TODO: search reale
+  })
 
-// Real-time validation and error clearing on input
-searchInput.addEventListener('input', function () {
-  if (searchInput.classList.contains('error')) {
-    FormValidator.clearFieldError('q');
-  }
-});
+  // Real-time validation
+  searchInput.addEventListener('input', function () {
+    if (searchInput.classList.contains('error')) {
+      FormValidator.clearFieldError('q')
+    }
+  })
 
-// Validate on Enter key press
-searchInput.addEventListener('keypress', function (e) {
-  if (e.key === 'Enter') {
-    searchButton.click();
-  }
-});
+  // Validate on Enter
+  searchInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      searchButton.click()
+    }
+  })
+}

@@ -1,29 +1,31 @@
+/* eslint-env browser */
+/* global FormValidator */
+
 /**
  * Login Form Validation and Submission
  */
 
-// Select the login form and attach event listener
-document.getElementById('login-form').addEventListener('submit', function (e) {
-  // Prevent default form submission
-  e.preventDefault()
+const loginForm = document.getElementById('login-form')
 
-  // Validate all fields
-  const validation = FormValidator.validateForm('login-form')
+if (loginForm) {
+  loginForm.addEventListener('submit', function (e) {
+    e.preventDefault()
 
-  if (!validation.valid) {
-    console.error('Form validation failed:', validation.errors)
-    // Errors are already displayed by markFieldError
-    return
-  }
+    // Validate all fields
+    const validation = FormValidator.validateForm('login-form')
 
-  // Sanitize all inputs
-  const sanitizedData = FormValidator.sanitizeForm('login-form')
+    if (!validation.valid) {
+      console.error('Form validation failed:', validation.errors)
+      return
+    }
 
-  // Show success message (in production, send to server)
-  console.log('Sanitized form data:', sanitizedData)
-  alert('Login completato!')
-})
+    // Sanitize all inputs
+    const sanitizedData = FormValidator.sanitizeForm('login-form')
+    console.log('Sanitized form data:', sanitizedData)
 
-// Enable real-time validation on blur
-FormValidator.enableRealTimeValidation('login-form')
+    alert('Login completato!')
+  })
 
+  // Enable real-time validation on blur
+  FormValidator.enableRealTimeValidation('login-form')
+}

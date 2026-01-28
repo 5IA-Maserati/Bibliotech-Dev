@@ -12,12 +12,16 @@
 
 declare(strict_types=1);
 
-// Imposta valori di default solo se non definiti
+// Set default values if not provided
 $type = $type ?? 'text';
 $placeholder = $placeholder ?? null;
 $required = $required ?? true;
+
+// $aria_label is nullable, defaults to $label
 $aria_label = $aria_label ?? $label;
 
+// $type, $id, $label are always non-null strings
+// $aria_label and $placeholder can be null
 ?>
 
 <div class="input-group">

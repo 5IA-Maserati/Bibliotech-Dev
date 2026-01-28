@@ -44,7 +44,7 @@ require_once __DIR__ . '/bootstrap.php';
                 Accedi all'area riservata
             </a>
         <?php endif; ?>
-        
+
     </header>
 
     <!-- Quick navigation -->

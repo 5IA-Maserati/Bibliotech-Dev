@@ -12,7 +12,7 @@ const FormValidator = {
       minLength: 3,
       maxLength: 20,
       pattern: /^[a-zA-Z0-9_-]+$/, // Alphanumeric, underscore, hyphen only
-      message: 'Il nome utente dovrebbe contenere da 3 a 20 caratteri (alfanumerici, _, -)' 
+      message: 'Il nome utente dovrebbe contenere da 3 a 20 caratteri (alfanumerici, _, -)'
     },
     password: {
       minLength: 8,
@@ -180,7 +180,7 @@ const FormValidator = {
 
     field.classList.add('error');
     field.setAttribute('aria-invalid', 'true');
-    
+
     // Remove existing error message if any
     const existingError = field.parentElement.querySelector('.error-message');
     if (existingError) existingError.remove();
@@ -202,7 +202,7 @@ const FormValidator = {
 
     field.classList.remove('error');
     field.setAttribute('aria-invalid', 'false');
-    
+
     const errorMsg = field.parentElement.querySelector('.error-message');
     if (errorMsg) errorMsg.remove();
   },

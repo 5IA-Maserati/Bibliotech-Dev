@@ -33,8 +33,8 @@ include '../includes/header.php';
             <div class="info-box">
                 <h2>Come Donare</h2>
                 <p>
-                    Donare libri alla nostra biblioteca è semplice e gratuito! Non è necessario fornire alcun dato 
-                    relativo al libro (titolo, editore, autore, ecc.). I libri verranno catalogati direttamente 
+                    Donare libri alla nostra biblioteca è semplice e gratuito! Non è necessario fornire alcun dato
+                    relativo al libro (titolo, editore, autore, ecc.). I libri verranno catalogati direttamente
                     dal nostro staff durante la consegna.
                 </p>
                 <p style="margin-top: 1rem; font-weight: 500; color: #4CAF50;">

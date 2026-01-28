@@ -9,7 +9,7 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
 
   // Validate all fields
   const validation = FormValidator.validateForm('login-form')
-  
+
   if (!validation.valid) {
     console.error('Form validation failed:', validation.errors)
     // Errors are already displayed by markFieldError
@@ -18,7 +18,7 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
 
   // Sanitize all inputs
   const sanitizedData = FormValidator.sanitizeForm('login-form')
-  
+
   // Show success message (in production, send to server)
   console.log('Sanitized form data:', sanitizedData)
   alert('Login completato!')

@@ -282,14 +282,14 @@ const form = document.getElementById('form-id');
 // 2. Add submit handler
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-  
+
   // 3. Validate all fields
   const validation = FormValidator.validateForm('form-id');
   if (!validation.valid) return;
-  
+
   // 4. Sanitize inputs
   const sanitized = FormValidator.sanitizeForm('form-id');
-  
+
   // 5. Process sanitized data
   console.log('Clean data:', sanitized);
   // TODO: Send to server

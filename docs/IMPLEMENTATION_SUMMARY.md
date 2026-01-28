@@ -136,11 +136,11 @@ docs/
 ```javascript
 document.getElementById('form-id').addEventListener('submit', function (e) {
   e.preventDefault();
-  
+
   // Validate all fields
   const validation = FormValidator.validateForm('form-id');
   if (!validation.valid) return;
-  
+
   // Sanitize and use data
   const sanitized = FormValidator.sanitizeForm('form-id');
   console.log('Clean data:', sanitized);

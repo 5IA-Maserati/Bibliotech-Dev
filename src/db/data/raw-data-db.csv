@@ -4,7 +4,7 @@ N. Inventario,Autore,Titolo,Casa editrice,Genere
 507,William Shakespeare                ,Amleto,Economica Feltrinelli 1990,"tragedia, Danimarca, Ofelia, fantasma, monologo ""essere o non essere"""
 204,William Shakespeare,Amleto,Einaudi 1965,"tragedia, Danimarca, Ofelia, fantasma, monologo ""essere o non essere"""
 644,SamuelBeckett  ,Aspettando Godot,Einaudi 1969,"dramma, Vladimiro, Estragone, teatro dell'Assurdo, nonsenso"
-32,Woody Allen,Io e Annie,Universale Economica Feltrinelli 1991,"Commedia romantica, nevrosi,Woody Allen: Alvy, 
+32,Woody Allen,Io e Annie,Universale Economica Feltrinelli 1991,"Commedia romantica, nevrosi,Woody Allen: Alvy,
  Diane Keaton: Annie Hall"
 2604,Sofocle ,Edipo Re,Universale Economica Feltrinelli 1991,"tragedia, Tebe, pestilenza, incesto, profezia Sfinge"
 2599,Eschilo   ,I Persiani,Feltrinelli 1991,"Tragedia, Susa, Atossa Serse, battaglia di Salamina"
@@ -23,7 +23,7 @@ N. Inventario,Autore,Titolo,Casa editrice,Genere
 1833,Rolf-Ulrich  ,Guida alla musica,Oscar Mondadori 1969,"Saggio,  musica"
 150,Carlo Emilio Gadda ,Quel pasticciaccio brutto de via Merulana,Garzanti 1957,"Romanzo, Roma, Fascismo, ""Palazzo degli Ori"", Francesco ""Don Ciccio"" Ingravallo"
 601,Carlo EmilioGadda ,Quel pasticciaccio brutto de via Merulana,Garzanti 1991,"Romanzo, Roma, Fascismo, ""Palazzo degli Ori"", Francesco ""Don Ciccio"" Ingravallo"
-2675,Carlo Emilio Gadda ,Il primo libro delle favole,Oscar Mondadori 1990,Raccolta fiabe 
+2675,Carlo Emilio Gadda ,Il primo libro delle favole,Oscar Mondadori 1990,Raccolta fiabe
 177,Oscar Wilde,Il ritratto di Dorian Gray,Sansoni 1965,"Romanzo, Londra vittoriana, dandy, estetismo, bellezza, Faust"
 550,Oscar Wilde ,De profundis,Feltrinelli 1992,"Lettera, Processo per omosessualità, Alfred Douglas"
 174-6,Fëdor Dostoevskij            ,I fratelli Karamazov (tre volumi),Oscar Mondadori 1969,"Romanzo, Fëdor, Dmitrij, patricidio"
@@ -83,7 +83,7 @@ A1131,Carlo Cassola  ,Il taglio del bosco,Oscar Mondadori ,"Racconto lungo, Appe
 530,Dacia Maraini ,La lunga vita di Marianna Ucria,Rizooli 1993,"Romanzo, Sicilia Settecento, condizione femminile, ribellione "
 452,Dacia Maraini ,La lunga vita di Marianna Ucria,Rizzoli 1992,"Romanzo, Sicilia Settecento, condizione femminile, ribellione "
 182,Dacia Maraini ,Donna in guerra,Einaudi 1973,Romanzo femminismo anni '70
-118,John Steinbeck,L’inverno del nostro scontento,Oscar Mondadori 1962,Romanzo  crisi classe media 
+118,John Steinbeck,L’inverno del nostro scontento,Oscar Mondadori 1962,Romanzo  crisi classe media
 158,John Steinbeck,La valle dell’Eden,Oscar Mondadori 1954,"Romanzo depravazione,  amore,  libertà"
 202,John Steinbeck,Uomini e topi,Bompiani 1974,Romanzo girovaghi crisi economica Usa
 262,John Steinbeck,Uomini e topi,Bompiani 1995,Romanzo girovaghi crisi economica Usa
@@ -165,7 +165,7 @@ A1136,Roberto Piumini ,Uomini con figure,Einaudi scuola 1990,Biografie scultori 
 328, Luigi Pirandello  ,I vecchi e i giovani,Mondadori 1967,"Romanzo storico, Mezzogiorno arretrato,"
 2720,Luigi Pirandello       ,I vecchi e i giovani,Garzanti 1993,"Romanzo storico, Mezzogiorno arretrato,"
 292,Luigi Pirandello       ,Dal naso al cielo,Mondadori 1973,Raccolta di novelle
-382,Giuseppe Tomasi di Lampedusa     ,Opere,Feltrinelli1974,Raccolta 
+382,Giuseppe Tomasi di Lampedusa     ,Opere,Feltrinelli1974,Raccolta
 373/4     ,Giovanni Verga    ,Tutte le novelle  (due volumi),Mondadori 1970," Sicilia,  lotta per la sopravvivenza, conflitto per il possesso della ""roba"", incomunicabilità"
 378,Giovanni Verga    ,Mastro-Don Gesualdo,O. Mondadori 1966,"Verismo, ciclo dei vinti, logica della ""roba"", discorso indiretto libero"
 6319,Giovanni Verga    ,Mastro Don Gesualdo,Mondadori 1960,"Verismo, ciclo dei vinti, logica della ""roba"", discorso indiretto libero"
@@ -484,7 +484,7 @@ A165,Maurie-Aude Murail    ,Cecile il futuro è per tutti ,Giunti  2010,Integraz
 A167,Fernando Corbalan ,"La sezione aurea, il linguaggio matematico della bellezza",RBA 2011,Saggio
 A204,Massimo Gramellini  Chiara Gamberale  ,Avrò cura di te,Longanesi  2012,Romanzo
 A206,Massimo Gramellini   ,Fai bei sogni  ,Longanesi 2013,"Romanzo, dolore, giornalismo,"
-A208 ,E.J.Michael   ,Regina del sole  ,Sonzogno  1996,Romanzo 
+A208 ,E.J.Michael   ,Regina del sole  ,Sonzogno  1996,Romanzo
 A205,Andrea Vitali ,La mamma del sole  ,Garzanti 2010,Romanzo
 A204,Adam Blade  Beast Quest ,Fern oil signore del fuoco,Salani 2015,Fantasy
 A213,Paolo D’agostini  ,"Dizionari del cinema, commedia",Electa 2009,Dizionari tematici
@@ -585,7 +585,7 @@ A1016 a-b,Miguel de Cervantes,Don Chisciotte della Mancia        2 vol.,Deagosti
 A1034,SiobhanVivian,La lista,UP Feltrinelli,"Romanzo, adolescenza, difficoltà"
 A1006,Italo Calvino,Marcovaldo ,Mondadori,"Romanzo, natura, città"
 A1025,Edgar Allan Poe,Racconti del mistero,Super Bur,Racconti mistero
-A1008,Luigi Capuana,Il marchese di Roccaverdina,De Agostini,Romanzo 
+A1008,Luigi Capuana,Il marchese di Roccaverdina,De Agostini,Romanzo
 A1004,Emily Brontë,Cime  tempestose,De Agostini,"Romanzo, passione"
 A1131,Isaac Asimov                             ,Le grandi storie della fantascienza,Newton   ,"Racconti, fantascienza"
 A1013,Terry Brooks                                        ,Il ciclo di Shannara                   ,Mondadori,Raccolta romanzi fantasy
@@ -619,7 +619,7 @@ A1017,Philip Pullman ,La lama sottile  ,Salani,Romanzo fantasy
 A1055,Erich Maria Remarque,Niente di nuovo sul fronte occidentale      ,Bur  ,Romanzo storico Prima guerra mondiale
 A1036,Carlo Rovelli         ,Sette brevi lezioni di Fisica ,Adelphi  ,"Saggio, cosmo, spazio"
 A1020,John Ronald Reuel Tolkien ,Lo Hobbit                 ,Bompiani,Romanzo fantasy
-A1040,Giorgio Vasari  ,"Le vite dei più eccellenti pittori,scultori,architetti         ",Grandi tascabili Newton        ,Biografie artisti 
+A1040,Giorgio Vasari  ,"Le vite dei più eccellenti pittori,scultori,architetti         ",Grandi tascabili Newton        ,Biografie artisti
 A1032,Carlos Ruiz Zafon ,L’ombra del vento    ,Mondadori  ,"Romanzo, Spagna, mistero"
 A1151,Rossella Postorino  ,Le assaggiatrici  ,Feltrinelli Milano 2018,"Romanzo, Nazismo"
 A1152,Giorgio Scianna ,Qualcosa ci inventeremo ,Einaudi 2014,"Romanzo, adolescenti, solitudine"
@@ -721,7 +721,7 @@ A1133,Desy Icardi,"Quaderno per ""L'annusatrice di libri",Fazi Editore,
 A1134,Suzy Zail,La pianista di Auschwitz,Il giornale,"Romanzo, adolescenza, persecuzioni razziali"
 A1135,Michela Murgia,Accabadora,Prix Page des libraires,"Romanzo, Sardegna"
 A1140,Richelle Mead,Midight Jewel,Edizioni LSWR,"Romanzo, amore avventura"
-A1137,Tim Bruno,"NEOS, la città sospesa",Salani,Roamzo fantascienza 
+A1137,Tim Bruno,"NEOS, la città sospesa",Salani,Roamzo fantascienza
 A1138,Barbara D'Alto,La stanza delle mele,Guida,"Romanzo, mistero, visioni"
 A1139,Ann Brashares,La seconda estate,best Bur ,"Romanzo amicizia, Jeans"
 A1141,Fred Ulmann,L'amico ritrovato,Feltrinelli,"Romanzo, amicizia, persecuzioni razzali"
@@ -818,7 +818,7 @@ A1220,George Orwell,La fattoria degli animali,Oscar mondadori !995,romanzo disto
 A1221,George Orwell,La fattoria degli animali,Oscar mondadori !995,romanzo distopico
 A1222,Guy de Maupassant,Bel-Ami,Giunti 2011,romanzo  parigi '800 ascesa sociale
 A1223,Immanuel Kant,Per la pace perpetua,Feltrinelli 1991,saggio filosofico
-A1224,Andrea Camillieri,Come la penso,Chiarelettere 2016,raccolta scritti 
+A1224,Andrea Camillieri,Come la penso,Chiarelettere 2016,raccolta scritti
 A1225,Khalil Gibran ,Il profeta,Rizzoli 1993,scritto filosofico(bilingue)
 A1226,Daniel Pennac ,Come un Romanzo,Feltrinelli 1992,saggio sulla lettura
 A1227,Denis Guedj,Il teorema del pappagallo,Tea 2003,romanzo e matematica
@@ -1029,31 +1029,31 @@ A1308,Ian Herbert,"Quiet genius - Bob Paisley, british football's Greatest manag
 A1309,Andrew Roberts ,Napoleon the Great,Penguin books 2014,"Biografia, lingua inglese"
 A1310,Disney,Il commissario Topalbano e altri polizieschi,Giunti 2019,"Fumetto, poliziesco"
 ,"Alì Ehsani, Francesco Casolo",I ragazzi hanno grandi sogni,Universale Economica Feltrinelli 2018,"Romanzo, emigrazione"
-A1311-1,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-2,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-3,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-4,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-5,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-6,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-7,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-8,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-9,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-10,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-11,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-12,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-13,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-14,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-15,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-16,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-17,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-18,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-19,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-20,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-21,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-22,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-23,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-24,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
-A1311-25,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione 
+A1311-1,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-2,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-3,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-4,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-5,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-6,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-7,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-8,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-9,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-10,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-11,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-12,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-13,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-14,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-15,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-16,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-17,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-18,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-19,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-20,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-21,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-22,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-23,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-24,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
+A1311-25,Elsa Morante,L'isola di Arturo,Salone del libro di Torino 2022,Romanzo formazione
 A1312,Lucinda Riley ,La sorella perduta,Giunti 2021,Romanzo rosa
 A1313,Gisella Laterza,La Divina Commedia,I classicini-Corriere della sera,Grandi storie in poche parole
 A1314,Giacomo Keison Bevilacqua,Troppo facile amarti in vacanza,Bao publishing 2021,"Graphic novel, distopia"
@@ -1215,11 +1215,11 @@ A 1447,Bram Stoker,Dracula,"Emos audionotes, 2022","Romanzo Horror, audiolibro"
 A1448,Jane Austen,Orgoglio e pregiudizio,"Emos audionotes, 2009","Romanzo rosa, audiolibro"
 A1449,Virginia Woolf,Al faro,"Emos audionotes, 2014","Romanzo, audiolibro"
 A1450,Lev Toltstoj,Anna Karenina,"Emos audionotes, 2021","Romanzo, audiolibro"
-A1451,Micol Sarfatti,Margherita Sarfatti,"Giulio Perrone Editore, 2023",Biografia 
+A1451,Micol Sarfatti,Margherita Sarfatti,"Giulio Perrone Editore, 2023",Biografia
 A1452,Ciro Auriemma,Il vento ci porterà,"Piemme, 2021",Romanzo rosa
-A1453,Laura Imai Messina,Tokyo tutto l'anno,"Einaudi, 2020",Letteratura di viaggio 
+A1453,Laura Imai Messina,Tokyo tutto l'anno,"Einaudi, 2020",Letteratura di viaggio
 A1454,Mary Renauly,Giochi Funerari,"Mondadori, 2023","Romanzo storico, Alessandro Magno"
-A1455,Sylvia Plath,La campana di vetro,"Mondadori, 2023",Romanzo 
+A1455,Sylvia Plath,La campana di vetro,"Mondadori, 2023",Romanzo
 A1456,Tadeusz Borowsky,"Da noi, ad Auschwitz","Mondadori, 2023","Romanzo,Lager"
 A1457,Franco Forte,Gengis Khan,"Mondadori, 2023",Romanzo storico
 A1458,Giovanni Nucci ,Il mare color del vino," Salani, 2021","Romanzo, Ulisse"

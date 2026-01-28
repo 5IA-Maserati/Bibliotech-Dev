@@ -34,7 +34,7 @@ include '../includes/header.php';
     </section>
 
     <div class="filters-dropdown">
-      <select id="genre"> 
+      <select id="genre">
         <option value="">Tutti i generi</option>
         <option>Romanzo</option>
         <option>Saggistica</option>

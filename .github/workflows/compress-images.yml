@@ -13,12 +13,12 @@ on:
 permissions:
   contents: write
   pull-requests: write
-      
+
 jobs:
   build:
     name: calibreapp/image-actions
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -33,7 +33,7 @@ jobs:
           webpQuality: 75
           avifQuality: 65
 
-          
+
       - name: Create New Pull Request If Needed
         if: steps.calibre.outputs.markdown != ''
         uses: peter-evans/create-pull-request@v4

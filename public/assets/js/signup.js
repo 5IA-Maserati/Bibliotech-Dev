@@ -9,7 +9,7 @@ document.getElementById('register-form').addEventListener('submit', function (e)
 
   // Validate all fields
   const validation = FormValidator.validateForm('register-form')
-  
+
   if (!validation.valid) {
     console.error('Form validation failed:', validation.errors)
     // Errors are already displayed by markFieldError
@@ -27,7 +27,7 @@ document.getElementById('register-form').addEventListener('submit', function (e)
 
   // Sanitize all inputs
   const sanitizedData = FormValidator.sanitizeForm('register-form')
-  
+
   // Show success message (in production, send to server)
   console.log('Sanitized form data:', sanitizedData)
   alert('Registrazione completata!')

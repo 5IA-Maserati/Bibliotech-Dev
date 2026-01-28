@@ -9,7 +9,7 @@ This guide describes coding conventions, project structure, and best practices f
 ### Files & Folders
 - Use **lowercase** letters.
 - Separate words with **dashes (`-`)**.
-- Examples:  
+- Examples:
   `user-controller.js`, `database-migration.sql`
 
 ### Variables & Functions

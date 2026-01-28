@@ -18,9 +18,9 @@ $aria_label = $aria_label ?? $label;
 ?>
 
 <div class="input-group">
-    <input 
-        type="<?php echo htmlspecialchars($type); ?>" 
-        id="<?php echo htmlspecialchars($id); ?>" 
+    <input
+        type="<?php echo htmlspecialchars($type); ?>"
+        id="<?php echo htmlspecialchars($id); ?>"
         <?php if ($required): ?>required<?php endif; ?>
         <?php if (!empty($placeholder)): ?>placeholder="<?php echo htmlspecialchars($placeholder); ?>"<?php endif; ?>
         <?php if (!empty($aria_label)): ?>aria-label="<?php echo htmlspecialchars($aria_label); ?>"<?php endif; ?>

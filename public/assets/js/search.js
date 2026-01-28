@@ -14,7 +14,7 @@ searchButton.addEventListener('click', function (e) {
 
   // Validate search input
   const searchValue = searchInput.value.trim();
-  
+
   if (searchValue === '') {
     FormValidator.markFieldError('q', 'Inserisci un termine di ricerca');
     return;
@@ -22,7 +22,7 @@ searchButton.addEventListener('click', function (e) {
 
   // Validate search input against pattern
   const validation = FormValidator.validateField('q');
-  
+
   if (!validation.valid) {
     FormValidator.markFieldError('q', validation.message);
     return;
@@ -31,10 +31,10 @@ searchButton.addEventListener('click', function (e) {
   // Sanitize search input
   const sanitizedSearch = FormValidator.sanitize(searchValue);
   console.log('Performing search for:', sanitizedSearch);
-  
+
   // Clear error on successful validation
   FormValidator.clearFieldError('q');
-  
+
   // TODO: Perform actual search operation here
   // For now, just log the sanitized search term
 });

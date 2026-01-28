@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS Users (
     email VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     role ENUM('user', 'admin') DEFAULT 'user',
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP    
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 --===============================
@@ -40,9 +40,9 @@ CREATE TABLE IF NOT EXISTS Books (
     copies_number INT DEFAULT 1,
     available_copies INT DEFAULT 1,
     CONSTRAINT fk_category
-     FOREIGN KEY (category_id) 
-     REFERENCES Categories(id) 
-    ON DELETE SET NULL 
+     FOREIGN KEY (category_id)
+     REFERENCES Categories(id)
+    ON DELETE SET NULL
 );
 
 --===============================
@@ -56,12 +56,12 @@ CREATE TABLE IF NOT EXISTS Loans (
     loan_date DATE NOT NULL,
     return_date DATE DEFAULT NULL,
     CONSTRAINT fk_user
-     FOREIGN KEY (user_id) 
-     REFERENCES Users(id) 
+     FOREIGN KEY (user_id)
+     REFERENCES Users(id)
     ON DELETE CASCADE,
     CONSTRAINT fk_book
-     FOREIGN KEY (book_id) 
-     REFERENCES Books(id) 
+     FOREIGN KEY (book_id)
+     REFERENCES Books(id)
     ON DELETE CASCADE
 );
 

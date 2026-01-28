@@ -7,21 +7,21 @@
  * @var string $label The label text
  * @var string|null $placeholder Optional placeholder text
  * @var bool|null $required Whether the input is required (default: true)
- * @var string $aria_label Optional ARIA label (defaults to $label)
+ * @var string $aria_label ARIA label (defaults to $label)
  */
 
 declare(strict_types=1);
 
-// Imposta valori di default solo se non definiti
+// Set default values if not provided
 $type = $type ?? 'text';
 $placeholder = $placeholder ?? null;
 $required = $required ?? true;
 
-// Ora $aria_label è nullable, default al label
-$aria_label = $aria_label ?? $label;
+// $aria_label is nullable, defaults to $label
+$aria_label = $aria_label ?: $label;
 
-// Psalm ora sa che $type, $label, $id non sono mai null
-// $aria_label e $placeholder possono essere null
+// Psalm now knows that $type, $label, $id are never null
+// $aria_label and $placeholder can be null
 ?>
 
 <div class="input-group">
@@ -32,7 +32,6 @@ $aria_label = $aria_label ?? $label;
         <?= $required ? 'required' : '' ?>
         <?= $placeholder !== null ? 'placeholder="' . htmlspecialchars($placeholder, ENT_QUOTES, 'UTF-8') . '"' : '' ?>
         <?= 'aria-label="' . htmlspecialchars($aria_label, ENT_QUOTES, 'UTF-8') . '"' ?>
-
     >
     <label for="<?= htmlspecialchars($id, ENT_QUOTES, 'UTF-8') ?>">
         <?= htmlspecialchars($label, ENT_QUOTES, 'UTF-8') ?>

@@ -18,7 +18,8 @@ $placeholder = $placeholder ?? null;
 $required    = $required ?? true;
 
 // $aria_label is nullable, defaults to $label
-$aria_label = $aria_label ?: $label;
+$aria_label = $aria_label ?? $label;
+
 
 // Build attributes array
 $attrs = [

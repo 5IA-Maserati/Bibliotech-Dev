@@ -255,7 +255,7 @@ Enables real-time validation on blur and clears errors on input.
 - **XSS Prevention:** All text inputs are sanitized to prevent Cross-Site Scripting (XSS) attacks by escaping HTML special characters
 - **Method:** Text content is set via `textContent` property to prevent HTML injection
 
-### Validation Rules
+### Validation Rules Principles
 - **Pattern Matching:** Regular expressions enforce allowed character sets
 - **Length Constraints:** Minimum and maximum length validation prevents buffer overflow attacks
 - **Type-Specific Rules:** Email, date, and password fields have specific validation patterns
@@ -316,7 +316,7 @@ FormValidator.enableRealTimeValidation('form-id');
 ### Valid Inputs to Test
 - **Username:** "user_name-123"
 - **Password:** "Password123"
-- **Email:** "user@example.com"
+- **Email:** `user@example.com`
 - **Name:** "Giovanni"
 - **Date:** "2000-01-15"
 - **Search:** "Harry Potter & The Philosopher's Stone"
@@ -345,7 +345,7 @@ All these should be either rejected or sanitized by the validation system.
 
 ## References
 
-- OWASP Top 10: https://owasp.org/www-project-top-ten/
-- XSS Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
-- Input Validation Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html
-- MDN Web Docs - Form Validation: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+- OWASP Top 10: `https://owasp.org/www-project-top-ten/`
+- XSS Prevention Cheat Sheet: `https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html`
+- Input Validation Cheat Sheet: `https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html`
+- MDN Web Docs - Form Validation: `https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation`

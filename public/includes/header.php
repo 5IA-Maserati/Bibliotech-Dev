@@ -2,10 +2,10 @@
 /**
  * Reusable header component
  *
- * @var string $title
- * @var string|null $subtitle
- * @var bool $show_nav
- * @var array<string, string> $nav_items
+ * @psalm-var string|null $title
+ * @psalm-var string|null $subtitle
+ * @psalm-var bool|null $show_nav
+ * @psalm-var array<string, string>|null $nav_items
  */
 
 $title     = $title ?: 'Biblioteca Digitale';

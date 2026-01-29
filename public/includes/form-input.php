@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  *
  * Reusable form input component

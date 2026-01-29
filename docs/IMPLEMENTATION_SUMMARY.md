@@ -83,7 +83,7 @@
 
 ## File Structure
 
-```
+```text
 public/
 ├── assets/
 │   ├── js/
@@ -132,7 +132,7 @@ docs/
 
 ## How to Use the FormValidator
 
-### In a Form Submit Handler:
+### In a Form Submit Handler
 ```javascript
 document.getElementById('form-id').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -150,7 +150,7 @@ document.getElementById('form-id').addEventListener('submit', function (e) {
 FormValidator.enableRealTimeValidation('form-id');
 ```
 
-### For Individual Field Validation:
+### For Individual Field Validation
 ```javascript
 const result = FormValidator.validateField('username');
 if (!result.valid) {
@@ -162,14 +162,14 @@ if (!result.valid) {
 
 ## Testing Recommendations
 
-### Valid Test Cases:
+### Valid Test Cases
 - ✓ Username: "user_name-123"
 - ✓ Password: "MyPassword123"
-- ✓ Email: "user@example.com"
+- ✓ Email: `user@example.com`
 - ✓ Name: "Giovanni D'Antonio"
 - ✓ Search: "Harry Potter & The Philosopher's Stone"
 
-### XSS Prevention Tests:
+### XSS Prevention Tests
 - ✗ `<script>alert('XSS')</script>` → Should be rejected
 - ✗ `<img src=x onerror=alert('XSS')>` → Should be rejected
 - ✗ `'; DROP TABLE users; --` → Should be rejected

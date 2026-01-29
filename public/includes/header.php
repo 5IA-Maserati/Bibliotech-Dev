@@ -8,10 +8,10 @@
  * @var array<string, string> $nav_items
  */
 
-$title     = $title ?? 'Biblioteca Digitale';
-$subtitle  = $subtitle ?? null;
-$show_nav  = $show_nav ?? false;
-$nav_items = $nav_items ?? [];
+$title     = $title ?: 'Biblioteca Digitale';
+$subtitle  = $subtitle ?: null;
+$show_nav  = $show_nav ?: false;
+$nav_items = $nav_items ?: []
 ?>
 
 <header class="navbar">

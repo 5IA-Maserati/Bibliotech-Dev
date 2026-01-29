@@ -25,7 +25,9 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
+          FILTER_REGEX_EXCLUDE: "vendor/"
 
+      # 3️ Run JSCPD
       - name: Run JSCPD
         run: |
           npx jscpd \

@@ -1,5 +1,6 @@
 <?php
 /**
+ *
  * Reusable form input component
  *
  * @var string|null $type        The type of input (text, password, email, etc.)

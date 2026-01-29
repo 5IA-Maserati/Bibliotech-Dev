@@ -1,4 +1,5 @@
 <?php
+
 $title = 'Biblioteca Digitale';
 $subtitle = 'Accedi o registrati per entrare nella piattaforma';
 include '../includes/header.php';

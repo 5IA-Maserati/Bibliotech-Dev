@@ -1,4 +1,5 @@
 <?php
+
 $title = 'Dona un Libro alla Biblioteca';
 $subtitle = 'Aiutaci a crescere: condividi i tuoi libri con la comunità';
 $show_nav = true;

@@ -1,4 +1,5 @@
 <?php
+
 $title = 'Catalogo';
 $show_nav = false;
 include '../includes/header.php';

@@ -18,7 +18,7 @@ $placeholder = $placeholder ?? null;
 $required = $required ?? true;
 
 // $aria_label is nullable, defaults to $label
-$aria_label = $aria_label ?: $label;
+$aria_label = $aria_label ?? $label;
 
 // Psalm now knows that $type, $label, $id are never null
 // $aria_label and $placeholder can be null

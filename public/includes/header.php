@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Reusable header component
  *
@@ -24,15 +25,15 @@ $nav_items = $nav_items ?? [];
     <div class="container">
         <h1><?= htmlspecialchars($title, ENT_QUOTES, 'UTF-8') ?></h1>
 
-        <?php if ($subtitle !== null && $subtitle !== ''): ?>
+        <?php if ($subtitle !== null && $subtitle !== '') : ?>
             <p><?= htmlspecialchars($subtitle, ENT_QUOTES, 'UTF-8') ?></p>
         <?php endif; ?>
     </div>
 </header>
 
-<?php if ($show_nav && $nav_items !== []): ?>
+<?php if ($show_nav && $nav_items !== []) : ?>
 <nav class="quick-nav" aria-label="Navigazione rapida">
-    <?php foreach ($nav_items as $link => $label): ?>
+    <?php foreach ($nav_items as $link => $label) : ?>
         <a href="<?= htmlspecialchars($link, ENT_QUOTES, 'UTF-8') ?>" class="btn-nav">
             <?= htmlspecialchars($label, ENT_QUOTES, 'UTF-8') ?>
         </a>

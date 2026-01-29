@@ -11,13 +11,13 @@
 ## Available Forms
 
 ### 1. Login Form (`/pages/login.php`)
-```
+```text
 Username:  3-20 chars, alphanumeric + underscore/hyphen
 Password:  8-50 chars, uppercase + lowercase + digit required
 ```
 
 ### 2. Registration Form (`/pages/signup.php`)
-```
+```text
 Nome:                First name (2-50 chars, letters only)
 Cognome:             Last name (2-50 chars, letters only)
 Data di Nascita:     Date in YYYY-MM-DD format
@@ -27,12 +27,12 @@ Confirm Password:    Must match Password field
 ```
 
 ### 3. Search Form (`/pages/search.php`)
-```
+```text
 Search Query:        Max 255 chars, alphanumeric + special chars allowed
 ```
 
 ### 4. Booking Form (`/pages/booking.html`)
-```
+```text
 Book Title:          1-255 chars, alphanumeric + punctuation allowed
 Student Name:        2-50 chars, letters only
 Student Email:       Valid email format required
@@ -71,7 +71,7 @@ Booking Date:        Date in YYYY-MM-DD format
 ### Email
 - **Pattern:** `^[^\s@]+@[^\s@]+\.[^\s@]+$`
 - **Allowed:** Standard email format
-- **Example:** "user@example.com"
+- **Example:** `user@example.com`
 
 ### Password
 - **Length:** 8-50 characters

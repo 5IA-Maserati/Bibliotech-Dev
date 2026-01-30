@@ -13,13 +13,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️ Checkout repo
+      # 1 Checkout repo
       - name: Checkout code
         uses: actions/checkout@v4
-      # 1.1 Check PHP Version
-      - name : Check PHP Version
+
+      # 1.1 Setup PHP
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, intl, zip
+          tools: composer:v2
+
+      # 1.2 Check PHP Version
+      - name: Check PHP Version
         run: php -v
-      # 2️ Run Super-Linter only on filtered files
+
+      # 2 Run Super-Linter
       - name: Run Super-Linter
         uses: github/super-linter@v6
         env:
@@ -29,7 +39,7 @@ jobs:
           VALIDATE_JSCPD: false
           FILTER_REGEX_EXCLUDE: "vendor/|node_module/"
 
-      # 3️ Run JSCPD
+      # 3 Run JSCPD
       - name: Run JSCPD
         run: |
           npx jscpd \

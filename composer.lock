@@ -4,6 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+        "config": {
+    "platform": {
+        "php": "8.2.0"
+        }
+    },
+
     "content-hash": "7d8b10dfe85c61ee8b4d7c5754ef1de8",
     "packages": [],
     "packages-dev": [

@@ -41,12 +41,6 @@ jobs:
       - name: Make Psalm executable
         run: chmod +x vendor/bin/psalm
 
-      # 1.6 Run Psalm
-      - name: Run Psalm
-        run: vendor/bin/psalm
-
-
-
       # 2 Run Super-Linter
       - name: Run Super-Linter
         uses: github/super-linter@v6

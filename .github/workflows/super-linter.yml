@@ -27,7 +27,7 @@ jobs:
 
       # 1.2 Install Composer dependencies
       - name: Install dependencies
-        run: composer install --no-progress --no-interaction
+        run: composer install --no-progress --no-interaction --no-cache --no-autoloader
 
       # 1.3 Run Psalm (local version)
       - name: Run Psalm

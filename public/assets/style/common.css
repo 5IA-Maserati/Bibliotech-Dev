@@ -83,20 +83,6 @@ header {
     padding: 15px 5%;
 }
 
-.btn-nav {
-    padding: 10px 20px;
-    background-color: var(--medium-blue);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.btn-nav:hover {
-    background-color: var(--dark-light-blue);
-}
-
 .btn-nav:last-child {
     margin-left: auto;
 }
@@ -118,21 +104,28 @@ header {
 }
 
 .btn-nav {
+  /* Layout e Display */
   display: inline-block;
-  text-decoration: none;
   padding: 0.6rem 1.2rem;
+  background-color: white;
+  color: var(--medium-blue);
+  border: 1px solid var(--medium-blue);
   border-radius: 6px;
+  
+  /* Tipografia */
+  text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
+  
+  /* Animazioni */
   transition: all 0.3s ease;
-  border: 1px solid var(--medium-blue);
-  color: var(--medium-blue);
-  background-color: white;
 }
+
 
 .btn-nav:hover {
   background-color: #eef4f8;
   transform: translateY(-1px);
+  background-color: var(--dark-light-blue);
 }
 
 .btn-nav.donate {

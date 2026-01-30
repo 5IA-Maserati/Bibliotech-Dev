@@ -17,33 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 1.1 Setup PHP
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          extensions: mbstring, intl, zip
-          tools: composer:v2
-
-      # 1.2 Reset vendor folder
-      - name: Reset vendor folder
-        run: rm -rf vendor
-
-      # 1.3 Clear Composer cache
-      - name: Clear Composer cache
-        run: composer clear-cache
-
-      # 1.4 Install Composer dependencies
-      - name: Install dependencies
-        run: composer install --no-progress --no-interaction --no-cache
-
-      # 1.5 Fix Psalm permissions
-      - name: Make Psalm executable
-        run: chmod +x vendor/bin/psalm
-
       # 2 Run Super-Linter
       - name: Run Super-Linter
-        uses: github/super-linter@v5
+        uses: github/super-linter@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false

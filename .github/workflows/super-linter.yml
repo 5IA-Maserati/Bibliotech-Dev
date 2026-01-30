@@ -35,7 +35,7 @@ jobs:
 
       # 1.4 Install Composer dependencies
       - name: Install dependencies
-        run: composer install --no-progress --no-interaction --no-cache --ignore-platform-reqs
+        run: composer install --no-progress --no-interaction --no-cache
 
       # 1.5 Fix Psalm permissions
       - name: Make Psalm executable
@@ -49,7 +49,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
-          FILTER_REGEX_EXCLUDE: "vendor/|node_modules/|dist/|build/"
+          FILTER_REGEX_EXCLUDE: "vendor/.*|node_modules/|dist/|build/"
 
       # 3 Run JSCPD
       - name: Run JSCPD

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit1d0a98832bed8c61b719504b8ee97b5c
+class ComposerStaticInit8ef3335b5f9532f3f764f1c66664ea28
 {
     public static $files = array (
         '88254829cb0eed057c30eaabb6d8edc4' => __DIR__ . '/..' . '/amphp/amp/src/functions.php',
@@ -320,10 +320,10 @@ class ComposerStaticInit1d0a98832bed8c61b719504b8ee97b5c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit1d0a98832bed8c61b719504b8ee97b5c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit1d0a98832bed8c61b719504b8ee97b5c::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit1d0a98832bed8c61b719504b8ee97b5c::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit1d0a98832bed8c61b719504b8ee97b5c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8ef3335b5f9532f3f764f1c66664ea28::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8ef3335b5f9532f3f764f1c66664ea28::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit8ef3335b5f9532f3f764f1c66664ea28::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit8ef3335b5f9532f3f764f1c66664ea28::$classMap;
 
         }, null, ClassLoader::class);
     }

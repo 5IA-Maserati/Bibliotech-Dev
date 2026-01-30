@@ -9,7 +9,7 @@
  * @psalm-var array<string, string>|null $nav_items
  */
 
-$title ??= 'Biblioteca Digitale';
+$title = (string) ($title ?? 'Biblioteca Digitale');
 $subtitle ??= null;
 $show_nav ??= false;
 $nav_items ??= [];

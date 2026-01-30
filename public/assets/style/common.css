@@ -83,10 +83,6 @@ header {
     padding: 15px 5%;
 }
 
-.btn-nav:last-child {
-    margin-left: auto;
-}
-
 /* Action Bar with Navigation Buttons */
 .action-bar {
   padding: 1rem 0;
@@ -104,30 +100,28 @@ header {
 }
 
 .btn-nav {
-  /* Layout e Display */
   display: inline-block;
   padding: 0.6rem 1.2rem;
   background-color: white;
   color: var(--medium-blue);
   border: 1px solid var(--medium-blue);
   border-radius: 6px;
-  
-  /* Tipografia */
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  
-  /* Animazioni */
   transition: all 0.3s ease;
 }
 
-
 .btn-nav:hover {
-  background-color: #eef4f8;
   transform: translateY(-1px);
   background-color: var(--dark-light-blue);
 }
 
+.btn-nav:last-child {
+  margin-left: auto;
+}
+
+/* Classi specifiche (varianti) alla fine */
 .btn-nav.donate {
   background-color: var(--medium-blue);
   color: white;

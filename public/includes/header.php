@@ -9,7 +9,8 @@
  * @psalm-var array<string, string>|null $nav_items
  */
 
-$title = (string) ($title ?? 'Biblioteca Digitale');
+$title ??= 'Biblioteca Digitale';
+assert(is_string($title), '$title must be a string');
 $subtitle ??= null;
 $show_nav ??= false;
 $nav_items ??= [];

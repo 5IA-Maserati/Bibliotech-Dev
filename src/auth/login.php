@@ -1,5 +1,7 @@
 <?php
 
+use PDO;
+
 declare(strict_types=1);
 
 session_start();
@@ -7,7 +9,7 @@ header('Content-Type: application/json');
 
 require_once __DIR__ . '/../db/db.php';
 
-/** @var \PDO $pdo */
+/** @var PDO $pdo */
 
 $rawInput = file_get_contents('php://input');
 $data = json_decode($rawInput, true);

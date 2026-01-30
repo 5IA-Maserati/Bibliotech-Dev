@@ -35,7 +35,7 @@ jobs:
 
       # 1.4 Install Composer dependencies
       - name: Install dependencies
-        run: composer install --no-progress --no-interaction --no-cache
+        run: composer install --no-progress --no-interaction --no-cache --ignore-platform-reqs
 
       # 1.5 Fix Psalm permissions
       - name: Make Psalm executable

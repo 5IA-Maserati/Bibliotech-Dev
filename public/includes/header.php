@@ -9,12 +9,11 @@
  * @psalm-var array<string, string>|null $nav_items
  */
 
-$title     = $title ?? 'Biblioteca Digitale';
-$subtitle  = $subtitle ?? null;
-$show_nav  = $show_nav ?? false;
-$nav_items = $nav_items ?? [];
+$title ??= 'Biblioteca Digitale';
+$subtitle ??= null;
+$show_nav ??= false;
+$nav_items ??= [];
 ?>
-
 
 <header class="navbar">
     <div class="logo-area">

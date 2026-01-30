@@ -27,11 +27,16 @@ jobs:
 
       # 1.2 Install Composer dependencies
       - name: Install dependencies
-        run: composer install --no-progress --no-interaction --no-cache --no-autoloader
+        run: composer install --no-progress --no-interaction --no-cache
 
-      # 1.3 Run Psalm (local version)
+      # 1.3 Fix Psalm permissions
+      - name: Make Psalm executable
+        run: chmod +x vendor/bin/psalm
+
+      # 1.4 Run Psalm
       - name: Run Psalm
         run: vendor/bin/psalm
+
 
       # 2 Run Super-Linter
       - name: Run Super-Linter

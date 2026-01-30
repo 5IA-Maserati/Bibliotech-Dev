@@ -49,11 +49,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
-          VALIDATE_PHP: false
-          VALIDATE_PHP_BUILTIN: false
-          VALIDATE_PHP_COMPOSER: false
           FILTER_REGEX_EXCLUDE: "vendor/|node_modules/|dist/|build/"
-
 
       # 3 Run JSCPD
       - name: Run JSCPD

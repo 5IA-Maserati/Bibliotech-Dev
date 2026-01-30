@@ -49,6 +49,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
+          PHP_LINTER_INSTALL_COMPOSER_DEPENDENCIES: false
           FILTER_REGEX_EXCLUDE: "vendor/.*|node_modules/|dist/|build/"
 
       # 3 Run JSCPD

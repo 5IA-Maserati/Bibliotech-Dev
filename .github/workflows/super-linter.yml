@@ -25,10 +25,13 @@ jobs:
           extensions: mbstring, intl, zip
           tools: composer:v2
 
-      # 1.2 Run Psalm
+      # 1.2 Install Composer dependencies
+      - name: Install dependencies
+        run: composer install --no-progress --no-interaction
+
+      # 1.3 Run Psalm (local version)
       - name: Run Psalm
         run: vendor/bin/psalm
-
 
       # 2 Run Super-Linter
       - name: Run Super-Linter
@@ -38,7 +41,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
-          FILTER_REGEX_EXCLUDE: "vendor/|node_module/|vendor/"
+          FILTER_REGEX_EXCLUDE: "vendor/|node_modules/|dist/|build/"
 
       # 3 Run JSCPD
       - name: Run JSCPD

@@ -43,18 +43,15 @@ jobs:
 
       # 2 Run Super-Linter
       - name: Run Super-Linter
-        uses: github/super-linter@v6
+        uses: github/super-linter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
-          PHP_LINTER_INSTALL_COMPOSER_DEPENDENCIES: false
           VALIDATE_PHP: false
-          VALIDATE_PHP_PHPCS: false
-          VALIDATE_PHP_PHPSTAN: false
-          VALIDATE_PHP_PHP_CS_FIXER: false
-          FILTER_REGEX_EXCLUDE: vendor/.*|node_modules/|dist/|build/
+          FILTER_REGEX_EXCLUDE: "vendor/.*|node_modules/|dist/|build/"
+
 
 
       # 3 Run JSCPD

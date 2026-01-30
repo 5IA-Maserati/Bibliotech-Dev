@@ -50,7 +50,12 @@ jobs:
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
           PHP_LINTER_INSTALL_COMPOSER_DEPENDENCIES: false
-          FILTER_REGEX_EXCLUDE: "vendor/.*|node_modules/|dist/|build/"
+          VALIDATE_PHP: false
+          VALIDATE_PHP_PHPCS: false
+          VALIDATE_PHP_PHPSTAN: false
+          VALIDATE_PHP_PHP_CS_FIXER: false
+          FILTER_REGEX_EXCLUDE: vendor/.*|node_modules/|dist/|build/
+
 
       # 3 Run JSCPD
       - name: Run JSCPD

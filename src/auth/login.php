@@ -1,8 +1,8 @@
 <?php
 
-use PDO;
-
 declare(strict_types=1);
+
+use PDO;
 
 session_start();
 header('Content-Type: application/json');

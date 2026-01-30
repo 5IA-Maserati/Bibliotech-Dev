@@ -25,9 +25,10 @@ jobs:
           extensions: mbstring, intl, zip
           tools: composer:v2
 
-      # 1.2 Check PHP Version
-      - name: Check PHP Version
-        run: php -v
+      # 1.2 Run Psalm
+      - name: Run Psalm
+        run: vendor/bin/psalm
+
 
       # 2 Run Super-Linter
       - name: Run Super-Linter
@@ -37,7 +38,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
-          FILTER_REGEX_EXCLUDE: "vendor/|node_module/"
+          FILTER_REGEX_EXCLUDE: "vendor/|node_module/|vendor/"
 
       # 3 Run JSCPD
       - name: Run JSCPD

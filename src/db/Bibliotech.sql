@@ -9,10 +9,10 @@ USE bibliotech;
 --===============================
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL,
     surname VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
+    passwords VARCHAR(255) NOT NULL,
     `role` ENUM('user', 'admin') DEFAULT 'user',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS users (
 --===============================
 CREATE TABLE IF NOT EXISTS categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL UNIQUE
+    username VARCHAR(50) NOT NULL UNIQUE
 );
 
 --===============================
@@ -38,9 +38,9 @@ CREATE TABLE IF NOT EXISTS books (
     copies_number INT DEFAULT 1,
     available_copies INT DEFAULT 1,
     CONSTRAINT fk_category
-        FOREIGN KEY (category_id)
-        REFERENCES categories(id)
-        ON DELETE SET NULL
+    FOREIGN KEY (category_id)
+    REFERENCES categories (id)
+    ON DELETE SET NULL
 );
 
 --===============================
@@ -53,11 +53,11 @@ CREATE TABLE IF NOT EXISTS loans (
     loan_date DATE NOT NULL,
     return_date DATE DEFAULT NULL,
     CONSTRAINT fk_user
-        FOREIGN KEY (user_id)
-        REFERENCES users(id)
-        ON DELETE CASCADE,
+    FOREIGN KEY (user_id)
+    REFERENCES users (id)
+    ON DELETE CASCADE,
     CONSTRAINT fk_book
-        FOREIGN KEY (book_id)
-        REFERENCES books(id)
-        ON DELETE CASCADE
+    FOREIGN KEY (book_id)
+    REFERENCES books (id)
+    ON DELETE CASCADE
 );

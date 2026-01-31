@@ -2,38 +2,33 @@ CREATE DATABASE IF NOT EXISTS bibliotech
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
 
-
-USE Bibliotech;
+USE bibliotech;
 
 --===============================
--- USERS TABLE
+-- users table
 --===============================
-
-CREATE TABLE IF NOT EXISTS Users (
+CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     surname VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    role ENUM('user', 'admin') DEFAULT 'user',
+    `role` ENUM('user', 'admin') DEFAULT 'user',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 --===============================
--- CATEGORIES TABLE
+-- categories table
 --===============================
-
-CREATE TABLE IF NOT EXISTS Categories (
+CREATE TABLE IF NOT EXISTS categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL UNIQUE
 );
 
-
 --===============================
--- BOOKS TABLE
+-- books table
 --===============================
-
-CREATE TABLE IF NOT EXISTS Books (
+CREATE TABLE IF NOT EXISTS books (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(150) NOT NULL,
     author VARCHAR(50) NOT NULL,
@@ -43,27 +38,26 @@ CREATE TABLE IF NOT EXISTS Books (
     copies_number INT DEFAULT 1,
     available_copies INT DEFAULT 1,
     CONSTRAINT fk_category
-     FOREIGN KEY (category_id)
-     REFERENCES Categories(id)
-    ON DELETE SET NULL
+        FOREIGN KEY (category_id)
+        REFERENCES categories(id)
+        ON DELETE SET NULL
 );
 
 --===============================
--- LOANS TABLE
+-- loans table
 --===============================
-
-CREATE TABLE IF NOT EXISTS Loans (
+CREATE TABLE IF NOT EXISTS loans (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     book_id INT NOT NULL,
     loan_date DATE NOT NULL,
     return_date DATE DEFAULT NULL,
     CONSTRAINT fk_user
-     FOREIGN KEY (user_id)
-     REFERENCES Users(id)
-    ON DELETE CASCADE,
+        FOREIGN KEY (user_id)
+        REFERENCES users(id)
+        ON DELETE CASCADE,
     CONSTRAINT fk_book
-     FOREIGN KEY (book_id)
-     REFERENCES Books(id)
-    ON DELETE CASCADE
+        FOREIGN KEY (book_id)
+        REFERENCES books(id)
+        ON DELETE CASCADE
 );

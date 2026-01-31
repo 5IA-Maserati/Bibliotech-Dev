@@ -24,6 +24,9 @@ jobs:
           php-version: 8.3
           extensions: pdo, pdo_mysql
 
+      - name: Disable Composer GitHub OAuth
+        run: composer config --global --unset github-oauth.github.com
+
       - name: Install Composer dependencies
         run: |
           cd src

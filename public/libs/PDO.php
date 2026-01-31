@@ -2,7 +2,7 @@
 
 namespace public\libs;
 
-use PDOStatement;
+use public\libs\PDOStatement;
 
 class PDO
 {
@@ -62,14 +62,32 @@ class PDO
 
     public const ERR_NONE = '00000';
 
-    public function __construct(string $dsn, ?string $username = null, ?string $password = null, ?array $options = null)
-    {
+    public string $dsn;
+    public string $username;
+    public ?string $password;
+    public ?array $options;
 
-    }
 
-    public function prepare(string $query, array $options = []): PDOStatement|false
+
+    public function __construct(
+    string $dsn,
+    ?string $username = null,
+    ?string $password = null,
+    ?array $options = null
+    ) {
+    $this->dsn = $dsn;
+    $this->username = $username;
+    $this->password = $password;
+    $this->options = $options;
+}
+
+
+    public function prepare(
+    string $query,
+    array $options = []
+    ): PDOStatement|false
     {
-        return false;
+    return false;
     }
 
     public function beginTransaction(): bool
@@ -97,10 +115,15 @@ class PDO
         return false;
     }
 
-    public function query(string $query, ?int $fetchMode = null, ...$args): PDOStatement|false
+    public function query(
+    string $query,
+    ?int $fetchMode = null,
+    mixed ...$args
+    ): PDOStatement|false
     {
-        return false;
+    return false;
     }
+
 
     public function lastInsertId(?string $name = null): string|false
     {

@@ -14,7 +14,7 @@
         }
     },
     "config": {
-    "classmap-authoritative": false,
-    "optimize-autoloader": true
+        "optimize-autoloader": false,
+        "classmap-authoritative": false
     }
 }

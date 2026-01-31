@@ -27,7 +27,7 @@ jobs:
       - name: Install Composer dependencies
         run: |
           cd src
-          composer self-update 2.2.18
+          composer self-update 2.0.4
           composer install --no-interaction --no-cache
           composer dump-autoload
 

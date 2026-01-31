@@ -51,7 +51,7 @@ class PDO
         try {
             $this->pdo = new PDO($dsn, $username, $password, $options ?? []);
         } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode(), $e);
+            throw new PDOException($e->getMessage(), $e->getCode(), $e);
         }
     }
 

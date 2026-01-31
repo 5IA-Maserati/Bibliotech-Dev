@@ -33,6 +33,11 @@ if ($email === '' || $password === '') {
 $stmt = $pdo->prepare(
     'SELECT id, password, role FROM users WHERE email = :email'
 );
+
+if ($stmt === false) {
+    throw new \RuntimeException('Impossibile preparare la query');
+}
+
 $stmt->execute(['email' => $email]);
 
 $user = $stmt->fetch();

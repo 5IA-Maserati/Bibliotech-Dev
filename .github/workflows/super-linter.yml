@@ -27,7 +27,8 @@ jobs:
       - name: Install Composer dependencies
         run: |
             cd src
-            composer install --no-interaction --no-cache
+            composer install --no-interaction --no-cache --no-optimize-autoloader --classmap-authoritative=false
+
 
       - name: Run Psalm
         run: |

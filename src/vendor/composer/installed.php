@@ -3,7 +3,7 @@
         'name' => 'bibliotech-dev/backend',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b3ba0df2a7e782b464331eed7b123788da8f87c7',
+        'reference' => '410c4fa57cb1abb4b6c2f4a8b29d8fa3a9aa58f1',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -112,7 +112,7 @@
         'bibliotech-dev/backend' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b3ba0df2a7e782b464331eed7b123788da8f87c7',
+            'reference' => '410c4fa57cb1abb4b6c2f4a8b29d8fa3a9aa58f1',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

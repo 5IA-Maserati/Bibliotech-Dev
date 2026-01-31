@@ -11,6 +11,10 @@
     "psr-4": {
         "App\\Auth\\": "auth/",
         "App\\Db\\": "db/"
+        }
+    },
+    "config": {
+    "classmap-authoritative": false,
+    "optimize-autoloader": true
     }
-}
 }

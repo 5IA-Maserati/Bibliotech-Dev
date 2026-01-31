@@ -22,8 +22,7 @@ class PDOStatement
         int $type = PDO::PARAM_STR,
         int $maxLength = 0,
         mixed $driverOptions = null
-        ): bool
-    {
+    ): bool {
         return $this->stmt->bindParam($param, $var, $type, $maxLength, $driverOptions);
     }
 

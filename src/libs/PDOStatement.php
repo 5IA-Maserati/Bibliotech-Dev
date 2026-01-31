@@ -1,6 +1,6 @@
 <?php
 
-namespace public\libs;
+namespace src\libs;
 
 use PDOStatement as NativePDOStatement;
 
@@ -13,28 +13,14 @@ class PDOStatement
         $this->stmt = $stmt;
     }
 
-    public function bindValue(
-        string|int $param,
-        mixed $value,
-        int $type = \PDO::PARAM_STR
-    ): bool {
+    public function bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool
+    {
         return $this->stmt->bindValue($param, $value, $type);
     }
 
-    public function bindParam(
-        string|int $param,
-        mixed &$var,
-        int $type = \PDO::PARAM_STR,
-        int $maxLength = 0,
-        mixed $driverOptions = null
-    ): bool {
-        return $this->stmt->bindParam(
-            $param,
-            $var,
-            $type,
-            $maxLength,
-            $driverOptions
-        );
+    public function bindParam(string|int $param, mixed &$var, int $type = PDO::PARAM_STR, int $maxLength = 0, mixed $driverOptions = null): bool
+    {
+        return $this->stmt->bindParam($param, $var, $type, $maxLength, $driverOptions);
     }
 
     public function execute(?array $params = null): bool
@@ -42,19 +28,12 @@ class PDOStatement
         return $this->stmt->execute($params);
     }
 
-    public function fetch(
-        int $mode = \PDO::FETCH_BOTH,
-        int $cursorOrientation = \PDO::FETCH_ORI_NEXT,
-        int $cursorOffset = 0
-    ): mixed {
-        return $this->stmt->fetch(
-            $mode,
-            $cursorOrientation,
-            $cursorOffset
-        );
+    public function fetch(int $mode = PDO::FETCH_BOTH, int $cursorOrientation = 0, int $cursorOffset = 0): mixed
+    {
+        return $this->stmt->fetch($mode, $cursorOrientation, $cursorOffset);
     }
 
-    public function fetchAll(int $mode = \PDO::FETCH_BOTH, mixed ...$args): array
+    public function fetchAll(int $mode = PDO::FETCH_BOTH, mixed ...$args): array
     {
         return $this->stmt->fetchAll($mode, ...$args);
     }

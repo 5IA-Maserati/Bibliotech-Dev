@@ -1,6 +1,6 @@
 <?php
 
-namespace public\libs;
+namespace src\libs;
 
 use PDO as NativePDO;
 use PDOStatement as NativePDOStatement;
@@ -43,7 +43,6 @@ class PDO
     /* PDO other constants */
     public const ERR_NONE = '00000';
 
-
     private NativePDO $pdo;
 
     public function __construct(
@@ -53,27 +52,15 @@ class PDO
         ?array $options = null
     ) {
         try {
-            $this->pdo = new NativePDO(
-                $dsn,
-                $username,
-                $password,
-                $options ?? []
-            );
+            $this->pdo = new NativePDO($dsn, $username, $password, $options ?? []);
         } catch (NativePDOException $e) {
-            throw new PDOException(
-                $e->getMessage(),
-                (int) $e->getCode(),
-                $e
-            );
+            throw new PDOException($e->getMessage(), (int)$e->getCode(), $e);
         }
     }
 
-    public function prepare(
-        string $query,
-        array $options = []
-    ): PDOStatement|false {
+    public function prepare(string $query, array $options = []): PDOStatement|false
+    {
         $stmt = $this->pdo->prepare($query, $options);
-
         return $stmt === false ? false : new PDOStatement($stmt);
     }
 
@@ -102,11 +89,8 @@ class PDO
         return $this->pdo->exec($statement);
     }
 
-    public function query(
-        string $query,
-        ?int $fetchMode = null,
-        mixed ...$args
-    ): PDOStatement|false {
+    public function query(string $query, ?int $fetchMode = null, mixed ...$args): PDOStatement|false
+    {
         $stmt = $fetchMode === null
             ? $this->pdo->query($query)
             : $this->pdo->query($query, $fetchMode, ...$args);

@@ -1,5 +1,9 @@
 <?php
 
+namespace public\libs;
+
+use PDOStatement;
+
 class PDO
 {
     public const PARAM_NULL = 0;
@@ -60,6 +64,7 @@ class PDO
 
     public function __construct(string $dsn, ?string $username = null, ?string $password = null, ?array $options = null)
     {
+
     }
 
     public function prepare(string $query, array $options = []): PDOStatement|false
@@ -128,65 +133,3 @@ class PDO
     }
 }
 
-class PDOStatement
-{
-    public function bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool
-    {
-        return false;
-    }
-
-    public function bindParam(string|int $param, mixed &$var, int $type = PDO::PARAM_STR, int $maxLength = 0, mixed $driverOptions = null): bool
-    {
-        return false;
-    }
-
-    public function execute(?array $params = null): bool
-    {
-        return false;
-    }
-
-    public function fetch(int $mode = PDO::FETCH_BOTH, int $cursorOrientation = 0, int $cursorOffset = 0): mixed
-    {
-        return null;
-    }
-
-    public function fetchAll(int $mode = PDO::FETCH_BOTH, ...$args): array
-    {
-        return [];
-    }
-
-    public function fetchColumn(int $column = 0): mixed
-    {
-        return null;
-    }
-
-    public function rowCount(): int
-    {
-        return 0;
-    }
-
-    public function errorCode(): ?string
-    {
-        return null;
-    }
-
-    public function errorInfo(): array
-    {
-        return [];
-    }
-
-    public function closeCursor(): bool
-    {
-        return false;
-    }
-
-    public function setFetchMode(int $mode, ...$args): bool
-    {
-        return false;
-    }
-}
-
-class PDOException extends Exception
-{
-    public ?array $errorInfo = null;
-}

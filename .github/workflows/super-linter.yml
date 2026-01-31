@@ -27,8 +27,9 @@ jobs:
       - name: Install Composer dependencies
         run: |
           cd src
-          composer install --no-interaction --no-cache --no-dev
+          composer install --no-interaction --no-cache
           composer dump-autoload
+
 
 
 

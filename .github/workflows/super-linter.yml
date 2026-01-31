@@ -21,8 +21,13 @@ jobs:
       - name: Build custom Super-Linter with PDO
         run: docker build -t superlinter-pdo .github/superlinter
 
+      - name: Debug PHP version inside Super-Linter
+        run: |
+          docker run github/super-linter:latest php -v
+
+
       # 3 Run Super-Linter using the custom image
-      - name: Run Super-Linter (custom image)
+      - name: Run Super-Linter
         run: |
           docker run \
             -e RUN_LOCAL=true \

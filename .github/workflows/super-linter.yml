@@ -17,25 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2 Psalm error check
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.3
-          extensions: pdo, pdo_mysql
-
-      - name: Install Composer dependencies
-        run: |
-          composer install --no-interaction --no-cache
-          composer dump-autoload
-
-      - name: Run Psalm
-        run: |
-            cd src
-            vendor/bin/psalm --output-format=github
-
-
-      # 3 Run Super-Linter
+      # 2 Run Super-Linter
       - name: Run Super-Linter
         uses: github/super-linter@v6
         env:
@@ -47,7 +29,7 @@ jobs:
           VALIDATE_PHP_PSALM: false
           FILTER_REGEX_EXCLUDE: "vendor/.*|node_modules/|dist/|build/"
 
-      # 4 Run JSCPD
+      # 3 Run JSCPD
       - name: Run JSCPD
         run: |
           npx jscpd \

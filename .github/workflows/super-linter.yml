@@ -25,10 +25,15 @@ jobs:
           extensions: pdo, pdo_mysql
 
       - name: Install Composer dependencies
-        run: composer install --no-interaction --no-cache
+        run: |
+            cd src
+            composer install --no-interaction --no-cache
 
       - name: Run Psalm
-        run: vendor/bin/psalm --output-format=github
+        run: |
+            cd src
+            vendor/bin/psalm --output-format=github
+
 
       # 3 Run Super-Linter
       - name: Run Super-Linter

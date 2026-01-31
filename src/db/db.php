@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-include '../../public/libs/PDO.php';
+use public\libs\PDO;
+use public\libs\PDOException;
 
 /**
  * Database connection

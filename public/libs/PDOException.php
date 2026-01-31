@@ -2,9 +2,9 @@
 
 namespace public\libs;
 
-use Exception;
+use PDOException as NativePDOException;
 
-class PDOException extends Exception
+class PDOException extends NativePDOException
 {
-    public ?array $errorInfo = null;
+
 }

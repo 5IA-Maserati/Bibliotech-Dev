@@ -6,7 +6,7 @@ session_start();
 
 header('Content-Type: application/json');
 
-include '/../../public/libs/PDO.php';
+use public\libs\PDO;
 
 require_once __DIR__ . '/../db/db.php';
 

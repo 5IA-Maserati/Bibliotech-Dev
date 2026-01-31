@@ -2,10 +2,13 @@
 
 namespace public\libs;
 
-use public\libs\PDOStatement;
+use PDO as NativePDO;
+use PDOStatement as NativePDOStatement;
+use PDOException as NativePDOException;
 
 class PDO
 {
+    /* PDO parameter constants */
     public const PARAM_NULL = 0;
     public const PARAM_INT = 1;
     public const PARAM_STR = 2;
@@ -13,6 +16,7 @@ class PDO
     public const PARAM_STMT = 4;
     public const PARAM_BOOL = 5;
 
+    /* PDO fetch mode constants */
     public const FETCH_LAZY = 1;
     public const FETCH_ASSOC = 2;
     public const FETCH_NUM = 3;
@@ -23,51 +27,24 @@ class PDO
     public const FETCH_CLASS = 8;
     public const FETCH_INTO = 9;
 
+    /* PDO error mode constants */
     public const ERRMODE_SILENT = 0;
     public const ERRMODE_WARNING = 1;
     public const ERRMODE_EXCEPTION = 2;
 
-    public const CASE_NATURAL = 0;
-    public const CASE_LOWER = 2;
-    public const CASE_UPPER = 1;
-
-    public const NULL_NATURAL = 0;
-    public const NULL_EMPTY_STRING = 1;
-    public const NULL_TO_STRING = 2;
-
-    public const ATTR_AUTOCOMMIT = 0;
-    public const ATTR_PREFETCH = 1;
-    public const ATTR_TIMEOUT = 2;
+    /* PDO attribute constants */
     public const ATTR_ERRMODE = 3;
-    public const ATTR_SERVER_VERSION = 4;
-    public const ATTR_CLIENT_VERSION = 5;
-    public const ATTR_SERVER_INFO = 6;
-    public const ATTR_CONNECTION_STATUS = 7;
-    public const ATTR_CASE = 8;
-    public const ATTR_CURSOR_NAME = 9;
-    public const ATTR_CURSOR = 10;
-    public const ATTR_ORACLE_NULLS = 11;
-    public const ATTR_PERSISTENT = 12;
-    public const ATTR_STATEMENT_CLASS = 13;
-    public const ATTR_FETCH_TABLE_NAMES = 14;
-    public const ATTR_FETCH_CATALOG_NAMES = 15;
-    public const ATTR_DRIVER_NAME = 16;
-    public const ATTR_STRINGIFY_FETCHES = 17;
-    public const ATTR_MAX_COLUMN_LEN = 18;
     public const ATTR_DEFAULT_FETCH_MODE = 19;
-    public const ATTR_EMULATE_PREPARES = 20;
 
+    /* PDO cursor constants */
     public const CURSOR_FWDONLY = 0;
     public const CURSOR_SCROLL = 1;
 
+    /* PDO other constants */
     public const ERR_NONE = '00000';
 
-    public string $dsn;
-    public ?string $username;
-    public ?string $password;
-    public ?array $options;
 
-
+    private NativePDO $pdo;
 
     public function __construct(
         string $dsn,
@@ -75,43 +52,54 @@ class PDO
         ?string $password = null,
         ?array $options = null
     ) {
-        $this->dsn = $dsn;
-        $this->username = $username;
-        $this->password = $password;
-        $this->options = $options;
+        try {
+            $this->pdo = new NativePDO(
+                $dsn,
+                $username,
+                $password,
+                $options ?? []
+            );
+        } catch (NativePDOException $e) {
+            throw new PDOException(
+                $e->getMessage(),
+                (int) $e->getCode(),
+                $e
+            );
+        }
     }
-
 
     public function prepare(
         string $query,
         array $options = []
     ): PDOStatement|false {
-        return false;
+        $stmt = $this->pdo->prepare($query, $options);
+
+        return $stmt === false ? false : new PDOStatement($stmt);
     }
 
     public function beginTransaction(): bool
     {
-        return false;
+        return $this->pdo->beginTransaction();
     }
 
     public function commit(): bool
     {
-        return false;
+        return $this->pdo->commit();
     }
 
     public function rollBack(): bool
     {
-        return false;
+        return $this->pdo->rollBack();
     }
 
     public function inTransaction(): bool
     {
-        return false;
+        return $this->pdo->inTransaction();
     }
 
     public function exec(string $statement): int|false
     {
-        return false;
+        return $this->pdo->exec($statement);
     }
 
     public function query(
@@ -119,37 +107,40 @@ class PDO
         ?int $fetchMode = null,
         mixed ...$args
     ): PDOStatement|false {
-        return false;
-    }
+        $stmt = $fetchMode === null
+            ? $this->pdo->query($query)
+            : $this->pdo->query($query, $fetchMode, ...$args);
 
+        return $stmt === false ? false : new PDOStatement($stmt);
+    }
 
     public function lastInsertId(?string $name = null): string|false
     {
-        return false;
+        return $this->pdo->lastInsertId($name);
     }
 
     public function errorCode(): ?string
     {
-        return null;
+        return $this->pdo->errorCode();
     }
 
     public function errorInfo(): array
     {
-        return [];
+        return $this->pdo->errorInfo();
     }
 
     public function getAttribute(int $attribute): mixed
     {
-        return null;
+        return $this->pdo->getAttribute($attribute);
     }
 
     public function setAttribute(int $attribute, mixed $value): bool
     {
-        return false;
+        return $this->pdo->setAttribute($attribute, $value);
     }
 
     public static function getAvailableDrivers(): array
     {
-        return [];
+        return NativePDO::getAvailableDrivers();
     }
 }

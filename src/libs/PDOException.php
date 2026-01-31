@@ -2,8 +2,9 @@
 
 namespace src\libs;
 
-use PDOException as NativePDOException;
+use Exception;
 
-class PDOException extends NativePDOException
+class PDOException extends Exception
 {
+
 }

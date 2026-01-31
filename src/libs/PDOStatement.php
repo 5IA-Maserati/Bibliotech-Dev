@@ -2,13 +2,11 @@
 
 namespace src\libs;
 
-use PDOStatement as NativePDOStatement;
-
 class PDOStatement
 {
-    private NativePDOStatement $stmt;
+    private PDOStatement $stmt;
 
-    public function __construct(NativePDOStatement $stmt)
+    public function __construct(PDOStatement $stmt)
     {
         $this->stmt = $stmt;
     }

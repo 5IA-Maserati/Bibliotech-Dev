@@ -2,9 +2,6 @@
 
 namespace src\libs;
 
-use PDO as NativePDO;
-use PDOStatement as NativePDOStatement;
-use PDOException as NativePDOException;
 
 class PDO
 {
@@ -43,7 +40,7 @@ class PDO
     /* PDO other constants */
     public const ERR_NONE = '00000';
 
-    private NativePDO $pdo;
+    private PDO $pdo;
 
     public function __construct(
         string $dsn,
@@ -52,8 +49,8 @@ class PDO
         ?array $options = null
     ) {
         try {
-            $this->pdo = new NativePDO($dsn, $username, $password, $options ?? []);
-        } catch (NativePDOException $e) {
+            $this->pdo = new PDO($dsn, $username, $password, $options ?? []);
+        } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode(), $e);
         }
     }
@@ -125,6 +122,6 @@ class PDO
 
     public static function getAvailableDrivers(): array
     {
-        return NativePDO::getAvailableDrivers();
+        return PDO::getAvailableDrivers();
     }
 }

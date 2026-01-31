@@ -16,7 +16,13 @@ class PDOStatement
         return $this->stmt->bindValue($param, $value, $type);
     }
 
-    public function bindParam(string|int $param, mixed &$var, int $type = PDO::PARAM_STR, int $maxLength = 0, mixed $driverOptions = null): bool
+    public function bindParam(
+        string|int $param,
+        mixed &$var,
+        int $type = PDO::PARAM_STR,
+        int $maxLength = 0,
+        mixed $driverOptions = null
+        ): bool
     {
         return $this->stmt->bindParam($param, $var, $type, $maxLength, $driverOptions);
     }

@@ -2,7 +2,6 @@
 
 namespace src\libs;
 
-
 class PDO
 {
     /* PDO parameter constants */

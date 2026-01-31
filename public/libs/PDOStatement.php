@@ -2,7 +2,7 @@
 
 namespace public\libs;
 
-use PDO;
+use public\libs\PDO;
 
 class PDOStatement
 {

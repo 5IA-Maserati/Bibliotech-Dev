@@ -17,10 +17,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 1.1 Install PHP PDO extensions
-      - name: Install PHP PDO extensions
-        run: sudo apt-get update && sudo apt-get install -y php-mysql php-sqlite3 php-pgsql
-
       # 2 Run Super-Linter
       - name: Run Super-Linter
         uses: github/super-linter@v6

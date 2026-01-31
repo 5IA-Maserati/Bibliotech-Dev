@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use PDO as PDO;
+include '../../public/libs/PDO.php';
 
 /**
  * Database connection

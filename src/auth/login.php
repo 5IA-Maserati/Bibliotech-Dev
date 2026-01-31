@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-use PDO as PDO;
-
 session_start();
+
 header('Content-Type: application/json');
+
+include '../libs/PDO.php';
 
 require_once __DIR__ . '/../db/db.php';
 

@@ -17,9 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 1.1 Install PHP Data Objects
-      - name: Install PHP Data Objects
-        run: sudo apt-get install pdo pdo_mysql
+      # 1.1 Check php version
+      - name: Check php version
+        run: php -v
 
       # 2 Run Super-Linter
       - name: Run Super-Linter

@@ -1,6 +1,0 @@
-<projectFiles>
-    <directory name="src" />
-    <stubs>
-        <directory name="psalm-stubs" />
-    </stubs>
-</projectFiles>

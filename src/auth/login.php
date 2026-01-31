@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use PDO;
+use PDO as PDO;
 
 session_start();
 header('Content-Type: application/json');

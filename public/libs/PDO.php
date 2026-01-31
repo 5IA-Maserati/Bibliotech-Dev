@@ -58,104 +58,130 @@ class PDO
 
     public const ERR_NONE = '00000';
 
-    public function __construct(string $dsn, ?string $username = null, ?string $password = null, ?array $options = null) {}
+    public function __construct(string $dsn, ?string $username = null, ?string $password = null, ?array $options = null)
+    {
+    }
 
-    public function prepare(string $query, array $options = []): PDOStatement|false {
+    public function prepare(string $query, array $options = []): PDOStatement|false
+    {
         return false;
     }
 
-    public function beginTransaction(): bool {
+    public function beginTransaction(): bool
+    {
         return false;
     }
 
-    public function commit(): bool {
+    public function commit(): bool
+    {
         return false;
     }
 
-    public function rollBack(): bool {
+    public function rollBack(): bool
+    {
         return false;
     }
 
-    public function inTransaction(): bool {
+    public function inTransaction(): bool
+    {
         return false;
     }
 
-    public function exec(string $statement): int|false {
+    public function exec(string $statement): int|false
+    {
         return false;
     }
 
-    public function query(string $query, ?int $fetchMode = null, ...$args): PDOStatement|false {
+    public function query(string $query, ?int $fetchMode = null, ...$args): PDOStatement|false
+    {
         return false;
     }
 
-    public function lastInsertId(?string $name = null): string|false {
+    public function lastInsertId(?string $name = null): string|false
+    {
         return false;
     }
 
-    public function errorCode(): ?string {
+    public function errorCode(): ?string
+    {
         return null;
     }
 
-    public function errorInfo(): array {
+    public function errorInfo(): array
+    {
         return [];
     }
 
-    public function getAttribute(int $attribute): mixed {
+    public function getAttribute(int $attribute): mixed
+    {
         return null;
     }
 
-    public function setAttribute(int $attribute, mixed $value): bool {
+    public function setAttribute(int $attribute, mixed $value): bool
+    {
         return false;
     }
 
-    public static function getAvailableDrivers(): array {
+    public static function getAvailableDrivers(): array
+    {
         return [];
     }
 }
 
 class PDOStatement
 {
-    public function bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool {
+    public function bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool
+    {
         return false;
     }
 
-    public function bindParam(string|int $param, mixed &$var, int $type = PDO::PARAM_STR, int $maxLength = 0, mixed $driverOptions = null): bool {
+    public function bindParam(string|int $param, mixed &$var, int $type = PDO::PARAM_STR, int $maxLength = 0, mixed $driverOptions = null): bool
+    {
         return false;
     }
 
-    public function execute(?array $params = null): bool {
+    public function execute(?array $params = null): bool
+    {
         return false;
     }
 
-    public function fetch(int $mode = PDO::FETCH_BOTH, int $cursorOrientation = 0, int $cursorOffset = 0): mixed {
+    public function fetch(int $mode = PDO::FETCH_BOTH, int $cursorOrientation = 0, int $cursorOffset = 0): mixed
+    {
         return null;
     }
 
-    public function fetchAll(int $mode = PDO::FETCH_BOTH, ...$args): array {
+    public function fetchAll(int $mode = PDO::FETCH_BOTH, ...$args): array
+    {
         return [];
     }
 
-    public function fetchColumn(int $column = 0): mixed {
+    public function fetchColumn(int $column = 0): mixed
+    {
         return null;
     }
 
-    public function rowCount(): int {
+    public function rowCount(): int
+    {
         return 0;
     }
 
-    public function errorCode(): ?string {
+    public function errorCode(): ?string
+    {
         return null;
     }
 
-    public function errorInfo(): array {
+    public function errorInfo(): array
+    {
         return [];
     }
 
-    public function closeCursor(): bool {
+    public function closeCursor(): bool
+    {
         return false;
     }
 
-    public function setFetchMode(int $mode, ...$args): bool {
+    public function setFetchMode(int $mode, ...$args): bool
+    {
         return false;
     }
 }

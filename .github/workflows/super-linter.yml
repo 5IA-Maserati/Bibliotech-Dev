@@ -17,28 +17,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-        # 2 Setup PHP
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          extensions: pdo, pdo_mysql
+      # 2 Build custom Super-Linter image with PDO
+      - name: Build custom Super-Linter with PDO
+        run: docker build -t superlinter-pdo .github/superlinter
 
+      # 3 Run Super-Linter using the custom image
+      - name: Run Super-Linter (custom image)
+        run: |
+          docker run \
+            -e RUN_LOCAL=true \
+            -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} \
+            -e VALIDATE_ALL_CODEBASE=false \
+            -e LOG_LEVEL=WARN \
+            -e VALIDATE_JSCPD=false \
+            -e VALIDATE_PHP=false \
+            -e FILTER_REGEX_EXCLUDE="vendor/.*|node_modules/|dist/|build/" \
+            -v ${{ github.workspace }}:/tmp/lint \
+            superlinter-pdo
 
-      # 2 Run Super-Linter
-      - name: Run Super-Linter
-        uses: github/super-linter@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_ALL_CODEBASE: false
-          LOG_LEVEL: WARN
-          VALIDATE_JSCPD: false
-          VALIDATE_PHP: false
-          FILTER_REGEX_EXCLUDE: "vendor/.*|node_modules/|dist/|build/"
-
-
-
-      # 3 Run JSCPD
+      # 4 Run JSCPD
       - name: Run JSCPD
         run: |
           npx jscpd \

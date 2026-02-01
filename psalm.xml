@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="4"
+    phpVersion="8.2"
+    resolveFromConfigFile="true"
+>
+    <projectFiles>
+        <directory name="src" />
+        <directory name="public" />
+    </projectFiles>
+
+    <issueHandlers>
+        <UnusedVariable>
+            <errorLevel type="suppress">
+                <directory name="public/pages" />
+            </errorLevel>
+        </UnusedVariable>
+
+        <PossiblyUnusedMethod>
+            <errorLevel type="suppress">
+                <directory name="src/libs" />
+            </errorLevel>
+        </PossiblyUnusedMethod>
+    </issueHandlers>
+</psalm>

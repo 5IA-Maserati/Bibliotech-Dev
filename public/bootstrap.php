@@ -61,6 +61,11 @@ session_set_cookie_params([
  * Session initialization
  * -------------------------------------------------
  */
-if (session_status() !== PHP_SESSION_ACTIVE) {
-    session_start();
+if (session_status() === 1) {   // 1 equals PHP_SESSION_NONE, which means that no session is active and...
+    session_start();            // ...we can start a new one. (I've done this because of the linter...)
 }
+/* Session codes 
+ * 0 = disabled
+ * 1 = none
+ * 2 = active
+ */

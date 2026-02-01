@@ -26,7 +26,6 @@ jobs:
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
           FILTER_REGEX_EXCLUDE: "vendor/.*|node_modules/|dist/|build/"
-          PHP_PSALM_CONFIG_FILE: psalm.xml
 
       # 3 Run JSCPD
       - name: Run JSCPD

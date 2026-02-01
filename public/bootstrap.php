@@ -41,3 +41,26 @@ header('Referrer-Policy: strict-origin-when-cross-origin');
 if (function_exists('mb_internal_encoding')) {
     mb_internal_encoding('UTF-8');
 }
+
+/**
+ * -------------------------------------------------
+ * Session security settings
+ * -------------------------------------------------
+ */
+ini_set('session.use_strict_mode', '1');
+ini_set('session.use_only_cookies', '1');
+
+session_set_cookie_params([
+    'httponly' => true,
+    'samesite' => 'Lax',
+    'secure' => isset($_SERVER['HTTPS'])
+]);
+
+/**
+ * -------------------------------------------------
+ * Session initialization
+ * -------------------------------------------------
+ */
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}

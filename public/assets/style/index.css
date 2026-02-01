@@ -9,16 +9,17 @@
     border-radius: 2px;
 }
 
-.btn-accedi-text {
+.btn-auth-text {
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.btn-accedi-text:hover {
+.btn-auth-text:hover {
     text-decoration: underline;
 }
+
 
 /* Time Central Layout */
 .content-wrapper {

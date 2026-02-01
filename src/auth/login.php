@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-session_start();
+require_once __DIR__ . '../../public/bootstrap.php';
 
 header('Content-Type: application/json');
 
@@ -48,8 +48,10 @@ if ($user === false || !password_verify($password, $user['password'])) {
     exit;
 }
 
-$_SESSION['user_id'] = $user['id'];
-$_SESSION['role'] = $user['role'];
+$_SESSION['user'] = [
+    'id' => $user['id'],
+    'role' => $user['role'],
+];
 
 echo json_encode([
     'success' => true,

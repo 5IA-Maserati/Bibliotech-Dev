@@ -36,11 +36,11 @@ require_once __DIR__ . '/bootstrap.php';
         </div>
 
         <?php if (isset($_SESSION['user'])) : ?>
-            <a href="/auth/logout.php" class="btn-accedi-text">
+            <a href="/auth/logout.php" class="btn-auth-text">
                 Logout
             </a>
         <?php else : ?>
-            <a href="/pages/login.php" class="btn-accedi-text">
+            <a href="/pages/login.php" class="btn-auth-text">
                 Accedi all'area riservata
             </a>
         <?php endif; ?>
@@ -101,9 +101,9 @@ require_once __DIR__ . '/bootstrap.php';
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-info">
-            <p><strong>Istituto Scolastico Superiore</strong></p>
-            <p>Via della Scuola, 123 - 00100 Città (Prov)</p>
-            <p>Tel: 0123 456789 | Email: biblioteca@scuola.edu.it</p>
+            <p><strong>Istituto Di Istruzione Superiori A. Maserati</strong></p>
+            <p>Via Mussini, 22 - 27058 Voghera (PV)</p>
+            <p>Tel: xxxx-xxxxx | Email: ????????@istitutomaserati.edu.it</p>
         </div>
     </footer>
 

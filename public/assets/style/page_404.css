@@ -1,13 +1,13 @@
 @import url("./common.css");
 
-.btn-accedi-text {
+.btn-auth-text {
     text-decoration: none;
     color: var(--dark-light-blue);
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.btn-accedi-text:hover {
+.btn-auth-text:hover {
     text-decoration: underline;
 }
 

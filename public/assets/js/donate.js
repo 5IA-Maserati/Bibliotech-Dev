@@ -1,3 +1,5 @@
+/* global L */
+
 document.addEventListener('DOMContentLoaded', function () {
   const mapContainer = document.getElementById('map')
   if (!mapContainer) return
@@ -22,13 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
     prefix: false
   }).addTo(map)
 
- map.attributionControl.addAttribution(`
+  map.attributionControl.addAttribution(`
   <a class="gmaps-link" href="https://maps.app.goo.gl/fhTpU3kYApsbhmp49" target="_blank">
     <img src="../assets/img/icons/google-map-icon.png" alt="Google Maps" class="gmaps-icon">
     Apri su Google Maps
   </a>
 `)
-
 
   L.marker([lat, lng])
     .addTo(map)

@@ -24,13 +24,15 @@ header {
     box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
 }
 
-header .navbar {
+/* Navbar container */
+header.navbar {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
+/* Logo area */
 .logo-area {
     position: absolute;
     left: 2rem;
@@ -39,7 +41,7 @@ header .navbar {
     font-size: 0.75rem;
 }
 
-.container {
+header .container {
     text-align: center;
 }
 
@@ -83,6 +85,7 @@ header p {
     font-size: 14px;
     color: #6b7280;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 /* INPUT */

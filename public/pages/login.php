@@ -20,7 +20,7 @@ include '../includes/header.php';
 
 <div class="login-container">
     <div class="login-card">
-        <h2>Biblioteca Digitale</h2>
+        <h1 style="text-align: center;">Biblioteca Digitale</h1>
         <p class="subtitle">Accesso studenti e docenti</p>
 
         <form id="login-form">

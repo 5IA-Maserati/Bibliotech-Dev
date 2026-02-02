@@ -25,7 +25,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
           VALIDATE_JSCPD: false
-          FILTER_REGEX_EXCLUDE: "vendor/.*|installer/.*|dist/|build/"
+          FILTER_REGEX_EXCLUDE: "rutime/vendor/.*|installer/.*|dist/|build/"
 
       # 3 Run JSCPD
       - name: Run JSCPD

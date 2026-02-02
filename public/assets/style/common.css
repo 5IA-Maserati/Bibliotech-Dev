@@ -1,6 +1,6 @@
-
-/* Color Variables */
-
+/* ===========================
+   COLOR VARIABLES
+=========================== */
 :root {
   --main-color: #51758d;
   --dark-light-blue: #5a7b94;
@@ -16,6 +16,9 @@
   --shadow: 0 2px 10px rgb(0 0 0 / 10%);
 }
 
+/* ===========================
+   GLOBAL RESET
+=========================== */
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +33,9 @@ body {
   line-height: 1.6;
 }
 
+/* ===========================
+   HEADER BASE
+=========================== */
 header {
   background: linear-gradient(
     135deg,
@@ -40,50 +46,80 @@ header {
   margin-bottom: 2rem;
 }
 
-/* Header */
+/* Titolo e sottotitolo comuni */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color:#51758D;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #51758D;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
 }
 
 .logo-area {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .logo-placeholder {
-    width: 60px;
-    height: 40px;
-    background-color: var(--dark-light-blue);
-    color: white;
-    font-size: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
+  width: 60px;
+  height: 40px;
+  background-color: var(--dark-light-blue);
+  color: white;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
 }
 
-/* Main Title */
+/* ===========================
+   MAIN TITLE
+=========================== */
 .main-title {
-    text-align: center;
-    color: var(--dark-light-blue);
-    margin: 0;
-    letter-spacing: 3px;
-    font-size: 2rem;
+  text-align: center;
+  color: var(--dark-light-blue);
+  margin: 0;
+  letter-spacing: 3px;
+  font-size: 2rem;
 }
 
-/* Navigation Buttons */
+/* ===========================
+   COMMON LAYOUT
+=========================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+/* ===========================
+   NAVIGATION BUTTONS
+=========================== */
 .quick-nav {
-    display: flex;
-    gap: 20px;
-    padding: 15px 5%;
+  display: flex;
+  gap: 20px;
+  padding: 15px 5%;
 }
 
-/* Action Bar with Navigation Buttons */
+/* Action Bar */
 .action-bar {
   padding: 1rem 0;
   background-color: #f8f9fa;
@@ -121,7 +157,7 @@ header {
   margin-left: auto;
 }
 
-/* Classi specifiche (varianti) alla fine */
+/* Varianti */
 .btn-nav.donate {
   background-color: var(--medium-blue);
   color: white;

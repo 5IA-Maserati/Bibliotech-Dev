@@ -3,28 +3,7 @@
 /* Search Page Styles */
 
 header {
-  padding: 2rem 0;
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
-}
-
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-main {
-  padding: 2rem 0;
 }
 
 .search-bar {

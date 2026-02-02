@@ -33,7 +33,7 @@ $NpmCmd   = Join-Path $NodeRoot "npm.cmd"
 # -------------------------------------------------
 if (!(Test-Path $NodeExe)) {
 
-    Write-Host "[Node] SIX-SEVEN, Installing Node.js..."
+    Write-Output "[Node] SIX-SEVEN, Installing Node.js..."
 
     New-Item -ItemType Directory -Force -Path $CacheDir | Out-Null
 
@@ -50,10 +50,10 @@ if (!(Test-Path $NodeExe)) {
     Expand-Archive $ZipPath -DestinationPath $CacheDir -Force
     Remove-Item $ZipPath
 
-    Write-Host "[Node] OK"
+    Write-Output "[Node] OK"
 }
 else {
-    Write-Host "[Node] Already installed"
+    Write-Output "[Node] Already installed"
 }
 
 # -------------------------------------------------
@@ -69,25 +69,25 @@ if (!(Test-Path $NpmCmd)) {
 Push-Location $RootDir
 
 if (Test-Path "package-lock.json") {
-    Write-Host "[NPM] Installing dependencies bla bla..."
+    Write-Output "[NPM] Installing dependencies bla bla..."
     & $NpmCmd ci --silent > $null 2>&1
 }
 else {
-    Write-Host "[NPM] Installing dependencies gne gne gne..."
+    Write-Output "[NPM] Installing dependencies gne gne gne..."
     & $NpmCmd install --silent > $null 2>&1
 }
 
 Pop-Location
-Write-Host "[NPM] OK"
+Write-Output "[NPM] OK"
 
 # -------------------------------------------------
 # StandardJS Lint
 # -------------------------------------------------
-Write-Host "[Lint] Running checks..."
+Write-Output "[Lint] Running checks..."
 
 Push-Location $RootDir
 & $NpmCmd run lint --silent > $null 2>&1
 Pop-Location
 
-Write-Host "[Lint] OK"
-Write-Host "[Done] GODO FUNZIONA TUTTO"
+Write-Output "[Lint] OK"
+Write-Output "[Done] GODO FUNZIONA TUTTO"

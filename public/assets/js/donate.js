@@ -1,34 +1,39 @@
-import L from 'leaflet'
-
 document.addEventListener('DOMContentLoaded', function () {
   const mapContainer = document.getElementById('map')
   if (!mapContainer) return
 
-  // Coordinate Voghera (centro città)
-  const lat = 44.9913
-  const lng = 9.0095
+  const lat = 44.98682625918026
+  const lng = 8.997528028540428
 
-  // Imposta path corretto delle immagini di Leaflet
-  L.Icon.Default.imagePath = '../assets/libs/leaflet/images/'
+  // Path corretto delle immagini Leaflet
+  L.Icon.Default.imagePath = '../assets/js/libs/.dist/images/'
 
-  // Inizializza la mappa
   const map = L.map('map', {
     center: [lat, lng],
-    zoom: 15,
-    scrollWheelZoom: false
+    zoom: 25,
+    scrollWheelZoom: false,
+    attributionControl: false
   })
 
-  // Layer OpenStreetMap
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
+
+  // Aggiungi il tuo controllo
+  L.control.attribution({
+    prefix: false
   }).addTo(map)
 
-  // Marker
+ map.attributionControl.addAttribution(`
+  <a class="gmaps-link" href="https://maps.app.goo.gl/fhTpU3kYApsbhmp49" target="_blank">
+    <img src="../assets/img/icons/google-map-icon.png" alt="Google Maps" class="gmaps-icon">
+    Apri su Google Maps
+  </a>
+`)
+
+
   L.marker([lat, lng])
     .addTo(map)
     .bindPopup('<strong>Biblioteca Scolastica</strong><br>Istituto Alfieri Maserati<br>Voghera')
 
-  // UX: abilita zoom solo dopo click
   map.on('click', () => map.scrollWheelZoom.enable())
   map.on('mouseout', () => map.scrollWheelZoom.disable())
 })

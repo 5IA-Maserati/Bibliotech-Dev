@@ -189,6 +189,31 @@ footer p {
   fill: var(--dark-light-blue);
 }
 
+.leaflet-control-attribution {
+  font-size: 1rem;          /* ingrandisce il testo */
+  padding: 8px 14px;        /* più spazio interno */
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.gmaps-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #1a73e8;           /* colore Google Maps */
+  text-decoration: none;
+}
+
+.gmaps-link:hover {
+  text-decoration: underline;
+}
+
+.gmaps-icon {
+  width: 20px;              /* ingrandisci qui l’icona */
+  height: 20px;
+}
 
 
 /* Hours Table */

@@ -1,0 +1,31 @@
+name: Lighthouse CI
+
+on:
+  push:
+    paths:
+      - '**/*.html'
+      - '**/*.js'
+      - '**/*.css'
+      
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run Lighthouse CI on static files
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          staticDistDir: '/public' # Web server root
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          # optionally, add performance budgets
+          # budgetPath: ./lighthouse-budget.json

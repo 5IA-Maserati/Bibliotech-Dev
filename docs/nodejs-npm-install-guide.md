@@ -2,20 +2,20 @@
 
 Easy and fast, just a command in powershell.
 
-
 ## Requirements
 
 ✅ PowerShell (default on Windows)
 ❌ Nothing is to be already installed
 
-
 ## How to run
 
 1. Open a terminal in vs code (it will be powershell)
 2. Run this command:
+
 ```ps1
 .\scripts\jslint.cmd
 ```
+
 Copy and paste it!
 
 ⚠️ **Copy extactly as said before, because powershell is strict.**

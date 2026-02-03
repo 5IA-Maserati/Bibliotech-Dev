@@ -1,0 +1,56 @@
+name: Lighthouse Performance Check
+
+on:
+  pull_request:
+    paths:
+      - '**/*.html'  # Run only if HTML files are modified
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Install Lighthouse CLI globally
+      - name: Install Lighthouse
+        run: npm install -g lighthouse
+
+      # Start a simple HTTP server to serve local files
+      - name: Start HTTP server
+        run: |
+          npm install -g serve
+          serve -s . -l 5000 &  # run server in the background
+          sleep 5  # wait a few seconds for the server to start
+
+      # Run Lighthouse for each HTML file
+      - name: Run Lighthouse
+        run: |
+          mkdir -p lighthouse-reports
+          for file in $(find . -name "*.html"); do
+            url="http://localhost:5000/${file#./}"
+            echo "Running Lighthouse on $url"
+            lighthouse "$url" --output=json --output-path="lighthouse-reports/$(basename $file).json" --only-categories=performance --throttling-method=devtools
+          done
+
+      # Optional: check performance thresholds
+      - name: Check performance thresholds
+        run: |
+          fail=0
+          for report in lighthouse-reports/*.json; do
+            score=$(jq '.categories.performance.score * 100' "$report")
+            echo "$(basename $report): Performance score = $score"
+            if (( $(echo "$score < 85" | bc -l) )); then
+              echo "Performance below threshold (85)"
+              fail=1
+            fi
+          done
+          if [ $fail -eq 1 ]; then
+            exit 1  # fail the job if any page is below the threshold

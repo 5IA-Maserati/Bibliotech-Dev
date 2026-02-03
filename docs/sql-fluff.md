@@ -1,6 +1,7 @@
 # SQLFluff
 
 ## Introduction
+
 To ensure consistent formatting and linting of SQL files in Bibliotech‑Dev, we are introducing **SQLFluff** as a mandatory development tool.
 
 ## Installation
@@ -8,6 +9,7 @@ To ensure consistent formatting and linting of SQL files in Bibliotech‑Dev, we
 SQLFluff can be installed in several ways:
 
 ### Using pip
+
 ```bash
 pip install sqlfluff
 ```
@@ -22,7 +24,7 @@ pipx install sqlfluff
 
 If you want to include it in `requirements-dev.txt`:
 
-```
+```markdown
 sqlfluff>=2.4.0
 ```
 
@@ -47,7 +49,7 @@ To check SQL files for formatting issues:
 sqlfluff lint path/to/sql/file.sql
 ```
 
-### Auto-fixing issues
+### Autofixing issues
 
 To automatically fix detected issues:
 

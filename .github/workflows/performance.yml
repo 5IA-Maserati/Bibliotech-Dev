@@ -21,11 +21,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Run Lighthouse CI on static files
+      - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
         with:
-          staticDistDir: '/public' # Web server root
+          configPath: ./lighthouserc.json
           uploadArtifacts: true
-          temporaryPublicStorage: true
-          # optionally, add performance budgets
-          # budgetPath: ./lighthouse-budget.json

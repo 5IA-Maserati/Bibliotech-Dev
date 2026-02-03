@@ -1,9 +1,12 @@
 name: Lighthouse Performance Check
 
 on:
-  pull_request:
+  push:
     paths:
       - '**/*.html'  # Run only if HTML files are modified
+      
+permissions:
+  contents: read
 
 jobs:
   lighthouse:

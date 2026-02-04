@@ -2,11 +2,9 @@ name: Lighthouse CI
 
 on:
   push:
-    paths:
-      - '**/*.php'
-      - '**/*.html'
-      - '**/*.js'
-      - '**/*.css'
+    branches:
+      - main
+
 
 permissions:
   contents: read

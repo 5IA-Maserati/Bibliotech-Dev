@@ -32,7 +32,7 @@
 - Enter key support for quick search
 - Real-time input sanitization
 
-#### Booking Form (`booking.html` + `booking.js`)
+#### Booking Form (`booking.php` + `booking.js`)
 - Book title validation
 - Student name validation
 - Email validation
@@ -98,7 +98,7 @@ public/
 │   ├── login.php                  [UPDATED - Added form-validator.js & validation.css]
 │   ├── signup.php                 [UPDATED - Added form-validator.js & validation.css]
 │   ├── search.php                 [UPDATED - Added form-validator.js & validation.css]
-│   └── booking.html               [UPDATED - Added form with validation]
+│   └── booking.php               [UPDATED - Added form with validation]
 └── includes/
     └── form-input.php             [Existing - Reusable form component]
 

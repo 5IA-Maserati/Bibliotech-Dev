@@ -49,7 +49,7 @@ require_once __DIR__ . '/bootstrap.php';
 
     <!-- Quick navigation -->
     <nav class="quick-nav" aria-label="Navigazione rapida">
-        <a href="/pages/booking.html" class="btn-nav">Restituisci Libro</a>
+        <a href="/pages/booking.php" class="btn-nav">Restituisci Libro</a>
         <a href="/pages/donate.php" class="btn-nav">Dona Libro</a>
         <a href="/pages/search.php" class="btn-nav">Cerca</a>
     </nav>

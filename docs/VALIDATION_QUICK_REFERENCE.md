@@ -31,7 +31,7 @@ Confirm Password:    Must match Password field
 Search Query:        Max 255 chars, alphanumeric + special chars allowed
 ```
 
-### 4. Booking Form (`/pages/booking.html`)
+### 4. Booking Form (`/pages/booking.php`)
 ```text
 Book Title:          1-255 chars, alphanumeric + punctuation allowed
 Student Name:        2-50 chars, letters only
@@ -221,7 +221,7 @@ FormValidator.markFieldError('email', 'Custom error message');
 - `public/pages/login.php` - Added validator & CSS
 - `public/pages/signup.php` - Added validator & CSS
 - `public/pages/search.php` - Added validator & CSS
-- `public/pages/booking.html` - Added form & validator
+- `public/pages/booking.php` - Added form & validator
 - `public/assets/js/login.js` - Complete rewrite with validation
 - `public/assets/js/signup.js` - Complete rewrite with validation
 - `public/assets/js/search.js` - Complete rewrite with validation

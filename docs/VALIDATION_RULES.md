@@ -12,7 +12,7 @@ This document outlines the input validation and sanitization implementation acro
 - **`public/pages/login.php`** - Login form
 - **`public/pages/signup.php`** - Registration form
 - **`public/pages/search.php`** - Search form
-- **`public/pages/booking.html`** - Booking form
+- **`public/pages/booking.php`** - Booking form
 
 ### Form Scripts
 - **`public/assets/js/login.js`** - Login form validation handler

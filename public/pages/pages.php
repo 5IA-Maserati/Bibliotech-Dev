@@ -1,3 +1,10 @@
+<?php
+
+$title = 'Books details';
+$show_nav = false;
+include '../includes/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>

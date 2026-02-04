@@ -1,3 +1,10 @@
+<?php
+
+$title = '404 - Page not found';
+$show_nav = false;
+include '../includes/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>

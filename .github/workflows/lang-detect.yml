@@ -1,0 +1,44 @@
+name: Detect Non-English Text
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  detect-language:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install language detector
+        run: pip install langdetect
+
+      - name: Scan repository for non-English text
+        run: |
+          python << 'EOF'
+          import os
+          from langdetect import detect
+
+          allowed_extensions = (".php", ".html", ".js", ".css", ".txt", ".md")
+
+          for root, dirs, files in os.walk("."):
+              for file in files:
+                  if file.endswith(allowed_extensions):
+                      path = os.path.join(root, file)
+                      try:
+                          content = open(path, "r", errors="ignore").read()
+                          if not content.strip():
+                              continue
+                          lang = detect(content)
+                          if lang != "en":
+                              print(f"❌ Non-English detected in {path} → {lang}")
+                      except Exception as e:
+                          pass
+          EOF

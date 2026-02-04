@@ -3,10 +3,11 @@ name: Lighthouse CI
 on:
   push:
     paths:
+      - '**/*.php'
       - '**/*.html'
       - '**/*.js'
       - '**/*.css'
-      
+
 permissions:
   contents: read
 

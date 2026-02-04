@@ -27,7 +27,6 @@ header(
     . "frame-src 'self'; "
     . "object-src 'none'; "
     . "base-uri 'self';"
-
 );
 
 

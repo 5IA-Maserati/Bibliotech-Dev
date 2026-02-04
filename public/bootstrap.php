@@ -27,8 +27,11 @@ header(
     . "frame-src 'self'; "
     . "object-src 'none'; "
     . "base-uri 'self';"
+
 );
 
+
+header("Cache-Control: no-cache");
 header('X-Content-Type-Options: nosniff');
 header('X-Frame-Options: DENY');
 header('Referrer-Policy: strict-origin-when-cross-origin');

@@ -28,9 +28,14 @@ jobs:
           from langdetect import detect
 
           allowed_extensions = (".php", ".html", ".js", ".css", ".txt", ".md")
+          ignored_folders = ["vendor", "node_modules", "storage", "tests", ".github", "runtime", "libs"]
+
           found_non_english = False
 
           for root, dirs, files in os.walk("."):
+              # Remove ignored folders from traversal
+              dirs[:] = [d for d in dirs if d not in ignored_folders]
+
               for file in files:
                   if file.endswith(allowed_extensions):
                       path = os.path.join(root, file)
@@ -49,7 +54,6 @@ jobs:
                                           print(f"Detected language: {lang}")
                                           found_non_english = True
                                   except:
-                                      # Skip lines too short for detection
                                       pass
                       except:
                           pass
@@ -60,3 +64,4 @@ jobs:
 
           print("✔ No non-English text detected.")
           EOF
+

@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const map = L.map('map', {
     center: [lat, lng],
     zoom: 20,
-    minZoom: minZoom,
-    maxZoom: maxZoom,
+    minZoom,
+    maxZoom,
     scrollWheelZoom: false,
     attributionControl: false
   })
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Carica i tiles rispettando i limiti di zoom
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    minZoom: minZoom,
-    maxZoom: maxZoom
+    minZoom,
+    maxZoom
   }).addTo(map)
 
   // Far partire la vista mostrando l'intera regione (ma l'utente può zoomare dentro)

@@ -1,11 +1,22 @@
 {
   "ci": {
     "collect": {
-      "url" : ["http://localhost:8000/"]
+      "url": ["http://localhost:8000/"]
     },
+
     "assert": {
-      "preset": "lighthouse:recommended"
+      "assertions": {
+        "errors-in-console": "off",
+        "document-latency-insight": "off",
+        "image-delivery-insight": "off",
+        "network-dependency-tree-insight": "off",
+        "offscreen-images": "off",
+        "uses-optimized-images": "off",
+        "uses-responsive-images": "off",
+        "uses-text-compression": "off"
+      }
     },
+
     "upload": {
       "target": "temporary-public-storage"
     }

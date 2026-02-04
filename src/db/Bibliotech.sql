@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS books (
     CONSTRAINT fk_category
     FOREIGN KEY (category_id)
     REFERENCES categories (id)
-    ON DELETE SET NULL
+    ON DELETE RESTRICT
 );
 
 --===============================

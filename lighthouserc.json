@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./public"
+      "url" : ["http://localhost:8000/"]
     },
     "assert": {
       "preset": "lighthouse:recommended"

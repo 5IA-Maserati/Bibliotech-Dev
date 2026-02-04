@@ -24,9 +24,12 @@ jobs:
         run: |
           python << 'EOF'
           import os
+          import sys
           from langdetect import detect
 
           allowed_extensions = (".php", ".html", ".js", ".css", ".txt", ".md")
+
+          found_non_english = False
 
           for root, dirs, files in os.walk("."):
               for file in files:
@@ -39,6 +42,13 @@ jobs:
                           lang = detect(content)
                           if lang != "en":
                               print(f"❌ Non-English detected in {path} → {lang}")
-                      except Exception as e:
+                              found_non_english = True
+                      except Exception:
                           pass
+
+          if found_non_english:
+              print("❌ Workflow stopped: Non-English text found.")
+              sys.exit(1)
+
+          print("✔ No non-English text detected.")
           EOF

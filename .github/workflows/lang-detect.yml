@@ -28,7 +28,6 @@ jobs:
           from langdetect import detect
 
           allowed_extensions = (".php", ".html", ".js", ".css", ".txt", ".md")
-
           found_non_english = False
 
           for root, dirs, files in os.walk("."):
@@ -36,18 +35,27 @@ jobs:
                   if file.endswith(allowed_extensions):
                       path = os.path.join(root, file)
                       try:
-                          content = open(path, "r", errors="ignore").read()
-                          if not content.strip():
-                              continue
-                          lang = detect(content)
-                          if lang != "en":
-                              print(f"❌ Non-English detected in {path} → {lang}")
-                              found_non_english = True
-                      except Exception:
+                          with open(path, "r", errors="ignore") as f:
+                              for line_number, line in enumerate(f, start=1):
+                                  text = line.strip()
+                                  if not text:
+                                      continue
+                                  try:
+                                      lang = detect(text)
+                                      if lang != "en":
+                                          print(f"\n❌ Non-English detected")
+                                          print(f"File: {path}")
+                                          print(f"Line {line_number}: {text}")
+                                          print(f"Detected language: {lang}")
+                                          found_non_english = True
+                                  except:
+                                      # Skip lines too short for detection
+                                      pass
+                      except:
                           pass
 
           if found_non_english:
-              print("❌ Workflow stopped: Non-English text found.")
+              print("\n❌ Workflow stopped: Non-English text found.")
               sys.exit(1)
 
           print("✔ No non-English text detected.")

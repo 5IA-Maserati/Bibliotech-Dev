@@ -3,7 +3,7 @@
 =========================== */
 :root {
   --main-color: #51758d;
-  --dark-light-blue: #5a7b94;
+  --dark-light-blue: #597992;
   --medium-blue: #6995ad;
   --light-gray-blue: #cfd8dc;
   --white: #fff;
@@ -139,8 +139,8 @@ main {
   display: inline-block;
   padding: 0.6rem 1.2rem;
   background-color: white;
-  color: var(--medium-blue);
-  border: 1px solid var(--medium-blue);
+  color: var(--dark-light-blue);
+  border: 1px solid var(--dark-light-blue);
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;

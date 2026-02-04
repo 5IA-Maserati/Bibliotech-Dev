@@ -70,7 +70,7 @@
 /* Buttons inside orari */
 .orari-nav {
     padding: 20px;
-    background-color: var(--medium-blue);
+    background-color: var(--dark-light-blue);
     color: white;
     text-decoration: none;
     border-radius: 5px;

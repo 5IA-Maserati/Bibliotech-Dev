@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prenotazione">
     <title>Prenotazione</title>
     <link rel="stylesheet" href="../assets/style/booking.css">
     <link rel="stylesheet" href="../assets/style/validation.css">
@@ -62,7 +63,7 @@
             <button type="submit">Prenota</button>
         </form>
 
-        
+
         <a href="search.php">Torna all'elenco libri</a>
         <a href="../index.php">Torna alla home</a>
     </div>

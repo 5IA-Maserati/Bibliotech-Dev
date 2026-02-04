@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina non trovata">
     <title>404 - Pagina non trovata</title>
     <link rel="stylesheet" href="../assets/style/page_404.css">
 </head>

@@ -1,8 +1,12 @@
-$ErrorActionPreference = "Stop" # Stop on errors
-$ProgressPreference = "SilentlyContinue" # no progress spam
+# -------------------------------------------------
+# PowerShell Node.js Setup & Lint Script
+# -------------------------------------------------
+# Stops execution on errors and suppresses progress messages
+$ErrorActionPreference = "Stop"
+$ProgressPreference   = "SilentlyContinue"
 
 # -------------------------------------------------
-# Paths... yea
+# Define Paths
 # -------------------------------------------------
 $RootDir  = (Resolve-Path "$PSScriptRoot\..").Path
 $CacheDir = Join-Path $RootDir ".cache\node"
@@ -13,81 +17,87 @@ $CacheDir = Join-Path $RootDir ".cache\node"
 $NodeVersion = "v20.11.1"
 
 # -------------------------------------------------
-# Accepts only 64 bit ok? And those with arm64 are lucky too
+# Determine Architecture (64-bit / ARM64 only)
 # -------------------------------------------------
 switch ($env:PROCESSOR_ARCHITECTURE) {
     "ARM64" { $Arch = "arm64" }
     "AMD64" { $Arch = "x64" }
-    default { throw "Architettura non supportata" }
+    default { throw "Unsupported architecture: $($env:PROCESSOR_ARCHITECTURE)" }
 }
 
 # -------------------------------------------------
-# Node paths
+# Node.js Executable Paths
 # -------------------------------------------------
 $NodeRoot = Join-Path $CacheDir "node-$NodeVersion-win-$Arch"
 $NodeExe  = Join-Path $NodeRoot "node.exe"
 $NpmCmd   = Join-Path $NodeRoot "npm.cmd"
 
 # -------------------------------------------------
-# Download Node.js (silent)
+# Download & Install Node.js if not present
 # -------------------------------------------------
 if (!(Test-Path $NodeExe)) {
 
-    Write-Output "[Node] SIX-SEVEN, Installing Node.js..."
+    Write-Output "[Node] Installing Node.js $NodeVersion..."
 
+    # Ensure cache directory exists
     New-Item -ItemType Directory -Force -Path $CacheDir | Out-Null
 
     $ZipName = "node-$NodeVersion-win-$Arch.zip"
     $ZipPath = Join-Path $CacheDir $ZipName
     $Url     = "https://nodejs.org/dist/$NodeVersion/$ZipName"
 
+    # Download Node.js archive
     Invoke-WebRequest $Url -OutFile $ZipPath
 
+    # Remove old installation if exists
     if (Test-Path $NodeRoot) {
         Remove-Item $NodeRoot -Recurse -Force
     }
 
+    # Extract Node.js
     Expand-Archive $ZipPath -DestinationPath $CacheDir -Force
+
+    # Remove zip file
     Remove-Item $ZipPath
 
-    Write-Output "[Node] OK"
+    Write-Output "[Node] Installation complete."
 }
 else {
-    Write-Output "[Node] Already installed"
+    Write-Output "[Node] Node.js already installed."
 }
 
 # -------------------------------------------------
-# sanity check
+# Sanity Check for npm
 # -------------------------------------------------
 if (!(Test-Path $NpmCmd)) {
-    throw "npm not found, ouch it will not work"
+    throw "npm executable not found. Node.js installation may be corrupted."
 }
 
 # -------------------------------------------------
-# NPM install (silent)
+# Install NPM Dependencies
 # -------------------------------------------------
 Push-Location $RootDir
 
 if (Test-Path "package-lock.json") {
-    Write-Output "[NPM] Installing dependencies bla bla..."
+    Write-Output "[NPM] Installing dependencies (CI mode)..."
     & $NpmCmd ci --silent > $null 2>&1
 }
 else {
-    Write-Output "[NPM] Installing dependencies gne gne gne..."
+    Write-Output "[NPM] Installing dependencies (full install)..."
     & $NpmCmd install --silent > $null 2>&1
 }
 
 Pop-Location
-Write-Output "[NPM] OK"
+Write-Output "[NPM] Dependencies installed."
 
 # -------------------------------------------------
-# StandardJS Lint
+# Run StandardJS Lint
 # -------------------------------------------------
-Write-Output "[Lint] Running checks..."
+Write-Output "[Lint] Running lint checks..."
 
 Push-Location $RootDir
 & $NpmCmd run lint --silent > $null 2>&1
 Pop-Location
 
-Write-Output "[Lint] OK"
-Write-Output "[Done] GODO FUNZIONA TUTTO"
+Write-Output "[Lint] Linting complete."
+Write-Output "[Done] All tasks completed successfully."

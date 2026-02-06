@@ -151,6 +151,7 @@ main {
 .btn-nav:hover {
   transform: translateY(-1px);
   background-color: var(--dark-light-blue);
+  color: white;
 }
 
 .btn-nav:last-child {

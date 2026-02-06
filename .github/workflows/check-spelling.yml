@@ -14,5 +14,4 @@ jobs:
         uses: check-spelling/check-spelling@v0.0.25
         with:
           check-spelling-dictionaries: en
-          check-spelling-wordlists: .github/wordlists/tech.txt
           check-spelling-fail-on-unrecognized: true

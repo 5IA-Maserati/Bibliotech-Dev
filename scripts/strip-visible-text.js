@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync } from "fs";
-import { glob } from "glob";
+import * as fs from "fs";
+import * as glob from "glob";
 import * as cheerio from "cheerio";
 
 const FILES = [

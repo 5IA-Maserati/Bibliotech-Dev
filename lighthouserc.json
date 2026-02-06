@@ -1,22 +1,19 @@
 {
   "ci": {
     "collect": {
-      "url": ["http://localhost:8000/"]
+      "url": [
+        "http://localhost:8000/index.php",
+        "http://localhost:8000/pages/booking.php",
+        "http://localhost:8000/pages/donate.php",
+        "http://localhost:8000/pages/login.php",
+        "http://localhost:8000/pages/page_404.php",
+        "http://localhost:8000/pages/search.php",
+        "http://localhost:8000/pages/signup.php"
+      ]
     },
-
     "assert": {
-      "assertions": {
-        "errors-in-console": "off",
-        "document-latency-insight": "off",
-        "image-delivery-insight": "off",
-        "network-dependency-tree-insight": "off",
-        "offscreen-images": "off",
-        "uses-optimized-images": "off",
-        "uses-responsive-images": "off",
-        "uses-text-compression": "off"
-      }
+      "preset": "lighthouse:recommended"
     },
-
     "upload": {
       "target": "temporary-public-storage"
     }

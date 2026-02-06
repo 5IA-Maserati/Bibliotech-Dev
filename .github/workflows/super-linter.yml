@@ -24,14 +24,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
-          VALIDATE_JSCPD: false
           FILTER_REGEX_EXCLUDE: "vendor/.*|installer/.*|dist/|build/"
-
-      # 3 Run JSCPD
-      - name: Run JSCPD
-        run: |
-          npx jscpd \
-            --threshold 10 \
-            --min-lines 5 \
-            --min-tokens 50 \
-            --ignore "**/vendor/**,**/installer/**,**/node_modules/**,**/dist/**,**/build/**"

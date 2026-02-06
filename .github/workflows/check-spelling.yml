@@ -3,58 +3,24 @@ name: Spell Check
 on: [push, pull_request]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   check-spelling:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout repository
       - uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-      # Step 3: Install required Node.js packages
       - name: Install dependencies
-        run: |
-          npm install cheerio glob
+        run: npm install cheerio glob
 
-      # Step 4: Extract Italian and English text from PHP/HTML
-      - name: Extract HTML text
-        run: node scripts/extract-html-text.js
+      - name: Strip visible HTML text (allow Italian)
+        run: node scripts/strip-visible-text.js
 
-      # Step 5: Spell check English text in PHP/HTML (excluding Italian tags)
-      - name: Spell Check English (HTML/PHP)
+      - name: Spell check
         uses: check-spelling/check-spelling@v0.0.25
-        with:
-          spell_check_this: english-html-to-check.txt
-          extra_dictionaries:
-            cspell:it_IT/it_IT.dic
-
-
-      # Step 6: Spell check Italian text in allowed HTML tags
-      - name: Spell Check Italian
-        uses: check-spelling/check-spelling@v0.0.25
-        with:
-          spell_check_this: italian-to-check.txt
-          extra_dictionaries:
-            cspell:it_IT/it_IT.dic
-
-      # Step 7: Spell check English in the rest of the repo (JS, CSS, Markdown, etc.)
-      - name: Spell Check English (Rest of repo)
-        uses: check-spelling/check-spelling@v0.0.25
-        with:
-          spell_check_this: |
-            '**/*.js'
-            '**/*.ts'
-            '**/*.css'
-            '**/*.md'
-          ignore-pattern: |
-            '**/*.php'                 # PHP handled above
-            'italian-to-check.txt'      # Temporary file
-            'english-html-to-check.txt' # Temporary file
-            'vendor/**'                # Ignore dependencies

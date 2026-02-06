@@ -264,6 +264,7 @@ maxbounds
 maxzoom
 MDN
 mesonet
+metadata
 microsoft
 miniclass
 minmax

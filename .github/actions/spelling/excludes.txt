@@ -11,6 +11,7 @@
 
 ^\Q.github/actions/spelling/expect.txt\E$
 ^\Q.github/wordlists/tech.txt\E$
+^src/db/data/raw-data-db\.csv$
 
 ^\Qpublic/assets/js/libs/.dist/leaflet.js\E$
 ^public/assets/img/

@@ -2,13 +2,13 @@
 
 /* Booking Page Styles */
 
-header {
-  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
-}
-
 header h1 {
   text-align: center;
   color: white;
+}
+
+header {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
 
 body {

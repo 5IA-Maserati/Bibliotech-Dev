@@ -8,7 +8,7 @@
 const searchInput = document.getElementById('q')
 const searchButton = document.querySelector('.btn-search')
 
-// Filtri (attualmente previsti)
+// Filters (currently expected)
 const _genreFilter = document.getElementById('genre')
 const _sortFilter = document.getElementById('sort')
 

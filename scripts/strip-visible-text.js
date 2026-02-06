@@ -50,4 +50,4 @@ for (const pattern of FILES) {
   }
 }
 
-console.log("✔ Visible HTML text stripped (CI-only)");
+console.log("Visible HTML text stripped (CI-only)");

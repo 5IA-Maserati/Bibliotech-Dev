@@ -1,87 +1,98 @@
 /* global L */
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const mapContainer = document.getElementById('map')
   if (!mapContainer) return
 
+  // Coordinates of the library
   const lat = 44.98682625918026
   const lng = 8.997528028540428
 
-  // Path corretto delle immagini Leaflet
+  // Correct path for Leaflet marker icons
   L.Icon.Default.imagePath = '../assets/js/libs/.dist/images/'
 
-  // Impostazioni zoom e bounds: permettere di vedere almeno tutta la regione
+  // Zoom configuration
   const minZoom = 8
   const maxZoom = 25
+  const initialZoom = 20
 
+  // Create the map
   const map = L.map('map', {
     center: [lat, lng],
-    zoom: 20,
+    zoom: initialZoom,
     minZoom,
     maxZoom,
     scrollWheelZoom: false,
     attributionControl: false
   })
 
-  // Bounds più ampi per coprire l'intera regione (modifica +/- per stringere/allargare)
-  const regionPadding = 1.5 // gradi ~ circa 100-150 km depending on latitude
+  // Define the bounds for the entire region (modify regionPadding to adjust coverage)
+  const regionPadding = 1.5 // degrees, ~100-150 km depending on latitude
   const bounds = L.latLngBounds(
     [lat - regionPadding, lng - regionPadding],
     [lat + regionPadding, lng + regionPadding]
   )
 
-  // Imposta i limiti di pan e una viscosità che 'rimbalza' verso i bounds
+  // Set map pan limits and smooth 'bounce' when reaching the bounds
   map.setMaxBounds(bounds)
   map.options.maxBoundsViscosity = 0.8
 
-  // Carica i tiles rispettando i limiti di zoom
+  // Load OpenStreetMap tiles within zoom limits
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     minZoom,
     maxZoom
   }).addTo(map)
 
-  // Far partire la vista mostrando l'intera regione (ma l'utente può zoomare dentro)
+  // Fit the map view to show the entire region initially
   map.fitBounds(bounds, { padding: [20, 20] })
 
-  // Aggiungi il tuo controllo
-  L.control.attribution({
-    prefix: false
-  }).addTo(map)
-
+  // Add attribution control
+  L.control.attribution({ prefix: false }).addTo(map)
   map.attributionControl.addAttribution(`
-  <a class="gmaps-link" href="https://maps.app.goo.gl/fhTpU3kYApsbhmp49" target="_blank">
-    <img src="../assets/img/icons/google-map-icon.png" alt="Google Maps" class="gmaps-icon">
-    Apri su Google Maps
-  </a>
-`)
+    <a class="gmaps-link" href="https://maps.app.goo.gl/fhTpU3kYApsbhmp49" target="_blank">
+      <img src="../assets/img/icons/google-map-icon.png" alt="Google Maps" class="gmaps-icon">
+      Open in Google Maps
+    </a>
+  `)
 
+  // Add a marker for the library with popup info
   L.marker([lat, lng])
     .addTo(map)
     .bindPopup('<strong>Biblioteca Scolastica</strong><br>Istituto Alfieri Maserati<br>Voghera')
 
-  // Bottone per ri-centrare la mappa sul punto biblioteca
+  // Add a custom control button to recenter the map on the library
   const centerControl = L.control({ position: 'topleft' })
-  centerControl.onAdd = function (map) {
+  centerControl.onAdd = (map) => {
     const div = L.DomUtil.create('div', 'leaflet-control leaflet-bar')
     const button = L.DomUtil.create('a', '', div)
     button.href = '#'
-    button.title = 'Centra sulla biblioteca'
+    button.title = 'Center on library'
     button.innerHTML = '⊙'
-    button.style.fontSize = '18px'
-    button.style.width = '36px'
-    button.style.height = '36px'
-    button.style.lineHeight = '36px'
-    button.style.textAlign = 'center'
-    button.style.cursor = 'pointer'
+
+    // Style the button
+    Object.assign(button.style, {
+      fontSize: '18px',
+      width: '36px',
+      height: '36px',
+      lineHeight: '36px',
+      textAlign: 'center',
+      cursor: 'pointer'
+    })
+
+    // Prevent map click propagation
     L.DomEvent.disableClickPropagation(button)
-    button.addEventListener('click', function (e) {
+
+    // Recenter map on click
+    button.addEventListener('click', (e) => {
       e.preventDefault()
       map.fitBounds(bounds, { padding: [20, 20] })
     })
+
     return div
   }
   centerControl.addTo(map)
 
+  // Enable scroll zoom on map click and disable on mouse out
   map.on('click', () => map.scrollWheelZoom.enable())
   map.on('mouseout', () => map.scrollWheelZoom.disable())
 })

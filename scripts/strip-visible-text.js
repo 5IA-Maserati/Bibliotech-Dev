@@ -1,6 +1,6 @@
-import fs from "fs";
-import glob from "glob";
-import cheerio from "cheerio";
+import { readFileSync, writeFileSync } from "fs";
+import { glob } from "glob";
+import * as cheerio from "cheerio";
 
 const FILES = [
   "public/**/*.html",

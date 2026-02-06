@@ -88,6 +88,7 @@ crss
 CSRF
 csrf
 css
+csv
 cta
 ctx
 cwd
@@ -214,6 +215,7 @@ joomla
 jpeg
 jpg
 jquery
+jrfnl
 jscpd
 jsfiddle
 jslint
@@ -411,6 +413,7 @@ signup
 simplexml
 socketio
 somedomain
+spam
 sql
 sqlfluff
 sqlite
@@ -512,6 +515,7 @@ workaround
 workflows
 www
 XDPI
+xml
 xmlns
 xmlwriter
 XObject
@@ -521,6 +525,7 @@ xss
 yaml
 yarn
 ychecker
+yml
 YUI
 YYYY
 zindex

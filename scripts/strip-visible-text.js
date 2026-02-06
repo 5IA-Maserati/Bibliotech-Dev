@@ -40,14 +40,32 @@ for (const pattern of FILES) {
       xmlMode: false
     });
 
+    let removedTexts = [];
+
     $("*").contents().each((_, node) => {
       if (node.type === "text" && !isInsideSkippedTag(node)) {
-        node.data = "";
+        const text = node.data?.trim();
+
+        if (text) {
+          removedTexts.push(text);
+          node.data = "";
+        }
       }
     });
 
     fs.writeFileSync(file, $.html());
+
+    // 🔍 DEBUG OUTPUT
+    if (removedTexts.length > 0) {
+      console.log(`\n📄 File: ${file}`);
+      removedTexts.forEach(t => {
+        console.log(`  ❌ "${t}"`);
+      });
+    } else {
+      console.log(`\n📄 File: ${file}`);
+      console.log("  ✅ No visible text removed");
+    }
   }
 }
 
-console.log("Visible HTML text stripped (CI-only)");
+console.log("\n✔ Visible HTML text stripped (CI-only)");

@@ -1,0 +1,8 @@
+version: 0.0.1
+dictionaries:
+  en:
+    description: "English dictionary"
+    file: "https://raw.githubusercontent.com/check-spelling/dictionaries/main/dictionaries/en.txt"
+  it:
+    description: "Italian dictionary"
+    file: "https://raw.githubusercontent.com/check-spelling/dictionaries/main/dictionaries/it.txt"

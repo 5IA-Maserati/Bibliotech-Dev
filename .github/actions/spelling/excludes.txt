@@ -7,6 +7,7 @@
 (?:^|/)\.gitkeep$
 [^/]\.map$
 [^/]\.png$
+\.yml$
 \.gz$
 
 ^\Q.github/actions/spelling/expect.txt\E$
@@ -14,7 +15,10 @@
 ^src/db/data/raw-data-db\.csv$
 
 ^\Qpublic/assets/js/libs/.dist/leaflet.js\E$
+^public/assets/js/libs/\.dist/leaflet.*$
+^tests/
 ^public/assets/img/
+
 
 (?:^|/)vendor/
 (?:^|/)node_modules/

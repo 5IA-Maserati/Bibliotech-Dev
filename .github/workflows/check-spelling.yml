@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: check-spelling/check-spelling@v0.0.74
+      - uses: check-spelling/check-spelling@v0.0.25

@@ -2,12 +2,14 @@ import * as fs from "fs";
 import * as glob from "glob";
 import * as cheerio from "cheerio";
 
+// Files to process
 const FILES = [
   "public/**/*.html",
   "public/**/*.php",
   "src/**/*.php",
 ];
 
+// Tags to skip (we don't remove text inside these)
 const SKIP_TAGS = new Set([
   "script",
   "style",
@@ -16,13 +18,11 @@ const SKIP_TAGS = new Set([
   "noscript"
 ]);
 
+// Helper: check if a node is inside a skipped tag
 function isInsideSkippedTag(elem) {
   let current = elem.parent;
   while (current) {
-    if (
-      current.tagName &&
-      SKIP_TAGS.has(current.tagName.toLowerCase())
-    ) {
+    if (current.tagName && SKIP_TAGS.has(current.tagName.toLowerCase())) {
       return true;
     }
     current = current.parent;
@@ -30,22 +30,20 @@ function isInsideSkippedTag(elem) {
   return false;
 }
 
+// Process each file pattern
 for (const pattern of FILES) {
   const files = glob.sync(pattern, { nodir: true });
 
   for (const file of files) {
     const html = fs.readFileSync(file, "utf8");
-    const $ = cheerio.load(html, {
-      decodeEntities: false,
-      xmlMode: false
-    });
+    const $ = cheerio.load(html, { decodeEntities: false, xmlMode: false });
 
     let removedTexts = [];
 
+    // Remove visible text not in skipped tags
     $("*").contents().each((_, node) => {
       if (node.type === "text" && !isInsideSkippedTag(node)) {
         const text = node.data?.trim();
-
         if (text) {
           removedTexts.push(text);
           node.data = "";
@@ -53,18 +51,24 @@ for (const pattern of FILES) {
       }
     });
 
-    fs.writeFileSync(file, $.html());
+    const strippedHtml = $.html();
 
-    // 🔍 DEBUG OUTPUT
+    // Write back modified file (CI-only)
+    fs.writeFileSync(file, strippedHtml);
+
+    // Debug output
+    console.log(`\n📄 File: ${file}`);
+
     if (removedTexts.length > 0) {
-      console.log(`\n📄 File: ${file}`);
-      removedTexts.forEach(t => {
-        console.log(`  ❌ "${t}"`);
-      });
+      console.log("  ❌ Removed text:");
+      removedTexts.forEach(t => console.log(`    "${t}"`));
     } else {
-      console.log(`\n📄 File: ${file}`);
-      console.log("  ✅ No visible text removed");
+      console.log("  ✅ No text removed");
     }
+
+    // Print entire stripped content
+    console.log("\n  📑 Full stripped content:");
+    console.log(strippedHtml);
   }
 }
 

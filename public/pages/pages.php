@@ -30,7 +30,7 @@ include '../includes/header.php';
 
         <button>Prestito</button>
 
-        <a href="search.php">Torna all'elenco libri</a>
+        <a href="search.php">Torna all catalogo</a>
         <a href="../index.php">Torna alla home</a>
     </div>
 </body>

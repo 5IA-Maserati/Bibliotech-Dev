@@ -9,20 +9,9 @@
       "url": ["http://localhost:8000/pages/search.php"],
       "url": ["http://localhost:8000/pages/signup.php"]
     },
-
     "assert": {
-      "assertions": {
-        "errors-in-console": "on",
-        "document-latency-insight": "on",
-        "image-delivery-insight": "on",
-        "network-dependency-tree-insight": "on",
-        "offscreen-images": "on",
-        "uses-optimized-images": "on",
-        "uses-responsive-images": "on",
-        "uses-text-compression": "on"
-      }
+      "preset": "lighthouse:recommended"
     },
-
     "upload": {
       "target": "temporary-public-storage"
     }

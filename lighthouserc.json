@@ -1,19 +1,25 @@
 {
   "ci": {
     "collect": {
-      "url": ["http://localhost:8000/"]
+      "url": ["http://localhost:8000/index.php"],
+      "url": ["http://localhost:8000/pages/booking.php"],
+      "url": ["http://localhost:8000/pages/donate.php"],
+      "url": ["http://localhost:8000/pages/login.php"],
+      "url": ["http://localhost:8000/pages/page_404.php"],
+      "url": ["http://localhost:8000/pages/search.php"],
+      "url": ["http://localhost:8000/pages/signup.php"]
     },
 
     "assert": {
       "assertions": {
-        "errors-in-console": "off",
-        "document-latency-insight": "off",
-        "image-delivery-insight": "off",
-        "network-dependency-tree-insight": "off",
-        "offscreen-images": "off",
-        "uses-optimized-images": "off",
-        "uses-responsive-images": "off",
-        "uses-text-compression": "off"
+        "errors-in-console": "on",
+        "document-latency-insight": "on",
+        "image-delivery-insight": "on",
+        "network-dependency-tree-insight": "on",
+        "offscreen-images": "on",
+        "uses-optimized-images": "on",
+        "uses-responsive-images": "on",
+        "uses-text-compression": "on"
       }
     },
 

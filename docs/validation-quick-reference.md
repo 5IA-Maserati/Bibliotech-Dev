@@ -1,8 +1,8 @@
 # Quick Reference: Form Validation
 
 ## Quick Links
-- 📖 Full Documentation: `docs/VALIDATION_RULES.md`
-- 📝 Implementation Summary: `docs/IMPLEMENTATION_SUMMARY.md`
+- 📖 Full Documentation: `docs/validation-rules.md`
+- 📝 Implementation Summary: `docs/implementation-summary.md`
 - 🔧 Validation Library: `public/assets/js/form-validator.js`
 - 🎨 Validation Styles: `public/assets/style/validation.css`
 

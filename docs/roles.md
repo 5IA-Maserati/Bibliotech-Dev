@@ -1,6 +1,6 @@
-# Website Roles and Responsibilities
+# Site Roles and Responsibilities
 
-This document outlines the responsibilities assigned to each team member for the website project. It provides clarity on ownership of specific sections, improving collaboration and accountability.
+This document outlines the responsibilities assigned to each team member for the site project. It provides clarity on ownership of specific sections, improving collaboration and accountability.
 
 ## Team Roles
 
@@ -14,7 +14,7 @@ This document outlines the responsibilities assigned to each team member for the
 
 ## Project Objectives
 
-- Create a responsive and user-friendly website for library services.
+- Create a responsive and user-friendly site for library services.
 - Maintain consistency in design and layout across all pages.
 - Ensure accurate content in books catalogue and individual book pages.
 - Provide seamless user account management and shopping cart experience.
@@ -31,3 +31,4 @@ This document outlines the responsibilities assigned to each team member for the
 - Team members are encouraged to communicate via the designated project channels.
 - Any issues with assigned sections should be reported immediately.
 - Backup copies of important files should be maintained regularly.
+

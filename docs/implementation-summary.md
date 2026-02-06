@@ -164,7 +164,7 @@ if (!result.valid) {
 
 ### Valid Test Cases
 - ✓ Username: "user_name-123"
-- ✓ Password: [INSERIRE_PASSWORD]
+- ✓ Password: [ENTER_PASSWORD]
 - ✓ Email: `user@example.com`
 - ✓ Name: "Giovanni D'Antonio"
 - ✓ Search: "Harry Potter & The Philosopher's Stone"

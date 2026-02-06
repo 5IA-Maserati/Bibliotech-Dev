@@ -18,9 +18,9 @@ Password:  8-50 chars, uppercase + lowercase + digit required
 
 ### 2. Registration Form (`/pages/signup.php`)
 ```text
-Nome:                First name (2-50 chars, letters only)
-Cognome:             Last name (2-50 chars, letters only)
-Data di Nascita:     Date in YYYY-MM-DD format
+Name:                First name (2-50 chars, letters only)
+Surname:             Last name (2-50 chars, letters only)
+Date of Birth:       Date in YYYY-MM-DD format
 Email:               Valid email format required
 Password:            8-50 chars, uppercase + lowercase + digit
 Confirm Password:    Must match Password field

@@ -1,9 +1,15 @@
-name: Spellcheck
-on: [pull_request, push]
+name: Spell Check
+
+on: [push, pull_request]
 
 jobs:
-  spellcheck:
+  check-spelling:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: check-spelling/check-spelling@v0.0.25
+      - name: Spell Check
+        uses: check-spelling/check-spelling@v0.0.74
+        with:
+          check-spelling-dictionaries: en
+          check-spelling-wordlists: .github/wordlists/tech.txt
+          check-spelling-fail-on-unrecognized: true

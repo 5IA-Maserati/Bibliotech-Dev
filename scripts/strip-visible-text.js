@@ -9,7 +9,7 @@ const FILES = [
   "src/**/*.php",
 ];
 
-// Tags to skip (we don't remove text inside these)
+// Tags to skip (text inside these tags is not removed)
 const SKIP_TAGS = new Set([
   "script",
   "style",
@@ -17,6 +17,13 @@ const SKIP_TAGS = new Set([
   "pre",
   "noscript"
 ]);
+
+// Attributes that may contain visible text we want to clear
+const ATTRS_TO_STRIP = [
+  "alt",
+  "aria-label",
+  "title"
+];
 
 // Helper: check if a node is inside a skipped tag
 function isInsideSkippedTag(elem) {
@@ -40,13 +47,26 @@ for (const pattern of FILES) {
 
     let removedTexts = [];
 
-    // Remove visible text not in skipped tags
+    // Remove visible text nodes not in skipped tags
     $("*").contents().each((_, node) => {
       if (node.type === "text" && !isInsideSkippedTag(node)) {
         const text = node.data?.trim();
         if (text) {
-          removedTexts.push(text);
+          removedTexts.push(`TEXT: "${text}"`);
           node.data = "";
+        }
+      }
+    });
+
+    // Remove Italian/visible text from attributes
+    $("*").each((_, elem) => {
+      for (const attr of ATTRS_TO_STRIP) {
+        if (elem.attribs && elem.attribs[attr]) {
+          const value = elem.attribs[attr].trim();
+          if (value) {
+            removedTexts.push(`ATTR(${attr}): "${value}"`);
+            elem.attribs[attr] = "";
+          }
         }
       }
     });
@@ -58,10 +78,9 @@ for (const pattern of FILES) {
 
     // Debug output
     console.log(`\n📄 File: ${file}`);
-
     if (removedTexts.length > 0) {
       console.log("  ❌ Removed text:");
-      removedTexts.forEach(t => console.log(`    "${t}"`));
+      removedTexts.forEach(t => console.log(`    ${t}`));
     } else {
       console.log("  ✅ No text removed");
     }
@@ -72,4 +91,4 @@ for (const pattern of FILES) {
   }
 }
 
-console.log("\n✔ Visible HTML text stripped (CI-only)");
+console.log("\n✔ Visible HTML text and attributes stripped (CI-only)");

@@ -31,26 +31,25 @@ jobs:
       - name: Spell Check English (HTML/PHP)
         uses: check-spelling/check-spelling@v0.0.25
         with:
-          check-spelling-dictionaries: en
-          check-spelling-files: 'english-html-to-check.txt'
-          check-spelling-fail-on-unrecognized: true
+          spell_check_this: english-html-to-check.txt
 
       # Step 6: Spell check Italian text in allowed HTML tags
       - name: Spell Check Italian
         uses: check-spelling/check-spelling@v0.0.25
         with:
-          check-spelling-dictionaries: it
-          check-spelling-files: 'italian-to-check.txt'
-          check-spelling-fail-on-unrecognized: true
+          spell_check_this: italian-to-check.txt
 
       # Step 7: Spell check English in the rest of the repo (JS, CSS, Markdown, etc.)
       - name: Spell Check English (Rest of repo)
         uses: check-spelling/check-spelling@v0.0.25
         with:
-          check-spelling-dictionaries: en
-          check-spelling-ignore-files: |
-            '**/*.php'      # PHP handled above
-            'italian-to-check.txt'
-            'english-html-to-check.txt'
-            'vendor/**'     # Ignore dependencies
-          check-spelling-fail-on-unrecognized: true
+          spell_check_this: |
+            '**/*.js'
+            '**/*.ts'
+            '**/*.css'
+            '**/*.md'
+          ignore-pattern: |
+            '**/*.php'                 # PHP handled above
+            'italian-to-check.txt'      # Temporary file
+            'english-html-to-check.txt' # Temporary file
+            'vendor/**'                # Ignore dependencies

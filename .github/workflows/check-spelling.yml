@@ -32,12 +32,14 @@ jobs:
         uses: check-spelling/check-spelling@v0.0.25
         with:
           spell_check_this: english-html-to-check.txt
+          extra_dictionaries: it
 
       # Step 6: Spell check Italian text in allowed HTML tags
       - name: Spell Check Italian
         uses: check-spelling/check-spelling@v0.0.25
         with:
           spell_check_this: italian-to-check.txt
+          extra_dictionaries: it
 
       # Step 7: Spell check English in the rest of the repo (JS, CSS, Markdown, etc.)
       - name: Spell Check English (Rest of repo)

@@ -1,8 +1,0 @@
-XSS
-xss
-CSRF
-csrf
-JWT
-jwt
-OAuth
-oauth

@@ -1,10 +1,18 @@
 {
   "ci": {
     "collect": {
-      "url": "http://localhost:8000/"
+      "url": [
+        "http://localhost:8000/index.php",
+        "http://localhost:8000/pages/booking.php",
+        "http://localhost:8000/pages/donate.php",
+        "http://localhost:8000/pages/login.php",
+        "http://localhost:8000/pages/page_404.php",
+        "http://localhost:8000/pages/search.php",
+        "http://localhost:8000/pages/signup.php"
+      ]
     },
     "assert": {
-      "preset": "lighthouse:no-errors"
+      "preset": "lighthouse:recommended"
     },
     "upload": {
       "target": "temporary-public-storage"

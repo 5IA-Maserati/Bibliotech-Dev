@@ -1,6 +1,6 @@
 <?php
 
-$title = 'Booking';
+$title = 'Prenotazione';
 $show_nav = false;
 include '../includes/header.php';
 ?>
@@ -16,9 +16,14 @@ include '../includes/header.php';
     <link rel="stylesheet" href="../assets/style/validation.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Prenotazione</h1>
+    <nav class="action-bar">
+        <div class="nav-buttons">
+            <a href="search.php" class="btn-nav">Torna al catalogo</a>
+            <a href="../index.php" class="btn-nav">Torna alla home</a>
+        </div>
+    </nav>
 
+    <div class="container">
         <div class="description">
             <p>Descrizione del libro</p>
         </div>
@@ -70,12 +75,6 @@ include '../includes/header.php';
             <button type="submit">Prenota</button>
         </form>
 
-
-        <a href="search.php">Torna all catalogo</a>
-        <a href="../index.php">Torna alla home</a>
     </div>
-
-    <script src="../assets/js/form-validator.js"></script>
-    <script src="../assets/js/booking.js"></script>
 </body>
 </html>

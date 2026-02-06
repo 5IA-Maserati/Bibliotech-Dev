@@ -2,6 +2,15 @@
 
 /* Booking Page Styles */
 
+header {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+header h1 {
+  text-align: center;
+  color: white;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -74,6 +83,7 @@ button:active,
 a:active {
   transform: translateY(0);
 }
+
 
 
 /* stylelint-disable media-feature-range-notation */

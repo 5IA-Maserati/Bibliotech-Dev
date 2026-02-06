@@ -68,8 +68,8 @@
 |------|-------|-----|-----|------|---------|
 | Login | Username | 3 | 20 | Alphanumeric | `^[a-zA-Z0-9_-]+$` |
 | Login | Password | 8 | 50 | Complex | Uppercase + Lowercase + Digit |
-| Register | Nome | 2 | 50 | Letters | `^[a-zA-Zàèéìòù\s'-]+$` |
-| Register | Cognome | 2 | 50 | Letters | `^[a-zA-Zàèéìòù\s'-]+$` |
+| Register | Name | 2 | 50 | Letters | `^[a-zA-Zàèéìòù\s'-]+$` |
+| Register | Surname | 2 | 50 | Letters | `^[a-zA-Zàèéìòù\s'-]+$` |
 | Register | Email | - | - | Email | `^[^\s@]+@[^\s@]+\.[^\s@]+$` |
 | Register | Password | 8 | 50 | Complex | Same as Login |
 | Register | Confirm Password | - | - | Match | Must match Password field |

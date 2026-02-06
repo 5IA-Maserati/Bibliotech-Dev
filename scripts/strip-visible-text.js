@@ -22,7 +22,7 @@ const SKIP_TAGS = new Set([
 const ATTRS_TO_STRIP = ["alt", "aria-label", "title"]
 
 // Helper: check if a node is inside a skipped tag
-function isInsideSkippedTag(elem: cheerio.Element): boolean {
+function isInsideSkippedTag(elem) {
   let current = elem.parent
   while (current) {
     if (current.tagName && SKIP_TAGS.has(current.tagName.toLowerCase())) {

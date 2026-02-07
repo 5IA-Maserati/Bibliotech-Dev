@@ -2,20 +2,14 @@ import * as fs from 'fs'
 import * as glob from 'glob'
 import * as cheerio from 'cheerio'
 
-// ------------------------------
-// FILE PATTERNS TO PROCESS
-// ------------------------------
+// File patterns to process
 const FILES = [
   'public/**/*.html',
   'public/**/*.php',
   'src/**/*.php'
 ]
 
-// ------------------------------
-// HTML SETTINGS
-// ------------------------------
-
-// Tags to skip (text inside these tags is preserved)
+// Tags to skip in HTML (text inside these tags is preserved)
 const SKIP_TAGS = new Set([
   'script',
   'style',
@@ -24,11 +18,11 @@ const SKIP_TAGS = new Set([
   'noscript'
 ])
 
-// Attributes that may contain visible text we want to clear
+// HTML attributes that may contain visible text
 const ATTRS_TO_STRIP = ['alt', 'aria-label', 'title']
 
 // Helper: check if a node is inside a skipped tag
-function isInsideSkippedTag(elem) {
+function isInsideSkippedTag(elem: any): boolean {
   let current = elem.parent
   while (current) {
     if (current.tagName && SKIP_TAGS.has(current.tagName.toLowerCase())) {
@@ -39,29 +33,23 @@ function isInsideSkippedTag(elem) {
   return false
 }
 
-// ------------------------------
-// Helper: remove all string literals from PHP or JS
-// ------------------------------
-function removeAllStrings(content) {
-  // Matches single-quoted, double-quoted, and backtick strings
-  const stringRegex = /(['"`])(?:\\.|(?!\1).)*\1/g
-  return content.replace(stringRegex, match => match[0] + match[0])
+// Remove all string literals from PHP code block
+function removePhpStrings(phpCode: string): string {
+  // Matches single, double, and backtick strings, including multiline
+  const stringRegex = /(['"`])(?:\\.|(?!\1)[^\\\n\r])*?\1/g
+  return phpCode.replace(stringRegex, (match, quote) => quote + quote)
 }
 
-// ------------------------------
-// MAIN PROCESS
-// ------------------------------
+// Process each file pattern
 for (const pattern of FILES) {
   const files = glob.sync(pattern, { nodir: true })
 
   for (const file of files) {
     let content = fs.readFileSync(file, 'utf8')
-    const removedTexts = []
+    const removedTexts: string[] = []
 
     if (file.endsWith('.html')) {
-      // ------------------------------
-      // HTML/PHP AS HTML PART
-      // ------------------------------
+      // --- HTML FILE: original Cheerio logic ---
       const $ = cheerio.load(content, { decodeEntities: false, xmlMode: false })
 
       // Remove visible text nodes not in skipped tags
@@ -89,30 +77,35 @@ for (const pattern of FILES) {
       })
 
       content = $.html()
+    } else if (file.endsWith('.php')) {
+      // --- PHP FILE: remove strings only inside <?php ... ?> blocks ---
+      content = content.replace(/<\?php([\s\S]*?)\?>/g, (match, phpBlock) => {
+        const strippedBlock = removePhpStrings(phpBlock)
+        // Optionally collect removed strings for debug
+        const strings = phpBlock.match(/(['"`])(?:\\.|(?!\1)[^\\\n\r])*?\1/g)
+        if (strings) {
+          strings.forEach(str => removedTexts.push(`PHP STRING: ${str}`))
+        }
+        return `<?php${strippedBlock}?>`
+      })
     }
 
-    // ------------------------------
-    // REMOVE ALL STRINGS (PHP/JS)
-    // ------------------------------
-    content = removeAllStrings(content)
+    // Write back modified file
+    fs.writeFileSync(file, content, 'utf8')
 
-    // Write back modified file (CI-only)
-    fs.writeFileSync(file, content)
-
-    // ------------------------------
-    // DEBUG OUTPUT
-    // ------------------------------
+    // Debug output
     console.log(`\n📄 File: ${file}`)
     if (removedTexts.length > 0) {
-      console.log('  ❌ Removed visible HTML text:')
+      console.log('  ❌ Removed text:')
       removedTexts.forEach(t => console.log(`    ${t}`))
     } else {
-      console.log('  ✅ No visible HTML text removed')
+      console.log('  ✅ No text removed')
     }
 
+    // Print entire stripped content
     console.log('\n  📑 Full stripped content:')
     console.log(content)
   }
 }
 
-console.log('\n✔ All string literals and visible HTML text stripped (CI-only)')
+console.log('\n✔ Finished processing HTML and PHP files.')

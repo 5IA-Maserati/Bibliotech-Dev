@@ -32,7 +32,7 @@ document.getElementById('register-form').addEventListener('submit', function (e)
 
   // Show success message (in production, send to server)
   console.log('Sanitized form data:', sanitizedData)
-  alert('Registrazione completata!')
+  alert('Signup successful!')
 })
 
 // Enable real-time validation on blur

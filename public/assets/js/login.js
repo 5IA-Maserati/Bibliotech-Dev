@@ -23,7 +23,7 @@ if (loginForm) {
     const sanitizedData = FormValidator.sanitizeForm('login-form')
     console.log('Sanitized form data:', sanitizedData)
 
-    alert('Login successful!')
+    alert('Login completato!')
   })
 
   // Enable real-time validation on blur

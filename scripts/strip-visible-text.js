@@ -2,12 +2,18 @@ import * as fs from 'fs'
 import * as glob from 'glob'
 import * as cheerio from 'cheerio'
 
-// Files to process
+// ------------------------------
+// FILE PATTERNS TO PROCESS
+// ------------------------------
 const FILES = [
   'public/**/*.html',
   'public/**/*.php',
   'src/**/*.php'
 ]
+
+// ------------------------------
+// HTML SETTINGS
+// ------------------------------
 
 // Tags to skip (text inside these tags is preserved)
 const SKIP_TAGS = new Set([
@@ -22,7 +28,7 @@ const SKIP_TAGS = new Set([
 const ATTRS_TO_STRIP = ['alt', 'aria-label', 'title']
 
 // Helper: check if a node is inside a skipped tag
-function isInsideSkippedTag (elem) {
+function isInsideSkippedTag(elem) {
   let current = elem.parent
   while (current) {
     if (current.tagName && SKIP_TAGS.has(current.tagName.toLowerCase())) {
@@ -33,58 +39,80 @@ function isInsideSkippedTag (elem) {
   return false
 }
 
-// Process each file pattern
+// ------------------------------
+// Helper: remove all string literals from PHP or JS
+// ------------------------------
+function removeAllStrings(content) {
+  // Matches single-quoted, double-quoted, and backtick strings
+  const stringRegex = /(['"`])(?:\\.|(?!\1).)*\1/g
+  return content.replace(stringRegex, match => match[0] + match[0])
+}
+
+// ------------------------------
+// MAIN PROCESS
+// ------------------------------
 for (const pattern of FILES) {
   const files = glob.sync(pattern, { nodir: true })
 
   for (const file of files) {
-    const html = fs.readFileSync(file, 'utf8')
-    const $ = cheerio.load(html, { decodeEntities: false, xmlMode: false })
-
+    let content = fs.readFileSync(file, 'utf8')
     const removedTexts = []
 
-    // Remove visible text nodes not in skipped tags
-    $('*').contents().each((_, node) => {
-      if (node.type === 'text' && !isInsideSkippedTag(node)) {
-        const text = node.data?.trim()
-        if (text) {
-          removedTexts.push(`TEXT: "${text}"`)
-          node.data = ''
-        }
-      }
-    })
+    if (file.endsWith('.html')) {
+      // ------------------------------
+      // HTML/PHP AS HTML PART
+      // ------------------------------
+      const $ = cheerio.load(content, { decodeEntities: false, xmlMode: false })
 
-    // Remove text from specified attributes
-    $('*').each((_, elem) => {
-      for (const attr of ATTRS_TO_STRIP) {
-        if (elem.attribs && elem.attribs[attr]) {
-          const value = elem.attribs[attr].trim()
-          if (value) {
-            removedTexts.push(`ATTR(${attr}): "${value}"`)
-            elem.attribs[attr] = ''
+      // Remove visible text nodes not in skipped tags
+      $('*').contents().each((_, node) => {
+        if (node.type === 'text' && !isInsideSkippedTag(node)) {
+          const text = node.data?.trim()
+          if (text) {
+            removedTexts.push(`TEXT: "${text}"`)
+            node.data = ''
           }
         }
-      }
-    })
+      })
 
-    const strippedHtml = $.html()
+      // Remove text from specified attributes
+      $('*').each((_, elem) => {
+        for (const attr of ATTRS_TO_STRIP) {
+          if (elem.attribs && elem.attribs[attr]) {
+            const value = elem.attribs[attr].trim()
+            if (value) {
+              removedTexts.push(`ATTR(${attr}): "${value}"`)
+              elem.attribs[attr] = ''
+            }
+          }
+        }
+      })
 
-    // Write back modified file (CI-only)
-    fs.writeFileSync(file, strippedHtml)
-
-    // Debug output
-    console.log(`\n📄 File: ${file}`)
-    if (removedTexts.length > 0) {
-      console.log('  ❌ Removed text:')
-      removedTexts.forEach(t => console.log(`    ${t}`))
-    } else {
-      console.log('  ✅ No text removed')
+      content = $.html()
     }
 
-    // Print entire stripped content
+    // ------------------------------
+    // REMOVE ALL STRINGS (PHP/JS)
+    // ------------------------------
+    content = removeAllStrings(content)
+
+    // Write back modified file (CI-only)
+    fs.writeFileSync(file, content)
+
+    // ------------------------------
+    // DEBUG OUTPUT
+    // ------------------------------
+    console.log(`\n📄 File: ${file}`)
+    if (removedTexts.length > 0) {
+      console.log('  ❌ Removed visible HTML text:')
+      removedTexts.forEach(t => console.log(`    ${t}`))
+    } else {
+      console.log('  ✅ No visible HTML text removed')
+    }
+
     console.log('\n  📑 Full stripped content:')
-    console.log(strippedHtml)
+    console.log(content)
   }
 }
 
-console.log('\n✔ Visible HTML text and attributes stripped (CI-only)')
+console.log('\n✔ All string literals and visible HTML text stripped (CI-only)')

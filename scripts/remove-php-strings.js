@@ -1,6 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import glob from 'glob'
+import * as fs from 'fs'
+import * as path from 'path'
+import * as glob from 'glob'
 
 // --- CONFIG ---
 // Directory to scan

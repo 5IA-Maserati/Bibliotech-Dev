@@ -22,7 +22,7 @@ const SKIP_TAGS = new Set([
 const ATTRS_TO_STRIP = ['alt', 'aria-label', 'title']
 
 // Helper: check if a node is inside a skipped tag
-function isInsideSkippedTag(elem: any): boolean {
+function isInsideSkippedTag(elem) {
   let current = elem.parent
   while (current) {
     if (current.tagName && SKIP_TAGS.has(current.tagName.toLowerCase())) {
@@ -34,7 +34,7 @@ function isInsideSkippedTag(elem: any): boolean {
 }
 
 // Remove all string literals from PHP code block
-function removePhpStrings(phpCode: string): string {
+function removePhpStrings(phpCode) {
   // Matches single, double, and backtick strings, including multiline
   const stringRegex = /(['"`])(?:\\.|(?!\1)[^\\\n\r])*?\1/g
   return phpCode.replace(stringRegex, (match, quote) => quote + quote)
@@ -46,7 +46,7 @@ for (const pattern of FILES) {
 
   for (const file of files) {
     let content = fs.readFileSync(file, 'utf8')
-    const removedTexts: string[] = []
+    const removedTexts = []
 
     if (file.endsWith('.html')) {
       // --- HTML FILE: original Cheerio logic ---

@@ -1,89 +1,79 @@
-import * as fs from 'fs'
-import * as path from 'path'
-import * as glob from 'glob'
+import * as fs from 'fs';
+import * as path from 'path';
+import * as glob from 'glob';
 
-// --- CONFIG ---
-// Directory to scan
-const PHP_DIR = 'public' // change this to your project folder
-const PHP_GLOB = `${PHP_DIR}/**/*.php`
+/**
+ * File patterns to process
+ * You can add any folders/files you want
+ */
+const FILES = [
+  'public/**/*.php'
+];
 
-// --- Helper: remove strings in a PHP block ---
+/**
+ * Remove all strings inside a PHP block
+ * @param {string} phpCode
+ * @returns {{ stripped: string, removed: string[] }}
+ */
 function removePhpStrings(phpCode) {
-  const removed = []
-  const stringRegex = /(['"`])(?:\\.|(?!\1)[^\\\n\r])*?\1/g
+  const removed = [];
+  // Regex for strings enclosed in single or double quotes
+  const stringRegex = /(['"])(?:\\.|[^\1\\])*?\1/g;
 
-  const stripped = phpCode.replace(stringRegex, function(match, quote) {
-    removed.push(match)
-    return quote + quote // replace with empty string of same quote
-  })
+  const stripped = phpCode.replace(stringRegex, (match) => {
+    removed.push(match);
+    // Return empty quotes of the same type
+    return match[0] + match[0];
+  });
 
-  return { stripped, removed }
+  return { stripped, removed };
 }
 
-// --- Process single PHP file ---
+/**
+ * Process a single PHP file
+ * Splits PHP blocks and HTML, removes strings from PHP blocks only
+ */
 function processPhpFile(filePath) {
-  const content = fs.readFileSync(filePath, 'utf8')
-  let output = ''
-  const removedStrings = []
+  const originalContent = fs.readFileSync(filePath, 'utf8');
+  const removedStrings = [];
 
-  // Regex to find PHP blocks
-  const phpBlockRegex = /<\?php([\s\S]*?)\?>/g
-  let lastIndex = 0
-  let match
+  // Split content into PHP blocks and everything else (HTML/text)
+  // Keeps the PHP delimiters <?php ... ?> or <?= ... ?>
+  const parts = originalContent.split(/(<\?(?:php|=)?[\s\S]*?\?>)/gi);
 
-  while ((match = phpBlockRegex.exec(content)) !== null) {
-    const phpStart = match.index
-    const phpEnd = phpBlockRegex.lastIndex
+  const processed = parts.map((part) => {
+    if (part.match(/^<\?(?:php|=)/i)) {
+      // This is a PHP block
+      const { stripped, removed } = removePhpStrings(part);
+      removedStrings.push(...removed);
+      return stripped;
+    } else {
+      // HTML or text outside PHP blocks, leave unchanged
+      return part;
+    }
+  }).join('');
 
-    // Append HTML before this PHP block
-    output += content.slice(lastIndex, phpStart)
+  // Overwrite the original file
+  fs.writeFileSync(filePath, processed, 'utf8');
 
-    // Process the PHP block
-    const phpBlock = match[1]
-    const result = removePhpStrings(phpBlock)
-    removedStrings.push(...result.removed)
+  return removedStrings;
+}
 
-    // Add back stripped PHP block
-    output += `<?php${result.stripped}?>`
+// Find all files matching the patterns
+const allFiles = FILES.flatMap(pattern => glob.sync(pattern, { nodir: true }));
 
-    lastIndex = phpEnd
-  }
+console.log(`Found ${allFiles.length} PHP files.\n`);
 
-  // Append remaining HTML
-  output += content.slice(lastIndex)
-
-  // Write back file
-  fs.writeFileSync(filePath, output, 'utf8')
-
-  // Debug output
-  console.log(`\n📄 Processed file: ${filePath}`)
-  if (removedStrings.length > 0) {
-    console.log('  ❌ Removed PHP strings:')
-    removedStrings.forEach(str => console.log(`    ${str}`))
+allFiles.forEach((file) => {
+  const removed = processPhpFile(file);
+  console.log(`📄 Processed file: ${file}`);
+  if (removed.length > 0) {
+    console.log(`  ❌ Removed PHP strings (${removed.length}):`);
+    removed.forEach(str => console.log(`    ${str}`));
   } else {
-    console.log('  ✅ No PHP strings removed')
+    console.log('  ✅ No PHP strings removed');
   }
+  console.log('');
+});
 
-  console.log('\n  📑 Full stripped content:')
-  console.log(output)
-}
-
-// --- Main: process all PHP files ---
-function processAllPhpFiles() {
-  const files = glob.sync(PHP_GLOB, { nodir: true })
-  if (files.length === 0) {
-    console.log('No PHP files found.')
-    return
-  }
-
-  console.log(`Found ${files.length} PHP files.`)
-
-  files.forEach(file => {
-    processPhpFile(file)
-  })
-
-  console.log('\n✔ All PHP files processed.')
-}
-
-// Run
-processAllPhpFiles()
+console.log('✔ All PHP files processed.');

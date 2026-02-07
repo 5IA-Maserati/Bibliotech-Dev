@@ -10,9 +10,7 @@ import path from 'path';
  * Example: ['validator.js', 'form.js']
  */
 const filenamesToProcess = [
-  'validator.js',
-  'form.js',
-  // Add more filenames as needed
+  'form-validator.js'
 ];
 
 /**

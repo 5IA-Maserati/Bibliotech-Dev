@@ -1,6 +1,7 @@
 // spellcheck-prep.js
 // Overwrites selected JS files by removing all string literals
 // Files are selected based on their filename only, ignoring folder structure
+// Also prints the cleaned content to the console
 
 import fs from 'fs';
 import path from 'path';
@@ -61,6 +62,9 @@ if (filesToProcess.length === 0) {
     const content = fs.readFileSync(filePath, 'utf-8');
     const cleanedContent = removeAllStrings(content);
     fs.writeFileSync(filePath, cleanedContent, 'utf-8');
-    console.log(`Processed and overwritten file: ${filePath}`);
+    console.log(`\nProcessed and overwritten file: ${filePath}`);
+    console.log('--- Cleaned content start ---');
+    console.log(cleanedContent);
+    console.log('--- Cleaned content end ---\n');
   });
 }

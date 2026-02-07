@@ -1,17 +1,18 @@
-import * as fs from 'fs'
-import * as path from 'path'
-import * as glob from 'glob'
+import fs from 'fs'
+import path from 'path'
+import glob from 'glob'
 
 // --- CONFIG ---
 // Directory to scan
-const PHP_GLOB = `**/*.php`
+const PHP_DIR = 'src' // change this to your project folder
+const PHP_GLOB = `${PHP_DIR}/**/*.php`
 
 // --- Helper: remove strings in a PHP block ---
-function removePhpStrings(phpCode: string): { stripped: string, removed: string[] } {
-  const removed: string[] = []
+function removePhpStrings(phpCode) {
+  const removed = []
   const stringRegex = /(['"`])(?:\\.|(?!\1)[^\\\n\r])*?\1/g
 
-  const stripped = phpCode.replace(stringRegex, (match, quote) => {
+  const stripped = phpCode.replace(stringRegex, function(match, quote) {
     removed.push(match)
     return quote + quote // replace with empty string of same quote
   })
@@ -20,15 +21,15 @@ function removePhpStrings(phpCode: string): { stripped: string, removed: string[
 }
 
 // --- Process single PHP file ---
-function processPhpFile(filePath: string) {
+function processPhpFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8')
   let output = ''
-  const removedStrings: string[] = []
+  const removedStrings = []
 
   // Regex to find PHP blocks
   const phpBlockRegex = /<\?php([\s\S]*?)\?>/g
   let lastIndex = 0
-  let match: RegExpExecArray | null
+  let match
 
   while ((match = phpBlockRegex.exec(content)) !== null) {
     const phpStart = match.index
@@ -39,11 +40,11 @@ function processPhpFile(filePath: string) {
 
     // Process the PHP block
     const phpBlock = match[1]
-    const { stripped, removed } = removePhpStrings(phpBlock)
-    removedStrings.push(...removed)
+    const result = removePhpStrings(phpBlock)
+    removedStrings.push(...result.removed)
 
     // Add back stripped PHP block
-    output += `<?php${stripped}?>`
+    output += `<?php${result.stripped}?>`
 
     lastIndex = phpEnd
   }

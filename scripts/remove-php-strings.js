@@ -4,7 +4,7 @@ import * as glob from 'glob'
 
 // --- CONFIG ---
 // Directory to scan
-const PHP_DIR = 'src' // change this to your project folder
+const PHP_DIR = 'public' // change this to your project folder
 const PHP_GLOB = `${PHP_DIR}/**/*.php`
 
 // --- Helper: remove strings in a PHP block ---

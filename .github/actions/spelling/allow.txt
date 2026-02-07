@@ -383,6 +383,7 @@ query
 react
 reactquery
 reactrouter
+readdir
 readme
 redux
 refactor
@@ -498,6 +499,7 @@ utexas
 utf
 uuid
 validator
+validators
 Validators
 var
 VARCHAR

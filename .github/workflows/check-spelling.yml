@@ -22,6 +22,9 @@ jobs:
       - name: Strip visible HTML text (allow Italian)
         run: node scripts/strip-visible-text.js
 
+      - name: Remove PHP strings (especially Italian)
+        run: node scripts/remove-php-strings.js
+
       - name: Remove all string literals from selected JS files
         run: node scripts/spellcheck-prep.js
 

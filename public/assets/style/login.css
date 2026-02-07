@@ -1,5 +1,8 @@
 @import url("./common.css");
 
+/* -----------------------------------
+   Global Reset
+----------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +10,9 @@
     font-family: "Segoe UI", sans-serif;
 }
 
-/* LAYOUT BASE */
+/* -----------------------------------
+   Base Layout
+----------------------------------- */
 body {
     min-height: 100vh;
     display: flex;
@@ -15,7 +20,9 @@ body {
     background: #eef4fb;
 }
 
-/* ===== HEADER ===== */
+/* -----------------------------------
+   Header
+----------------------------------- */
 header {
     width: 100%;
     background-color: #5f7f97;
@@ -32,7 +39,7 @@ header.navbar {
     position: relative;
 }
 
-/* Logo area */
+/* Logo area inside header */
 .logo-area {
     position: absolute;
     left: 2rem;
@@ -55,7 +62,9 @@ header p {
     opacity: 0.95;
 }
 
-/* ===== CONTENUTO CENTRALE ===== */
+/* -----------------------------------
+   Main Content / Login
+----------------------------------- */
 .login-container {
     flex: 1;
     display: flex;
@@ -64,7 +73,7 @@ header p {
     padding: 40px 20px;
 }
 
-/* CARD */
+/* Login card */
 .login-card {
     background: white;
     width: 100%;
@@ -75,7 +84,7 @@ header p {
     text-align: center;
 }
 
-/* TITOLI CARD */
+/* Card titles */
 .login-card h1 {
     color: #51758D;
     margin-bottom: 6px;
@@ -88,7 +97,9 @@ header p {
     text-align: center;
 }
 
-/* INPUT */
+/* -----------------------------------
+   Form Inputs
+----------------------------------- */
 .input-group {
     position: relative;
     margin-bottom: 22px;
@@ -115,6 +126,7 @@ header p {
     transition: 0.3s;
 }
 
+/* Input focus / valid state */
 .input-group input:focus,
 .input-group input:valid {
     border-bottom-color: #51758D;
@@ -127,13 +139,16 @@ header p {
     color: #51758D;
 }
 
+/* Fixed label for pre-filled inputs */
 label.fixed {
     top: -6px;
     font-size: 12px;
     color: #51758D;
 }
 
-/* BOTTONI */
+/* -----------------------------------
+   Buttons
+----------------------------------- */
 button {
     width: 100%;
     padding: 12px;
@@ -149,7 +164,9 @@ button:hover {
     background: #4e6a80;
 }
 
-/* LINK */
+/* -----------------------------------
+   Links
+----------------------------------- */
 .back-link {
     display: block;
     margin-top: 15px;
@@ -178,7 +195,9 @@ button:hover {
     color: white;
 }
 
-/* ===== FOOTER ===== */
+/* -----------------------------------
+   Footer
+----------------------------------- */
 footer {
     width: 100%;
     background-color: #5f7f97;

@@ -1,7 +1,8 @@
 // spellcheck-prep.js
-// Safely removes user-facing string literals (e.g., validation messages) from selected JS files
+// Safely removes user-facing string literals from selected JS files
+// Handles message properties, alert() calls, and FormValidator.markFieldError()
 // Overwrites files and prints cleaned content
-// Files are selected based on filename only, ignoring folder structure
+// Files are selected based on filename only
 
 import fs from 'fs';
 import path from 'path';
@@ -10,6 +11,10 @@ import path from 'path';
  * List of filenames to process (just the filename, no path)
  */
 const filenamesToProcess = [
+  'booking.js',
+  'login.js',
+  'signup.js',
+  'search.js',
   'form-validator.js'
 ];
 
@@ -34,15 +39,31 @@ function getAllJsFiles(dir) {
 }
 
 /**
- * Remove only user-facing string literals (e.g., `message` properties)
+ * Remove only user-facing string literals
+ * - `message: '...'` in validators
+ * - `alert('...')` calls
+ * - `FormValidator.markFieldError(id, '...')` messages
  * Preserves regex, patterns, comments, and code structure
  *
  * @param {string} jsContent - Original JS file content
- * @returns {string} - JS content with message strings emptied
+ * @returns {string} - JS content with user strings emptied
  */
 function removeUserStrings(jsContent) {
-  // Match lines like: message: 'some text' or message: "some text"
-  return jsContent.replace(/(message\s*:\s*)['"`][\s\S]*?['"`]/g, '$1""');
+  let cleaned = jsContent;
+
+  // 1️⃣ Remove message strings in validators
+  cleaned = cleaned.replace(/(message\s*:\s*)['"`][\s\S]*?['"`]/g, '$1""');
+
+  // 2️⃣ Remove strings inside alert(...) calls
+  cleaned = cleaned.replace(/alert\s*\(\s*(['"`])[\s\S]*?\1\s*\)/g, 'alert("")');
+
+  // 3️⃣ Remove second argument of FormValidator.markFieldError(id, '...')
+  cleaned = cleaned.replace(
+    /FormValidator\.markFieldError\s*\(\s*([^,]+)\s*,\s*(['"`])[\s\S]*?\2\s*\)/g,
+    'FormValidator.markFieldError($1, "")'
+  );
+
+  return cleaned;
 }
 
 // Get all JS files in the current project

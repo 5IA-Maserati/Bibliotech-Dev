@@ -1,11 +1,15 @@
 @import url("./common.css");
 
-/* Donate Page Styles */
-
+/* ===========================
+   Header
+=========================== */
 header {
   box-shadow: var(--shadow);
 }
 
+/* ===========================
+   Donate Section
+=========================== */
 .donate-section {
   background: var(--bg-white);
   border-radius: 12px;
@@ -20,9 +24,32 @@ header {
   gap: 2rem;
 }
 
+/* ===========================
+   Footer
+=========================== */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: white;
+  font-size: 0.95rem;
+  background-color: var(--dark-light-blue);
+  margin-top: 2rem;
+}
 
 footer p {
   margin: 0.5rem 0;
+}
+
+/* ===========================
+   Call-To-Action (CTA) Section
+=========================== */
+.cta-section {
+  background: linear-gradient(135deg, var(--dark-light-blue) 0%, var(--main-color) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .cta-section h2 {
@@ -36,22 +63,45 @@ footer p {
   opacity: 0.9;
 }
 
-.map-info p {
-  margin: 0.25rem 0;
-  color: var(--text-light);
+/* CTA Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  margin: 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-
-
-.map-info {
-  padding: 0.75rem 1rem;
-  background: #f5f7f9;
-  text-align: center;
-  border-top: 1px solid #e0e0e0;
-  font-size: 0.85rem;
+.btn-primary {
+  background: white;
+  color: var(--dark-light-blue);
 }
 
-/* Info Boxes */
+.btn-primary:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: rgb(255 255 255 / 10%);
+  transform: scale(1.05);
+}
+
+/* ===========================
+   Info Boxes
+=========================== */
 .info-box {
   background: #f5f5f5;
   padding: 1.5rem;
@@ -71,28 +121,16 @@ footer p {
   font-size: 1.3rem;
 }
 
-
 .info-box p {
   color: var(--text-light);
   margin-bottom: 0.8rem;
 }
 
-.location-info p {
-  margin: 0.5rem 0;
-  color: var(--text-light);
-}
-
-.location-note p {
-  margin: 0.5rem 0;
-  color: var(--text-light);
-}
-
-
 .info-box p:last-child {
   margin-bottom: 0;
 }
 
-
+/* Info Box Variants */
 .info-box.hours {
   border-left-color: var(--medium-blue);
 }
@@ -100,8 +138,6 @@ footer p {
 .info-box.hours h2 {
   color: var(--medium-blue);
 }
-
-
 
 .info-box.highlight {
   border-left-color: var(--medium-blue);
@@ -121,7 +157,9 @@ footer p {
   color: #f44336;
 }
 
-/* Location Info */
+/* ===========================
+   Location Info
+=========================== */
 .location-info {
   margin-bottom: 1rem;
 }
@@ -139,13 +177,34 @@ footer p {
   font-weight: 600;
 }
 
+.location-info p,
+.location-note p {
+  margin: 0.5rem 0;
+  color: var(--text-light);
+}
+
+/* Map info text styling */
+.map-info {
+  padding: 0.75rem 1rem;
+  background: #f5f7f9;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+}
+
+.map-info p {
+  margin: 0.25rem 0;
+  color: var(--text-light);
+}
+
 .map-info p:first-child {
   font-weight: 600;
   color: var(--text-dark);
 }
 
-
-/* Map Styles */
+/* ===========================
+   Map Styles
+=========================== */
 .map-container {
   margin-top: 1rem;
   border-radius: 6px;
@@ -190,8 +249,8 @@ footer p {
 }
 
 .leaflet-control-attribution {
-  font-size: 1rem;          /* ingrandisce il testo */
-  padding: 8px 14px;        /* più spazio interno */
+  font-size: 1rem;
+  padding: 8px 14px;
   background: rgb(255 255 255 / 90%);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
@@ -202,7 +261,7 @@ footer p {
   align-items: center;
   gap: 6px;
   font-weight: 600;
-  color: #1a73e8;           /* colore Google Maps */
+  color: #1a73e8;
   text-decoration: none;
 }
 
@@ -211,12 +270,13 @@ footer p {
 }
 
 .gmaps-icon {
-  width: 20px;              /* ingrandisci qui l’icona */
+  width: 20px;
   height: 20px;
 }
 
-
-/* Hours Table */
+/* ===========================
+   Hours Table
+=========================== */
 .hours-table {
   display: flex;
   flex-direction: column;
@@ -247,7 +307,9 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* Donation List */
+/* ===========================
+   Donation List
+=========================== */
 .donate-list {
   list-style: none;
   padding: 0;
@@ -274,68 +336,9 @@ footer p {
   color: #f44336;
 }
 
-
-
-
-/* CTA Section */
-.cta-section {
-  background: linear-gradient(135deg, var(--dark-light-blue) 0%, var(--main-color) 100%);
-  color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-/* Buttons */
-.btn-primary,
-.btn-secondary {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  margin: 0.5rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.btn-primary {
-  background: white;
-  color: var(--dark-light-blue);
-}
-
-.btn-primary:hover {
-  background: #f0f0f0;
-  transform: scale(1.05);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.btn-secondary:hover {
-  background: rgb(255 255 255 / 10%);
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: white;
-  font-size: 0.95rem;
-  background-color: var(--dark-light-blue);
-  margin-top: 2rem;
-}
-
-/* stylelint-disable media-feature-range-notation */
-
-/* Responsive Design */
+/* ===========================
+   Responsive Design
+=========================== */
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.5rem;
@@ -386,5 +389,3 @@ footer {
     height: 250px;
   }
 }
-
-/* stylelint-enable media-feature-range-notation */

@@ -13,17 +13,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1 Checkout repo
+      # 1. Checkout repo
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           submodules: false
 
-      # 2 Run Super-Linter
+      # 2. Run Super-Linter
       - name: Run Super-Linter
         uses: github/super-linter@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_ALL_CODEBASE: false
-          LOG_LEVEL: WARN
-          FILTER_REGEX_EXCLUDE: '(^|/)(vendor|runtime|.dist|build)(/|$)'
+
+          # JSCPD configuration
+          VALIDATE_JSCPD: true
+          JSCPD_THRESHOLD: 10
+          JSCPD_MIN_LINES: 5
+          JSCPD_MIN_TOKENS: 70
+          JSCPD_ABSOLUTE: true
+
+          # Filter to exclude directories (regex)
+          FILTER_REGEX_EXCLUDE: "vendor/.*|\\.git/.*|\\.dist/.*|build/.*|runtime/.*"

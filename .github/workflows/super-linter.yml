@@ -25,5 +25,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
+          VALIDATE_JSCPD: false
           LOG_LEVEL: WARN
           FILTER_REGEX_EXCLUDE: "vendor/.*|\\.git/.*|\\.dist/.*|build/.*|runtime/.*"
+
+      # 3 Run JSCPD separately
+      - name: Duplicate check
+        run: npx jscpd . --config .jscpdrc.json

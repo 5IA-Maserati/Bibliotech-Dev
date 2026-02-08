@@ -19,12 +19,6 @@ jobs:
         with:
           submodules: false
 
-      # 2 Remove vendor before lint
-      # - name: Remove vendor directory
-        #run: |
-         # echo "Removing vendor directory before linting..."
-          # rm -rf vendor runtime/vendor
-
       # 2 Run Super-Linter
       - name: Run Super-Linter
         uses: github/super-linter@v6
@@ -32,4 +26,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
-          FILTER_REGEX_EXCLUDE: '(^|/)(vendor|runtime|.dist|build|scripts)(/|$)'
+          FILTER_REGEX_EXCLUDE: '(^|/)(vendor|runtime|.dist|build)(/|$)'

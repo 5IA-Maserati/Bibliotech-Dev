@@ -4,10 +4,11 @@
   "minTokens": 70,
   "absolute": true,
   "exitCode": 1,
-  "ignore": [
-    "node_modules/**",
-    ".git/**",
-    "dist/**",
-    "build/**"
+  "exclude": [
+    "**/vendor/**",
+    "**/.git/**",
+    "**/.dist/**",
+    "**/build/**",
+    "**/runtime/**"
   ]
 }

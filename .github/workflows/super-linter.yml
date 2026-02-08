@@ -32,4 +32,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
-          FILTER_REGEX_EXCLUDE: ".*vendor/.*|.*installer/.*|.*dist/.*|.*build/.*"
+          FILTER_REGEX_EXCLUDE: "(/vendor/|/dist/|/build/|/runtime/)"
+

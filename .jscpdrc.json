@@ -4,11 +4,11 @@
   "minTokens": 70,
   "absolute": true,
   "exitCode": 1,
-  "exclude": [
-    "**/vendor/**",
-    "**/.git/**",
-    "**/.dist/**",
-    "**/build/**",
-    "**/runtime/**"
+  "ignore": [
+    "vendor/",
+    ".git/",
+    ".dist/",
+    "build/",
+    "runtime/"
   ]
 }

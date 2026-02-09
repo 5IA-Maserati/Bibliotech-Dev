@@ -26,7 +26,7 @@ jobs:
           if [ -z "$CONFIG_DIR" ]; then
             CONFIG_DIR="${{ github.workspace }}"
           fi
-          echo "JSCPD_CONFIG_FILE=$CONFIG_DIR/.jscpd.json" >> $GITHUB_ENV
+          echo "JSCPD_CONFIG_FILE=$CONFIG_DIR/.jscpdrc.json" >> $GITHUB_ENV
 
       # 3 Run Super-Linter
       - name: Run Super-Linter

@@ -19,16 +19,21 @@ jobs:
         with:
           submodules: false
 
-      # 2 Run Super-Linter
+      # 2 Determine JSCPD config path
+      - name: Set JSCPD config path
+        run: |
+          CONFIG_DIR="${{ env.working_dir }}"
+          if [ -z "$CONFIG_DIR" ]; then
+            CONFIG_DIR="${{ github.workspace }}"
+          fi
+          echo "JSCPD_CONFIG_FILE=$CONFIG_DIR/.jscpd.json" >> $GITHUB_ENV
+
+      # 3 Run Super-Linter
       - name: Run Super-Linter
         uses: github/super-linter@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
-          VALIDATE_JSCPD: false
+          JSCPD_CONFIG_FILE: ${{ env.JSCPD_CONFIG_FILE }}
           LOG_LEVEL: WARN
           FILTER_REGEX_EXCLUDE: "vendor/.*|\\.git/.*|\\.dist/.*|build/.*|runtime/.*"
-
-      # 3 Run JSCPD separately
-      - name: Duplicate check
-        run: npx jscpd . --config .jscpdrc.json

@@ -27,3 +27,6 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: WARN
           FILTER_REGEX_EXCLUDE: "vendor/.*|\\.git/.*|\\.dist/.*|build/.*|runtime/.*"
+          # Enable jscpd (duplicate code detector) and point to custom config
+          VALIDATE_JSCPD: true
+          JSCPD_CONFIG: .jscpd.json

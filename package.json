@@ -4,5 +4,8 @@
   },
   "scripts": {
     "lint": "standard"
+  },
+  "dependencies": {
+    "npx": "^10.2.2"
   }
 }

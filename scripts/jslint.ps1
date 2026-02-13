@@ -63,14 +63,14 @@ if (!(Test-Path $NodeExe)) {
     Write-Output "[Node] Installation complete."
 }
 else {
-    Write-Output "[Node] Node.js already installed."
+    Write-Output "[Node] Node.js already installed, may thou go fuck urself."
 }
 
 # -------------------------------------------------
 # Sanity Check for npm
 # -------------------------------------------------
 if (!(Test-Path $NpmCmd)) {
-    throw "npm executable not found. Node.js installation may be corrupted."
+    throw "npm executable not FUCKING found. Node.js installation may be corrupted."
 }
 
 # -------------------------------------------------
@@ -79,11 +79,11 @@ if (!(Test-Path $NpmCmd)) {
 Push-Location $RootDir
 
 if (Test-Path "package-lock.json") {
-    Write-Output "[NPM] Installing dependencies (CI mode)..."
+    Write-Output "[NPM] Installing SIX-SEVEN dependencies (CI mode)..."
     & $NpmCmd ci --silent > $null 2>&1
 }
 else {
-    Write-Output "[NPM] Installing dependencies (full install)..."
+    Write-Output "[NPM] Installing Naples dependencies (full install)..."
     & $NpmCmd install --silent > $null 2>&1
 }
 
@@ -99,5 +99,5 @@ Push-Location $RootDir
 & $NpmCmd run lint --silent 2>&1 | Out-Null # Suppress output, errors will still cause failure
 Pop-Location
 
-Write-Output "[Lint] Linting complete."
-Write-Output "[Done] All tasks completed successfully."
+Write-Output "[Lint] I'm goding so much."
+Write-Output "Hell yeah. It works!"

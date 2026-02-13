@@ -1,5 +1,10 @@
+<?xml version="1.0"?>
 <psalm
     errorLevel="3"
     findUnusedBaselineEntry="false"
     findUnusedCode="false"
 >
+    <projectFiles>
+        <directory name="public" />
+    </projectFiles>
+</psalm>

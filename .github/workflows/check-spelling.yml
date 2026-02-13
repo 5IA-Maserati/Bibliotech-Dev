@@ -20,16 +20,13 @@ jobs:
         run: npm install cheerio glob
 
       - name: Strip visible HTML text (allow Italian)
-        run: node scripts/strip-visible-text.js
+        run: node scripts/remove-html-strings.js
 
       - name: Remove PHP strings (especially Italian)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y php-cli
-          php scripts/remove-php-strings.php
+        run: node scripts/remove-php-strings.js
 
       - name: Remove all string literals from selected JS files
-        run: node scripts/spellcheck-prep.js
+        run: node scripts/remove-js-strings.js
 
       - name: Spell check
         uses: check-spelling/check-spelling@v0.0.25

@@ -27,60 +27,6 @@ jobs:
           LOG_LEVEL: INFO
           FILTER_REGEX_EXCLUDE: "vendor/.*|\\.git/.*|\\.dist/.*|build/.*|runtime/.*"
           LINTER_RULES_PATH: .
-          FIX_ANSIBLE: true
-          FIX_BIOME_FORMAT: true
-          FIX_BIOME_LINT: true
-          FIX_CLANG_FORMAT: true
-          FIX_CSHARP: true
-          FIX_CSS_PRETTIER: true
-          FIX_CSS: true
-          FIX_JAVASCRIPT_PRETTIER: true
-          FIX_JAVASCRIPT_ES: true
-          FIX_JSON_PRETTIER: true
-          FIX_JSON: true
-          FIX_JSONC_PRETTIER: true
-          FIX_HTML_PRETTIER: true
-          FIX_MARKDOWN_PRETTIER: true
-          FIX_MARKDOWN: true
-          FIX_PYTHON_BLACK: true
-          FIX_PYTHON_ISORT: true
-          FIX_TSX: true
-          FIX_TYPESCRIPT_PRETTIER: true
-          FIX_VUE_PRETTIER: true
-          FIX_YAML_PRETTIER: true
-          
-      - name: Check for changes
-        id: changes
-        run: |
-          git diff
-          echo "CHANGED=$(git status --porcelain | wc -l)" >> $GITHUB_OUTPUT
-
-      - name: Checkout or create PR branch
-        if: ${{ steps.changes.outputs.CHANGED != '0' }}
-        run: |
-          BRANCH_NAME="auto-lint-fixes"
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          if git ls-remote --exit-code origin $BRANCH_NAME; then
-            git checkout $BRANCH_NAME
-          else
-            git checkout -b $BRANCH_NAME
-          fi
-
-      - name: Commit fixes
-        if: ${{ steps.changes.outputs.CHANGED != '0' }}
-        run: |
-          git add .
-          git commit -m "Auto-fix by Super-Linter" || echo "Nothing to commit"
-          git push --set-upstream origin auto-lint-fixes
-
-      - name: Create or update Pull Request
-        if: ${{ steps.changes.outputs.CHANGED != '0' }}
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Auto-fix by Super-Linter"
-          branch: auto-lint-fixes
           title: "Auto-lint fixes"
           body: "Super-Linter applied automatic fixes. Review before merging."
           base: main

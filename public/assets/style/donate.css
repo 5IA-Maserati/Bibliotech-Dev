@@ -126,6 +126,17 @@ footer p {
   margin-bottom: 0.8rem;
 }
 
+.location-info p,
+.location-note p {
+  margin: 0.5rem 0;
+  color: var(--text-light);
+}
+
+.map-info p {
+  margin: 0.25rem 0;
+  color: var(--text-light);
+}
+
 .info-box p:last-child {
   margin-bottom: 0;
 }
@@ -177,12 +188,6 @@ footer p {
   font-weight: 600;
 }
 
-.location-info p,
-.location-note p {
-  margin: 0.5rem 0;
-  color: var(--text-light);
-}
-
 /* Map info text styling */
 .map-info {
   padding: 0.75rem 1rem;
@@ -190,11 +195,6 @@ footer p {
   text-align: center;
   border-top: 1px solid #e0e0e0;
   font-size: 0.85rem;
-}
-
-.map-info p {
-  margin: 0.25rem 0;
-  color: var(--text-light);
 }
 
 .map-info p:first-child {
@@ -339,7 +339,7 @@ footer p {
 /* ===========================
    Responsive Design
 =========================== */
-@media (max-width: 768px) {
+@media (max-width>= 768px) {
   header h1 {
     font-size: 1.5rem;
   }

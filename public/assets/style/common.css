@@ -115,6 +115,7 @@ main {
 /* ===========================
    NAVIGATION BUTTONS
 =========================== */
+
 /* Quick action navigation */
 .quick-nav {
   display: flex;
@@ -167,6 +168,7 @@ main {
 /* ===========================
    Button Variants
 =========================== */
+
 /* Donate button variant */
 .btn-nav.donate {
   background-color: var(--medium-blue);

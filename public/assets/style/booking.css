@@ -2,11 +2,6 @@
 
 /* Booking Page Styles */
 
-header h1 {
-  text-align: center;
-  color: white;
-}
-
 header {
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
@@ -30,6 +25,11 @@ h1 {
   margin-bottom: 2rem;
   text-align: center;
   letter-spacing: 2px;
+}
+
+header h1 {
+  text-align: center;
+  color: white;
 }
 
 /* Description section */

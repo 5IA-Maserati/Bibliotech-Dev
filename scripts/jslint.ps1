@@ -14,7 +14,7 @@ $CacheDir = Join-Path $RootDir ".cache\node"
 # -------------------------------------------------
 # Node.js Version
 # -------------------------------------------------
-$NodeVersion = "v20.11.1"
+$NodeVersion = "v22.9.0"
 
 # -------------------------------------------------
 # Determine Architecture (64-bit / ARM64 only)

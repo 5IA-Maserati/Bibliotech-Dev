@@ -96,7 +96,7 @@ Write-Output "[NPM] Dependencies installed."
 Write-Output "[Lint] Running lint checks..."
 
 Push-Location $RootDir
-& $NpmCmd run lint --silent > $null 2>&1
+& $NpmCmd run lint --silent 2>&1 | Out-Null
 Pop-Location
 
 Write-Output "[Lint] Linting complete."

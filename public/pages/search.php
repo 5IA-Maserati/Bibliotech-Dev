@@ -6,7 +6,7 @@ $show_nav = false;
 // Render header
 ob_start();
 include __DIR__ . '/../includes/header.php';
-$header = ob_get_clean();
+$header = ob_get_clean() ?: '';
 
 // Load template and replace
 $tpl = __DIR__ . '/search.html';

@@ -6,7 +6,7 @@ $subtitle = 'Accedi o registrati per entrare nella piattaforma';
 // Render header (capture output)
 ob_start();
 include __DIR__ . '/../includes/header.php';
-$header = ob_get_clean();
+$header = ob_get_clean() ?: '';
 
 // Render form inputs
 $type = 'text';

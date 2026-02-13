@@ -22,6 +22,11 @@ $nav_items ??= [];
         <div class="logo-placeholder" aria-hidden="true">LOGO 2</div>
     </div>
 
+    <!-- Dynamic login/logout -->
+    <div class="auth-area">
+        <?php include __DIR__ . '/header.auth.php'; ?>
+    </div>
+
     <div class="container">
         <h1><?= htmlspecialchars($title, ENT_QUOTES, 'UTF-8') ?></h1>
 

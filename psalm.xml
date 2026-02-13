@@ -1,0 +1,5 @@
+<psalm
+    errorLevel="3"
+    findUnusedBaselineEntry="false"
+    findUnusedCode="false"
+>

@@ -9,7 +9,9 @@ $nav_items = [
 ];
 
 // Render header
-ob_start(); include __DIR__ . '/../includes/header.php'; $header = ob_get_clean();
+ob_start();
+include __DIR__ . '/../includes/header.php';
+$header = ob_get_clean();
 
 // Load template and replace
 $tpl = __DIR__ . '/donate.html';
@@ -20,5 +22,3 @@ $replacements = [
 ];
 $html = str_replace(array_keys($replacements), array_values($replacements), $html);
 echo $html;
-
-?>

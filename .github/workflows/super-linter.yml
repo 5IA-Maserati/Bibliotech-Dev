@@ -27,7 +27,3 @@ jobs:
           LOG_LEVEL: INFO
           FILTER_REGEX_EXCLUDE: "vendor/.*|\\.git/.*|\\.dist/.*|build/.*|runtime/.*"
           LINTER_RULES_PATH: .
-          title: "Auto-lint fixes"
-          body: "Super-Linter applied automatic fixes. Review before merging."
-          base: main
-          update-existing: true

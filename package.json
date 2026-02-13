@@ -6,7 +6,6 @@
     "lint": "standard"
   },
   "dependencies": {
-    "codeql": "^1.0.0",
-    "npx": "^10.2.2"
+    "codeql": "^1.0.0"
   }
 }

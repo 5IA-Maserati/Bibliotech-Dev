@@ -206,3 +206,11 @@ footer {
     padding: 2rem 1rem;
     font-size: 0.95rem;
 }
+
+/* Small note inside cards (used on signup under title) */
+.card-note {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}

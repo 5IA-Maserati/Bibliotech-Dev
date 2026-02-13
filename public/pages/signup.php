@@ -2,91 +2,43 @@
 
 $title = 'Biblioteca Digitale';
 $subtitle = 'Accedi o registrati per entrare nella piattaforma';
-include '../includes/header.php';
+
+// Render header
+ob_start(); include __DIR__ . '/../includes/header.php'; $header = ob_get_clean();
+
+// Render all form inputs
+$type = 'text'; $id = 'nome'; $label = 'Nome'; $aria_label = 'Inserisci il tuo nome';
+ob_start(); include __DIR__ . '/../includes/form-input.php'; $fi_nome = ob_get_clean();
+
+$type = 'text'; $id = 'cognome'; $label = 'Cognome'; $aria_label = 'Inserisci il tuo cognome';
+ob_start(); include __DIR__ . '/../includes/form-input.php'; $fi_cognome = ob_get_clean();
+
+$type = 'date'; $id = 'data-nascita'; $label = 'Data di nascita'; $aria_label = 'Inserisci la tua data di nascita';
+ob_start(); include __DIR__ . '/../includes/form-input.php'; $fi_data_nascita = ob_get_clean();
+
+$type = 'email'; $id = 'email'; $label = 'Email'; $aria_label = 'Inserisci la tua email';
+ob_start(); include __DIR__ . '/../includes/form-input.php'; $fi_email = ob_get_clean();
+
+$type = 'password'; $id = 'password'; $label = 'Password'; $aria_label = 'Inserisci la tua password';
+ob_start(); include __DIR__ . '/../includes/form-input.php'; $fi_password = ob_get_clean();
+
+$type = 'password'; $id = 'confirm-password'; $label = 'Conferma password'; $aria_label = 'Conferma la tua password';
+ob_start(); include __DIR__ . '/../includes/form-input.php'; $fi_confirm_password = ob_get_clean();
+
+// Load template and replace placeholders
+$tpl = __DIR__ . '/signup.html';
+$html = file_get_contents($tpl);
+$replacements = [
+	'{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
+	'{{HEADER}}' => $header,
+	'{{FORM_INPUT_NOME}}' => $fi_nome,
+	'{{FORM_INPUT_COGNOME}}' => $fi_cognome,
+	'{{FORM_INPUT_DATA_NASCITA}}' => $fi_data_nascita,
+	'{{FORM_INPUT_EMAIL}}' => $fi_email,
+	'{{FORM_INPUT_PASSWORD}}' => $fi_password,
+	'{{FORM_INPUT_CONFIRM_PASSWORD}}' => $fi_confirm_password,
+];
+$html = str_replace(array_keys($replacements), array_values($replacements), $html);
+echo $html;
+
 ?>
-
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Registrazione">
-    <title>Registrazione | Biblioteca Digitale</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style/login.css">
-    <link rel="stylesheet" href="../assets/style/validation.css">
-</head>
-<body>
-
-
-
-<div class="login-container">
-    <div class="login-card">
-        <h2>Registrazione</h2>
-        <p class="subtitle">Crea un nuovo account</p>
-
-        <form id="register-form">
-            <?php
-            $type = 'text';
-            $id = 'nome';
-            $label = 'Nome';
-            $aria_label = 'Inserisci il tuo nome';
-            include '../includes/form-input.php';
-            ?>
-
-            <?php
-            $type = 'text';
-            $id = 'cognome';
-            $label = 'Cognome';
-            $aria_label = 'Inserisci il tuo cognome';
-            include '../includes/form-input.php';
-            ?>
-
-            <?php
-            $type = 'date';
-            $id = 'data-nascita';
-            $label = 'Data di nascita';
-            $aria_label = 'Inserisci la tua data di nascita';
-            include '../includes/form-input.php';
-            ?>
-
-            <?php
-            $type = 'email';
-            $id = 'email';
-            $label = 'Email';
-            $aria_label = 'Inserisci la tua email';
-            include '../includes/form-input.php';
-            ?>
-
-            <?php
-            $type = 'password';
-            $id = 'password';
-            $label = 'Password';
-            $aria_label = 'Inserisci la tua password';
-            include '../includes/form-input.php';
-            ?>
-
-            <?php
-            $type = 'password';
-            $id = 'confirm-password';
-            $label = 'Conferma password';
-            $aria_label = 'Conferma la tua password';
-            include '../includes/form-input.php';
-            ?>
-
-            <button type="submit">Registrati</button>
-        </form>
-
-        <a href="login.php" class="back-link">← Torna al login</a>
-        <a href="../index.php" class="home-btn">Torna alla Home</a>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2026 Biblioteca Scolastica. Tutti i diritti riservati.</p>
-    <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
-</footer>
-
-<script src="../assets/js/form-validator.js"></script>
-<script src="../assets/js/signup.js"></script>
-</body>
-</html>

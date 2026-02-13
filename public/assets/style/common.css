@@ -65,7 +65,7 @@ header p {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background-color: #51758D;
+  background: linear-gradient(135deg, var(--dark-light-blue) 0%, var(--main-color) 100%);
   box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
 }
 

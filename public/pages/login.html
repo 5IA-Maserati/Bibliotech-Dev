@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>{{TITLE}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accedi">
+    <link rel="stylesheet" href="../assets/style/login.css">
+    <link rel="stylesheet" href="../assets/style/validation.css">
+</head>
+<body>
+    {{HEADER}}
+
+<div class="login-container">
+    <div class="login-card">
+        <h1 style="text-align: center;">Biblioteca Digitale</h1>
+        <p class="subtitle">Accesso studenti e docenti</p>
+        
+        <form id="login-form">
+            {{FORM_INPUT_USERNAME}}
+
+            {{FORM_INPUT_PASSWORD}}
+
+            <button type="submit">Accedi</button>
+
+            <a href="signup.php" class="back-link">Registrati</a>
+            <a href="../index.php" class="home-btn">Torna alla Home</a>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Biblioteca Scolastica. Tutti i diritti riservati.</p>
+    <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
+</footer>
+
+<script src="../assets/js/form-validator.js"></script>
+<script src="../assets/js/login.js"></script>
+</body>
+</html>

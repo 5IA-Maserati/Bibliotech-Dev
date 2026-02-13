@@ -7,128 +7,18 @@ $nav_items = [
     '../index.php' => 'Home',
     'search.php' => 'Torna al Catalogo'
 ];
-include '../includes/header.php';
+
+// Render header
+ob_start(); include __DIR__ . '/../includes/header.php'; $header = ob_get_clean();
+
+// Load template and replace
+$tpl = __DIR__ . '/donate.html';
+$html = file_get_contents($tpl);
+$replacements = [
+    '{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
+    '{{HEADER}}' => $header,
+];
+$html = str_replace(array_keys($replacements), array_values($replacements), $html);
+echo $html;
+
 ?>
-
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dona un libro">
-    <title>Dona un Libro - Biblioteca</title>
-
-    <!-- Leaflet CSS (locale) -->
-    <link rel="stylesheet" href="../assets/js/libs/.dist/leaflet.css">
-
-
-    <!-- Donate page CSS -->
-    <link rel="stylesheet" href="../assets/style/donate.css">
-</head>
-<body>
-
-
-
-<main class="container">
-    <section class="donate-section">
-        <div class="content-wrapper">
-
-            <div class="info-box">
-                <h2>Come Donare</h2>
-                <p>
-                    Donare libri alla nostra biblioteca è semplice e gratuito! Non è necessario fornire alcun dato
-                    relativo al libro (titolo, editore, autore, ecc.). I libri verranno catalogati direttamente
-                    dal nostro staff durante la consegna.
-                </p>
-                <p style="margin-top: 1rem; font-weight: 500; color: #4CAF50;">
-                    ✓ Portaci i tuoi libri negli orari di apertura indicati di seguito
-                </p>
-            </div>
-
-            <div class="info-box">
-                <h2>📍 Ubicazione della Biblioteca</h2>
-
-                <div class="location-info">
-                    <p><strong>Indirizzo:</strong></p>
-                    <p>Istituto Alfieri Maserati<br>Voghera</p>
-                </div>
-
-                <div class="map-container">
-                    <div id="map"></div>
-                </div>
-
-                <div class="location-note">
-                    <p><strong>📍 Come raggiungerci:</strong></p>
-                    <p>
-                        Per consegnare i libri, rivolgiti alla <strong>Segreteria</strong> situata all'ingresso,
-                        subito a destra. Il nostro staff ti guiderà nel processo di donazione e catalogazione.
-                    </p>
-                </div>
-            </div>
-
-            <div class="info-box hours">
-                <h2>🕒 Orari di Apertura</h2>
-                <div class="hours-table">
-                    <div class="hour-row">
-                        <span class="day">Lunedì - Venerdì:</span>
-                        <span class="time">09:00 - 13:00</span>
-                    </div>
-                    <div class="hour-row">
-                        <span class="day">Sabato - Domenica:</span>
-                        <span class="time">Chiuso</span>
-                    </div>
-                    <div class="hour-row">
-                        <span class="day">Festivi:</span>
-                        <span class="time">Chiuso</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-box highlight">
-                <h2>💡 Cosa Puoi Donare</h2>
-                <ul class="donate-list">
-                    <li>Libri in buone condizioni</li>
-                    <li>Qualsiasi genere: romanzi, saggistica, storia, fantascienza, ragazzi, ecc.</li>
-                    <li>Libri in italiano e in altre lingue</li>
-                    <li>Enciclopedie e opere di riferimento</li>
-                </ul>
-            </div>
-
-            <div class="info-box warning">
-                <h2>⚠️ Cosa Non Accettiamo</h2>
-                <ul class="donate-list">
-                    <li>Libri danneggiati, sporchi o con pagine mancanti</li>
-                    <li>Libri fortemente sottolineati o annotati</li>
-                    <li>Fumetti e riviste (in generale)</li>
-                </ul>
-            </div>
-
-            <div class="cta-section">
-                <h2>Sei Pronto a Donare?</h2>
-                <p>Raccogli i tuoi libri e vieni a trovarci durante gli orari di apertura!</p>
-
-                <button class="btn-primary"
-                    onclick="alert('Grazie per il tuo interesse! Visita la biblioteca negli orari indicati.')">
-                    Scopri di Più
-                </button>
-
-                <a href="search.php" class="btn-secondary">Torna al Catalogo</a>
-            </div>
-
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2026 Biblioteca Scolastica. Tutti i diritti riservati.</p>
-    <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
-</footer>
-
-<!-- Leaflet JS -->
-<script src= "../assets/js/libs/.dist/leaflet.js"></script>
-
-<!-- Donate page JS -->
-<script src="../assets/js/donate.js"></script>
-
-</body>
-</html>

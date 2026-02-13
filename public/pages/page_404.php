@@ -2,37 +2,18 @@
 
 $title = '404 - Page not found';
 $show_nav = false;
-include '../includes/header.php';
+
+// Render header
+ob_start(); include __DIR__ . '/../includes/header.php'; $header = ob_get_clean();
+
+// Load template and replace
+$tpl = __DIR__ . '/page_404.html';
+$html = file_get_contents($tpl);
+$replacements = [
+	'{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
+	'{{HEADER}}' => $header,
+];
+$html = str_replace(array_keys($replacements), array_values($replacements), $html);
+echo $html;
+
 ?>
-
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pagina non trovata">
-    <title>404 - Pagina non trovata</title>
-    <link rel="stylesheet" href="../assets/style/page_404.css">
-</head>
-<body>
-
-<header class="navbar">
-    <div class="logo-area">
-        <div class="logo-placeholder" aria-hidden="true">LOGO</div>
-        <p class="main-title">Bibliotech</p>
-    </div>
-    <a href="login.php" class="btn-auth-text">Accedi</a>
-</header>
-
-<main>
-    <h1>404 - Pagina non trovata</h1>
-    <p>La pagina che stai cercando non esiste.</p>
-    <a href="../index.php">Torna alla home</a>
-</main>
-
-<footer class="footer">
-    <p>&copy; 2026 Bibliotech</p>
-</footer>
-
-</body>
-</html>

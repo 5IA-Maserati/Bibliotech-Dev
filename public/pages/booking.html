@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prenotazione">
+    <title>{{TITLE}}</title>
+    <link rel="stylesheet" href="../assets/style/booking.css">
+    <link rel="stylesheet" href="../assets/style/validation.css">
+</head>
+<body>
+    {{HEADER}}
+    <nav class="action-bar">
+        <div class="nav-buttons">
+            <a href="search.php" class="btn-nav">Torna al catalogo</a>
+            <a href="../index.php" class="btn-nav">Torna alla home</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="description">
+            <p>Descrizione del libro</p>
+        </div>
+
+        <form id="booking-form">
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="book-title"
+                    placeholder="Titolo libro"
+                    required
+                    aria-label="Titolo del libro"
+                >
+                <label for="book-title">Titolo del libro</label>
+            </div>
+
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="student-name"
+                    placeholder="Nome studente"
+                    required
+                    aria-label="Nome dello studente"
+                >
+                <label for="student-name">Nome Studente</label>
+            </div>
+
+            <div class="input-group">
+                <input
+                    type="email"
+                    id="student-email"
+                    placeholder="Email"
+                    required
+                    aria-label="Email dello studente"
+                >
+                <label for="student-email">Email</label>
+            </div>
+
+            <div class="input-group">
+                <input
+                    type="date"
+                    id="booking-date"
+                    required
+                    aria-label="Data di prenotazione"
+                >
+                <label for="booking-date">Data di prenotazione</label>
+            </div>
+
+            <button type="submit">Prenota</button>
+        </form>
+
+    </div>
+</body>
+</html>

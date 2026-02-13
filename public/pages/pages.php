@@ -2,36 +2,18 @@
 
 $title = 'Books details';
 $show_nav = false;
-include '../includes/header.php';
+
+// Render header
+ob_start(); include __DIR__ . '/../includes/header.php'; $header = ob_get_clean();
+
+// Load template and replace
+$tpl = __DIR__ . '/pages.html';
+$html = file_get_contents($tpl);
+$replacements = [
+	'{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
+	'{{HEADER}}' => $header,
+];
+$html = str_replace(array_keys($replacements), array_values($replacements), $html);
+echo $html;
+
 ?>
-
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dettagli Libro">
-    <title>Dettagli Libro</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Titolo del Libro</h1>
-
-        <div class="info">
-            <p><strong>Autore:</strong> Nome Autore</p>
-            <p><strong>Anno:</strong> Anno</p>
-            <p><strong>Genere:</strong> Genere</p>
-            <p><strong>Lingua:</strong> Lingua</p>
-        </div>
-
-        <div class="description">
-            <p>Descrizione del libro</p>
-        </div>
-
-        <button>Prestito</button>
-
-        <a href="search.php">Torna all catalogo</a>
-        <a href="../index.php">Torna alla home</a>
-    </div>
-</body>
-</html>

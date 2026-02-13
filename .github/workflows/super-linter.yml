@@ -42,7 +42,7 @@ jobs:
           FIX_PHP_PSALM: false
           FIX_GITHUB_ACTIONS_ZIZMOR: true
           FIX_JAVASCRIPT_ES: true
-          
+
       - name: Commit and Push Fixes
         run: |
           git config --global user.name "github-actions"
@@ -53,7 +53,7 @@ jobs:
           git push --set-upstream origin auto-lint-fixes --force
 
       - name: Set output branch
-        run: echo "pr-branch=auto-lint-fixes" >> $GITHUB_OUTPUT
+        run: echo "pr-branch=auto-lint-fixes" >> "$GITHUB_OUTPUT"
 
   lint:
     needs: fix

@@ -10,34 +10,33 @@
 </head>
 <body>
 
+    <div class="    login-container">
+        <div class="login-container">
+            <div class="login-card">
+                <h1 style="text-align: center;">Biblioteca Digitale</h1>
+                <p class="subtitle">Crea un nuovo account</p>
+                <p class="card-note" style="margin-bottom:18px; font-size:0.9rem; color:#6b7280;">Grazie per il tuo contributo alla nostra comunità di lettori!</p>
 
+                <form id="register-form">
+                    {{FORM_INPUT_NOME}}
+                    {{FORM_INPUT_COGNOME}}
+                    {{FORM_INPUT_DATA_NASCITA}}
+                    {{FORM_INPUT_EMAIL}}
+                    {{FORM_INPUT_PASSWORD}}
+                    {{FORM_INPUT_CONFIRM_PASSWORD}}
 
-<div class="login-container">
-    <div class="login-container">
-        <div class="login-card">
-            <h1 style="text-align: center;">Biblioteca Digitale</h1>
-            <p class="subtitle">Crea un nuovo account</p>
-            <p class="card-note" style="margin-bottom:18px; font-size:0.9rem; color:#6b7280;">Grazie per il tuo contributo alla nostra comunità di lettori!</p>
+                    <button type="submit">Registrati</button>
 
-            <form id="register-form">
-                {{FORM_INPUT_NOME}}
-                {{FORM_INPUT_COGNOME}}
-                {{FORM_INPUT_DATA_NASCITA}}
-                {{FORM_INPUT_EMAIL}}
-                {{FORM_INPUT_PASSWORD}}
-                {{FORM_INPUT_CONFIRM_PASSWORD}}
-
-                <button type="submit">Registrati</button>
-
-                <a href="login.php" class="back-link">← Torna al login</a>
-                <a href="../index.php" class="home-btn">Torna alla Home</a>
-            </form>
+                    <a href="login.php" class="back-link">← Torna al login</a>
+                    <a href="../index.php" class="home-btn">Torna alla Home</a>
+                </form>
+            </div>
         </div>
     </div>
-    <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
-<footer>
-    <p>&copy; 2026 Biblioteca Scolastica. Tutti i diritti riservati.</p>
-    <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
-</footer>
+        <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
+    <footer>
+        <p>&copy; 2026 Biblioteca Scolastica. Tutti i diritti riservati.</p>
+        <p>Grazie per il tuo contributo alla nostra comunità di lettori!</p>
+    </footer>
 </body>
 </html>

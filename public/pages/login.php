@@ -15,7 +15,7 @@ $label = 'Username';
 $aria_label = 'Inserisci il tuo username';
 ob_start();
 include __DIR__ . '/../includes/form-input.php';
-$form_input_username = ob_get_clean();
+$form_input_username = ob_get_clean() ?: '';
 
 $type = 'password';
 $id = 'password';
@@ -23,7 +23,7 @@ $label = 'Password';
 $aria_label = 'Inserisci la tua password';
 ob_start();
 include __DIR__ . '/../includes/form-input.php';
-$form_input_password = ob_get_clean();
+$form_input_password = ob_get_clean() ?: '';
 
 // Load template and replace placeholders
 $tpl = __DIR__ . '/login.html';

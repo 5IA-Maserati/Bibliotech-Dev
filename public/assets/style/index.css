@@ -12,6 +12,20 @@
 }
 
 /* -----------------------------------
+   Authentication Button Text
+----------------------------------- */
+.btn-auth-text {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.btn-auth-text:hover {
+    text-decoration: underline;
+}
+
+/* -----------------------------------
    Time Central Layout
 ----------------------------------- */
 .content-wrapper {
@@ -21,7 +35,7 @@
 }
 
 /* Container for the schedule ("orari") */
-.orari-mega-container {
+.opening-hours-mega-container {
     display: flex;
     background-color: var(--white);
     border: 2px solid var(--light-gray-blue);
@@ -33,7 +47,7 @@
 }
 
 /* Label section inside schedule */
-.orari-label {
+.opening-hours-label {
     flex: 1;
     background-color: var(--dark-light-blue);
     color: white;
@@ -46,7 +60,7 @@
 }
 
 /* Content box inside schedule */
-.orari-box {
+.opening-hours-box {
     flex: 1;
     padding: 40px;
     display: flex;
@@ -57,13 +71,13 @@
 }
 
 /* Paragraphs inside schedule grid */
-.orari-grid p {
+.opening-hours-grid p {
     margin: 10px 0;
     font-size: 1.1rem;
 }
 
 /* Navigation buttons inside schedule */
-.orari-nav {
+.opening-hours-nav {
     padding: 20px;
     background-color: var(--dark-light-blue);
     color: white;
@@ -74,7 +88,7 @@
     font-weight: 400;
 }
 
-.orari-nav:hover {
+.opening-hours-nav:hover {
     background-color: var(--dark-light-blue);
 }
 

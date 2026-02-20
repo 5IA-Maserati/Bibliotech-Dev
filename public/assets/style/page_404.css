@@ -1,16 +1,5 @@
 @import url("./common.css");
 
-.btn-auth-text {
-    text-decoration: none;
-    color: var(--dark-light-blue);
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.btn-auth-text:hover {
-    text-decoration: underline;
-}
-
 .footer {
     height: 150px;
     padding: 20px 5%;

@@ -2,6 +2,7 @@
 
 $title = 'Biblioteca Digitale';
 $subtitle = 'Accedi o registrati per entrare nella piattaforma';
+$show_auth = false;
 
 // Render header (capture output)
 ob_start();

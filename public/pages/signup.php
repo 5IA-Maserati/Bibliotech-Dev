@@ -1,7 +1,8 @@
 <?php
 
 $title = 'Biblioteca Digitale';
-$subtitle = 'Accedi o registrati per entrare nella piattaforma';
+$subtitle = 'Grazie per il tuo contributo alla nostra comunità di lettori!';
+$show_auth = false;
 
 // Render header
 ob_start();

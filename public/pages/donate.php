@@ -4,7 +4,7 @@ $title = 'Dona un Libro alla Biblioteca';
 $subtitle = 'Aiutaci a crescere: condividi i tuoi libri con la comunità';
 $show_nav = true;
 $nav_items = [
-    '../index.php' => 'Home',
+    '/index.php' => 'Home',
     'search.php' => 'Torna al Catalogo'
 ];
 

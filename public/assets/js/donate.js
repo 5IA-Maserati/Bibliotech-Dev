@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lng = 8.997528028540428
 
   // Correct path for Leaflet marker icons
-  L.Icon.Default.imagePath = '../assets/js/libs/.dist/images/'
+  L.Icon.Default.imagePath = '/assets/js/libs/.dist/images/'
 
   // Zoom configuration
   const minZoom = 8
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   L.control.attribution({ prefix: false }).addTo(map)
   map.attributionControl.addAttribution(`
     <a class="gmaps-link" href="https://maps.app.goo.gl/fhTpU3kYApsbhmp49" target="_blank">
-      <img src="../assets/img/icons/google-map-icon.png" alt="Google Maps" class="gmaps-icon">
+      <img src="/assets/img/icons/google-map-icon.png" alt="Google Maps" class="gmaps-icon">
       Open in Google Maps
     </a>
   `)

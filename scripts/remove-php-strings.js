@@ -9,7 +9,7 @@ const FILES = ['public/**/*.php']
  * @param {string} content
  * @returns {{ stripped: string, removed: string[] }}
  */
-function removePhpStrings(content) {
+function removePhpStrings (content) {
   const removed = []
 
   // Matches single or double quoted strings with escaped chars
@@ -29,7 +29,7 @@ function removePhpStrings(content) {
 /**
  * Process a single PHP file
  */
-function processPhpFile(filePath) {
+function processPhpFile (filePath) {
   const originalContent = fs.readFileSync(filePath, 'utf8')
 
   const { stripped, removed } = removePhpStrings(originalContent)
@@ -44,7 +44,7 @@ function processPhpFile(filePath) {
 }
 
 // MAIN
-async function main() {
+async function main () {
   try {
     const allFiles = await glob(FILES, { nodir: true })
 

@@ -6,8 +6,8 @@ on:
   pull_request:
 
 permissions:
-  contents: write
-
+  contents: read
+  statuses: write
 jobs:
   fix:
     runs-on: ubuntu-latest

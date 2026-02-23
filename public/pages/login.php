@@ -6,7 +6,7 @@ $show_auth = false;
 
 // Render header (capture output)
 ob_start();
-include __DIR__ . '/../includes/header.php';
+include dirname(__DIR__) . '/includes/header.php';
 $header = ob_get_clean() ?: '';
 
 // Render form inputs
@@ -15,7 +15,7 @@ $id = 'username';
 $label = 'Username';
 $aria_label = 'Inserisci il tuo username';
 ob_start();
-include __DIR__ . '/../includes/form-input.php';
+include dirname(__DIR__) . '/includes/form-input.php';
 $form_input_username = ob_get_clean() ?: '';
 
 $type = 'password';
@@ -23,7 +23,7 @@ $id = 'password';
 $label = 'Password';
 $aria_label = 'Inserisci la tua password';
 ob_start();
-include __DIR__ . '/../includes/form-input.php';
+include dirname(__DIR__) . '/includes/form-input.php';
 $form_input_password = ob_get_clean() ?: '';
 
 // Load template and replace placeholders

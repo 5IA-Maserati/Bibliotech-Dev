@@ -24,19 +24,19 @@ const FormValidator = {
       pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
       message: 'Inserisci un indirizzo email valido'
     },
-    nome: {
+    name: {
       minLength: 2,
       maxLength: 50,
       pattern: /^[a-zA-Zàèéìòù\s-'-]+$/,
       message: 'Il nome deve contenere solo lettere, spazi e al massimo un trattino'
     },
-    cognome: {
+    surname: {
       minLength: 2,
       maxLength: 50,
       pattern: /^[a-zA-Zàèéìòù\s-'-]+$/,
       message: 'Il cognome deve contenere solo lettere, spazi e al massimo un trattino'
     },
-    'data-nascita': {
+    birthdate: {
       minLength: 10,
       maxLength: 10,
       pattern: /^\d{2}-\d{2}-\d{4}$/,
@@ -47,23 +47,23 @@ const FormValidator = {
       pattern: /^[a-zA-Z0-9àèéìòù\s\-',.&()]*$/,
       message: 'La ricerca contiene caratteri non validi'
     },
-    'book-title': {
+    booktitle: {
       minLength: 1,
       maxLength: 255,
       pattern: /^[a-zA-Z0-9àèéìòù\s\-',.&:()]+$/,
       message: 'Il titolo del libro contiene caratteri non validi'
     },
-    'student-name': {
+    studentname: {
       minLength: 2,
       maxLength: 50,
       pattern: /^[a-zA-Zàèéìòù\s'-]+$/,
       message: 'Il nome deve contenere solo lettere e spazi'
     },
-    'student-email': {
+    studentemail: {
       pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
       message: 'Inserisci un indirizzo email valido'
     },
-    'booking-date': {
+    bookingdate: {
       minLength: 10,
       maxLength: 10,
       pattern: /^\d{4}-\d{2}-\d{2}$/,
@@ -120,7 +120,7 @@ const FormValidator = {
    */
   validateForm: function (formId) {
     const form = document.getElementById(formId)
-    if (!form) return { valid: false, errors: ['non trovato'] }
+    if (!form) return { valid: false, errors: ['not found'] }
 
     const inputs = form.querySelectorAll('input[type!="submit"][type!="button"]')
     const errors = []

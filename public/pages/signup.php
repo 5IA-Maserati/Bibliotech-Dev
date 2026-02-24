@@ -19,7 +19,7 @@ include dirname(__DIR__) . '/includes/form-input.php';
 $fi_nome = ob_get_clean() ?: '';
 
 $type = 'text';
-$id = 'cognome';
+$id = 'surname';
 $label = 'Cognome';
 $aria_label = 'Inserisci il tuo cognome';
 ob_start();
@@ -27,7 +27,7 @@ include dirname(__DIR__) . '/includes/form-input.php';
 $fi_cognome = ob_get_clean() ?: '';
 
 $type = 'date';
-$id = 'data-nascita';
+$id = 'birthdate';
 $label = 'Data di nascita';
 $aria_label = 'Inserisci la tua data di nascita';
 ob_start();

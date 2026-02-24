@@ -21,6 +21,7 @@ const SKIP_TAGS = new Set([
 const ATTRS_TO_STRIP = [
   'alt',
   'title',
+  'placeholder',
   'aria-label',
   'aria-labelledby',
   'aria-describedby',

@@ -23,8 +23,6 @@ const ATTRS_TO_STRIP = [
   'title',
   'placeholder',
   'aria-label',
-  'aria-labelledby',
-  'aria-describedby',
   'aria-valuetext',
   'aria-placeholder',
   'aria-details'

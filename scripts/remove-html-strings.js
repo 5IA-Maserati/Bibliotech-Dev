@@ -87,24 +87,6 @@ for (const pattern of FILES) {
         }
       });
 
-      // ARIA_REFERENCES: clear referenced elements text
-      ARIA_REFERENCES.forEach(attr => {
-        if (elem.attribs[attr]) {
-          const ids = elem.attribs[attr].split(/\s+/);
-          ids.forEach(id => {
-            const refElem = $(`#${id}`);
-            if (refElem.length) {
-              const text = refElem.text().trim();
-              if (text) {
-                removedTexts.push(`ATTR(${attr}) -> #${id}: "${text}"`);
-                refElem.text('');
-              }
-            }
-          });
-          elem.attribs[attr] = '';
-        }
-      });
-
       // Inline JS: alert, confirm, prompt
       Object.keys(elem.attribs).forEach(attrName => {
         const val = elem.attribs[attrName];

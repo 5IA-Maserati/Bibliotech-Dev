@@ -1,13 +1,13 @@
-const fs = require('fs')
-const glob = require('glob')
-const cheerio = require('cheerio')
+const fs = require('fs');
+const glob = require('glob');
+const cheerio = require('cheerio');
 
 // Files to process
 const FILES = [
   'public/**/*.html',
   'public/**/*.php',
   'src/**/*.php'
-]
+];
 
 // Tags to skip (text inside these tags is preserved)
 const SKIP_TAGS = new Set([
@@ -15,105 +15,141 @@ const SKIP_TAGS = new Set([
   'code',
   'pre',
   'noscript'
-])
+]);
 
 // Attributes that may contain visible text we want to clear
 const ATTRS_TO_STRIP = [
-  'alt', 
-  'title', 
-  'aria-label', 
-  'aria-labelledby',
-  'aria-describedby',
-  'aria-valuetext', 
-  'aria-placeholder', 
+  'alt',
+  'title',
+  'aria-label',
+  'aria-valuetext',
+  'aria-placeholder',
   'aria-details'
+];
+
+// ARIA attributes that reference other elements
+const ARIA_REFERENCES = [
+  'aria-labelledby',
+  'aria-describedby'
 ];
 
 // Helper: check if a node is inside a skipped tag
 function isInsideSkippedTag(elem) {
-  let current = elem.parent
+  let current = elem.parent;
   while (current) {
     if (current.tagName && SKIP_TAGS.has(current.tagName.toLowerCase())) {
-      return true
+      return true;
     }
-    current = current.parent
+    current = current.parent;
   }
-  return false
+  return false;
 }
 
-// Remove alert() strings inside <script>
+// Remove alert(), confirm(), prompt() strings inside <script>
 function stripAlerts(scriptContent, removedTexts) {
-  // regex to match alert("text") or alert('text') or alert(`text`)
-  return scriptContent.replace(/alert\s*\(\s*(['"`])([\s\S]*?)\1\s*\)/g, function(_, quote, msg) {
+  return scriptContent.replace(/(alert|confirm|prompt)\s*\(\s*(['"`])([\s\S]*?)\2\s*\)/g, function(_, fn, quote, msg) {
     if (msg.trim()) {
-      removedTexts.push(`ALERT: "${msg}"`)
+      removedTexts.push(`${fn.toUpperCase()}: "${msg}"`);
     }
-    return 'alert("")' // replace with empty string
-  })
+    return `${fn}("")`;
+  });
 }
 
 // Process each file pattern
 for (const pattern of FILES) {
-  const files = glob.sync(pattern, { nodir: true })
+  const files = glob.sync(pattern, { nodir: true });
 
   for (const file of files) {
-    const html = fs.readFileSync(file, 'utf8')
-    const $ = cheerio.load(html, { decodeEntities: false, xmlMode: false })
+    const html = fs.readFileSync(file, 'utf8');
+    const $ = cheerio.load(html, { decodeEntities: false, xmlMode: false });
 
-    const removedTexts = []
+    const removedTexts = [];
 
     // Remove visible text nodes not in skipped tags
     $('*').contents().each((_, node) => {
       if (node.type === 'text' && !isInsideSkippedTag(node)) {
-        const text = node.data ? node.data.trim() : ''
+        const text = node.data ? node.data.trim() : '';
         if (text) {
-          removedTexts.push(`TEXT: "${text}"`)
-          node.data = ''
+          removedTexts.push(`TEXT: "${text}"`);
+          node.data = '';
         }
       }
-    })
+    });
 
-    // Remove text from specified attributes
+    // Remove text from ATTRS_TO_STRIP
     $('*').each((_, elem) => {
-      for (const attr of ATTRS_TO_STRIP) {
-        if (elem.attribs && elem.attribs[attr]) {
-          const value = elem.attribs[attr].trim()
+      if (!elem.attribs) return;
+
+      ATTRS_TO_STRIP.forEach(attr => {
+        if (elem.attribs[attr]) {
+          const value = elem.attribs[attr].trim();
           if (value) {
-            removedTexts.push(`ATTR(${attr}): "${value}"`)
-            elem.attribs[attr] = ''
+            removedTexts.push(`ATTR(${attr}): "${value}"`);
+            elem.attribs[attr] = '';
           }
         }
-      }
-    })
+      });
 
-    // Strip alert() content inside scripts
+      // ARIA_REFERENCES: clear referenced elements text
+      ARIA_REFERENCES.forEach(attr => {
+        if (elem.attribs[attr]) {
+          const ids = elem.attribs[attr].split(/\s+/);
+          ids.forEach(id => {
+            const refElem = $(`#${id}`);
+            if (refElem.length) {
+              const text = refElem.text().trim();
+              if (text) {
+                removedTexts.push(`ATTR(${attr}) -> #${id}: "${text}"`);
+                refElem.text('');
+              }
+            }
+          });
+          elem.attribs[attr] = '';
+        }
+      });
+
+      // Inline JS: alert, confirm, prompt
+      Object.keys(elem.attribs).forEach(attrName => {
+        const val = elem.attribs[attrName];
+        if (val && /(alert|confirm|prompt)\s*\(/.test(val)) {
+          elem.attribs[attrName] = val.replace(/(alert|confirm|prompt)\s*\(\s*(['"`])([\s\S]*?)\2\s*\)/g, function(_, fn, quote, msg) {
+            if (msg.trim()) {
+              removedTexts.push(`${fn.toUpperCase()} INLINE: "${msg}"`);
+            }
+            return `${fn}("")`;
+          });
+        }
+      });
+    });
+
+    // Strip alert/confirm/prompt content inside <script>
     $('script').each((_, elem) => {
       if (elem.children && elem.children.length > 0) {
         elem.children.forEach(child => {
           if (child.type === 'text' && child.data) {
-            child.data = stripAlerts(child.data, removedTexts)
+            child.data = stripAlerts(child.data, removedTexts);
           }
-        })
+        });
       }
-    })
+    });
 
-    const strippedHtml = $.html()
+    const strippedHtml = $.html();
 
     // Write back modified file
-    fs.writeFileSync(file, strippedHtml)
+    fs.writeFileSync(file, strippedHtml);
 
     // Debug output
-    console.log(`\n📄 File: ${file}`)
+    console.log(`\n📄 File: ${file}`);
     if (removedTexts.length > 0) {
-      console.log('  ❌ Removed text:')
-      removedTexts.forEach(t => console.log(`    ${t}`))
+      console.log('  ❌ Removed text:');
+      removedTexts.forEach(t => console.log(`    ${t}`));
     } else {
-      console.log('  ✅ No text removed')
+      console.log('  ✅ No text removed');
     }
 
-    console.log('\n  📑 Full stripped content:')
-    console.log(strippedHtml)
+    console.log('\n  📑 Full stripped content:');
+    console.log(strippedHtml);
   }
 }
 
-console.log('\n✔ Visible HTML text, attributes, and alert() strings stripped (CI-only)')
+console.log('\n✔ Visible HTML text, attributes, and alert/confirm/prompt strings stripped (CI-only)');

@@ -22,15 +22,11 @@ const ATTRS_TO_STRIP = [
   'alt',
   'title',
   'aria-label',
+  'aria-labelledby',
+  'aria-describedby',
   'aria-valuetext',
   'aria-placeholder',
   'aria-details'
-];
-
-// ARIA attributes that reference other elements
-const ARIA_REFERENCES = [
-  'aria-labelledby',
-  'aria-describedby'
 ];
 
 // Helper: check if a node is inside a skipped tag

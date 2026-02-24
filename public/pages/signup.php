@@ -11,12 +11,12 @@ $header = ob_get_clean() ?: '' ;
 
 // Render all form inputs
 $type = 'text';
-$id = 'nome';
+$id = 'name';
 $label = 'Nome';
 $aria_label = 'Inserisci il tuo nome';
 ob_start();
 include dirname(__DIR__) . '/includes/form-input.php';
-$fi_nome = ob_get_clean() ?: '';
+$fi_name = ob_get_clean() ?: '';
 
 $type = 'text';
 $id = 'surname';
@@ -24,7 +24,7 @@ $label = 'Cognome';
 $aria_label = 'Inserisci il tuo cognome';
 ob_start();
 include dirname(__DIR__) . '/includes/form-input.php';
-$fi_cognome = ob_get_clean() ?: '';
+$fi_surname = ob_get_clean() ?: '';
 
 $type = 'date';
 $id = 'birthdate';
@@ -32,7 +32,7 @@ $label = 'Data di nascita';
 $aria_label = 'Inserisci la tua data di nascita';
 ob_start();
 include dirname(__DIR__) . '/includes/form-input.php';
-$fi_data_nascita = ob_get_clean() ?: '';
+$fi_birth_date = ob_get_clean() ?: '';
 
 $type = 'email';
 $id = 'email';
@@ -64,9 +64,9 @@ $html = file_get_contents($tpl);
 $replacements = [
     '{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
     '{{HEADER}}' => $header,
-    '{{FORM_INPUT_NOME}}' => $fi_nome,
-    '{{FORM_INPUT_COGNOME}}' => $fi_cognome,
-    '{{FORM_INPUT_DATA_NASCITA}}' => $fi_data_nascita,
+    '{{FORM_INPUT_NOME}}' => $fi_name,
+    '{{FORM_INPUT_COGNOME}}' => $fi_surname,
+    '{{FORM_INPUT_DATA_NASCITA}}' => $fi_birth_date,
     '{{FORM_INPUT_EMAIL}}' => $fi_email,
     '{{FORM_INPUT_PASSWORD}}' => $fi_password,
     '{{FORM_INPUT_CONFIRM_PASSWORD}}' => $fi_confirm_password,

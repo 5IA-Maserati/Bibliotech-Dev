@@ -34,7 +34,7 @@
     padding: 50px 5%;
 }
 
-/* Container for the schedule ("orari") */
+/* Container for the schedule ("hours") */
 .opening-hours-mega-container {
     display: flex;
     background-color: var(--white);

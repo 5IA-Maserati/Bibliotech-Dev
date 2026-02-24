@@ -63,7 +63,7 @@ if (!(Test-Path $NodeExe)) {
     Write-Output "[Node] Installation complete."
 }
 else {
-    Write-Output "[Node] Node.js already installed, may thou go fuck urself."
+    Write-Output "[Node] Node.js already installed, may thou go fuck yourself."
 }
 
 # -------------------------------------------------
@@ -98,5 +98,5 @@ Write-Output "[Lint] Running lint checks..."
 Push-Location $RootDir
 Pop-Location
 
-Write-Output "[Lint] I'm goding so much."
+Write-Output "[Lint] I'm enjoying it so much."
 Write-Output "Hell yeah. It works!"

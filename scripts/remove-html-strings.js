@@ -1,6 +1,6 @@
-import * as fs from 'fs'
-import * as glob from 'glob'
-import * as cheerio from 'cheerio'
+const fs = require('fs')
+const glob = require('glob')
+const cheerio = require('cheerio')
 
 // Files to process
 const FILES = [
@@ -11,7 +11,6 @@ const FILES = [
 
 // Tags to skip (text inside these tags is preserved)
 const SKIP_TAGS = new Set([
-  'script',
   'style',
   'code',
   'pre',
@@ -19,10 +18,19 @@ const SKIP_TAGS = new Set([
 ])
 
 // Attributes that may contain visible text we want to clear
-const ATTRS_TO_STRIP = ['alt', 'aria-label', 'title']
+const ATTRS_TO_STRIP = [
+  'alt', 
+  'title', 
+  'aria-label', 
+  'aria-labelledby',
+  'aria-describedby',
+  'aria-valuetext', 
+  'aria-placeholder', 
+  'aria-details'
+];
 
 // Helper: check if a node is inside a skipped tag
-function isInsideSkippedTag (elem) {
+function isInsideSkippedTag(elem) {
   let current = elem.parent
   while (current) {
     if (current.tagName && SKIP_TAGS.has(current.tagName.toLowerCase())) {
@@ -31,6 +39,17 @@ function isInsideSkippedTag (elem) {
     current = current.parent
   }
   return false
+}
+
+// Remove alert() strings inside <script>
+function stripAlerts(scriptContent, removedTexts) {
+  // regex to match alert("text") or alert('text') or alert(`text`)
+  return scriptContent.replace(/alert\s*\(\s*(['"`])([\s\S]*?)\1\s*\)/g, function(_, quote, msg) {
+    if (msg.trim()) {
+      removedTexts.push(`ALERT: "${msg}"`)
+    }
+    return 'alert("")' // replace with empty string
+  })
 }
 
 // Process each file pattern
@@ -46,7 +65,7 @@ for (const pattern of FILES) {
     // Remove visible text nodes not in skipped tags
     $('*').contents().each((_, node) => {
       if (node.type === 'text' && !isInsideSkippedTag(node)) {
-        const text = node.data?.trim()
+        const text = node.data ? node.data.trim() : ''
         if (text) {
           removedTexts.push(`TEXT: "${text}"`)
           node.data = ''
@@ -67,9 +86,20 @@ for (const pattern of FILES) {
       }
     })
 
+    // Strip alert() content inside scripts
+    $('script').each((_, elem) => {
+      if (elem.children && elem.children.length > 0) {
+        elem.children.forEach(child => {
+          if (child.type === 'text' && child.data) {
+            child.data = stripAlerts(child.data, removedTexts)
+          }
+        })
+      }
+    })
+
     const strippedHtml = $.html()
 
-    // Write back modified file (CI-only)
+    // Write back modified file
     fs.writeFileSync(file, strippedHtml)
 
     // Debug output
@@ -81,10 +111,9 @@ for (const pattern of FILES) {
       console.log('  ✅ No text removed')
     }
 
-    // Print entire stripped content
     console.log('\n  📑 Full stripped content:')
     console.log(strippedHtml)
   }
 }
 
-console.log('\n✔ Visible HTML text and attributes stripped (CI-only)')
+console.log('\n✔ Visible HTML text, attributes, and alert() strings stripped (CI-only)')

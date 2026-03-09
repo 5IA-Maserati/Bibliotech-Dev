@@ -7,7 +7,6 @@ amd
 angular
 antimeridian
 api
-api_key
 apigroup
 apolloclient
 apolloprovider
@@ -230,7 +229,6 @@ jsonlint
 jsons
 jsonwebtoken
 jsx
-k8s
 kbd
 keepbuffer
 keydown

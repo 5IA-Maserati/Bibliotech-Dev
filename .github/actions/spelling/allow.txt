@@ -553,6 +553,7 @@ zoomstart
 
 
 Accolla
+Alfieri
 Amos
 Beso
 Besostri
@@ -564,7 +565,9 @@ Nappi
 Pare
 Parentela
 Redin
+
 accolla
+alfieri
 amos
 beso
 besostri

@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add a marker for the library with popup info
   L.marker([lat, lng])
     .addTo(map)
-    .bindPopup('<strong>Biblioteca Scolastica</strong><br>Istituto Alfieri Maserati<br>Voghera')
+    .bindPopup('<strong>School Library</strong><br>Alfieri Maserati Institute<br>Voghera')
 
   // Add a custom control button to recenter the map on the library
   const centerControl = L.control({ position: 'topleft' })

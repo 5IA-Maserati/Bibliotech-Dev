@@ -565,6 +565,7 @@ Nappi
 Pare
 Parentela
 Redin
+Voghera
 
 accolla
 alfieri
@@ -578,3 +579,4 @@ nappi
 pare
 parentela
 redin
+voghera

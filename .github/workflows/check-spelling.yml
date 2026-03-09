@@ -37,5 +37,3 @@ jobs:
             cspell:java/src/java-terms.txt
             cspell:typescript/dict/typescript.txt
             cspell:html/dict/html.txt
-          extra_excludes: |
-            (^|/)expect\.txt$

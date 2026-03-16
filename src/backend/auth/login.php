@@ -6,7 +6,7 @@ require_once __DIR__ . '/../../public/bootstrap.php';
 
 header('Content-Type: application/json');
 
-use src\libs\PDO;
+use src\backend\libs\PDO;
 
 require_once __DIR__ . '/../db/db.php';
 

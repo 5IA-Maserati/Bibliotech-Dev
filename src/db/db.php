@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use src\libs\PDO;
-use src\libs\PDOException;
+use src\backend\libs\PDO;
+use src\backend\libs\PDOException;
 
 /**
  * Database connection

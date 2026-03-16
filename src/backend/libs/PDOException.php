@@ -1,6 +1,6 @@
 <?php
 
-namespace src\libs;
+namespace src\backend\libs;
 
 use Exception;
 

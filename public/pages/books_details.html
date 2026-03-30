@@ -8,6 +8,72 @@
 
     </head>
     <body>
-        <!-- TODO: have to implement the structure with the design team -->
+        {{HEADER}}
+
+        <main class="book-detail-page">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/index.php">Home</a>
+                <span>&gt;</span>
+                <a href="/pages/search.php">Catalogo</a>
+                <span>&gt;</span>
+                <span aria-current="page">Dettagli Libro</span>
+            </nav>
+
+            <section class="book-meta">
+                <article class="book-cover">
+                    <img src="{{BOOK_COVER}}" alt="Copertina libro" id="book-cover" />
+                </article>
+
+                <article class="book-info">
+                    <h1 id="book-title">{{BOOK_TITLE}}</h1>
+                    <p class="book-author" id="book-author">{{BOOK_AUTHOR}}</p>
+                    <p class="book-subtitle" id="book-subtitle">{{BOOK_SUBTITLE}}</p>
+
+                    <ul class="book-attributes">
+                        <li><strong>Genere:</strong> <span id="book-genre">{{BOOK_GENRE}}</span></li>
+                        <li><strong>Anno:</strong> <span id="book-year">{{BOOK_YEAR}}</span></li>
+                        <li><strong>Pagine:</strong> <span id="book-pages">{{BOOK_PAGES}}</span></li>
+                        <li><strong>ISBN:</strong> <span id="book-isbn">{{BOOK_ISBN}}</span></li>
+                        <li><strong>Lingua:</strong> <span id="book-lang">{{BOOK_LANGUAGE}}</span></li>
+                    </ul>
+
+                    <p class="availability" id="book-availability">Disponibilità: <span>{{BOOK_AVAILABILITY}}</span></p>
+
+                    <div class="actions">
+                        <button class="btn-primary" id="reserve-button">Prenota libro</button>
+                        <button class="btn-secondary" id="favorite-button">Aggiungi ai preferiti</button>
+                    </div>
+                </article>
+            </section>
+
+            <section class="book-description" aria-labelledby="synopsis-title">
+                <h2 id="synopsis-title">Sinossi</h2>
+                <p id="book-description">{{BOOK_DESCRIPTION}}</p>
+            </section>
+
+            <section class="book-details-box" aria-labelledby="details-title">
+                <h2 id="details-title">Dettagli aggiuntivi</h2>
+                <dl>
+                    <dt>Casa editrice</dt>
+                    <dd id="book-publisher">{{BOOK_PUBLISHER}}</dd>
+                    <dt>Edizione</dt>
+                    <dd id="book-edition">{{BOOK_EDITION}}</dd>
+                    <dt>Lingua originale</dt>
+                    <dd id="book-original-lang">{{BOOK_LANGUAGE}}</dd>
+                    <dt>Formato</dt>
+                    <dd id="book-format">{{BOOK_FORMAT}}</dd>
+                </dl>
+            </section>
+
+            <aside class="related-books">
+                <h2>Libri correlati</h2>
+                <div id="related-books-list" class="related-grid">
+                    <!-- JavaScript inserts related book cards -->
+                </div>
+            </aside>
+        </main>
+
+        <script src="/assets/js/form-validator.js"></script>
+        <script src="/assets/js/books_details.js"></script>
     </body>
 </html>

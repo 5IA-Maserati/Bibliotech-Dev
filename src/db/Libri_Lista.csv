@@ -1,0 +1,1307 @@
+n_inventario,autore,titolo,casa_editrice,anno,isbn,generi,ripetuti
+3,Vittorio Alfieri,La vita,E.I.R,1964,-,"Biografia, Memorie",FALSE
+8,Metz/Costa,Attraverso il cinema,Longanesi,1978,-,Saggistica,FALSE
+17,Thomas Mann,I Buddenbrook,Mondadori,1970,9788804491768,"Narrativa, Classico",FALSE
+18,Carlo Cassola,Il taglio del bosco,Einaudi,1965,-,"Narrativa, Racconti",FALSE
+20,Cesare Pavese,La bella estate,Einaudi,1949,-,"Narrativa, Romanzo",FALSE
+21,Antonio Fogazzaro,Malombra,Mondadori,-,-,"Fantasy, Gotico, Classico",FALSE
+28,Eduardo de Filippo,Filumena Marturano,Einaudi,1964,-,"Poesia, Teatro",FALSE
+29,Dino Buzzati,Il deserto dei tartari,Mondadori,2000,9788804481072,"Narrativa, Classico",FALSE
+A1586,Woody Allen,Io e Annie,Feltrinelli,1991,9788807811449,"Poesia, Teatro",FALSE
+32,Natalia Ginzburg,Lessico famigliare,Einaudi,1963,-,"Narrativa, Biografia, Memorie",FALSE
+33,Giorgio Bassani,Gli occhiali d’oro,Mondadori,1977,9788804470106,"Narrativa, Romanzo",FALSE
+35,Giorgio Bassani,Le storie ferraresi,Einaudi,1960,-,"Narrativa, Racconti",FALSE
+57,Miguel de Cervantes,Don Chisciotte della Mancia (Vol. 3),Mondadori,1964,-,"Narrativa, Classico",FALSE
+58,Miguel de Cervantes,Don Chisciotte della Mancia (Vol. 2),Mondadori,1964,-,"Narrativa, Classico",FALSE
+59,Miguel de Cervantes,Don Chisciotte della Mancia (Vol. 1),Mondadori,1964,-,"Narrativa, Classico",FALSE
+64,Erodoto,Storie di antichi popoli,Editrice Italiana di Cultura,1964,-,"Saggistica, Storia",FALSE
+66,Carlo Goldoni,La locandiera,Signorelli,1966,-,"Poesia, Teatro",FALSE
+76,Victor Hugo,I lavoratori del mare,San Paolo,1966,-,"Narrativa, Classico",FALSE
+77,I. S. Turgenev,Padri e figli,San Paolo,1961,-,"Narrativa, Classico",FALSE
+79,W.H. Armstrong,Sounder,Bompiani,1971,9788845233043,"Ragazzi, Romanzo Storico",FALSE
+81,Beppe Fenoglio,I ventitre giorni della città di Alba,Einaudi,1952,-,"Romanzo Storico, Racconti",FALSE
+91,Lew Wallace,Ben Hur,San Paolo,1966,-,"Romanzo Storico, Avventura",FALSE
+103,Vitaliano Brancati,Il bell’Antonio,Bompiani,1963,-,"Narrativa, Romanzo",FALSE
+104,André Gide,I falsari,Bompiani,1953,-,"Narrativa, Romanzo",FALSE
+113,Herman Melville,Moby Dick (2 volumi),Garzanti,1946,-,"Narrativa, Avventura, Classico",FALSE
+114,Herman Melville,Moby Dick (2 volumi),Garzanti,1946,-,"Narrativa, Avventura, Classico",FALSE
+115,Primo Levi,Se questo è un uomo - La tregua,Einaudi,1996,9788806143947,"Biografia, Memorie, Romanzo Storico",FALSE
+118,John Steinbeck,L’inverno del nostro scontento,Mondadori,1962,-,"Narrativa, Romanzo",FALSE
+122,Lev Tolstoj,Guerra e pace,Mondadori,1945,-,"Romanzo Storico, Classico",FALSE
+123,Lev Tolstoj,Guerra e pace,Mondadori,1945,-,"Romanzo Storico, Classico",FALSE
+136,Natalia Ginzburg,Le piccole virtù,Einaudi,1962,-,"Narrativa, Saggistica",FALSE
+141,James Hilton,"Addio, Mister Chips",Mondadori,1938,-,"Narrativa, Romanzo",FALSE
+150,Carlo Emilio Gadda,Quel pasticciaccio brutto...,Garzanti,1957,-,"Giallo, Thriller, Classico",FALSE
+158,John Steinbeck,La valle dell’Eden,Mondadori,1954,-,"Narrativa, Classico",FALSE
+163,Margaret Mitchell,Via col vento,Mondadori,-,-,Romanzo Storico,FALSE
+168,Arthur Miller,Morte di un commesso viaggiatore,Garzanti,1968,-,"Poesia, Teatro",FALSE
+174,Fëdor Dostoevskij,I fratelli Karamazov,Mondadori,1969,-,"Narrativa, Classico",FALSE
+175,Fëdor Dostoevskij,I fratelli Karamazov,Mondadori,1969,-,"Narrativa, Classico",FALSE
+176,Fëdor Dostoevskij,I fratelli Karamazov,Mondadori,1969,-,"Narrativa, Classico",FALSE
+177,Oscar Wilde,Il ritratto di Dorian Gray,Sansoni,1965,-,"Fantasy, Gotico, Classico",FALSE
+182,Dacia Maraini,Donna in guerra,Einaudi,1973,9788806385101,"Narrativa, Romanzo",FALSE
+184,Peter Weiss,Colloquio dei tre viandanti,Einaudi,1969,-,"Narrativa, Romanzo",FALSE
+190,Grazia Deledda,Canne al vento,Famiglia Cristiana,1997,-,"Narrativa, Classico",FALSE
+200,W. Sheridan Allen,Come si diventa nazisti,Einaudi,1968,-,"Saggistica, Storia",FALSE
+202,John Steinbeck,Uomini e topi,Bompiani,1974,9788845209673,"Narrativa, Classico",FALSE
+203,Roberto Battaglia,Storia della Resistenza italiana,Einaudi,1964,-,"Saggistica, Storia",FALSE
+204,William Shakespeare,Amleto,Einaudi,1965,-,"Poesia, Teatro",FALSE
+205,Malvezzi-Pirelli,Lettere di condannati a morte...,Einaudi,1967,-,"Biografia, Memorie, Storia",FALSE
+214,Leonardo Sciascia,A ciascuno il suo,Adelphi,1995,9788845907219,"Giallo, Thriller",FALSE
+248,Luigi Pirandello,Il berretto a sonagli...,Mondadori,1969,-,"Poesia, Teatro",FALSE
+260,Italo Calvino,L’entrata in guerra,Einaudi,1974,9788806380625,"Narrativa, Racconti, Romanzo Storico",FALSE
+262,John Steinbeck,Uomini e topi,Bompiani,1995,9788845248436,"Narrativa, Classico",FALSE
+263,Jack Kerouac,I sotterranei,Feltrinelli,1965,-,"Narrativa, Biografia, Memorie",FALSE
+271,Elio Vittorini,Conversazione in Sicilia,Einaudi,1966,-,"Narrativa, Classico",FALSE
+281,Elsa Morante,La storia,Einaudi,1974,9788806397272,Romanzo Storico,FALSE
+23,Rondolino,Dizionario del cinema italiano 1945-1969,Einaudi,1969,-,"Saggistica, Manuali",FALSE
+292,Luigi Pirandello,Dal naso al cielo,Mondadori,1973,-,"Narrativa, Racconti",FALSE
+293,Giovanni Verga,"Una peccatrice, Storia di una capinera...",Mondadori,1975,9788804492987,"Narrativa, Romanzo",FALSE
+295,Antonio Fogazzaro,Malombra,Mondadori,1974,9788804492529,"Fantasy, Gotico, Classico",FALSE
+304,Franz Kafka,Il castello,Mondadori,1977,9788804135506,"Narrativa, Classico",FALSE
+306,Franz Kafka,Il processo,Mondadori,1975,9788804307683,"Narrativa, Classico",FALSE
+309,Jaroslav Hasek,Il buon soldato sc’veik,Feltrinelli,1966,-,"Romanzo Storico, Satira",FALSE
+316,James Joyce,Ulisse,Mondadori,1973,9788804000392,"Narrativa, Classico",FALSE
+326,Gian Luigi Rondi,7 domande a 49 registi,SEI,1975,9788805055372,Saggistica,FALSE
+328,Luigi Pirandello,I vecchi e i giovani,Mondadori,1967,-,Romanzo Storico,FALSE
+346,Beppe Fenoglio,La malora,Einaudi,1968,-,"Narrativa, Romanzo",FALSE
+349,Raffaello Brignetti,Il gabbiano azzurro,Mondadori,1973,9788804107102,"Narrativa, Romanzo",FALSE
+351,Cesare Pavese,Feria d’agosto,Mondadori,1971,9788804092267,"Narrativa, Saggistica, Racconti",FALSE
+252,AA. VV.,Diario del Che in Bolivia,Feltrinelli,1968,-,"Biografia, Memorie",FALSE
+352,Antonio Fogazzaro,Piccolo mondo antico,Mondadori,1970,9788804492574,Romanzo Storico,FALSE
+354,Emilio Lussu,Un anno sull’altipiano,Einaudi,1960,-,"Romanzo Storico, Biografia, Memorie",FALSE
+361,Giorgio Bassani,Il giardino dei Finzi-Contini,Einaudi,1962,-,Romanzo Storico,FALSE
+362,Apollonio,L’uomo nel 2000,Rizzoli,1968,-,Saggistica,FALSE
+369,Leonardo Sciascia,La scomparsa di Majorana,Einaudi,1975,9788806437368,"Saggistica, Biografia, Memorie",FALSE
+373,Giovanni Verga,Tutte le novelle (due volumi),Mondadori,1970,9788804000373,"Narrativa, Racconti",FALSE
+374,Giovanni Verga,Tutte le novelle (due volumi),Mondadori,1970,9788804000373,"Narrativa, Racconti",FALSE
+375,Cesare Pavese,La casa in collina,Einaudi,1967,-,Romanzo Storico,FALSE
+378,Giovanni Verga,Mastro-Don Gesualdo,Mondadori,1966,-,"Narrativa, Classico",FALSE
+379,Joseph Conrad,Racconti di mare e di costa,Mondadori,1971,9788804492727,"Narrativa, Racconti, Avventura",FALSE
+382,Giuseppe Tomasi di Lampedusa,Opere,Feltrinelli,1974,9788807804476,"Narrativa, Racconti",FALSE
+386,Luigi Pirandello,Il fu Mattia Pascal,Mondadori,2000,9788804492581,"Narrativa, Classico",FALSE
+390,Emilio Lussu,Marcia su Roma e dintorni,Einaudi,1974,9788806037650,"Saggistica, Storia",FALSE
+397,Franz Kafka,La metamorfosi,Garzanti,1976,9788811306016,"Narrativa, Racconti",FALSE
+400,Ignazio Silone,Il segreto di Luca,Mondadori,2000,9788804492741,"Narrativa, Romanzo",FALSE
+409,Thomas Mann,"Tonio Kroger, La morte a Venezia...",Garzanti,1982,9788811580556,"Narrativa, Racconti",FALSE
+411,Oreste del Buono,La stampa italiana sotto il fascismo,Feltrinelli,1971,9788807222535,"Saggistica, Storia",FALSE
+413,Carlo Levi,Le parole sono pietre,Einaudi,1980,9788806502264,"Saggistica, Biografia, Memorie",FALSE
+414,Renata Viganò,L’Agnese va a morire,Einaudi,1982,9788806034987,Romanzo Storico,FALSE
+416,Ernest Hemingway,Fiesta,Einaudi,1981,9788806047703,"Narrativa, Classico",FALSE
+418,Robert Louis Stevenson,"Romanzi, racconti e saggi",Mondadori,-,9788804125306,"Narrativa, Racconti, Saggistica",FALSE
+424,Mario Rigoni Stern,Il bosco degli urogalli,Einaudi,1974,9788806031269,"Narrativa, Racconti",FALSE
+A1627,Elio Vittorini,Uomini e no,Mondadori,1973,9788804000095,Romanzo Storico,FALSE
+435,Ernest Hemingway,I racconti di Nick Adams,Einaudi,1981,9788806518760,"Narrativa, Racconti",FALSE
+438,Maria Bellonci,Rinascimento privato,Marsilio,-,-,Romanzo Storico,FALSE
+449,Elio Vittorini,Uomini e no,Mondadori,1990,9788804332763,Romanzo Storico,FALSE
+451,Maria Bellonci,Segreti dei Gonzaga,Mondadori,1997,9788804415443,Romanzo Storico,FALSE
+452,Dacia Maraini,La lunga vita di Marianna Ucria,Rizzoli,1992,9788817664400,Romanzo Storico,FALSE
+454,Primo Levi,I sommersi e i salvati,Einaudi,1987,9788806599669,"Saggistica, Storia",FALSE
+456,Herman Melville,Moby Dick,Adelphi,1987,9788845905384,"Narrativa, Avventura, Classico",FALSE
+457,Maria Bellonci,Rinascimento privato,Marsilio,-,-,"Romanzo Storico, Narrativa",FALSE
+462,Francesca Sanvitale,Verso Paola,Einaudi,1992,9788806122172,"Narrativa, Romanzo breve",FALSE
+463,Francesca Sanvitale,Verso Paola,Einaudi,1992,9788806122172,"Narrativa, Romanzo breve",FALSE
+464,Marco Lodoli,I fannulloni,Einaudi,1990,9788806118434,"Romanzo, Esistenziale",FALSE
+465,Marco Lodoli,I fannulloni,Einaudi,1990,9788806118434,"Romanzo, Esistenziale",FALSE
+466,Cesare Pavese,La luna e i falò,Einaudi,1950,-,"Narrativa, Classici",FALSE
+467,Natalia Ginzburg,La strada che va in città,Einaudi,1975,9788806412364,"Classico, Formazione",FALSE
+469,Giuseppe Berto,Colloqui con il cane,Marsilio,1986,9788831749014,"Narrativa, Racconti",FALSE
+470,Marco Polo,Il Milione,Einaudi,1982,9788806053728,"Saggistica, Storia, Biografia, Testimonianze",FALSE
+489,Vasco Pratolini,Le ragazze di Sanfrediano,Mondadori,1992,9788804505038,"Neorealismo, Classico, Corale",FALSE
+492,Franz Kafka,Lettera al padre,Feltrinelli,1992,9788807820191,"Biografia, Diari",FALSE
+496,AA. VV.,Diario del Che in Bolivia,Feltrinelli,1968,-,"Biografia, Diari, Testimonianze",FALSE
+499,Domenico Starnone,Segni d’oro,Feltrinelli,1992,9788807811517,"Romanzo, Satira",FALSE
+502,Carlo Cassola,Fausto e Anna,Rizzoli,1992,9788817110198,"Romanzo Storico, Resistenza, Narrativa",FALSE
+503,Aldo Palazzeschi,Le sorelle Materassi,Mondadori,1990,9788804332306,"Narrativa, Classici",FALSE
+507,William Shakespeare,Amleto,Feltrinelli,1990,9788807820069,"Poesia, Teatro",FALSE
+511,Johnny Hart,L’antichissimo mondo di B.C.,Mondadori,1965,-,"Fumetti, Graphic Novel",FALSE
+516,Johnny Hart,B.C. in 24 lezioni,Mondadori,1972,-,"Fumetti, Graphic Novel",FALSE
+519,Clara Sereni,Il gioco dei regni,Giunti,1993,9788809202819,"Romanzo Storico, Biografia, Testimonianze",FALSE
+520,Clara Sereni,Il gioco dei regni,Giunti,1993,9788809202819,"Romanzo Storico, Biografia, Testimonianze",FALSE
+521,Rosetta Loy,Le strade di polvere,Einaudi,1987,9788806599720,"Romanzo Storico, Narrativa",FALSE
+A1556,Joseph Stiglitz,La globalizzazione che funziona,Einaudi,2006,9788806190743,"Saggistica, Politica, Scienze",FALSE
+522,Rosetta Loy,Le strade di polvere,Einaudi,1987,9788806599720,"Romanzo Storico, Narrativa",FALSE
+525,Edoardo Boncinelli,Le forme della vita,Einaudi,2006,9788806176540,"Saggistica, Scienze",FALSE
+523,Marx - Engels,Manifesto del Partito Comunista,Einaudi,1998,9788806149490,"Saggistica, Filosofia, Politica",FALSE
+524,Michel Vovelle,La Rivoluzione francese...,Einaudi,2007,9788806187799,"Saggistica, Storia",FALSE
+529,Dacia Maraini,La lunga vita di Marianna Ucria,Rizzoli,1993,9788817664400,"Romanzo Storico, Narrativa",FALSE
+530,Dacia Maraini,La lunga vita di Marianna Ucria,Rizzoli,1993,9788817664400,"Romanzo Storico, Narrativa",FALSE
+534,Luigi Pirandello,I vecchi e i giovani,Garzanti,1993,9788811364583,"Romanzo Storico, Narrativa",FALSE
+539,Marco Paolini,Il sergente,Einaudi,2008,9788806191429,"Poesia, Teatro, Romanzo Storico",FALSE
+541,Ignazio Silone,Fontamara,Mondadori,1997,9788804423850,"Narrativa, Classici",FALSE
+542,James Kakalios,La fisica dei supereroi,Einaudi,2005,9788806173211,"Saggistica, Scienze",FALSE
+543,Giuseppe Tomasi di Lampedusa,Il Gattopardo,Feltrinelli,1993,9788807810286,"Romanzo Storico, Classici",FALSE
+546,Eileen Power,Vita nel Medioevo,Einaudi,1999,9788806152339,"Saggistica, Storia, Testimonianze",FALSE
+A1609,Bertolt Brecht,Vita di Galileo,Einaudi,1963,9788806062965,"Poesia, Teatro",FALSE
+547,Lev Tolstoj,Sonata a Kreutzer,Feltrinelli,1991,9788807820153,"Narrativa, Romanzo breve, Classici",FALSE
+548,Niccolò Machiavelli,Il Pincipe,Feltrinelli,1992,9788807820131,"Saggistica, Filosofia, Storia, Politica",FALSE
+550,Oscar Wilde,De profundis,Feltrinelli,1992,9788807820467,"Biografia, Diari, Testimonianze",FALSE
+552,Italo Svevo,Senilità,Feltrinelli,1991,9788807811696,"Narrativa, Classici",FALSE
+570,Charles M. Schulz,Un Natale di Charlie Brown,Bompiani,1966,-,"Fumetti, Graphic Novel, Ragazzi",FALSE
+587,Pier Paolo Pasolini,Ragazzi di vita,Garzanti,1992,9788811666496,"Narrativa, Ragazzi, Formazione",FALSE
+589,Elsa Morante,L’isola di Arturo,Einaudi,1957,-,"Narrativa, Ragazzi, Formazione",FALSE
+591,Natalia Ginzburg,Le voci della sera,Einaudi,1963,-,"Narrativa, Romanzo breve",FALSE
+594,Carlo Cassola,La ragazza di Bube,Rizzoli,1973,9788817100344,"Narrativa, Romanzo Storico",FALSE
+601,Carlo Emilio Gadda,Quel pasticciaccio brutto...,Garzanti,1991,9788811661122,"Giallo, Thriller, Narrativa",FALSE
+602,James Joyce,Gente di Dublino,La Nuova Italia,1982,9788822100061,"Narrativa, Racconti, Classici",FALSE
+610,Massimo D'Azeglio,Ettore Fieramosca,Fabbri Editori,1985,9788845023926,"Romanzo Storico, Narrativa",FALSE
+617,Miguel de Cervantes,Don Chisciotte della Mancia,Rizzoli,1993,9788817169127,"Narrativa, Classici",FALSE
+24,Rondolino,Dizionario del cinema italiano 1945-1969,Einaudi,1969,-,"Saggistica, Manuali",FALSE
+618,Miguel de Cervantes,Don Chisciotte della Mancia,Rizzoli,1993,9788817169127,"Narrativa, Classici",FALSE
+619,Miguel de Cervantes,Don Chisciotte della Mancia,Rizzoli,1993,9788817169127,"Narrativa, Classici",FALSE
+620,Miguel de Cervantes,Don Chisciotte della Mancia,Rizzoli,1993,9788817169127,"Narrativa, Classici",FALSE
+623,Walter Scott,Ivanohe,Garzanti,1989,9788811519785,"Romanzo Storico, Narrativa",FALSE
+624,Walter Scott,Ivanohe,Garzanti,1989,9788811519785,"Romanzo Storico, Narrativa",FALSE
+625,Walter Scott,Ivanhoe,Penguin Books,1986,9780140431431,"Lingue Straniere, Romanzo Storico",FALSE
+626,Gustave Flaubert,L'education sentimentale,Folio,1965,9782070360661,"Lingue Straniere, Narrativa",FALSE
+628,Sibilla Aleramo,Una donna,Feltrinelli,1992,9788807804472,"Narrativa, Biografia, Testimonianze",FALSE
+629,Charles Darwin,L’origine della specie,Einaudi,2009,9788806196234,"Saggistica, Scienze",FALSE
+636,Italo Svevo,La coscienza di Zeno,Mondadori,1987,9788842430031,"Narrativa, Classici, Biografia, Diari",FALSE
+637,Alberto Moravia,Gli indifferenti,Bompiani,1995,9788845213601,"Narrativa, Classici",FALSE
+638,Alberto Moravia,Gli indifferenti,Bompiani,1995,9788845213601,"Narrativa, Classici",FALSE
+639,Hermann Hesse,Demian,Mondadori,1993,9788804374469,"Narrativa, Ragazzi, Formazione",FALSE
+640,Hermann Hesse,Gertrud,Mondadori,1980,9788804179374,"Classico, Psicologico, Musicale",FALSE
+641,Hermann Hesse,Racconti,Mondadori,2001,9788804493037,"Narrativa, Racconti",FALSE
+642,Hermann Hesse,Sotto la ruota,Mondadori,1999,9788804467380,"Narrativa, Ragazzi, Formazione",FALSE
+643,Franz Kafka,Il messaggio dell’imperatore,Adelphi,1994,9788845904325,"Narrativa, Racconti",FALSE
+A1615,Samuel Beckett,Aspettando Godot,Einaudi,1969,-,"Poesia, Teatro",FALSE
+644,J. W. Goethe,Favola,Adelphi,1990,9788845907876,"Narrativa, Racconti",FALSE
+645,Michele Serra,Il nuovo che avanza,Feltrinelli,1997,9788807811739,"Narrativa, Racconti, Attualità",FALSE
+647,Hermann Hesse,Leggende e fiabe,Mondadori,1999,9788804468691,"Ragazzi, Fiabe, Narrativa, Racconti",FALSE
+699,Dario Fo,Teatro comico,Garzanti,1962,-,"Poesia, Teatro",FALSE
+771,Luciano De Maria,Marinetti e il Futurismo,-,-,-,"Saggistica, Storia, Filosofia",FALSE
+801,Henry James,The portrait of a lady,Oxford University Press,1981,9780192815159,"Lingue Straniere, Narrativa",FALSE
+802,Nathaniel Hawthorne,The Scarlet Letter,Oxford University Press,1990,9780192827879,"Lingue Straniere, Narrativa",FALSE
+803,Thomas Hardy,Tess of the D'Urbervilles,Oxford University Press,1983,9780192816354,"Lingue Straniere, Narrativa",FALSE
+805,Virginia Woolf,To the Lighthouse,Oxford University Press,1992,9780192828753,"Lingue Straniere, Narrativa",FALSE
+806,Virginia Woolf,Orlando,Oxford University Press,1992,9780192828333,"Lingue Straniere, Fantasy, Narrativa",FALSE
+807,Horace Walpole,The Castle of Otranto,Oxford University Press,1982,9780192816156,"Lingue Straniere, Fantasy, Gotico",FALSE
+808,Mark Twain,The adventures of Tom Sawyer,Oxford University Press,1993,9780192822607,"Lingue Straniere, Ragazzi, Narrativa",FALSE
+809,Jack London,"The call of the Wild, White fang...",Oxford University Press,1991,9780192827299,"Lingue Straniere, Narrativa",FALSE
+810,Robert Louis Stevenson,Dr. Jekyll and Mr. Hyde,Oxford University Press,1987,9780192817402,"Lingue Straniere, Fantasy, Gotico",FALSE
+811,Herman Melville,Moby Dick,Oxford University Press,1988,9780192817293,"Lingue Straniere, Narrativa",FALSE
+812,Jonathan Swift,Gulliver's Travels,Oxford University Press,1986,9780192817474,"Lingue Straniere, Narrativa",FALSE
+813,Thomas Hardy,Far From the Madding Crowd,Oxford University Press,1993,9780192822454,"Lingue Straniere, Narrativa",FALSE
+814,George Eliot,The mill on the Floss,Oxford University Press,1980,9780192815142,"Lingue Straniere, Narrativa",FALSE
+816,John Bunyan,The Pilgrim's Progress,Oxford University Press,1984,9780192816095,"Lingue Straniere, Narrativa",FALSE
+817,Emily Brontë,Wuthering Heights,Oxford University Press,1981,9780192815439,"Lingue Straniere, Narrativa",FALSE
+818,Charlotte Brontë,Jane Eyre,Oxford University Press,1980,9780192815135,"Lingue Straniere, Narrativa",FALSE
+A1557,Dino Buzzati,Le notti difficili,Mondadori,1973,9788804098900,"Narrativa, Racconti, Fantasy, Gotico",FALSE
+819,Jane Austen,Emma,Oxford University Press,1990,9780192815302,"Lingue Straniere, Narrativa",FALSE
+820,Jane Austen,Pride and Prejudice,Oxford University Press,1990,9780192827640,"Lingue Straniere, Narrativa",FALSE
+821,Charles Dickens,Christmas Books,Oxford University Press,1985,9780192817887,"Lingue Straniere, Narrativa, Ragazzi",FALSE
+823,Daniel Defoe,Moll Flanders,Oxford University Press,1981,9780192815418,"Lingue Straniere, Narrativa",FALSE
+824,J. Fenimore Cooper,The last of the Mohicans,Oxford University Press,1983,9780192815333,"Lingue Straniere, Romanzo Storico",FALSE
+825,Joseph Conrad,Lord Jim,Oxford University Press,1983,9780192815661,"Lingue Straniere, Narrativa",FALSE
+826,Charles Dickens,Great Expectations,Oxford University Press,1994,9780192822294,"Lingue Straniere, Narrativa, Formazione",FALSE
+827,Charles Dickens,David Copperfield,Oxford University Press,1982,9780192815340,"Lingue Straniere, Narrativa",FALSE
+828,William Thackeray,Vanity fair,Oxford University Press,1983,9780192815197,"Lingue Straniere, Narrativa, Classico",FALSE
+829,Geoffrey Chaucer,The Canterbury Tales,Oxford University Press,1983,9780192815388,"Lingue Straniere, Narrativa, Classico",FALSE
+831,Charles Dickens,The Pickwick Papers,Oxford University Press,1987,9780192817764,"Lingue Straniere, Narrativa, Classico",FALSE
+838,Sebastiano Vassalli,La chimera,Einaudi,1992,9788806129188,Romanzo Storico,FALSE
+840,Leonardo Sciascia,La strega e il capitano,Bompiani,1995,9788845246738,"Saggistica, Storia",FALSE
+844,Charles Dickens,"Timbra il tuo cartellino, Bristow",Mondadori,1973,-,"Fumetti, Graphic Novel",FALSE
+A1611,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE
+845,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE
+846,Howard Post,Gli emarginati,Mondadori,1973,9788804423455,"Fumetti, Graphic Novel",FALSE
+A1612,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE
+847,Charles M. Schulz,Il bambino a una dimensione,Mondadori,1971,-,"Fumetti, Graphic Novel",FALSE
+848,Charles M. Schulz,E’ domani Charlie Brown,Mondadori,1974,9788804113332,"Fumetti, Graphic Novel",FALSE
+A1613,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE
+849,Elzie Crisler Segar,Fino all’ultimo spinacio,Mondadori,1974,-,"Fumetti, Graphic Novel",FALSE
+A1614,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE
+850,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE
+851,Mort Walker,Manuale della recluta,Mondadori,1973,-,"Fumetti, Graphic Novel",FALSE
+852,Charles Dickens,Bristow il contestatore integrato,Mondadori,1973,-,"Fumetti, Graphic Novel",FALSE
+853,Mort Walker,Il mondo è una caserma,Mondadori,1975,-,"Fumetti, Graphic Novel",FALSE
+855,Dario Fo,Morte accidentale di un anarchico,Einaudi,1974,9788806039692,"Poesia, Teatro",FALSE
+856,Leonardo Sciascia,Il contesto,Einaudi,1971,9788806323838,"Giallo, Thriller",FALSE
+863,Leonardo Sciascia,Il contesto,Einaudi,1971,9788806323838,"Giallo, Thriller",FALSE
+1016,Dario Fo,Le commedie di D. Fo,Einaudi,1975,9788806041831,"Poesia, Teatro",FALSE
+1130,Atti convegno Pisa,Il linguaggio cinematografico,Plan,2002,9788888267029,"Saggistica, Cinema",FALSE
+1445,Quino,Mafalda colpisce ancora,Bompiani,1969,-,"Fumetti, Graphic Novel",FALSE
+1515,A. Melucco Vaccaro,I Longobardi in Italia,Longanesi,1982,9788830400824,"Saggistica, Storia",FALSE
+1629,Brunetta,Letteratura e cinema,Zanichelli,1976,-,"Saggistica, Cinema",FALSE
+1698,Natalia Ginzburg,Caro Michele,Mondadori,1973,9788806371197,"Narrativa, Romanzo",FALSE
+1699,Ugo Foscolo,Ultime lettere di Jacopo Ortis,Einaudi,1963,-,"Narrativa, Classico",FALSE
+1833,Rolf-Ulrich,Guida alla musica,Mondadori,1969,-,"Saggistica, Musica",FALSE
+1851,Jay M. Savage,L’evoluzione,Zanichelli,1967,-,"Saggistica, Scienze",FALSE
+2194,AA. VV.,Programmazione neurolinguistica,Astrolabio,1982,9788834007098,"Saggistica, Scienze",FALSE
+2266,AA. VV.,Pragmatica della comunicazione umana,Astrolabio,1971,9788834001423,"Saggistica, Scienze",FALSE
+2587,Antonio Tabucchi,Il filo dell’orizzonte,Feltrinelli,1991,9788807811463,"Narrativa, Romanzo, Giallo",FALSE
+2599,Eschilo,I Persiani,Feltrinelli,1991,9788807820122,"Poesia, Teatro, Classico",FALSE
+2604,Sofocle,Edipo Re,Feltrinelli,1991,9788807820283,"Poesia, Teatro, Classico",FALSE
+2675,Carlo Emilio Gadda,Il primo libro delle favole,Mondadori,1990,9788804332411,"Narrativa, Ragazzi",FALSE
+2720,Luigi Pirandello,I vecchi e i giovani,Garzanti,1993,9788811364583,Romanzo Storico,FALSE
+4383,Boris Pasternak,Il dottor Zivago,Loescher,1957,-,Romanzo Storico,FALSE
+6319,Giovanni Verga,Mastro Don Gesualdo,Mondadori,1960,-,"Narrativa, Classico",FALSE
+A120,Lev Tolstoj,Anna Karenina,Einaudi,2014,9788806219321,"Narrativa, Classico",FALSE
+A1579,Gabriele D'Annunzio,Il piacere,Gulliver,-,9788822730701,"Narrativa, Classico",FALSE
+A1630,Michele Ferrari,Noi abbiamo futuro,Marcos y Marcos,2014,9788871686943,Ragazzi,FALSE
+-,"Ehsani, Casolo",I ragazzi hanno grandi sogni,Feltrinelli,2018,9788807890536,"Ragazzi, Biografia, Memorie",FALSE
+A1622,Leonardo Sciascia,Todo modo,Einaudi,1974,9788806404766,"Giallo, Thriller",FALSE
+A1623,Leonardo Sciascia,Todo modo,Einaudi,1974,9788806404766,"Giallo, Thriller",FALSE
+854,Leonardo Sciascia,Il contesto,Einaudi,1971,9788806323838,"Giallo, Thriller",FALSE
+A1620,Leonardo Sciascia,Il contesto,Einaudi,1971,9788806323838,"Giallo, Thriller",FALSE
+A059,Lucia Impelluso,La natura e i suoi simboli,Electa,2004,9788837024468,"Saggistica, Arte",FALSE
+A066,AA. VV.,"Centrifuga: fughe, ritorni...",Sinnos,2016,9788876093227,"Ragazzi, Racconti",FALSE
+A067,Bart Moeyaert,Il club della via Lattea,Sinnos,2011,9788876091872,Ragazzi,FALSE
+A068,Zita Dazzi,In equilibrio perfetto,Sinnos,2016,9788876093258,Ragazzi,FALSE
+A069,Catherine Forde,A bomba,Sinnos,2011,9788876091971,Ragazzi,FALSE
+A070,Christophe Léon,Reato di fuga,Sinnos,2016,9788876093159,Ragazzi,FALSE
+A071,Federico Appel,Pesi massimi,Sinnos,2014,9788876092787,"Fumetti, Graphic Novel, Ragazzi",FALSE
+A072,AA. VV.,Il libro dell’economia,Gribaudo,2015,9788858012642,"Saggistica, Economia",FALSE
+A073,Aude de Tocqueville,Atlante delle città perdute,Bompiani,2014,9788845277870,"Saggistica, Geografia",FALSE
+A074,Dominique Lanni,Atlante dei paesi sognati,Bompiani,2016,9788845283123,"Saggistica, Geografia",FALSE
+A075,Umberto Eco,Storia delle terre... leggendari,Bompiani,2014,9788845278143,Saggistica,FALSE
+A076,Matthieu Mantanus,Beethoven e la ragazza...,Mondadori,2016,9788804664369,"Ragazzi, Musica",FALSE
+A077,Luigi Garlando,‘O Maè - Storia di judo e camorra,Piemme,2014,9788856637380,"Ragazzi, Attualità",FALSE
+A079,Piersandro Pallavicini,La chimica della bellezza,Feltrinelli,2016,9788807032042,"Narrativa, Romanzo",FALSE
+A080,Debra Ginsberg,Mio figlio Blaze,TEA,2003,9788850203536,"Biografia, Memorie",FALSE
+A081,Antonio Ferrara,Il ragazzo e la tempesta,Rizzoli,2014,9788817073356,Ragazzi,FALSE
+A082,Giuseppe Pontiggia,Nati due volte,Mondadori,2002,9788804509530,"Narrativa, Romanzo",FALSE
+A083,Giuseppe Pontiggia,Nati due volte,Mondadori,2002,9788804509530,"Narrativa, Romanzo",FALSE
+A084,Fabrizio Gatti,Viki che voleva andare a scuola,Rizzoli,2010,9788817039987,"Ragazzi, Attualità",FALSE
+A085,Erika Silvestri,Il commerciante di bottoni,Rizzoli,2010,9788817045766,"Ragazzi, Biografia, Memorie",FALSE
+A086,Alison Leslie Gold,Mi ricordo Anna Frank,Rizzoli,2011,9788817038102,"Ragazzi, Biografia, Memorie",FALSE
+A087,Paola Zannoner,Rocco + colomba,De Agostini,2011,9788841864975,"Ragazzi, Romanzo Storico",FALSE
+A088,Xavier Laurent Petit,Be safe,Rizzoli,2011,9788817047715,"Ragazzi, Romanzo Storico",FALSE
+A089,John Grisham,La prima indagine di Theodore Boone,Mondadori,2012,9788804620020,"Ragazzi, Giallo, Thriller",FALSE
+A090,Stefania Bertola,Solo Flora,Feltrinelli,2016,9788807910197,Ragazzi,FALSE
+A091,Antonio Ferrara,Con una rosa in mano,Feltrinelli,2016,9788807910258,"Ragazzi, Romanzo Storico",FALSE
+A1624,Sally Gardner,Il pianeta di Standish,Feltrinelli,2013,9788807910012,"Ragazzi, Fantasy",FALSE
+A092,Sally Gardner,Il pianeta di Standish,Feltrinelli,2013,9788807910012,"Ragazzi, Fantasy",FALSE
+A093,Claudia de Lillo,"Dire, fare, baciare",Feltrinelli,2015,9788807090639,"Ragazzi, Saggistica",FALSE
+A094,Boris Pasternak,Il dottor Zivago,Feltrinelli,2012,9788807900037,Romanzo Storico,FALSE
+A095,Alessandro Baricco,Una certa idea di mondo,Feltrinelli,2015,9788807887307,Saggistica,FALSE
+A1592,Federico Moccia,Tre metri sopra il cielo,Feltrinelli,2007,9788807819865,"Ragazzi, Narrativa",FALSE
+A097,Giuseppe Tomasi di Lampedusa,Il Gattopardo,Feltrinelli,2012,9788807900013,"Romanzo Storico, Classico",FALSE
+A098,Sharon M. Draper,Melody,Feltrinelli,2016,9788807910210,Ragazzi,FALSE
+A099,Alessandro Baricco,Novecento,Feltrinelli,2012,9788807880889,"Poesia, Teatro",FALSE
+A100,Rebecca Stead,Segreti e bugie,Feltrinelli,2013,9788807910043,"Ragazzi, Giallo, Thriller",FALSE
+A1000,Italo Svevo,La coscienza di Zeno,Newton Compton,-,9788854117081,"Narrativa, Classico",FALSE
+A1001,Ignazio Silone,Fontamara,Mondadori,1977,9788804492505,"Romanzo Storico, Classico",FALSE
+A1001-1,Ignazio Silone,Fontamara,Mondadori,1977,9788804492505,"Romanzo Storico, Classico",FALSE
+A1001-2,Ignazio Silone,Fontamara,Mondadori,1977,9788804001356,"Romanzo Storico, Classico",FALSE
+A1002,Edgar Allan Poe,Storia di Gordon Pym,Rizzoli,-,9788817168345,"Narrativa, Avventura, Fantasy",FALSE
+A1003,Ugo Foscolo,Le ultime lettere di Jacopo Ortis,L'Espresso,-,-,"Narrativa, Classico",FALSE
+A1004,Emily Brontë,Cime tempestose,De Agostini,-,-,"Narrativa, Classico, Fantasy",FALSE
+A1005,Giovanni Verga,Storia di una capinera,Crescere,-,9788883372222,"Narrativa, Classico",FALSE
+A1006,Italo Calvino,Marcovaldo,Mondadori,-,9788804374330,"Narrativa, Ragazzi, Racconti",FALSE
+A1007,Antonio Fogazzaro,Malombra,La Repubblica,-,-,"Fantasy, Gotico, Classico",FALSE
+A1007-1,Antonio Fogazzaro,Malombra,La Repubblica,-,-,"Narrativa, Classici",FALSE
+A1008,Luigi Capuana,Il marchese di Roccaverdina,De Agostini,-,-,"Narrativa, Classici",FALSE
+A1009,Dino Buzzati,Il deserto dei Tartari,Mondadori,-,9788804492475,"Narrativa, Classici",FALSE
+A101,Enrico Deaglio,La banalità del bene,Feltrinelli,2012,9788807884764,"Narrativa, Romanzo Storico, Shoah narrativa",FALSE
+A1010,Gabriele D'Annunzio,Motti dannunziani,Newton Compton,-,9788879835335,"Saggistica, Filosofia",FALSE
+A1011,James Joyce,Gente di Dublino,Newton Compton,2010,9788854120358,"Narrativa, Racconti, Classici",FALSE
+A1012,Terry Brooks,L’ultima magia,Mondadori,-,9788804470923,Fantasy,FALSE
+A1013,Terry Brooks,Il ciclo di Shannara,Mondadori,-,9788804375177,Fantasy,FALSE
+A1014,Terry Brooks,Il labirinto,Mondadori,-,9788804533032,Fantasy,FALSE
+A1015,David Eddings,La grande dea,Sperling & Kupfer,-,9788820008535,Fantasy,FALSE
+A1016-a,Miguel de Cervantes,Don Chisciotte della Mancia I,De Agostini,-,-,"Narrativa, Classici",FALSE
+A1016-b,Miguel de Cervantes,Don Chisciotte della Mancia II,De Agostini,-,-,"Narrativa, Classici",FALSE
+A1017,Philip Pullman,La lama sottile,Salani,1997,9788884514783,Fantasy,FALSE
+A1018,Philip Pullman,Il cannocchiale d’ambra,TEA,2004,9788850207558,Fantasy,FALSE
+A1019,Christopher Paolini,Eldest,Rizzoli,2005,9788817008471,Fantasy,FALSE
+A102,Banana Yoshimoto,Kitchen,Feltrinelli,2011,9788807880490,"Letteratura Giapponese, Sentimentale",FALSE
+A1020,J. R. R. Tolkien,Lo Hobbit,Bompiani,2003,9788845254581,"Fantasy, Ragazzi",FALSE
+A1021,Suzanne Collins,Gregor (la profezia del flagello),Mondadori,-,9788804631776,"Fantasy, Ragazzi",FALSE
+A1022,Arthur Conan Doyle,Uno studio in rosso,Il Sole 24 Ore,-,-,"Giallo, Thriller, Racconti",FALSE
+A1023,Arthur Conan Doyle,Uno studio in rosso,Mondadori,-,9788804664873,"Giallo, Thriller, Racconti",FALSE
+A1024,Howard Phillips Lovecraft,La casa stregata,Newton Compton,-,9788854117043,"Fantasy, Horror, Racconti",FALSE
+A1025,Edgar Allan Poe,Racconti del mistero,Rizzoli,-,9788817126130,"Fantasy, Horror, Gotico, Racconti",FALSE
+A1026,Judith Kerr,Quando Hitler rubò il coniglio rosa,Rizzoli,-,9788817028458,"Ragazzi, Romanzo Storico, Shoah narrativa",FALSE
+A1027,Yann Martel,Vita di Pi,Piemme,-,9788838481870,"Narrativa, Avventura",FALSE
+A1027-1,Ugo Frasca,Noi Italiani,Guida,2007,9788860429407,"Saggistica, Attualità, Politica",FALSE
+A1028,Isaac B. Singer,Nuove storie alla corte di mio padre,Longanesi,-,9788830408547,"Narrativa, Racconti, Romanzo Storico",FALSE
+A1029,Harper Lee,Il buio oltre la siepe,Feltrinelli,-,9788807880944,"Narrativa, Classici",FALSE
+A103,Valentina Camerini,Il secondo momento migliore,Feltrinelli,2014,9788807910081,"Romanzo, Sentimentale",FALSE
+A1030,Paolo Giordano,La solitudine dei numeri primi,Mondadori,-,9788804577028,"Narrativa, Ragazzi, Adolescenza",FALSE
+A1031,Alessandro Baricco,The game,Einaudi,-,9788806235315,"Saggistica, Scienze, Attualità",FALSE
+A1032,Carlos Ruiz Zafón,L’ombra del vento,Mondadori,2004,9788804527336,"Narrativa, Giallo, Thriller, Gotico",FALSE
+A1033,Vanessa Diffenbaugh,Il linguaggio segreto dei fiori,Garzanti,2011,9788811670394,"Romanzo, Sentimentale, Formazione",FALSE
+A1034,Siobhan Vivian,La lista,Feltrinelli,-,9788807921968,"Narrativa, Ragazzi, Adolescenza",FALSE
+A1035,Arthur Schopenhauer,L’arte di ottenere ragione,Adelphi,-,9788845908568,"Saggistica, Filosofia",FALSE
+A1036,Carlo Rovelli,Sette brevi lezioni di Fisica,Adelphi,2014,9788845929250,"Saggistica, Scienze",FALSE
+A1037,Sigmund Freud,Il sogno e la sua interpretazione,Newton Compton,2010,9788854124356,"Saggistica, Filosofia, Scienze",FALSE
+A1038,Paulo Coelho,L’Alchimista,Bompiani,-,9788845241283,"Narrativa, Filosofia",FALSE
+A1039,Gandhi,La voce della verità,Newton Compton,-,9788879831962,"Saggistica, Biografia, Testimonianze",FALSE
+A104,Paul Dowswell,Auslander,Feltrinelli,2016,9788807910203,"Romanzo Storico, Ragazzi, Guerra",FALSE
+A1040,Giorgio Vasari,Le vite de' più eccellenti pittori...,Newton Compton,1997,9788881830633,"Saggistica, Biografia, Storia",FALSE
+A1041,Franz Kafka,Tutti i racconti,Newton Compton,1993,9788879831932,"Narrativa, Racconti, Classici",FALSE
+A1042,Edgar Lee Masters,Antologia di Spoon River,Newton Compton,1993,9788879830072,"Poesia, Teatro",FALSE
+A1043,Edgar Lee Masters,Il nuovo Spoon River,Newton Compton,1995,9788879838030,"Poesia, Teatro",FALSE
+A1044,Luigi Pirandello,Sei personaggi in cerca d’autore,Crescere,-,9788883371690,"Poesia, Teatro",FALSE
+A1045,Luigi Pirandello,Maschere nude (Vol. 1),Newton Compton,1993,9788879831345,"Poesia, Teatro",FALSE
+A1046,Rosetta Loy,La parola ebreo,Einaudi,-,9788806145393,"Romanzo Storico, Shoah narrativa, Biografia",FALSE
+A1047,Roy Lewis,Il più grande uomo scimmia del pleistocene,Adelphi,1992,9788845909244,"Umorismo, Satira, Preistorico",FALSE
+A1048,Lindsey Davis,In pasto ai leoni,Marco Tropea,-,9788843802370,"Giallo, Thriller, Romanzo Storico",FALSE
+A1049,Ernest Hemingway,Addio alle armi,Corriere della Sera,-,-,"Romanzo Storico, Guerra, Narrativa, Classici",FALSE
+A105,Stefano Benni,La compagnia dei Celestini,Feltrinelli,2006,9788807812675,"Narrativa, Ragazzi",FALSE
+A1050,Valerio Massimo Manfredi,Il mio nome è Nessuno (Il giuramento),Mondadori,2012,9788804624158,"Romanzo Storico, Narrativa",FALSE
+A1051,Ernest Hemingway,Storie della guerra di Spagna,Mondadori,-,9788804665047,"Narrativa, Racconti, Romanzo Storico, Guerra",FALSE
+A1052,Valerio Massimo Manfredi,Idi di marzo,Mondadori,2008,9788804579939,"Romanzo Storico, Narrativa",FALSE
+A1053,Valerio Massimo Manfredi,L’armata perduta,Mondadori,2007,9788804562108,"Romanzo Storico, Narrativa",FALSE
+A1054,Ernest Hemingway,Per chi suona la campana,Mondadori,-,9788804492758,"Romanzo Storico, Guerra, Narrativa",FALSE
+A1055,E. M. Remarque,Niente di nuovo sul fronte occidentale,Rizzoli,2016,9788817117562,"Romanzo Storico, Guerra, Narrativa, Classici",FALSE
+A1056,Oriana Fallaci,La rabbia e l’orgoglio,Rizzoli,-,9788817129759,"Saggistica, Attualità",FALSE
+A1057,Oriana Fallaci,Quel giorno sulla luna,Rizzoli,-,9788817036897,"Saggistica, Attualità, Storia",FALSE
+A1058,AA. VV.,Grande guerra un racconto in 100 immagini,Stato Maggiore Difesa,2016,9788898185252,"Saggistica, Storia, Guerra",FALSE
+A1059,"Folman, Polonsky",Anne Frank - Diario (Graphic),Einaudi,2017,9788806233761,"Fumetti, Graphic Novel, Shoah narrativa",FALSE
+A106,Sarah Crossan,Apple e Rain,Feltrinelli,2016,9788807910234,"Narrativa, Ragazzi, Adolescenza",FALSE
+A1060,Herman Melville,Moby Dick,Mondadori,2014,9788804676836,"Fumetti, Graphic Novel, Classici",FALSE
+A1061,Luigi Pirandello,"Uno, nessuno e centomila",Newton Compton,-,9788854117098,"Narrativa, Classici",FALSE
+A1062,Grazia Deledda,Canne al vento,San Paolo,-,9788821553553,"Narrativa, Classici",FALSE
+A1063,Stefano Benni,Achille piè veloce,Feltrinelli,-,9788807016404,"Umorismo, Grottesco",FALSE
+A1064,Oscar Wilde,L’importanza di essere Franco,Rusconi,-,9788818029515,"Poesia, Teatro",FALSE
+A1065,Oscar Wilde,Aforismi,Barbera Editore,-,9788878990264,"Saggistica, Filosofia",FALSE
+A1066,Siobhan Dowd,La bambina dimenticata dal tempo,Uovonero,-,9788896918127,"Narrativa, Ragazzi, Adolescenza",FALSE
+A1067,Jane Austen,Tutti i romanzi,Newton Compton,-,9788854111720,"Narrativa, Classici",FALSE
+A1068,Haruki Murakami,Il mestiere dello scrittore,Einaudi,2017,9788806232153,"Saggistica, Biografia",FALSE
+A1069,Giovanni Verga,Mastro Don Gesualdo,Newton Compton,-,9788854116541,"Narrativa, Classici",FALSE
+A107,Daniel Pennac,Come un romanzo,Feltrinelli,2011,9788807880568,"Saggistica, Manuali",FALSE
+A1070,F. Scott Fitzgerald,Il grande Gatsby,Newton Compton,-,9788854124379,"Narrativa, Classici",FALSE
+A1071,Gabriele D'Annunzio,Il piacere,Newton Compton,-,9788854117036,"Narrativa, Classici",FALSE
+A1072,Michail Bulgakov,Il maestro e Margherita,Newton Compton,-,9788854117074,"Narrativa, Fantasy, Classici",FALSE
+A1073,Oriana Fallaci,Intervista Oriana Fallaci,Corriere della Sera,-,-,"Saggistica, Storia, Attualità",FALSE
+A1074,Renata Viganò,L’Agnese va a morire,Einaudi,-,9788806222667,"Romanzo Storico, Resistenza, Narrativa",FALSE
+A1075,Carlo Goldoni,La locandiera,Mondadori,-,9788804508923,"Poesia, Teatro",FALSE
+A1076,Antonio Skarmeta,Il postino di Neruda,Garzanti,-,9788811668261,"Narrativa, Romanzo Storico",FALSE
+A1077,Annie Franҫois,La lettrice,Guanda,-,9788882460678,"Saggistica, Umorismo, Libri",FALSE
+A1078,Antonio Tabucchi,Sostiene Pereira,Feltrinelli,-,9788807813812,"Romanzo Storico, Narrativa",FALSE
+A1079,Charles Dickens,David Copperfield,Crescere,-,9788883371928,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A108,Amos Oz,Contro il fanatismo,Feltrinelli,2015,9788807886768,"Saggistica, Filosofia, Attualità",FALSE
+A1080,Helen Humphreys,Il giardino perduto,Playground,-,9788889113072,"Narrativa, Romanzo Storico",FALSE
+A1081,Marilynne Robinson,Lila,Einaudi,-,9788806219599,"Romanzo, Spirituale, Drammatico",FALSE
+A1082,Stephen King,Danse Macabre,Frassinelli,-,9788876841773,"Saggistica, Fantasy, Horror",FALSE
+A1083,Diego Ferra,NUMB Anna,Sperling & Kupfer,-,9788820061516,"Narrativa, Ragazzi, Adolescenza",FALSE
+A1084,Abir Mukherjee,L'uomo di Calcutta,SEM,-,9788893900286,"Giallo, Thriller, Romanzo Storico",FALSE
+A1085,Alessandro Baricco,Novecento,Feltrinelli,-,9788807813027,"Poesia, Teatro, Narrativa",FALSE
+A1086,Renee Engeln,Beauty Mania,HarperCollins,2017,9788869052569,"Saggistica, Scienze, Attualità",FALSE
+A1087,Laura Calosso,La stoffa delle donne,SEM,-,9788893900224,"Romanzo, Sociale, Moda",FALSE
+A1088,Charles & Mary Lamb,Tales from Shakespeare,Pearson,-,9781405862363,"Ragazzi, Poesia, Teatro",FALSE
+A1089,Francisco Brines,La rosa della notte,Edizioni Cadmo,-,9788879230536,"Poesia, Teatro",FALSE
+A109,"More, Reed, Reed",I segreti di Amber House,Feltrinelli,2016,9788807910241,"Narrativa, Fantasy, Horror, Gotico",FALSE
+A1090,Lev Tolstoj,Anna Karenina,Einaudi,-,9788806219315,"Narrativa, Classici",FALSE
+A1091,Annie Cohen-Solal,Americani per sempre,Johan & Levi,2012,9788860100818,"Saggistica, Storia",FALSE
+A1092,Piero Bevilacqua,Il grande saccheggio,Laterza,2011,9788842095811,"Saggistica, Storia, Attualità",FALSE
+A1093,J. F. Ferrándiz,La terra maledetta,Longanesi,2019,9788830451438,Romanzo Storico,FALSE
+A1094,Wilbur Smith,Il settimo papiro,TEA,-,9788878183185,"Narrativa, Avventura",FALSE
+A1095,Ted Chiang,Storie della tua vita,Frassinelli,-,9788893420043,"Fantasy, Distopico, Racconti",FALSE
+A1096,Seneca,Apokolokyntosis,Mondadori,1996,9788804414677,"Narrativa, Classico, Satira",FALSE
+A1097,Giovanni Boccaccio,Vita di Dante,Moretti & Vitali,2014,9788871865669,"Biografia, Memorie, Classico",FALSE
+A1098,Fëdor Dostoevskij,Le notti bianche,Garzanti,-,9788811361254,"Narrativa, Racconti, Classico",FALSE
+A1099,Katie Khan,Regalami una stella,Newton Compton,-,9788822701021,"Narrativa, Romanzo",FALSE
+A110,Rolf Lappert,Pampa Blues,Feltrinelli,2013,9788807910036,Ragazzi,FALSE
+A1100,Marcel Proust,Alla ricerca del tempo perduto,Mondadori,2011,9788804604594,"Narrativa, Classico",FALSE
+A1101,Collettivo Senza Slot,Vivere senza Slot,Nuova Dimensione,2013,9788889200988,"Saggistica, Attualità",FALSE
+A11027,Stefano Benni,Margherita Dolcevita,Feltrinelli,2010,9788807880902,"Narrativa, Romanzo",FALSE
+A1103,Emiliano Poddi,Tre volte invano,Instar Libri,2012,9788846101488,"Narrativa, Romanzo",FALSE
+A1104,Andrea Antonello,Baci a tutti,Piemme,2016,9788856653243,"Biografia, Memorie",FALSE
+A1105,Daniel Pennac,Il paradiso degli orchi,Feltrinelli,1992,9788807880629,"Giallo, Thriller, Narrativa",FALSE
+A1106,H. M. Enzensberger,Il mago dei numeri,Mondadori,2000,9788806146405,"Ragazzi, Saggistica",FALSE
+A1107,Bebe Vio,Mi hanno regalato un sogno,Rizzoli,2017,9788817093224,"Biografia, Memorie",FALSE
+A1108,Blake Nelson,Paranoid park,Rizzoli,2007,9788846208750,Ragazzi,FALSE
+A1109,F. e A. Antonello,Sono graditi visi sorridenti,Feltrinelli,2013,9788807491443,"Biografia, Memorie",FALSE
+A111,Daniel Pennac,Il paradiso degli orchi,Feltrinelli,2011,9788807880629,"Giallo, Thriller, Narrativa",FALSE
+A1110,F. H. Burnett,Il giardino segreto,Social Libri,2017,9788894191387,"Ragazzi, Classico",FALSE
+A1111,Paolo Crepet,Baciami senza rete,Mondadori,2016,9788804669043,"Saggistica, Psicologia",FALSE
+A1112,Ken Follett,La caduta dei giganti,Mondadori,2011,9788804613763,Romanzo Storico,FALSE
+A1113,David Lindley,La luna di Einstein,TEA,2005,9788850207862,"Saggistica, Scienze",FALSE
+A1114,Enzo Fileno Carabba,Fuga da Magopoli,Marcos y Marcos,2017,9788871687841,"Ragazzi, Fantasy",FALSE
+A1115,Enzo Fileno Carabba,Battaglia a Magopoli,Marcos y Marcos,2017,9788871688008,"Ragazzi, Fantasy",FALSE
+A1116,Kevin Brooks,Naked,Piemme,2011,9788856616958,Ragazzi,FALSE
+A1117,Erica Grazioli,Cioccolato e cannella…,Selecta,2016,9788899432096,"Biografia, Memorie",FALSE
+A1118,Fulvia Degl'Innocenti,La libraia,San Paolo,2014,9788821592652,Ragazzi,FALSE
+A1119,Marie-Aude Murail,https://www.google.com/search?q=Persidivista.com,Giunti,2017,9788809836365,Ragazzi,FALSE
+A112,Javier Ruescas,Tutti i colori di te,Feltrinelli,2016,9788807910227,Ragazzi,FALSE
+A1120,Carlo Greppi,Non restare indietro,Feltrinelli,2015,9788807910180,"Saggistica, Storia",FALSE
+A1121,Alessandro Barbero,La storia (l’origine dell’umanità),Corriere della Sera,2017,-,"Saggistica, Storia",FALSE
+A1122,"Salerno, Bernini",La storia di Voghera,Guardamagna,2016,9788895193489,"Saggistica, Storia",FALSE
+A1123,Dominique Lapierre,Più grandi dell’amore,Mondadori,1990,9788804340150,"Saggistica, Attualità",FALSE
+A1124,Lemony Snicket,Un infausto inizio,Salani,2017,9788869181955,"Ragazzi, Fantasy",FALSE
+A1125,Italo Svevo,Senilità,Bompiani,1985,9788845212390,"Narrativa, Classico",FALSE
+A1126,J. R. R. Tolkien,Lo Hobbit,Adelphi,2018,9788845932595,"Fantasy, Classico, Ragazzi",FALSE
+A1128,Fëdor Dostoevskij,Il giocatore,Bompiani,1997,9788845245107,"Narrativa, Classico",FALSE
+A1129,Ken Follett,I pilastri della terra,Mondadori,1990,9788804568971,Romanzo Storico,FALSE
+A113,Vandana Shiva,Storia dei semi,Feltrinelli,2013,9788807882463,"Saggistica, Scienze",FALSE
+A1130,Jonathan Safran Foer,"Molto forte, incredibilmente vicino",Guanda,-,9788882468926,"Narrativa, Romanzo",FALSE
+A1131,Carlo Cassola,Il taglio del bosco,Mondadori,-,-,"Narrativa, Racconti",FALSE
+A1621,Isaac Asimov,Le grandi storie della fantascienza,Newton Compton,-,9788854122344,"Narrativa, Fantasy, Racconti",FALSE
+A1132,Desy Icardi,L'annusatrice di libri,Fazi Editore,-,9788893254921,"Narrativa, Romanzo",FALSE
+A1133,Desy Icardi,"Quaderno per ""L'annusatrice di libri""",Fazi Editore,-,-,"Narrativa, Romanzo",FALSE
+A1134,Suzy Zail,La pianista di Auschwitz,Il Giornale,-,-,"Romanzo Storico, Ragazzi",FALSE
+A1135,Michela Murgia,Accabadora,Einaudi,-,9788806197804,"Narrativa, Romanzo",FALSE
+A1136,Roberto Piumini,Uomini con figure,Einaudi,1990,9788828600861,"Ragazzi, Biografia, Memorie",FALSE
+A1137,Tim Bruno,"NEOS, la città sospesa",Salani,-,9788862561913,"Ragazzi, Fantasy",FALSE
+A1138,Barbara D'Alto,La stanza delle mele,Guida,-,9788860424562,"Narrativa, Romanzo",FALSE
+A1139,Ann Brashares,La seconda estate,Rizzoli,-,9788817013584,Ragazzi,FALSE
+A114,Shane Peacock,L’occhio del corvo,Feltrinelli,2015,9788807910166,"Ragazzi, Giallo, Thriller",FALSE
+A1140,Richelle Mead,Midnight Jewel,LSWR,-,9788868955211,"Ragazzi, Fantasy",FALSE
+A1141,Fred Uhlman,L'amico ritrovato,Feltrinelli,-,9788807880708,"Romanzo Storico, Classico",FALSE
+A1142-a,"Antonielli, Chittolini",Storia della Lombardia (Vol. 1),Laterza,2001,9788842062189,"Saggistica, Storia",FALSE
+A1142-b,"Antonielli, Chittolini",Storia della Lombardia (Vol. 2),Laterza,2001,9788842062189,"Saggistica, Storia",FALSE
+A1142-c,"Antonielli, Chittolini",Storia della Lombardia (Vol. 3),Laterza,2001,9788842062189,"Saggistica, Storia",FALSE
+A1142-d,"Antonielli, Chittolini",Storia della Lombardia (Vol. 4),Laterza,2001,9788842062189,"Saggistica, Storia",FALSE
+A1142-e,"Antonielli, Chittolini",Storia della Lombardia (Vol. 5),Laterza,2001,9788842062189,"Saggistica, Storia",FALSE
+A1143,Daniel Defoe,Robinson Crusoe,Garzanti,-,9788811360349,"Narrativa, Avventura, Classico",FALSE
+A1144,Elena Ferrante,L’amica geniale,Edizioni e/o,2018,9788866320326,"Narrativa, Romanzo",FALSE
+A1145,Michael Zadoorian,Beautiful Music,Marcos y Marcos,2018,9788871688176,"Narrativa, Romanzo",FALSE
+A1145-1,"Portinari, Carbone",174517 deportato: Primo Levi,La Meridiana,2019,9788879168694,"Fumetti, Graphic Novel, Romanzo Storico",FALSE
+A1146,"Barilli, De Carli",Il delitto Matteotti,BeccoGiallo,2018,9788899016937,"Fumetti, Graphic Novel, Storia",FALSE
+A1147,Chiara Gamberale,Le luci nelle case degli altri,Mondadori,2017,9788804608639,"Narrativa, Romanzo",FALSE
+A1148,Todd Strasser,L’onda,Rizzoli,2018,9788817032735,"Ragazzi, Romanzo Storico",FALSE
+A1149,Giuseppe Catozzella,E tu splendi,Feltrinelli,2018,9788807032844,"Ragazzi, Narrativa",FALSE
+A115,Erri De Luca,Il peso della farfalla,Feltrinelli,2016,9788807888595,"Narrativa, Racconti",FALSE
+A1150,Alessandro D'Avenia,Ciò che inferno non è,Mondadori,2019,9788804646273,"Romanzo Storico, Biografia, Memorie",FALSE
+A1151,Rossella Postorino,Le assaggiatrici,Feltrinelli,2018,9788807032691,Romanzo Storico,FALSE
+A1152,Giorgio Scianna,Qualcosa ci inventeremo,Einaudi,2014,9788806220808,"Ragazzi, Narrativa",FALSE
+A1153,Giorgio Scianna,Cose più grandi di noi,Einaudi,2019,9788806240097,"Ragazzi, Narrativa",FALSE
+A1154,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236052,"Ragazzi, Narrativa",FALSE
+A1155,Paolo Giordano,La solitudine dei numeri primi,Mondadori,2018,9788804685609,"Narrativa, Romanzo",FALSE
+A1156,Ryszard Kapuściński,Shah-in-shah,Feltrinelli,2017,9788807881077,"Saggistica, Storia",FALSE
+A1157,William Golding,Il signore delle mosche,Mondadori,2018,9788804667001,"Narrativa, Classico, Fantasy",FALSE
+A1158,Matt Killeen,La bambina di Hitler,Garzanti,2019,9788811604594,"Ragazzi, Romanzo Storico",FALSE
+A1159,Alessandro D'Avenia,L’arte di essere fragili,Mondadori,2019,9788804684121,"Saggistica, Letteratura",FALSE
+A116,Corrado Ceschinelli,Cambiamente,Curcu & Genovese,-,9788896737521,Saggistica,FALSE
+A1160,Alessandro D'Avenia,Bianca come il latte rossa come il sangue,Mondadori,2010,9788804595199,"Ragazzi, Narrativa",FALSE
+A1161,Amélie Nothomb,Acido solforico,Voland,2015,9788862430166,"Narrativa, Fantasy",FALSE
+A1162,"Apuzzo, Carnazzi",Quattro sberle in padella,Stampa Alternativa,2012,9788888916941,"Saggistica, Attualità",FALSE
+A1163,Giacomo Mazzariol,Mio fratello rincorre i dinosauri,Einaudi,2016,9788806230623,"Narrativa, Biografia, Memorie",FALSE
+A1164,Nicola Brunialti,Il paradiso alla fine del mondo,Sperling & Kupfer,2019,9788820066529,Ragazzi,FALSE
+A1165,Lia Levi,Questa sera è già domani,Edizioni e/o,2018,9788866329435,Romanzo Storico,FALSE
+A1166,Niccolò Ammaniti,Io non ho paura,Einaudi,2011,9788806207694,"Narrativa, Romanzo",FALSE
+A1167,Greta Thunberg,La nostra casa è in fiamme,Mondadori,2019,9788804711261,"Saggistica, Attualità",FALSE
+A1168,Fond. F. De André,Anche le parole sono nomadi,Chiarelettere,2018,9788861907758,"Poesia, Teatro",FALSE
+A1169,Zygmunt Bauman,Modernità liquida,Laterza,2019,9788842094890,"Saggistica, Sociologia",FALSE
+A117,Arthur Conan Doyle,Sherlock Holmes - Tutti i racconti,Einaudi,2015,9788806227296,"Giallo, Thriller, Classico",FALSE
+A1170,"Mentana, Segre",La memoria rende liberi,Rizzoli,2018,9788817107952,"Biografia, Memorie, Storia",FALSE
+A1171,Luigi Garlando,Per questo mi chiamo Giovanni,Rizzoli,2018,9788817103268,"Ragazzi, Attualità",FALSE
+A1625,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Memorie",FALSE
+A1173,Anthony De Mello,Messaggio di un’aquila...,Piemme,2015,9788856627688,"Saggistica, Spiritualità",FALSE
+A1174,Michele Serra,Gli sdraiati,Feltrinelli,2016,9788807884399,"Narrativa, Romanzo",FALSE
+A1175,Michele Serra,Il nuovo che avanza,Feltrinelli,2013,9788807811739,"Saggistica, Attualità",FALSE
+A1176,Mates,Veri amici,Mondadori,2016,9788891809384,"Ragazzi, Biografia, Memorie",FALSE
+A1177,Luigi Pirandello,Sei personaggi in cerca d'autore,Rusconi,-,9788818031334,"Poesia, Teatro",FALSE
+A1178,K. Kressmann Taylor,Destinatario sconosciuto,Rizzoli,-,9788817106095,Romanzo Storico,FALSE
+A1179,Robert Louis Stevenson,Lo strano caso del Dr. Jekyll...,Epoca,-,-,"Fantasy, Gotico, Classico",FALSE
+A118,Joseph Conrad,La linea d’ombra,Einaudi,2015,9788806217441,"Narrativa, Classico",FALSE
+A1180,Lois Lowry,The Giver,Giunti,2017,9788809058143,"Ragazzi, Fantasy",FALSE
+A1181,Anonimo,Le mille e una notte Vol. II,Corriere della Sera,-,-,"Narrativa, Classico",FALSE
+A1182,Luigi Pirandello,Amori senza amore e altre novelle,Rusconi,-,9788818029522,"Narrativa, Racconti, Classici",FALSE
+A1183,Jonathan Coe,La banda dei brocchi,Feltrinelli,-,9788807814260,"Narrativa, Ragazzi, Formazione",FALSE
+A1184,Herman Melville,Moby Dick,Corriere della Sera,-,-,"Narrativa, Classici",FALSE
+A1185,Ken Follett,I pilastri della terra,Mondadori,-,9788804340328,"Romanzo Storico, Narrativa",FALSE
+A1186,Honoré de Balzac,Eugénie Grandet,Garzanti,-,9788811362091,"Narrativa, Classici",FALSE
+A1189,Italo Calvino,Il sentiero dei nidi di ragno,Mondadori,-,9788804374347,"Narrativa, Romanzo Storico, Resistenza",FALSE
+A119,Jane Austen,Orgoglio e pregiudizio,Einaudi,2014,9788806217403,"Narrativa, Classici",FALSE
+A1190,Oscar Wilde,Il ritratto di Dorian Gray,Acquarelli,-,9788844014901,"Narrativa, Classici",FALSE
+A1191,Anonimo,Le mille e una notte Vol. I,Corriere della Sera,-,-,"Narrativa, Racconti, Classici",FALSE
+A1192,Daniel Pennac,La fata carabina,Feltrinelli,-,9788807812297,"Giallo, Thriller, Narrativa",FALSE
+A1193,Mario Tobino,Per le antiche scale,Mondadori,1976,9788804098608,"Narrativa, Racconti",FALSE
+A1626,Ugo Mioni,La coppa del vicerè d'Egitto,San Paolo,1937,-,Romanzo Storico,FALSE
+A1560,Christian Jacq,I misteri di Osiride 1 - L'albero...,Corriere della Sera,2004,9771129085186,Romanzo Storico,FALSE
+A1194,Fabio Paglieri,La cura della ragione,Il Mulino,2016,9788815260539,"Saggistica, Filosofia",FALSE
+A1561,Christian Jacq,I misteri di Osiride 2 - La cospirazione...,Corriere della Sera,2004,9771129085186,Romanzo Storico,FALSE
+A1195,Saulle Panizza,Ragazzi che Costituzione!,Plus,2009,9788884926523,"Saggistica, Ragazzi, Formazione",FALSE
+A1562,Christian Jacq,I misteri di Osiride 3 - Il cammino...,Corriere della Sera,2004,9771129085186,Romanzo Storico,FALSE
+A1196,AIE,Saperi e libertà (Maschile/femminile),AIE,2001,-,"Saggistica, Attualità",FALSE
+A1563,Christian Jacq,I misteri di Osiride 4 - Il grande segreto,Corriere della Sera,2004,9771129085186,Romanzo Storico,FALSE
+A1197,Domenico Quirico,Il tuffo nel pozzo,Vita e Pensiero,2017,9788834331575,"Saggistica, Biografia, Testimonianze, Reportage",FALSE
+A1198,Saulle Panizza,La Costituzione italiana aggiornata...,Pisa University Press,2018,9788867418298,"Saggistica, Manuali, Attualità",FALSE
+A1199,Giuseppe Verdi,Il Trovatore,Fabbri Editori,1995,-,"Poesia, Teatro",FALSE
+A1200,Arnald,Diversamente occupati,Arti Grafiche Fiorin,2009,-,"Fumetti, Graphic Novel",FALSE
+A1201,AA. VV.,Il Ragazzini Inglese-italiano,Zanichelli,2015,9788808194484,"Saggistica, Manuali",FALSE
+A1202,AA. VV.,Il Ragazzini Inglese-italiano,Zanichelli,2015,9788808194484,"Saggistica, Manuali",FALSE
+A1203,AA. VV.,Lo Zingarelli 2017,Zanichelli,2017,9788808601616,"Saggistica, Manuali",FALSE
+A1204,AA. VV.,Lo Zingarelli 2018,Zanichelli,2018,9788808800927,"Saggistica, Manuali",FALSE
+A1205,Agatha Christie,Sfida a Poirot,Mondadori,1963,-,"Giallo, Thriller",FALSE
+A1206,Agatha Christie,Miss Marple: Nemesi,Mondadori,1971,9788804399088,"Giallo, Thriller",FALSE
+A1207,Agatha Christie,Gli elefanti hanno buona memoria,Mondadori,1972,9788804102914,"Giallo, Thriller",FALSE
+A1208,Agatha Christie,Poirot e la salma,Mondadori,1946,-,"Giallo, Thriller",FALSE
+A1209,Agatha Christie,Delitto in cielo,Mondadori,1935,-,"Giallo, Thriller",FALSE
+A121,Franz Kafka,La metamorfosi,Einaudi,2014,9788806217434,"Narrativa, Classici",FALSE
+A1210,Agatha Christie,Carte in tavola,Mondadori,1936,-,"Giallo, Thriller",FALSE
+A1211,Agatha Christie,Polvere negli occhi,Mondadori,1953,-,"Giallo, Thriller",FALSE
+A1212,Agatha Christie,I primi casi di Poirot,Mondadori,1973,-,"Giallo, Thriller, Racconti",FALSE
+A1213,Agatha Christie,C'era una volta,Mondadori,1945,-,"Giallo, Thriller, Romanzo Storico",FALSE
+A1214,Agatha Christie,Poirot non sbaglia,Mondadori,1951,-,"Giallo, Thriller",FALSE
+A1215,Agatha Christie,I sette quadranti,Mondadori,1929,-,"Giallo, Thriller",FALSE
+A1216,Agatha Christie,Miss Marple al Bertram Hotel,Mondadori,1965,-,"Giallo, Thriller",FALSE
+A1217,Jean Giono,L'uomo che piantava gli alberi,Salani,1987,9788877820259,"Narrativa, Racconti",FALSE
+A1218,Enrico Grassani,Anche se voi vi credete assolti,Selecta,2016,9788899432119,"Saggistica, Filosofia, Attualità",FALSE
+A1219,Edgar Allan Poe,Racconti di fantascienza,Newton Compton,1995,9788879839358,"Fantasy, Racconti, Classici",FALSE
+A122,Charlotte Brontë,Jane Eyre,Einaudi,2017,9788806217410,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1220,George Orwell,La fattoria degli animali,Mondadori,1995,9788804353723,"Narrativa, Fantasy, Distopico, Classici",FALSE
+A1221,George Orwell,La fattoria degli animali,Mondadori,1995,9788804353723,"Narrativa, Fantasy, Distopico, Classici",FALSE
+A1222,Guy de Maupassant,Bel-Ami,Giunti,2011,9788809767850,"Narrativa, Classici",FALSE
+A1223,Immanuel Kant,Per la pace perpetua,Feltrinelli,1991,9788807820229,"Saggistica, Filosofia",FALSE
+A1224,Andrea Camilleri,Come la penso,Chiarelettere,2016,9788861908618,"Saggistica, Biografia, Testimonianze",FALSE
+A1225,Kahlil Gibran,Il profeta,Rizzoli,1993,9788817110198,"Poesia, Teatro, Filosofia",FALSE
+A1226,Daniel Pennac,Come un romanzo,Feltrinelli,1992,9788807812286,"Saggistica, Manuali",FALSE
+A1227,Denis Guedj,Il teorema del pappagallo,TEA,2003,9788850204793,"Narrativa, Saggistica, Scienze",FALSE
+A1228,Richard Bach,Il gabbiano Jonathan Livingston,Rizzoli,1970,9788817130011,"Narrativa, Ragazzi, Formazione",FALSE
+A1229,Umberto Eco,Il nome della rosa,Bompiani,1980,9788845207914,"Giallo, Thriller, Romanzo Storico",FALSE
+A123,Robert Louis Stevenson,Lo stano caso del Dr. Jekyll...,Einaudi,2015,9788806225644,"Fantasy, Horror, Gotico, Classici",FALSE
+A1230,"Barbero, Frugoni",Dizionario del Medioevo,Laterza,1994,9788842063742,"Saggistica, Storia, Manuali",FALSE
+A1231,Gabriel García Márquez,Dell'amore e di altri demoni,Mondadori,1998,9788804450941,"Realismo Magico, Storico, Amore",FALSE
+A1232,Stefano Benni,Comici spaventati guerrieri,Feltrinelli,1986,9788807811906,"Umorismo, Giallo, Satira",FALSE
+A1233,Edmond Rostand,Cirano de Bergerac,Rusconi,2009,9788818026139,"Poesia, Teatro",FALSE
+A1234,Alessandro Baricco,Oceano mare,Rizzoli,1993,9788846200020,"Romanzo, Filosofico, Surreale",FALSE
+A1235,Chiara Gamberale,Per 10 minuti,Feltrinelli,2013,9788807030710,"Romanzo, Psicologico, Rinascita",FALSE
+A1236,Tayari Jones,Un matrimonio americano,Neri Pozza,2018,9788854518216,"Drammatico, Sociale",FALSE
+A1237,Marco Presta,Accendimi,Einaudi,2017,9788806236205,"Umorismo, Surreale",FALSE
+A1238,Simone Cristicchi,Abbi cura di me,San Paolo,2019,9788821598289,"Biografia, Diari, Testimonianze",FALSE
+A1239,Federico Moccia,La ragazza di Roma Nord,SEM,2019,9788893902038,"Narrativa, Ragazzi, Adolescenza",FALSE
+A124,Ludovico Ariosto,Orlando Furioso I,Einaudi,2015,9788806227983,"Poesia, Teatro, Classici",FALSE
+A1240,Andrzej Sapkowski,Il guardiano degli innocenti,Editrice Nord,2016,9788842916567,Fantasy,FALSE
+A1241,Denis Guedj,Il teorema del pappagallo,TEA,2018,9788850251780,"Narrativa, Saggistica, Scienze",FALSE
+A1242,Michele Tranquilli,Una buona idea,Feltrinelli,2017,9788807032486,"Biografia, Testimonianze, Reportage",FALSE
+A1243,Jean-Louis Fournier,Dove andiamo papà?,Rizzoli,2009,9788817032339,"Biografia, Diari, Testimonianze",FALSE
+A1244,Federica Manzon,La nostalgia degli altri,Feltrinelli,2017,9788807032370,"Romanzo, Psicologico",FALSE
+A1564,Francesco Dimitri,Alice nel paese della Vaporità,TEA,2012,9788850228805,Fantasy,FALSE
+A1245,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Testimonianze, Ragazzi",FALSE
+A1576,John Green,Cercando Alaska,Rizzoli,2006,9788817076340,"Narrativa, Ragazzi, Adolescenza, Formazione",FALSE
+A1246,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Testimonianze, Ragazzi",FALSE
+A1247,Manuela Santoni,Le sorelle Brontë,BeccoGiallo,2018,9788833140131,"Fumetti, Graphic Novel, Biografia",FALSE
+A1248,Aldo Cazzullo,A riveder le stelle,Mondadori,2020,9788804732419,"Saggistica, Storia, Classici",FALSE
+A1249,David Grossman,Qualcuno con cui correre,Mondadori,2019,9788804680215,"Narrativa, Ragazzi, Formazione",FALSE
+A125,Ludovico Ariosto,Orlando Furioso II,Einaudi,2015,9788806227983,"Poesia, Teatro, Classici",FALSE
+A1250,Elsa Morante,Il mondo salvato dai ragazzini,Einaudi,2020,9788806244675,"Poesia, Teatro, Narrativa",FALSE
+A1251,Jules Verne,L'isola misteriosa,Marsilio,2020,9788829705221,"Narrativa, Ragazzi, Classici",FALSE
+A1252,"Vaccarino, Morosinotto",The Game,Mondadori,2018,9788804706243,"Narrativa, Ragazzi",FALSE
+A1253,Edgar Allan Poe,Racconti di investigazione,Morano,1996,9788880361250,"Giallo, Thriller, Racconti, Classici",FALSE
+A1254,Edgar Allan Poe,Le avventure di Gordon Pym,Mondadori,1992,9788804364958,"Narrativa, Fantasy, Horror, Classici",FALSE
+A1255,Andrea Camilleri,Un filo di fumo,Sellerio,1997,9788838913938,"Romanzo Storico, Narrativa",FALSE
+A1256,Kaho Nashiki,Un'estate con la Strega dell'Ovest,Feltrinelli,2017,9788807032431,"Narrativa, Ragazzi, Formazione",FALSE
+A1257-1,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Testimonianze, Ragazzi",FALSE
+A1257-10,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520150,"Narrativa, Biografia, Testimonianze, Ragazzi",FALSE
+A1257-11,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520150,"Narrativa, Biografia, Testimonianze, Ragazzi",FALSE
+A1257-12,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520150,"Narrativa, Biografia, Testimonianze, Ragazzi",FALSE
+A1257-13,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-14,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-15,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-16,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-17,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-18,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-19,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-2,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Memorie, Ragazzi",FALSE
+A1257-20,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-21,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-22,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-23,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-24,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1257-3,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Memorie, Ragazzi",FALSE
+A1257-4,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Memorie, Ragazzi",FALSE
+A1257-5,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Memorie, Ragazzi",FALSE
+A1257-6,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Memorie, Ragazzi",FALSE
+A1257-7,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Memorie, Ragazzi",FALSE
+A1257-8,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520150,"Narrativa, Biografia, Memorie, Ragazzi",FALSE
+A1257-9,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520150,"Narrativa, Biografia, Memorie, Ragazzi",FALSE
+A1258-1,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-10,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-11,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-12,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-13,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-14,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-15,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-16,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-17,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-18,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-19,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-2,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-20,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-21,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-22,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-23,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1258-3,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-4,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-5,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-6,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-7,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-8,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1258-9,Fabrizio Gatti,Bilal,Rizzoli,-,9788817025068,"Saggistica, Attualità",FALSE
+A1259-1,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-10,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-11,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-12,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-13,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-14,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-15,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-16,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-17,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-18,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-19,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-2,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-20,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-21,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-22,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-23,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-24,Christoph Hein,Tutto quello che non hai (20 cose...),Einaudi,2019,9788866565153,"Fumetti, Graphic Novel, Attualità",FALSE
+A1259-25,Takoua Ben Mohamed,Il mio migliore amico è fascista,Rizzoli,2021,9788817156947,"Ragazzi, Fantasy",FALSE
+A1259-26,Ransom Riggs,"Miss Peregrine, La casa dei ragazzi speciali",Rizzoli,2011,9788817053672,"Romanzo Storico, Avventura",FALSE
+A1259-27,Valerio Massimo Manfredi,"Aléxandros, il confine del mondo",Mondadori,2002,9788804509685,"Ragazzi, Classico, Avventura",FALSE
+A1259-28,Carlo Collodi,Le avventure di Pinocchio,Liberamente,2019,9788863114095,"Saggistica, Letteratura",FALSE
+A1259-29,Daniel Pennac,Come un romanzo,Feltrinelli,1993,9788807812549,"Ragazzi, Narrativa",FALSE
+A1259-3,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Narrativa, Biografia, Memorie",FALSE
+A1259-30,Giacomo Mazzariol,Mio fratello rincorre i dinosauri,Einaudi,2016,9788806229529,"Saggistica, Reportage, Attualità",FALSE
+A1259-31,Åsne Seierstad,Il libraio di Kabul,Rizzoli,2002,9788817107108,"Fantascienza, Racconti, Classico",FALSE
+A1259-32,Ray Bradbury,Cronache marziane,Mondadori,1989,9788804320092,"Giallo, Thriller, Romanzo Storico",FALSE
+A1259-33,Lindsey Davis,Le miniere dell'imperatore,Il Saggiatore,2010,9788842816361,"Giallo, Thriller",FALSE
+A1259-34,Andrea Camilleri,La pazienza del ragno,Sellerio,2004,9788838919670,"Ragazzi, Narrativa",FALSE
+A1259-35,Enrico Galiano,Eppure cadiamo felici,Garzanti,2017,9788811672329,"Ragazzi, Narrativa",FALSE
+A1259-4,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-5,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-6,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-7,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-8,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Narrativa",FALSE
+A1259-9,Giorgio Scianna,La regola dei pesci,Einaudi,2017,9788806236619,"Ragazzi, Classico",FALSE
+A126,Ferenc Molnar,I ragazzi della via Pàl,Einaudi,2016,9788806217458,"Narrativa, Giallo, Racconti",FALSE
+A1657,Giancarlo De Cataldo,Un fitto mistero,Contrasto,2017,9788869656828,"Ragazzi, Giallo, Thriller",FALSE
+A1260,Lemony Snicket,Quando l'hai vista l'ultima volta?,Salani,2013,9788867152635,"Ragazzi, Narrativa",FALSE
+A1261,Aidan Chambers,Quando eravamo in tre,Rizzoli,2019,9788817109864,"Ragazzi, Fantasy",FALSE
+A1640,Rick Riordan,Percy Jackson e gli dei dell'Olimpo: Le storie segrete,Mondadori,2013,9788804631622,"Narrativa, Romanzo",FALSE
+A1262,Michela Marzano,Idda,Einaudi,2019,9788806242305,"Giallo, Thriller, Romanzo Storico",FALSE
+A1633,Carlo A. Martigli,L'apprendista di Michelangelo,Mondadori,2017,9788804680873,"Narrativa, Romanzo",FALSE
+A1635,Francesco D'Isa,La stanza di Therese,Tunué,2017,9788867902347,"Ragazzi, Fantascienza",FALSE
+A1263,Luigi Ballerini,Il mistero del bosco,Edizioni Lapis,2016,9788878744577,"Ragazzi, Narrativa",FALSE
+A1264,Jay Asher,Tredici,Mondadori,2019,9788804705307,"Ragazzi, Fantasy",FALSE
+A1641,Rick Riordan,Percy Jackson racconta gli Dei Greci,Mondadori,2014,9788804646541,"Ragazzi, Narrativa, Rosa",FALSE
+A1687,Siobhan Vivian,"Noi, gli unici al mondo",Newton Compton,2017,9788822700889,"Ragazzi, Giallo, Thriller",FALSE
+A1265,Lemony Snicket,Chi sarà mai a quest'ora?,Salani,2013,9788862568608,"Ragazzi, Narrativa",FALSE
+A1636,Gabriele Caruso,Un sogno che fa male,Mondadori,2019,9788804707936,"Ragazzi, Giallo, Thriller",FALSE
+A1266,Robin Stevens,Omicidi per signorine,Mondadori,2014,9788804659909,"Ragazzi, Narrativa, Rosa",FALSE
+A1267,Morgane Bicail,Phoneplay,Newton Compton,2017,9788822711670,"Ragazzi, Romanzo Storico",FALSE
+A1632,Paul Dowswell,L'ultima alba di guerra,Feltrinelli,-,9788807921678,"Ragazzi, Fantascienza, Distopico",FALSE
+A1629,Veronica Roth,Divergent,De Agostini,2014,9788841896891,"Ragazzi, Fantasy",FALSE
+A1268,Silvana De Mari,L'ultimo elfo,Salani,-,9788862561951,"Narrativa, Fantasy",FALSE
+A1269,Genki Kawamura,Se i gatti scomparissero dal mondo,Einaudi,2019,9788806240301,"Ragazzi, Romanzo Storico",FALSE
+A1555,Karl Bruckner,Il gran sole di Hiroshima,Giunti,2011,9788809810303,"Narrativa, Classico, Filosofia",FALSE
+A127,Voltaire,Candido,Einaudi,2014,9788806217465,"Racconto filosofico umoristico, contro l'ottimismo",FALSE
+A1270,Tommaso Pincio,Hotel a zero stelle,Laterza,2011,9788842095903,Saggistica,FALSE
+A1684,Geoff Rodkey,I viaggi di Egg: In fuga da Mortaria,Giunti,2012,9788809772650,"Ragazzi, Narrativa",FALSE
+A1271,Paolo Mieli,Lampi sulla storia,Rizzoli,2018,9788817105262,"Saggistica, Storia",FALSE
+A1600,Roald Dahl,Il GGG,Salani,2014,9788862560411,"Ragazzi, Fantasy",FALSE
+A1272,Michele Raniero,Extra Unione e la fortezza di Nugari,Il Ciliegio,2014,9788867711109,Fantasy,FALSE
+A1639,Irene Adler,"Sherlock, Lupin e io: Il trio della dama nera",Piemme,2011,9788856617305,"Giallo, Thriller, Ragazzi",FALSE
+A1273,Orazio Labbate,Suttaterra,Tunué,2017,9788867902408,"Fantasy, Gotico, Narrativa",FALSE
+A1631,Lauren Oliver,Il viaggio di Lili e Po,Piemme,2011,9788868361135,"Ragazzi, Fantasy",FALSE
+A1644,Gabbie Hanna,Adultolescence,Salani,2018,9788893674690,"Poesia, Teatro",FALSE
+A1274,Chris Colfer,La terra delle storie - L'avvertimento dei Grimm,Rizzoli,2014,9788817075254,"Ragazzi, Fantasy, Fiabe",FALSE
+A1638,Concita De Gregorio,Chi sono io?,Contrasto,2011,9788869653131,"Saggistica, Biografia, Testimonianze",FALSE
+A1275,John Flanagan,La terra dei ghiacci - L'apprendista del ranger,Mondadori,2005,9788804550137,"Romanzo Storico, Ragazzi, Narrativa",FALSE
+A1276,Enti Autori,Funzioni e obiettivi,Banca d'Italia,2019,-,"Saggistica, Scienze",FALSE
+A1643,Roald Dahl,Il grande ascensore di cristallo,Salani,1989,9788877820791,"Ragazzi, Fantasy",FALSE
+A1645,Filelfo,L'assemblea degli animali,Einaudi,2020,9788806245948,"Narrativa, Fiabe",FALSE
+A1277,Cornelia Funke,Cuore d'inchiostro,Mondadori,2003,9788804537757,"Ragazzi, Fantasy",FALSE
+A1278,Barbara Biscotti,Giulio Cesare un tirannicidio imperfetto,Corriere della Sera,2020,-,"Saggistica, Storia",FALSE
+A1651,Michael Morpurgo,Il ragazzo che non uccise Hitler,Piemme,2015,9788868362620,"Romanzo Storico, Ragazzi, Guerra",FALSE
+A1558,Stefania Podda,Marie Curie,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1279,Geronimo Stilton,Cronache del Regno della fantasia - La porta incantata,Piemme,2015,9788856649719,"Ragazzi, Fantasy",FALSE
+A1637,Jules Verne,Viaggio al centro della terra,Einaudi,2014,9788883376337,"Narrativa, Ragazzi, Classici",FALSE
+A128,Rita Franchini Ponti,La luna nel pozzo,Grafiche Ortolan,2009,-,"Narrativa, Locale",FALSE
+A1634,Lello Gurrado,Fulmine,Marcos y Marcos,2014,9788871686950,"Ragazzi, Formazione",FALSE
+A1280,Estelle Laure,La notte che ho dipinto il cielo,De Agostini,2015,9788851141386,"Narrativa, Ragazzi, Adolescenza",FALSE
+A1281,Emiliano Gucci,Con tutto il bene che posso,Giunti,2020,9788809885424,"Romanzo, Famiglia, Adolescenza",FALSE
+A1670,Carrie Firestone,Prima che te ne vai,Il Castoro,2017,9788869661760,"Narrativa, Ragazzi, Adolescenza",FALSE
+A1282,D. Di Pietrantonio,L'Arminuta,Einaudi,2017,9788806232108,"Romanzo, Formazione, Famiglia",FALSE
+A1663,Jérome Colin,Campo di battaglia,Einaudi,2018,9788806240098,"Narrativa, Ragazzi, Adolescenza",FALSE
+A1688,Katie Khan,Regalami una stella,Newton Compton,2017,9788822700872,"Fantascienza, Sentimentale, Distopico",FALSE
+A1682,"Barbato, Bussola, Pilliu",Bacteria,Star Comics,2021,9788822623866,"Fumetti, Graphic Novel, Fantasy, Distopico",FALSE
+A1284,Tommaso Fusari,Quello che non siamo diventati,Mondadori,2019,9788804707998,"Narrativa, Ragazzi, Formazione",FALSE
+A1648,"Vernay, Alibert, Lapière",Rose,Tunué,2020,9788867903725,"Fumetti, Graphic Novel",FALSE
+A1285,Carol Swain,Quello che voleva essere,Tunué,2019,9788867903429,"Fumetti, Graphic Novel",FALSE
+A1285-1,Albert Camus,La peste,Salone del Libro,-,-,"Narrativa, Classici",FALSE
+A1285-2,Albert Camus,La peste,Salone del Libro,-,-,"Narrativa, Classici",FALSE
+A1285-3,Albert Camus,La peste,Salone del Libro,-,-,"Narrativa, Classici",FALSE
+A1286,Philippe Nessmann,Missione Marte,Electa,2017,9788891811868,"Saggistica, Scienze, Ragazzi",FALSE
+A1287,Emanuele Melilli,Maria Stuarda,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1288,Federica Meloni,Lucrezia Borgia,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1289,Gabriella Seveso,Maria Montessori,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A129,"Dobrilla, Fuso, Oss",Medicina e scienza,Curcu & Genovese,2013,9788896737750,"Saggistica, Scienze",FALSE
+A1603,Gabriel García Márquez,Notizia di un sequestro,Mondadori,1998,9788804450703,"Saggistica, Biografia, Reportage",FALSE
+A1290,Stefania Podda,Marie Curie,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1291,Barbara Biscotti,Cleopatra,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1292,Filippo Danovi,Artemisia Gentileschi,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1293,Alberto Fabris,Elisabetta I,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1294,Gian Luca D'Errico,Madame de Pompadour,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1295,Alessandra Consolaro,Indira Gandhi,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1296,Emanuele Melilli,Anna Bolena,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1297,Stefania De Nardis,Caterina II di Russia,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1298,Loredana Garlati,Elisabetta d'Austria,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1299,Denis Forasacco,Vittoria,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A130,Alexandre Dumas,I tre moschettieri,Einaudi,2017,9788806216260,"Narrativa, Romanzo Storico, Classici",FALSE
+A1602,Gabriel García Márquez,L’autunno del patriarca,Mondadori,2002,9788804508601,"Narrativa, Classici",FALSE
+A1300,Filippo Danovi,Maria Antonietta,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1301,Barbara Biscotti,Giovanna D'Arco,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1302,Luca Mori,Saffo,Corriere della Sera,2020,-,"Biografia, Poesia, Teatro",FALSE
+A1303,Alberto Fabris,Caterina de' Medici,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1304,Andrea Dusio,Paolina Bonaparte,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE
+A1305,Adrian Besley,Billie Eilish. La biografia,Salani,2020,9788893677943,"Biografia, Testimonianze",FALSE
+A1306,Carla Maria Russo,Il cavaliere del giglio,Piemme,2007,9788868366476,"Romanzo Storico, Narrativa",FALSE
+A1307,Ellis Peters,La vergine nel ghiaccio,TEA,1993,9788878193130,"Giallo, Thriller, Romanzo Storico",FALSE
+A1308,Ian Herbert,Quiet Genius - Bob Paisley,Bloomsbury Sport,2017,9781472937391,"Lingue Straniere, Biografia",FALSE
+A1309,Andrew Roberts,Napoleon the Great,Penguin Books,2014,9780141032016,"Lingue Straniere, Biografia",FALSE
+A131,Edgar Lee Masters,Antologia di Spoon River,Einaudi,2014,9788806219215,"Poesia, Teatro",FALSE
+A1659,Roberto Saviano,Gomorra,Mondadori,2006,9788804554501,"Saggistica, Attualità, Reportage",FALSE
+A1310,Disney,Il commissario Topalbano,Giunti,2019,9788852233890,"Fumetti, Graphic Novel",FALSE
+A1311-1,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-10,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-11,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-12,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-13,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-14,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-15,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-16,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-17,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-18,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-19,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-2,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-20,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-21,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-22,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-23,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-24,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-25,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-3,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-4,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-5,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-6,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-7,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-8,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1311-9,Elsa Morante,L'isola di Arturo,Salone del Libro,2022,-,"Narrativa, Ragazzi, Formazione, Classici",FALSE
+A1312,Lucinda Riley,La sorella perduta,Giunti,2021,9788809845350,"Saga familiare, Romanzo storico, Rosa",FALSE
+A1313,Gisella Laterza,La Divina Commedia,Corriere della Sera,2022,9788809951754,"Ragazzi, Classici",FALSE
+A1314,G. Keison Bevilacqua,Troppo facile amarti in vacanza,Bao Publishing,2021,9788832735703,"Fumetti, Graphic Novel",FALSE
+A1315,Pier Emilio Castoldi,Voghera nebbie mortali,Fratelli Frilli,2016,9788869431470,"Giallo, Thriller",FALSE
+A1316,Ellis Peters,Il sepolcro oltre le dune,TEA,2001,9788878189034,"Giallo, Thriller, Romanzo Storico",FALSE
+A1317,Paula Hawkins,Dentro l'acqua,Piemme,2017,9788856660142,"Giallo, Thriller",FALSE
+A1318,Mario Rigoni Stern,Stagioni,Einaudi,2021,9788806250355,"Narrativa, Natura, Guerra",FALSE
+A1319,"Ceci, Puleo",Possiamo essere tutto,Tunué,2022,9788867904396,"Fumetti, Graphic Novel",FALSE
+A132,Fabio Bonacina,Giovanni Paolo II viaggi di speranza,Vaccari,2006,9788885335837,"Saggistica, Religione",FALSE
+A1573,Gabriel García Márquez,Cent’anni di solitudine,Mondadori,1996,9788804415436,"Narrativa, Romanzo, Classico",FALSE
+A1320,P. Boccalario,L'isola del tesoro (Stevenson),Corriere della Sera,2022,-,"Ragazzi, Avventura, Classico",FALSE
+A1321,Sarah Rossi,Racconti di E. A. Poe,Corriere della Sera,2022,-,"Ragazzi, Giallo, Thriller",FALSE
+A1322,Roberto Piumini,I Promessi Sposi (Manzoni),Corriere della Sera,2022,-,"Ragazzi, Classico",FALSE
+A1323,David Grossman,Vedi alla voce: amore,Mondadori,2014,9788804644552,"Narrativa, Romanzo Storico",FALSE
+A1324,Banana Yoshimoto,Chie-chan e io,Feltrinelli,2010,9788807722189,"Narrativa, Romanzo",FALSE
+A1325,Joseph Roth,La Cripta dei Cappuccini,Newton Compton,2010,9788854117075,"Romanzo Storico, Classico",FALSE
+A1326,Siobhan Dowd,Il mistero del London Eye,Uovonero,2011,9788896918074,"Ragazzi, Giallo, Thriller",FALSE
+A1327,Colum McCann,Questo bacio vada al mondo intero,Rizzoli,2017,9788817094016,"Narrativa, Romanzo",FALSE
+A1328,Albert Einstein,Il significato della relatività...,Newton Compton,2015,9788854181311,"Saggistica, Scienze",FALSE
+A133,Nicolas Barreau,Gli ingredienti segreti dell’amore,Feltrinelli,2012,9788807019184,"Narrativa, Rosa",FALSE
+A1339,Alicia Giménez Bartlett,Un Natale di pietra,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1647,Luigi Pirandello,"Uno, nessuno e centomila",Einaudi,2014,9788806219277,"Narrativa, Classico",FALSE
+A134,F. Scott Fitzgerald,Gli ultimi fuochi,Mondadori,1974,9788804117861,"Narrativa, Romanzo, Classico",FALSE
+A1340,Andrea Camilleri,Capodanno,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1341,Maurizio De Giovanni,Febbre,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1342,Francesco Recami,Ottobre in giallo a Milano,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1343,Marcello Fois,Ti ho fatto male,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1344,Alessandro Robecchi,Il tavolo,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1345,Diego De Silva,Patrocinio gratuito,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1346,Esmahan Aykol,Rubacuori a Capodanno,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1347,Santo Piazzese,Come fu che cambiai marca di Whisky,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1348,Giampaolo Simi,Il comandante Oberdan,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1349,Maurizio De Giovanni,Un giorno di settembre a Natale,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1608,F. Scott Fitzgerald,Il grande Gatzby,Einaudi,2014,9788806217489,"Narrativa, Romanzo, Classico",FALSE
+A135,Werner Keller,La civiltà etrusca,Euroclub,1979,-,"Saggistica, Storia",FALSE
+A1350,Carlo Lucarelli,A girl like you,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE
+A1351-1,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-10,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-11,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-12,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-13,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,9788807881736,"Romanzo Storico, Narrativa",FALSE
+A1351-14,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,9788807881736,"Romanzo Storico, Narrativa",FALSE
+A1351-15,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,9788807881736,"Romanzo Storico, Narrativa",FALSE
+A1351-16,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,9788807881736,"Romanzo Storico, Narrativa",FALSE
+A1351-2,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-3,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-4,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-5,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-6,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-7,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-8,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1351-9,Antonio Tabucchi,Sostiene Pereira,Salone del Libro,2023,-,"Romanzo Storico, Narrativa",FALSE
+A1352,Alda Merini,L'altra verità,Rizzoli,1997,9788817112232,"Biografia, Memorie",FALSE
+A1353,Giuseppe Ungaretti,Vita d'un uomo,Mondadori,2009,9788804583494,Poesia,FALSE
+A1354,David Grossman,Caduto fuori dal tempo,Mondadori,2011,9788804624464,"Narrativa, Romanzo",FALSE
+A1355,Cesare Pavese,La luna e i falò,Einaudi,1950,9788806219353,"Narrativa, Classico",FALSE
+A1356,Alessandro D'Avenia,L'arte di essere fragili,Mondadori,2016,9788804683935,"Saggistica, Letteratura",FALSE
+A1357,Alessandro D'Avenia,"Bianca come il latte, rossa...",Mondadori,2010,9788804633534,"Ragazzi, Narrativa",FALSE
+A1358,Alessandro D'Avenia,L'appello,Mondadori,2020,9788804734248,"Ragazzi, Narrativa",FALSE
+A1359,Cristina Obber,Era solo un selfie,Piemme,2022,9788856683836,"Ragazzi, Attualità",FALSE
+A1359-1,Cristina Obber,Era solo un selfie,Piemme,2022,9788856683836,"Ragazzi, Attualità",FALSE
+A1652,Andrea Castelli,"Scusi, il teatro?",Curcu & Genovese,2010,9788896737156,"Biografia, Memorie, Teatro",FALSE
+A136,Ernest Hemingway,I racconti di Nick Adams,Mondadori,1976,9788804128503,"Narrativa, Racconti, Classico",FALSE
+A1360,Virginie Grimaldi,Via dei colibrì,Fabbri Editori,2021,9788891585867,"Narrativa, Romanzo",FALSE
+A1361,Madeline Miller,Circe,Marsilio,2018,9788831784961,"Narrativa, Fantasy, Mitologia",FALSE
+A1362,Luigi Garlando,"Vai all'inferno, Dante!",Rizzoli,2020,9788817144982,"Ragazzi, Narrativa",FALSE
+A1363,Henning Mankell,L'ultimo segreto del Fuoco,Salani,2013,9788862568288,"Ragazzi, Narrativa",FALSE
+A1364,Arthur Schnitzler,Doppio sogno,La Repubblica,2011,9788889145325,"Narrativa, Classico",FALSE
+A1365,Derrien & Torregrossa,1984 (Graphic novel),Star Comics,2022,9788822628465,"Fumetti, Graphic Novel, Distopico",FALSE
+A1366,Giuseppe Pederiali,I ragazzi di Villa Emma,Mondadori,1989,9788842401673,"Ragazzi, Romanzo Storico",FALSE
+A1367,Edwin A. Abbott,Flatlandia,Rizzoli,2021,9788845906885,"Fantascienza, Classico",FALSE
+A1368,Michael Zadoorian,Beautiful Music,Marcos y Marcos,2018,9788871688175,"Narrativa, Romanzo",FALSE
+A1369,John Boyne,La sfida,Rizzoli,2009,9788817054426,"Ragazzi, Romanzo",FALSE
+A1642,Fëdor Dostoevskij,,Einaudi,2014,9788806217472,"Narrativa, Classico",FALSE
+A137,Dino Buzzati,Il deserto dei tartari,Mondadori,1974,9788804096925,"Narrativa, Classico",FALSE
+A1370,George Orwell,1984,Rizzoli,2021,9788804668239,"Narrativa, Classico, Distopico",FALSE
+A1689,Philip K. Dick,"Ubik, io sono vivo voi siete morti",Fanucci,1969,9788834741305,"Fantascienza, Classico",FALSE
+A1686,Elle Cosimano,Stagioni del caos,Rizzoli,2021,9788817154943,"Fantasy, Young Adult",FALSE
+A1371,AA. VV.,Cuori connessi,Il Borgo Bologna,2022,-,"Ragazzi, Attualità, Racconti",FALSE
+A1372,Federico Pace,La più bella estate,Einaudi,2022,9788806251292,"Narrativa, Viaggi",TRUE
+A1372,"Pif, Marco Lillo","Io posso, due donne sole...",Feltrinelli,2021,9788807492970,"Saggistica, Attualità",TRUE
+A1373,Seanan McGuire,Una porta per ogni cuore,Mondadori,2022,9788804746098,"Fantasy, Young Adult",FALSE
+A1658,Rocco Tanica,Non siamo mai stati sulla Terra,Il Saggiatore,2022,9788842831517,"Saggistica, Tecnologia",FALSE
+A1669,Bianca Pitzorno,La bambina con il falcone,Mondadori,1982,9788842401147,"Ragazzi, Romanzo Storico",FALSE
+A1374,Robert Louis Stevenson,L'isola del tesoro,Panorama,1991,-,"Narrativa, Avventura, Classico",FALSE
+A1661,Molière,Commedie,Mondadori,1960,9788804603384,"Poesia, Teatro, Classico",FALSE
+A1375,Erin Doom,Fabbricante di lacrime,Salani,2021,9788893679908,"Narrativa, Rosa, Young Adult",FALSE
+A1376,Pier Paolo Pasolini,Ragazzi di vita,Garzanti,1962,9788811683455,"Narrativa, Classico",FALSE
+A1671,Dan Brown,Inferno,Mondadori,2013,9788804633800,"Giallo, Thriller",FALSE
+A1377,Silvio Pellico,Le mie prigioni,SEI,1955,-,"Biografia, Memorie, Classico",FALSE
+A1690,G. Pietropolli Charmet,L'insostenibile bisogno di ammirazione,Laterza,2018,9788858131373,"Saggistica, Psicologia",FALSE
+A1685,Boris Pasternak,Il dottor Zivago,Feltrinelli,1958,9788807883716,"Romanzo Storico, Classico",FALSE
+A1378,Marie-Aude Murail,Niente cravatta (Sauveur & figlio),Giunti,2017,9788809835775,"Ragazzi, Psicologia, Famiglia",FALSE
+A1379,Linda Traversi,La panchina delle cose difficili,Einaudi,2022,9788866567300,"Ragazzi, Amicizia, Inclusione",TRUE
+A1379,Espérance Hakuzwimana,Tutta intera,Einaudi,2022,9788806251629,"Narrativa, Romanzo",TRUE
+A138,"F. Segù, P. Loaldi",Frammenti,UES,2012,9788897813025,"Narrativa, Racconti",TRUE
+A138,Vivian Lamarque,Poesie 1972-2002,Mondadori,2002,9788804510574,Poesia,TRUE
+A1380,Sahar Mustafah,La tua bellezza,Marcos y Marcos,2020,9788871689943,"Narrativa, Romanzo",FALSE
+A1381,Giulio Ferroni,Ariosto,Corriere della Sera,2016,-,"Saggistica, Letteratura",FALSE
+A1382,Nicolai Lilin,La guerra e l'odio,Piemme,2023,9788856686158,"Saggistica, Attualità",FALSE
+A1383,Valerio Massimo Manfredi,Lo scudo di Talos,Mondadori,1988,9788804473771,"Romanzo Storico, Avventura",FALSE
+A1384,Robert M. Pirsig,Lo Zen e l'arte della manutenzione...,Adelphi,1981,9788845904645,"Narrativa, Filosofia, Classico",FALSE
+A1385,Cesare Pavese,La luna e i falò,Einaudi,2020,9788806245932,"Narrativa, Classico",FALSE
+A1386,Randa Ghazy,Sognando Palestina,Fabbri Editori,2002,9788817128639,"Ragazzi, Attualità",FALSE
+A1387,Jay Elliot,Steve Jobs. L'uomo che ha inventato...,Hoepli,2015,9788820364969,"Biografia, Memorie",FALSE
+A1388,J. K. Rowling,Harry Potter e la pietra filosofale,Salani,1997,9788877827028,"Ragazzi, Fantasy",FALSE
+A1389,Rita Levi Montalcini,L'asso nella manica a brandelli,Baldini+Castoldi,1998,9788880894291,"Saggistica, Scienze",FALSE
+A139,Norman T. Di Giovanni,Novecento,Longanesi,1977,9788830400329,Romanzo Storico,FALSE
+A1683,Licia Troisi,Cronache del mondo emerso,Mondadori,2004,9788804532729,"Ragazzi, Fantasy",FALSE
+A1390,Umberto Veronesi,Il diritto di morire,Mondadori,2005,9788804548684,"Saggistica, Attualità, Bioetica",FALSE
+A1391,"Giordana, Fava, Zapelli",I cento passi,Feltrinelli,2014,9788807883983,"Teatro, Cinema, Attualità",FALSE
+A1392,Paolo Repossi,Il rito del filare,Ediciclo,2023,9788865494430,"Saggistica, Natura",FALSE
+A1393,Jean-Pierre Vernant,C'era una volta Ulisse,Einaudi,2006,9788806179046,"Ragazzi, Mitologia, Classico",FALSE
+A1394,AA. VV.,Parole ostili,Laterza,2018,9788858130833,"Ragazzi, Attualità",FALSE
+A1395,Marco Malvaldi,Oscura e celeste,Giunti,2023,9788809902644,"Giallo, Thriller, Romanzo Storico",FALSE
+A1396,Andrea Camilleri,Il boccone del povero,La Repubblica,2021,-,"Giallo, Thriller",FALSE
+A1397,Andrea Camilleri,Il duello è contagioso,La Repubblica,2021,-,"Giallo, Thriller",FALSE
+A1398,Stephen King,Carrie,Corriere della Sera,1994,9788845245847,"Horror, Thriller",FALSE
+A1399,Tom Clancy,La grande fuga dell'Ottobre Rosso,Corriere della Sera,1997,9788817114250,"Giallo, Thriller",FALSE
+A1655,Viviana Mazza,Il bambino Nelson Mandela,Mondadori,2014,9788804637745,"Ragazzi, Biografia, Memorie",FALSE
+A140,G. C. Giacobbe,Come diventare un Buddha...,Ponte alle grazie,2005,9788879287555,"Saggistica, Psicologia, Umorismo",FALSE
+A1400,Emilio Salgari,Sandokan alla riscossa,Rizzoli,2011,9788817047916,"Ragazzi, Avventura, Classico",FALSE
+A1401,Elena Ferrante,Storia del nuovo cognome,Edizioni E/O,-,9788866320325,"Narrativa, Romanzo",FALSE
+A1402,Isabel Allende,Paula,Feltrinelli,1994,9788807813638,"Narrativa, Biografia, Memorie",FALSE
+A1403,Andrea Franzoso,Ero un bullo. La vera storia di...,De Agostini,2022,9788851198533,"Ragazzi, Biografia, Attualità",FALSE
+A1404,William Golding,Il Signore delle Mosche,Mondadori,2017,9788804675718,"Narrativa, Classico, Distopico",FALSE
+A1405,Martha Grimes,Shakespeare in nero,Mondadori,1984,9788804247544,"Giallo, Thriller",FALSE
+A1406,Jules Verne,Ventimila leghe sotto i mari,Rizzoli,2016,9788817086618,"Ragazzi, Avventura, Classico",FALSE
+A1407,Kazuo Ishiguro,Non lasciarmi,Einaudi,2016,9788806229567,"Narrativa, Fantascienza, Distopico",FALSE
+A1408,"P. Vineis, L. Savarino",La salute del mondo,Feltrinelli,2021,9788807173893,"Saggistica, Attualità, Ecologia",FALSE
+A1409,Roberto Cingolani,L'altra specie,Il Mulino,2019,9788815283620,"Saggistica, Tecnologia",FALSE
+A141,Nicolas Barreau,Con te fino alla fine del mondo,Feltrinelli,2008,9788807880575,"Narrativa, Rosa",TRUE
+A141,Victor Hugo,Notre-Dame de Paris,Einaudi,1972,9788806033873,"Narrativa, Classico, Romanzo Storico",TRUE
+A1410,Jean-Paul Sartre,Nausea,Penguin Books,1965,9780141185494,"Narrativa, Classico, Filosofia",FALSE
+A1411,Paolo Occhipinti,D'amore e di guerra,Cairo,2012,9788860524453,"Romanzo Storico, Rosa",FALSE
+A1412,Andrew Norriss,Da quando ho incontrato Jessica,Il Castoro,2016,9788869660602,"Ragazzi, Narrativa",FALSE
+A1413,Pietro Grasso,Paolo Borsellino parla ai ragazzi,Feltrinelli,2021,9788807895085,"Ragazzi, Attualità",FALSE
+A1414,Sebastiano Maffettone,Il quarto shock,Luiss University Press,2020,9788861055741,"Saggistica, Attualità",FALSE
+A1415,Michele Ainis,Il regno dell'Uroboro,La nave di Teseo,2018,9788893444650,"Saggistica, Sociologia",FALSE
+A1416,Anna Lavatelli,Erano tutti figli miei,Notes Edizioni,2019,9788897007783,"Ragazzi, Romanzo Storico",FALSE
+A1417,Charles M. Schulz,Tutto Peanuts anni 1950-1951,Hachette,2022,9788869136190,"Fumetti, Graphic Novel",FALSE
+A1418,Oscar Wilde,The importance of being Earnest,Lucarini,1986,9788870331294,"Teatro, Classico",FALSE
+A1419,Jostein Gaarder,Il mondo di Sofia,Euroclub,1997,9788850208226,"Narrativa, Filosofia, Ragazzi",FALSE
+A1665,Kader Abdolah,La casa della moschea,Iperborea,2011,9788870911663,"Narrativa, Romanzo",FALSE
+A142,Mark Haddon,Boom!,Einaudi,2009,9788806199340,"Ragazzi, Narrativa",FALSE
+A1420,George R.R. Martin,Il Trono di Spade - Il grande inverno,Mondadori,2016,9788804664873,"Fantasy, Epico, Avventura ",FALSE
+A1421,Joe Dever,Ombre sulla sabbia (Lupo Solitario),Edizioni EL,2000,9788847705882,"Ragazzi, Fantasy, Librogame",FALSE
+A1422,Marie-Aude Murail,Lupa bianca lupo nero,Giunti,2019,9788809877478,"Ragazzi, Narrativa",FALSE
+A1423,Claudio Moretti,Storie di grandi campioni,Newton Compton,2019,9788822735743,"Ragazzi, Sport, Biografia",FALSE
+A1424,Mattia Bertoldi,Il coraggio di Lilly,Tre60,2022,9788867027117,"Romanzo Storico, Biografia",FALSE
+A1425,Fabio Geda,L'estate alla fine del secolo,Baldini+Castoldi,2011,9788866200689,"Narrativa, Romanzo",FALSE
+A1426,Valerio Massimo Manfredi,Il mio nome è nessuno - Il giuramento,Mondadori,2017,9788804677705,"Romanzo Storico, Mitologia",FALSE
+A1427,Harper Lee,Il buio oltre la siepe,Feltrinelli,2013,9788807881552,"Narrativa, Classico",FALSE
+A1428,Primo Levi,I sommersi e i salvati,Einaudi,2019,9788828608621,"Saggistica, Memorie, Storia",FALSE
+A1429,Fred Uhlman,L'amico ritrovato,Feltrinelli,2013,9788807880708,"Romanzo Storico, Classico",FALSE
+A1673,John Grisham,Il broker,Mondadori,2005,9788804537351,"Giallo, Thriller",FALSE
+A143,Cinzia Montagna,Chi ha paura di Caterina?,Primula,2016,9788894101157,Romanzo Storico,FALSE
+A1430,Cesare Pavese,La casa in collina,Einaudi,2020,9788806245925,"Narrativa, Classico, Romanzo Storico",FALSE
+A1431,Francesco D'Adamo,Storia di Iqbal,Edizioni EL,2001,9788847708012,"Ragazzi, Attualità",FALSE
+A1432,Voltaire,Candido o l'ottimismo,Feltrinelli,2019,9788807903339,"Narrativa, Classico, Filosofia",FALSE
+A1433,Giovanni Verga,Storia di una capinera,Rizzoli,2010,9788817028908,"Narrativa, Classico",FALSE
+A1434,Emilio Lussu,Un anno sull'altopiano,Einaudi,2000,9788806219162,"Romanzo Storico, Classico, Memorie",FALSE
+A1435,Jack London,Il richiamo della foresta,Biancoenero,2017,9788899010415,"Audiolibro, Avventura, Classico",FALSE
+A1436,Primo Levi,I sommersi e i salvati,Emons,-,9788869863898,"Audiolibro, Saggistica, Storia",FALSE
+A1437,Jostein Gaarder,Il mondo di Sofia,Longanesi,2009,9788830424524,"Audiolibro, Filosofia, Ragazzi",FALSE
+A1438,Massimo Gramellini,Fai bei sogni,Salani,2012,9788862568685,"Audiolibro, Narrativa",FALSE
+A1439,André Aciman,Chiamami col tuo nome,Salani,2007,9788869862211,"Audiolibro, Narrativa, Rosa",FALSE
+A144,Andrea De Carlo,Giro di vento,Bompiani,2004,9788845233067,"Narrativa, Romanzo",TRUE
+A144,Edoardo Nesi,Storia della mia gente,Bompiani,2011,9788845267864,"Saggistica, Attualità",TRUE
+A1440,AA. VV.,Le mille e una notte,Emons,2024,9788869866899,"Audiolibro, Classico",FALSE
+A1441,Jane Austen,Persuasione,Emons,2022,9788869867254,"Audiolibro, Classico, Rosa",FALSE
+A1442,Giuseppe Tomasi di Lampedusa,Il Gattopardo,Emons,2022,9788869867056,"Audiolibro, Storico, Classico",FALSE
+A1443,Fëdor Dostoevskij,Delitto e castigo,Emons,2018,9788869863485,"Audiolibro, Classico",FALSE
+A1444,J. M. Barrie,Peter Pan,Emons,2021,9788869866387,"Audiolibro, Ragazzi, Fantasy",FALSE
+A1445,Hermann Hesse,Siddharta,Emons,2021,9788869866363,"Audiolibro, Classico, Filosofia",FALSE
+A1446,F. Scott Fitzgerald,Il grande Gatsby,Emons,2011,9788869860361,"Audiolibro, Classico",FALSE
+A1447,Bram Stoker,Dracula,Emons,2022,9788869867070,"Audiolibro, Horror, Classico",FALSE
+A1448,Jane Austen,Orgoglio e pregiudizio,Emons,2009,9788869860163,"Audiolibro, Classico, Rosa",FALSE
+A1449,Virginia Woolf,Al faro,Emons,2014,9788869861627,"Audiolibro, Classico",FALSE
+A145,Annette Wieviorka,Auschwitz spiegato a mia figlia,Einaudi,1999,9788806151706,"Ragazzi, Storia",TRUE
+A145,Antonio Forcellino,Raffaello. Una vita felice,Laterza,2006,9788842078739,"Saggistica, Arte, Biografia",TRUE
+A1450,Lev Tolstoj,Anna Karenina,Emons,2021,9788869867590,"Audiolibro, Classico",FALSE
+A1451,Micol Sarfatti,Margherita Sarfatti,Giulio Perrone,2023,9788860046642,"Biografia, Memorie, Storia",FALSE
+A1452,Ciro Auriemma,Il vento ci porterà,Piemme,2021,9788856679779,"Narrativa, Rosa",FALSE
+A1453,Laura Imai Messina,Tokyo tutto l'anno,Einaudi,2020,9788806244217,"Narrativa, Viaggi",FALSE
+A1454,Mary Renault,Giochi funerari,Mondadori,2023,9788804756859,Romanzo Storico,FALSE
+A1455,Sylvia Plath,La campana di vetro,Mondadori,2023,9788804765363,"Narrativa, Classico",FALSE
+A1456,Tadeusz Borowski,"Da noi, ad Auschwitz",Mondadori,2023,9788804772866,"Romanzo Storico, Memorie",FALSE
+A1457,Franco Forte,Gengis Khan,Mondadori,2023,9788804765080,Romanzo Storico,FALSE
+A1458,Giovanni Nucci,Il mare color del vino,Salani,2021,9788831003667,"Ragazzi, Mitologia",FALSE
+A1459,Francesco D'Adamo,La traversata,Il Castoro,2021,9788869666872,"Ragazzi, Attualità",FALSE
+A1604,Gabriel García Márquez,Memoria delle mie puttane tristi,Mondadori,2005,8022264745017,"Narrativa, Romanzo",FALSE
+A146,Antonio Tabucchi,Il piccolo naviglio,Feltrinelli,2011,9788807018633,"Narrativa, Romanzo",FALSE
+A1460,Luigi Rainero Fassati,Mal d'alcol,Salani,2017,9788893813358,"Saggistica, Salute, Attualità",FALSE
+A1461,Silvia Avallone,Un'amicizia,Rizzoli,2021,9788817142960,"Narrativa, Romanzo",FALSE
+A1462,Fabrizio Casa,Fragile,Sinnos,2012,9788876092046,"Ragazzi, Sport",FALSE
+A1463,Bianca Garavelli,Le terzine perdute di Dante,Rizzoli,2015,9788817083041,"Giallo, Thriller, Romanzo Storico",FALSE
+A1464,Edgar Allan Poe,Eureka. Poema in prosa,Newton Compton,1996,9788881834921,"Saggistica, Filosofia",FALSE
+A1465,Arthur Conan Doyle,Gli aforismi di Sherlock Holmes,Newton Compton,1995,9788879838047,"Miscellanea, Giallo",FALSE
+A1466,Gina Basso,Il coraggio di parlare,Fabbri Editori,1971,-,"Ragazzi, Attualità",FALSE
+A1467,Arthur Conan Doyle,Le avventure di Sherlock Holmes,Newton Compton,2008,9788854113060,"Giallo, Thriller, Classico",FALSE
+A1468,Massimiliano Frassi,I bambini delle fogne di Bucarest,Ferrari,2002,9788887476101,"Saggistica, Attualità",FALSE
+A1469,"Buronson, Hara",Ken il guerriero (Vol. 1),d/books,1983,9788880593712,"Fumetti, Manga",FALSE
+A147,Andrea De Carlo,Due di due,Mondadori,2001,9788804492413,"Narrativa, Romanzo",TRUE
+A147,Sam Savage,Firmino,Einaudi,2007,9788806192532,"Narrativa, Romanzo",TRUE
+A1470,Alberto Manzi,Orzowei,Bompiani,1961,-,"Ragazzi, Avventura, Classico",FALSE
+A1471,Christopher Paolini,Eragon,Fabbri Editori,2003,9788845181757,"Ragazzi, Fantasy",FALSE
+A1472,Montesquieu,Persian Letters,Penguin Books,1973,9780140442816,"Narrativa, Classico (Inglese)",FALSE
+A1473,Charles Dickens,A Tale of Two Cities,Penguin Books,1970,9780140430547,"Romanzo Storico, Classico (Inglese)",FALSE
+A1474,Agatha Christie,Murder on the Links,HarperCollins,1988,9780006162729,"Giallo, Classico (Inglese)",FALSE
+A1475,Daniele Mencarelli,Sempre tornare,Mondadori,2021,9788804742050,"Narrativa, Formazione",FALSE
+A1476,Martin Gilbert,La grande storia della Prima guerra... (Vol. 2),Il Giornale,1998,-,"Saggistica, Storia",FALSE
+A1477,Luca O'Connor,Harper Evans e la stella dei desideri,Edizioni WE,2021,9791280240453,"Ragazzi, Fantasy",FALSE
+A1478,Agatha Christie,Poirot Investigates,Bantam Books,1982,9780553229616,"Giallo, Racconti (Inglese)",FALSE
+A1479,E. M. Forster,A Room with a View,Penguin Books,1987,9780140432688,"Narrativa, Classico (Inglese)",FALSE
+A148,Alba de Céspedes,Prima e dopo,Mondadori,1955,-,"Narrativa, Classico",TRUE
+A148,Paul Bowles,Il tè nel deserto,Garzanti,1990,9788811666493,"Narrativa, Romanzo, Classico",TRUE
+A1480,Luigi Pirandello,Six Characters in Search of an Author,Eyre Methuen,1979,9780413396700,"Teatro, Classico (Inglese)",FALSE
+A1481,Hermann Hesse,The Journey to the East,Panther,1966,-,"Narrativa, Filosofia (Inglese)",FALSE
+A1482,AA. VV.,English Verse,Penguin Books,1985,9780140420587,Poesia (Inglese),FALSE
+A1483,Arthur Conan Doyle,Black Peter - The Red-Headed League,Grafisk Forlag,1980,9788742972922,"Giallo, Racconti (Inglese)",FALSE
+A1484,Agatha Christie,Ten Little Niggers (And Then There Were None),HarperCollins,1979,9780006161906,"Giallo, Classico (Inglese)",FALSE
+A1485,Oscar Wilde,Il delitto di Lord Arthur Savile,La Spiga,-,9788871003467,"Racconti, Classico",FALSE
+A1486,Oscar Wilde,Un marito ideale,Newton Compton,1994,9788879836562,"Teatro, Classico",FALSE
+A1487,Oscar Wilde,Un marito ideale,Newton Compton,1994,9788879836562,"Teatro, Classico",FALSE
+A1488,George Orwell,1984,Crescere,2024,9791254542036,"Narrativa, Distopico, Classico",FALSE
+A1489,Herman Melville,Le cento pagine più belle,Mondadori,1982,-,"Antologia, Classico",FALSE
+A149,Gabriele D'Annunzio,L’innocente,Mondadori,1976,9788804008279,"Narrativa, Classico",TRUE
+A149,Giampaolo Pansa,Ma l’amore no,Sperling & Kupfer,1994,9788820018788,Romanzo Storico,TRUE
+A1490,Vincenzo Cerami,Un borghese piccolo piccolo,Corriere della Sera,2003,-,"Narrativa, Romanzo, Classico",FALSE
+A1491,Charles Darwin,L'origine delle specie,Corriere della Sera,2010,-,"Saggistica, Scienze, Classico",FALSE
+A1492,Adam Smith,La ricchezza delle nazioni,Corriere della Sera,2010,-,"Saggistica, Economia, Classico",FALSE
+A1493,Sergio Valzania,Fare la pace - Vincitori e vinti...,Salerno,2011,9788884027344,"Saggistica, Storia",FALSE
+A1494,Raoul Pupo,Trieste '45,Corriere della Sera,2010,-,"Saggistica, Storia",FALSE
+A1495,A. Giménez-Bartlett,Un vero e proprio viaggio,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1496,Andrea Camilleri,Doppia indagine,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1497,Andrea Camilleri,L'oro a Vigata,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1498,Andrea Camilleri,I cacciatori,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1499,Andrea Camilleri,Il palato assoluto,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1628,Malorie Blackman,Hacker,Signorelli,2000,9788843407170,"Ragazzi, Thriller",FALSE
+A150,Rosa Montero,Storia del Re Trasparente,Frassinelli,2005,9788876849039,"Romanzo Storico, Fantasy",FALSE
+A1500,Andrea Camilleri,Il morto viaggiatore,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1501,Andrea Camilleri,Il terremoto del '38,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1502,Andrea Camilleri,La rettitudine fatta persona,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1503,"Queen, Dannay",L'avventura della signora barbuta,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1504,M. Vázquez Montalbán,La dea nuda,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1505,Antonio Manzini,L'eremita,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1506,Maurizio De Giovanni,L'omicidio Carosino,La Repubblica,2021,-,"Giallo, Thriller, Racconti",FALSE
+A1507,Vincenzo Arte,Crescere senza voti,Mondadori,2023,9788804764892,"Saggistica, Pedagogia",FALSE
+A1508,John Green,Cercando Alaska,Rizzoli,2019,9788817109727,"Ragazzi, Young Adult",FALSE
+A1509,Kathleen Glasgow,E poi ci sono io,Rizzoli,2018,9788817101899,"Ragazzi, Attualità",FALSE
+A1653,Andrea Camilleri,Donne,Rizzoli,2016,9788817089456,"Narrativa, Racconti",FALSE
+A151,Paola Mastrocola,L’anno che non caddero le foglie,Guanda,2016,9788823514782,"Narrativa, Favola",FALSE
+A1510,Harper Lee,Il buio oltre la siepe,Feltrinelli,-,9788807881558,"Narrativa, Classico",FALSE
+A1511,Luigi Garlando,Presentami un sogno,HarperCollins,2021,9788869058288,"Ragazzi, Sport",FALSE
+A1512,Irene Vallejo,Il fischio dell'arciere,Bompiani,2023,9788830119420,"Narrativa, Mitologia, Storico",FALSE
+A1513,Zerocalcare,Kobane Calling,Bao Publishing,2020,9788832734591,"Fumetti, Graphic Novel, Reportage",FALSE
+A1514,Nicola Brunialti,Un nome che non è il mio,Sperling & Kupfer,2022,9788820072704,"Ragazzi, Storia, Shoah",FALSE
+A1515,Sara Gambazza,Ci sono mani che odorano di buono,Longanesi,2023,9788830459380,"Narrativa, Romanzo",FALSE
+A1516,Patrizia Carrano,La bambina che mangiava i comunisti,Vallecchi,2022,9788882521363,"Narrativa, Romanzo",FALSE
+A1517,Daniele Aristarco,Io dico no! Storie di eroica disobbedienza,Einaudi,2017,9788866563723,"Ragazzi, Storia, Attualità",FALSE
+A1518,Cosima Buccoliero,Senza sbarre,Einaudi,2022,9788806251840,"Saggistica, Attualità, Carcere",FALSE
+A1519,Minuit,Le ragazze della foresta,Edizioni EL,2021,9788847738232,"Ragazzi, Narrativa",FALSE
+A152,Anton Čechov,La fidanzata e altri racconti,Newton Compton,1995,9788879839327,"Racconti, Classico",FALSE
+A1674,Andrew Lane,Young Sherlock - Trappola velenosa,De Agostini,2012,9788841873793,"Ragazzi, Giallo",FALSE
+A1520,Marie-Aude Murail,Flipper (Sauveur & figlio 2),Giunti,2016,9788809831513,"Ragazzi, Narrativa",FALSE
+A1521,AA. VV.,Donne al futuro,Il Mulino,2021,9788815291882,"Saggistica, Attualità",FALSE
+A1522,Cosima Buccoliero,Senza sbarre,Einaudi,2022,9788806251840,"Saggistica, Attualità, Carcere",FALSE
+A1523,Farhad Bitani,L'ultimo lenzuolo bianco,Neri Pozza,2020,9788854520332,"Saggistica, Biografia, Attualità",FALSE
+A1524,Niccolò Ammaniti,Io non ho paura,Einaudi,2001,9788806142100,"Narrativa, Romanzo",FALSE
+A1525,Evelyn Waugh,A Handful of Dust,Penguin Books,-,9780141183664,"Narrativa, Satira (Inglese)",FALSE
+A1526,David Thomson,England in the Nineteenth Century,Penguin Books,-,-,"Saggistica, Storia (Inglese)",FALSE
+A1527,Graham Greene,The Honorary Consul,Penguin Books,-,-,"Narrativa, Romanzo (Inglese)",FALSE
+A1528,AA. VV.,Le Mille e una notte (Vol. 1-2),Corriere della Sera,-,-,"Classico, Favola",FALSE
+A1529,"Mentana, Segre",La memoria rende liberi,Rizzoli,2015,9788817083072,"Saggistica, Memorie, Shoah",FALSE
+A1679,Seneca,La vera gioia,Newton Compton,1995,9788881832101,"Filosofia, Classico",FALSE
+A153,Marco Malvaldi,L’infinito tra parentesi,Rizzoli,2016,9788817087643,"Saggistica, Scienza",FALSE
+A1530,Luis Sepúlveda,Il vecchio che leggeva romanzi d'amore,Guanda,1989,9788882460235,"Narrativa, Romanzo",FALSE
+A1531,Luis Sepúlveda,Storia di una gabbianella...,Salani,1998,9788877826060,"Ragazzi, Favola",FALSE
+A1532,Chuck Palahniuk,Invisible Monsters,Mondadori,2012,9788804616238,"Narrativa, Romanzo",FALSE
+A1533,Alberto Moravia,Gli indifferenti,Bompiani,1962,-,"Narrativa, Classico",FALSE
+A1534,Oscar Wilde,Detti e aforismi,Rizzoli,1999,9788817154215,"Miscellanea, Aforismi",FALSE
+A1535,Kahlil Gibran,Il profeta,Feltrinelli,2010,9788807881954,"Poesia, Spiritualità, Classico",FALSE
+A1536,Bianca Pitzorno,La bambina col falcone,Salani,1992,9788877822451,"Ragazzi, Romanzo Storico",FALSE
+A1537,Dino Buzzati,La famosa invasione degli orsi di Sicilia,Mondadori,1992,9788824700879,"Ragazzi, Classico, Favola",FALSE
+A1538,Robert Harris,Pompei,Mondadori,2003,9788804512210,"Romanzo Storico, Thriller",FALSE
+A1539,Andrea Camilleri,La mossa del cavallo,Rizzoli,1999,9788817061738,"Romanzo Storico, Giallo",FALSE
+A154,Luigi Pirandello,Donna Mimma,Newton Compton,1995,9788879838924,"Racconti, Classico",FALSE
+A1599,"Tiffany, Thorne",Harry Potter e la maledizione dell'erede,Salani,2016,9788869187490,"Teatro, Fantasy",FALSE
+A1540,Robert Ludlum,Il Patto,Club degli Editori,1979,-,"Thriller, Spionaggio",FALSE
+A1541,Jules Verne,I guai di un cinese in Cina,San Paolo,-,9788821516244,"Avventura, Classico",FALSE
+A1542,Alexandre Dumas,Il conte di Montecristo,Malipiero Editore,-,9788870072890,"Avventura, Classico, Storico",FALSE
+A1543,Charles Dickens,Oliver Twist,Aurora Editore,-,9788886076240,"Narrativa, Classico",FALSE
+A1544,Arthur Conan Doyle,Il mastino di Baskerville,Mondadori,-,9788804581452,"Giallo, Classico",FALSE
+A1545,F. Scott Fitzgerald,Il grande Gatsby,Mondadori,-,9788804604923,"Narrativa, Classico",FALSE
+A1546,William Golding,Il Signore delle Mosche,Mondadori,-,9788804675718,"Narrativa, Classico, Distopico",FALSE
+A1547,Giovanni Falcone,Cose di Cosa Nostra,Fabbri Editori,-,9788845133663,"Saggistica, True crime, Attualità",FALSE
+A1548,Jack London,Il richiamo della foresta,Mondadori,-,9788804480556,"Avventura, Classico",FALSE
+A1549,S. Sebag Montefiore,I discorsi che hanno cambiato il mondo,Edizioni White Star,-,9788854005401,"Saggistica, Storia",FALSE
+A155,Natalia Ginzburg,Lessico famigliare,Mondadori,1974,9788806037896,"Narrativa, Classico, Memorie",TRUE
+A155,Andrea Vitali,La modista,Garzanti,2008,9788811686613,"Narrativa, Romanzo",TRUE
+A1550,Louisa May Alcott,Piccole donne,Bompiani,-,9788845214041,"Ragazzi, Classico, Formazione",FALSE
+A1551,Louisa May Alcott,Piccole donne crescono,Aurora Editore,-,9788886076189,"Ragazzi, Classico, Sentimentale",FALSE
+A1552,Louisa May Alcott,I ragazzi di Jo,Fratelli Melita Editori,-,9788840360705,"Ragazzi, Classico, Formazione",FALSE
+A1662,Giovanni Verga,Dal tuo al mio,Newton Compton,1995,9788879839358,"Narrativa, Classico",FALSE
+A156,Silvia Avallone,Acciaio,Rizzoli,2010,9788817037631,"Narrativa, Romanzo, Attualità",FALSE
+A157,Alberto Bertuzzi,La costituzione comoda,Rizzoli,1981,-,"Saggistica, Politica",FALSE
+A1680,Markus Zusak,Storia di una ladra di libri,Sperling & Kupfer,2015,9788868360665,"Romanzo Storico, Ragazzi",FALSE
+A1678,Sandra Frattini,Le orchidee del Monte Vallassa,Guardamagna,2016,9788895193557,"Saggistica, Natura, Botanica",FALSE
+A158,John Grisham,Theodore Boone - La ragazza...,Mondadori,2011,9788804611561,"Ragazzi, Giallo",FALSE
+A159,Nick Hornby,Alta fedeltà,Guanda,1995,9788877468338,"Narrativa, Romanzo",FALSE
+A1598,Guido Sgardoli,O sei dentro o sei fuori,Edizioni EL,2010,9788847726352,"Ragazzi, Narrativa",FALSE
+A160,Isabel Allende,La casa degli spiriti,Feltrinelli,1987,9788807810015,"Narrativa, Realismo Magico, Classico",FALSE
+A1650,Francesca Longo,Come ti sequestro la prof,Edizioni EL,2010,9788847726321,"Ragazzi, Umorismo",FALSE
+A1649,Christian Jacq,Il romanzo di Ramses,Mondadori,1997,9788804433720,"Romanzo Storico, Avventura",FALSE
+A161,Christian Jacq,Il romanzo di Ramses,Mondadori,1997,9788804433767,"Romanzo Storico, Avventura",FALSE
+A1646,Jostein Gaarder,Il mondo di Anna,Longanesi,2013,9788830436152,"Ragazzi, Narrativa, Ecologia",FALSE
+A162,Giorgio Amendola,Una scelta di vita,Rizzoli,1976,9788817123303,"Saggistica, Biografia, Politica",FALSE
+A1591,Federico Moccia,Tre metri sopra il cielo,Mondadori,2005,9788804545804,"Narrativa, Rosa, Young Adult",FALSE
+A163,Patricia Cornwell,Oggetti di reato,Mondadori,1992,9788804358896,"Giallo, Thriller",TRUE
+A163,Paola Zannoner,Sopra l’acqua sotto il cielo,Mondadori,2007,9788804573159,"Ragazzi, Narrativa",TRUE
+A1681,Luigi Pirandello,Amori senza amore,Newton Compton,1995,9788881831814,"Racconti, Classico",FALSE
+A164,"Ossorio, Zoungrana",Se entri nel cerchio sei libero,Mondadori,2010,9788804598466,"Ragazzi, Formazione",FALSE
+A165,Apuleio,La favola di Amore e Psiche,Newton Compton,1995,9788879833660,"Classico, Mitologia",TRUE
+A165,Marie-Aude Murail,Cécile. Il futuro è per tutti,Giunti,2010,9788809742611,"Ragazzi, Narrativa",TRUE
+A166,Luigi Pirandello,Un matrimonio ideale...,Newton Compton,1995,9788879838894,"Racconti, Classico",FALSE
+A166M,Angela Nanetti,Morte a Garibaldi,Giunti,2011,9788809768000,"Ragazzi, Romanzo Storico",FALSE
+A1656,Italo Svevo,Il mio ozio e altri racconti,Newton Compton,1995,9788879839365,"Racconti, Classico",FALSE
+A167,Fernando Corbalan,La sezione aurea,RBA,2011,9788447377039,"Saggistica, Matematica",FALSE
+A1660,Platone,Simposio,Rizzoli,2016,9788817100410,"Filosofia, Classico",FALSE
+A168,Timothy Lewis,Solo una volta nella vita,Giunti,2013,9788809778269,"Narrativa, Romanzo",FALSE
+A1668,Daphne du Maurier,A Venezia... un dicembre rosso,Rizzoli,1980,9788817166166,"Racconti, Thriller, Classico",FALSE
+A169,Paul Bakolo Ngoi,Colpo di testa,Rizzoli,2010,9788817038164,"Ragazzi, Sport",FALSE
+A170,Doriana Martini,Prigionieri di noi stessi,Graus Editore,2015,9788883464874,"Saggistica, Psicologia",FALSE
+A1654,Paulo Coelho,Lo Zahir,Corriere della Sera,2005,9788845233968,"Narrativa, Romanzo",FALSE
+A171,Edmond Rostand,Cirano di Bergerac,Newton Compton,1993,9788879830508,"Teatro, Classico",TRUE
+A171,Susanna Tamaro,Ascolta la mia voce,Corriere della Sera,2006,9788817012904,"Narrativa, Romanzo",TRUE
+A172,Aleksandr Solženicyn,Una giornata di Ivàn Denìsovič,Newton Compton,1993,9788879831512,"Romanzo Storico, Classico",FALSE
+A1667,Giorgio Faletti,Fuori da un evidente destino,Baldini+Castoldi,2006,9788860730121,"Giallo, Thriller",FALSE
+A173,Torey L. Hayden,La foresta dei girasoli,TEA,2011,9788850225132,"Narrativa, Drammatico",FALSE
+A1666,Giorgio Faletti,Niente di vero tranne gli occhi,Baldini+Castoldi,2004,9788884906006,"Giallo, Thriller",FALSE
+A174,AA. VV.,Incontri nell’aula 18,Libreria Ticinum Editore,2016,9788890479366,"Narrativa, Racconti",TRUE
+A174,Jenny Lawson,Facciamo finta di niente,Sperling & Kupfer,2016,9788820060930,"Saggistica, Umorismo, Memorie",TRUE
+A175,Giorgio Amendola,Un’isola,Rizzoli,1982,9788817123181,"Saggistica, Biografia, Politica",TRUE
+A175,G. C. Giacobbe,Come smettere di farsi le seghe...,Ponte alle grazie,2003,9788879286466,"Saggistica, Psicologia, Umorismo",TRUE
+A1617,Dario Sabbatucci,"Tarquinia, la pittura etrusca",De Agostini,-,-,"Saggistica, Arte, Storia",FALSE
+A176,Roberto Perrone,Banana football Club,Rizzoli,2012,9788817056069,"Narrativa, Sport",FALSE
+A177,Jerry Spinelli,Per sempre Stargirl,Mondadori,2012,9788804620075,"Ragazzi, Narrativa",FALSE
+A1619,Karen Blixen,La mia Africa,Feltrinelli,1992,9788807810329,"Narrativa, Memorie, Classico",FALSE
+A1597,John N. Wilford,L’enigma dei dinosauri,Mondadori,1994,9788804391626,"Saggistica, Paleontologia",FALSE
+A178,Giuseppe Culicchia,Un’estate al mare,Garzanti,2007,9788811685817,"Narrativa, Romanzo",FALSE
+A1691,Steven Weinberg,I primi tre minuti,Mondadori,1994,9788804388480,"Saggistica, Scienza",FALSE
+A179,Nicholas Sparks,Le parole che non ti ho detto,Frassinelli,1998,9788876845344,"Narrativa, Rosa",FALSE
+A180,Sinesio,Elogio della calvizie,Newton Compton,1995,9788879838382,"Saggistica, Filosofia, Classico",FALSE
+A1590,Federico Moccia,Ho voglia di te,Feltrinelli,2006,8022264753555,"Narrativa, Rosa, Young Adult",FALSE
+A1593,Jack London,Zanna Bianca,Bompiani,1980,9788809033870,"Ragazzi, Avventura, Classico",FALSE
+A1588,Jack London,Zanna Bianca,Giunti,2004,9788809033870,"Ragazzi, Avventura, Classico",FALSE
+A1589,Jack London,Zanna Bianca,Giunti,2004,9788809033870,"Ragazzi, Avventura, Classico",FALSE
+A181,Nicholas Sparks,Quando ho aperto gli occhi,Frassinelli,2003,9788876847591,"Narrativa, Rosa",FALSE
+A1606,Gerhard Konzelmann,Maometto,Bompiani,1991,9788845217431,"Saggistica, Biografia, Religione",FALSE
+A182,Paolo Mosca,Il nuovo senso della vita,Sperling & Kupfer,2003,9788820035074,"Saggistica, Spiritualità",FALSE
+A1607,Enzo Biagi,Lettera d’amore a una ragazza di una volta,Rizzoli,2003,9788817872655,"Saggistica, Memorie",FALSE
+A183,Andrew Lane,Young Sherlock Holmes,De Agostini,2014,9788851121852,"Ragazzi, Giallo",FALSE
+A184,Albert Einstein,Lo spazio è una questione di tempo,RBA,2014,9788447376483,"Saggistica, Fisica",FALSE
+A1587,Haruki Murakami,Norwegian Wood,Einaudi,1987,9788806216467,"Narrativa, Romanzo",FALSE
+A1596,John le Carré,Il canto della missione,Mondadori,2006,9788804550978,"Giallo, Thriller, Spionaggio",FALSE
+A185,Enti Autori,Italiane Vol III - dizionario biografico,-,2004,-,"Saggistica, Biografia",FALSE
+A1595,Ellis Peters,Un cadavere di troppo,TEA,1990,9788878191630,"Giallo, Storico",FALSE
+A186,Charles Dickens,Le campane,Newton Compton,1993,9788879830577,"Narrativa, Classico",FALSE
+A1610,Luigi Pirandello,Sei personaggi in cerca d’autore,Newton Compton,1993,9788879830583,"Teatro, Classico",FALSE
+A187,Vamba,Il giornalino di Gian Burrasca,De Agostini,2009,9788841856642,"Ragazzi, Classico, Umorismo",FALSE
+A1605,Gabriel García Márquez,Cronaca di una morte annunciata,Mondadori,1981,9788804213193,"Narrativa, Classico",FALSE
+A188,Victor Hugo,L’ultimo giorno di un condannato...,Newton Compton,1993,9788879832793,"Narrativa, Classico",FALSE
+A1594,Robert Louis Stevenson,Lo strano caso del Dr. Jekyll e Mr. Hyde,Newton Compton,1992,9788879830170,"Narrativa, Classico, Horror",FALSE
+A189,Conor Grennan,Sette fiori di senape,Piemme,2011,9788856616421,"Narrativa, Memorie, Viaggi",FALSE
+A190,Antonio Forcellino,1545,Laterza,2008,9788842085934,"Saggistica, Storia, Arte",TRUE
+A190,Charles Dickens,Le avventure di Oliver Twist,Mondadori,2015,9788804655611,"Narrativa, Classico",TRUE
+A191,Giuseppe Sicheri,Vino è salute,Saviolo Edizioni,2008,9788895122112,"Saggistica, Enogastronomia",FALSE
+A1618,Margherita Oggero,Amen,Effatà,2014,9788874029419,"Saggistica, Religione",FALSE
+A192,Luca Nascimbene,Il ragazzo che cantava poesie d’amore,Youcanprint,2017,9788892647786,"Poesia, Amore",TRUE
+A192,Giancarlo Galli,Gli Agnelli,Mondadori,1997,9788804429814,"Saggistica, Biografia, Economia",TRUE
+A1672,Ken Follett,L’uomo di Pietroburgo,Mondadori,1982,9788804245637,"Giallo, Thriller, Storico",FALSE
+A1601,Giorgio Rochat,Le guerre italiane 1935- 1943,Einaudi,2005,9788806177974,"Saggistica, Storia, Militaria",FALSE
+A193,Gian Luca Favetto,Un’eterna solitudine,Effatà,2012,9788874027477,"Saggistica, Spiritualità",FALSE
+A1676,Ken Follett,Il terzo gemello,Mondadori,1997,9788804423851,"Giallo, Thriller",FALSE
+A194,Elena Loewenthal,Un’annunciazione,Effatà,2014,9788874029310,"Saggistica, Religione",FALSE
+A195,Don Antonio Mazzi,Pinocchio e i suoi fratelli,Piemme,1995,9788838424266,"Saggistica, Attualità",FALSE
+A1616,Mario Dal Bello,Caravaggio,Effatà,2007,9788874023400,"Saggistica, Arte",FALSE
+A196,Sigmund Freud,L’interpretazione dei sogni,Rusconi,2016,9788818031389,"Saggistica, Psicologia, Classico",FALSE
+A1585,Silvana De Mari,Giuseppe figlio di Giacobbe,Effatà,2014,9788874029297,"Ragazzi, Religione",FALSE
+A197,Amy Hempel,Ragioni di vivere,Serra e Riva Editori,1986,9788877980075,"Narrativa, Racconti",FALSE
+A1675,Alessandro Gisotti,11 settembre. Una storia che continua,Effatà,2011,9788874027170,"Saggistica, Storia, Attualità",FALSE
+A1584,Federico Moccia,Tre metri sopra il cielo,Feltrinelli,2005,9788807840395,"Narrativa, Rosa, Young Adult",FALSE
+A198,Stephen King,Misery,Sperling & Kupfer,2015,9788868362706,"Horror, Thriller",FALSE
+A1583,Friedrich Nietzsche,Così parlò Zarathustra,Mondadori,2016,9788804672197,"Filosofia, Classico",FALSE
+A199,Isabel Allende,Le avventure di aquila e giaguaro,Feltrinelli,2004,9788807883259,"Ragazzi, Avventura",FALSE
+A1575,Michael J. Gelb,Il segreto da Vinci,Il Saggiatore,2004,9788842812547,"Saggistica, Arte, Self-help",FALSE
+A200,Oscar Wilde,Il ritratto di Dorian Gray,Feltrinelli,2016,9788807900402,"Narrativa, Classico",FALSE
+A1577,Robert S. Elegant,Manciù,Bompiani,1987,-,"Romanzo Storico, Avventura",FALSE
+A201,Paulo Coelho,Sulla sponda del fiume Pietra...,Mondadori,1996,9788845229045,"Narrativa, Romanzo",FALSE
+A202,Patrick Dennis,Intorno al mondo con zia Mame,Adelphi,2011,9788845925696,"Narrativa, Umorismo",FALSE
+A203,J. W. Goethe,Le affinità elettive,Mondadori,2017,9788804677277,"Narrativa, Classico",FALSE
+A1677,Marie Cardinal,Le parole per dirlo,Bompiani,1981,9788845207860,"Narrativa, Psicologico",FALSE
+A1578,Miguel de Cervantes,Don Chisciotte della Mancia,Mondadori,2017,9788804642749,"Narrativa, Classico",FALSE
+A1582,"Gramellini, Gamberale",Avrò cura di te,Longanesi,2012,9788830436688,"Narrativa, Romanzo",FALSE
+A204,Adam Blade,Beast Quest - Ferno il signore...,Salani,2015,9788862561501,"Ragazzi, Fantasy",FALSE
+A1581,Gordon L. Rottman,Eserciti della guerra del golfo 1990-91,Edizioni del Prado,1998,-,"Saggistica, Storia, Militaria",FALSE
+A205,Andrea Vitali,La mamma del sole,Garzanti,2010,9788811681670,"Narrativa, Romanzo",FALSE
+A206,David Bellemère,Le quindici gioie del matrimonio,Newton Compton,1994,9788879833745,"Saggistica, Satira, Classico",FALSE
+A1580,Massimo Gramellini,Fai bei sogni,Longanesi,2013,9788830429154,"Narrativa, Autobiografico",FALSE
+A1570,Bram Stoker,Dracula,Einaudi,2016,9788806219278,"Horror, Classico",FALSE
+A207,Wilbur Smith,Monsone,Longanesi,1999,9788830416970,"Avventura, Romanzo Storico",FALSE
+A1574,Luca Reteuna,Sorella Acqua,Effatà,2012,9788874027781,"Saggistica, Ecologia",FALSE
+A208,E.J. Michael,Regina del sole,Sonzogno,1996,9788845408991,Romanzo Storico,FALSE
+A1571,Gabriel García Márquez,Cent’anni di solitudine,Mondadori,1987,9788804305713,"Narrativa, Classico, Realismo Magico",FALSE
+A1572,Gabriel García Márquez,Cent’anni di solitudine,Feltrinelli,1987,-,"Narrativa, Classico, Realismo Magico",FALSE
+A209,Ken Follett,Un luogo chiamato libertà,Mondadori,1995,9788804406283,Romanzo Storico,FALSE
+A1569,Stephen Badsey / David G. Chandler,Normandia 1944,Edizioni del Prado,1998,9788483720035,"Saggistica, Storia, Militaria",FALSE
+A210,Carlo Cassola,L’antagonista,Rizzoli,1976,9788817110037,"Narrativa, Romanzo",FALSE
+A211,Giacobbe Fragomeni,All’ultimo round. La mia storia,Limina,2013,9788860411624,"Biografia, Sport",FALSE
+A1568,Elizabeth Bowen,The House in Paris,Penguin Books,1976,140005358,"Narrativa, Romanzo (Inglese)",FALSE
+A1567,Stefano Zecchi,Amata per caso,Mondadori,2004,9771123835008,"Narrativa, Romanzo",FALSE
+A212,Albert Einstein,Come io vedo il mondo,Newton Compton,1993,9788879833073,"Saggistica, Fisica, Filosofia",FALSE
+A1565,Mika Waltari,Turms l’Etrusco,Mondadori,1985,9788804266606,Romanzo Storico,FALSE
+A213,Paolo D’Agostini,Dizionari del cinema: Commedia,Electa,2009,9788837057039,"Saggistica, Cinema",FALSE
+A214,Giuseppe De Grassi,Occhi di ragazzo,Rai Eri,2002,9788839712065,"Biografia, Musica",FALSE
+A1566,Margaret Mazzantini,Mare al mattino,Einaudi,2011,9788845119323,"Narrativa, Attualità",FALSE
+A215,Frances Hardinge,Volo nella notte,Fabbri Editori,2006,9788845119026,"Ragazzi, Fantasy",FALSE
+A216,B. Taylor Bradford,L’amore non può attendere,Sperling & Kupfer,2009,9788820047719,"Narrativa, Rosa",FALSE
+A287,Giovanni Boccaccio,Decameron,Mondadori,2015,9788804648781,"Classico, Racconti",FALSE
+A217,John Grisham,L’uomo della pioggia,Mondadori,1997,9788804423010,"Giallo, Thriller",FALSE
+A218,William Shakespeare,La tempesta,Mondadori,2017,9788804677767,"Teatro, Classico",FALSE
+A219,Luis Sepúlveda,Il vecchio che leggeva romanzi d’amore,Guanda,2001,9788882463761,"Narrativa, Romanzo",FALSE
+A220,Javier Ruescas,Tutti i colori di te,Feltrinelli,2016,9788807922736,"Young Adult, Rosa",FALSE
+A221,Jenny Lawson,Follemente felice,Sperling & Kupfer,2015,9788820059346,"Saggistica, Umorismo, Memorie",FALSE
+A222,Gavriel Savit,Anna e l’Uomo delle rondini,Sperling & Kupfer,2016,9788820059889,"Romanzo Storico, Ragazzi",FALSE
+A223,Shakespeare,Sogno di una notte di mezz’estate,Mondadori,2017,9788804677750,"Teatro, Classico",FALSE
+A224,Alex Soojung/Kim Pang,Dipendenza digitale,LSWR,2013,9788868951443,"Saggistica, Tecnologia, Psicologia",FALSE
+A244,Charles Baudelaire,I fiori del male,Mondadori,2014,9788804627838,"Poesia, Classico",FALSE
+A225,Nadia Tempest,10 cose che non avresti mai pensato...,Sperling & Kupfer,2016,9788820060960,"Saggistica, Curiosità, Young Adult",FALSE
+A226,Nicholas Sparks,La risposta è nelle stelle,Frassinelli,2013,9788820054709,"Narrativa, Rosa",FALSE
+A227,Marco Braico,Metà di tutto,Effatà,2013,9788874028473,"Narrativa, Romanzo",FALSE
+A228,Nicola Gardini,Viva il latino,Garzanti,2016,9788811676235,"Saggistica, Linguistica",FALSE
+A229,Chris Weitz,The new order,Sperling & Kupfer,2016,9788820060069,"Young Adult, Distopico",FALSE
+A230,Charlotte Roth,Quando eravamo immortali,Sperling & Kupfer,2014,9788820057274,Romanzo Storico,FALSE
+A231,Stephen King,On writing,Frassinelli,2015,9788820058813,"Saggistica, Scrittura, Autobiografia",FALSE
+A232,Luca Reteuna,E dopo? Energie rinnovabili per tutti,Effatà,2009,9788874025175,"Saggistica, Ecologia, Tecnologia",FALSE
+A233,Luca Reteuna,Cure dolci cure,Effatà,2010,9788874026363,"Saggistica, Salute",FALSE
+A234,Fëdor Dostoevskij,Memorie dal sottosuolo,Mondadori,2017,9788804674391,"Narrativa, Classico, Filosofia",FALSE
+A235,Nathaniel Hawthorne,La lettera scarlatta,Mondadori,2015,9788804658254,"Narrativa, Classico, Romanzo Storico",FALSE
+A236,Kiera Cass,The Selection,Sperling & Kupfer,2015,9788820053703,"Young Adult, Distopico, Rosa",FALSE
+A237,S. Calvani M. Albertazzi,Saccheggio mondiale,Effatà,2011,9788874027209,"Saggistica, Attualità, Economia",FALSE
+A238,Arwen Elys Dayton,Seeker,Sperling & Kupfer,2016,9788820060380,"Ragazzi, Fantasy",FALSE
+A239,Edmondo De Amicis,Cuore,Mondadori,2016,9788804660486,"Ragazzi, Classico",FALSE
+A240,Paul Dowswell,L’ultima alba di guerra,Feltrinelli,2016,9788807921852,"Ragazzi, Romanzo Storico",FALSE
+A241,Alessia Gazzola,L’allieva,Longanesi,2016,9788830429948,"Giallo, Romanzo",FALSE
+A242,Andrew Fukuda,The Hunt,Il Castoro,2013,9788880336968,"Young Adult, Horror",FALSE
+A243,Seneca,Apokolokyntosis,Mondadori,2017,9788804674339,"Classico, Satira",FALSE
+A245,Luca Reteuna,Speriamo nel mare!,Effatà,2013,9788874028306,"Saggistica, Ecologia",FALSE
+A246,Jonathan Coe,Lo specchio dei desideri,Feltrinelli,2012,9788807018996,"Narrativa, Romanzo",FALSE
+A247,Patrick Süskind,Il profumo,TEA,1985,9788878191297,"Thriller, Romanzo Storico",FALSE
+A248,Nicolas Vanier,Belle & Sebastien,Sperling & Kupfer,2014,9788820055745,"Ragazzi, Avventura",FALSE
+A249,Robin Hobb,L’assassino,Sperling & Kupfer,2015,9788820059636,"Fantasy, Formazione",FALSE
+A250,Alessandro Gisotti,Dio e Obama,Effatà,2010,9788874026005,"Saggistica, Politica, Religione",FALSE
+A251,Fëdor Dostoevskij,Il sosia,Mondadori,2016,9788804660493,"Narrativa, Classico",FALSE
+A252,Erasmo da Rotterdam,Elogio della follia,Mondadori,2017,9788804674353,"Filosofia, Classico",FALSE
+A253,Plauto,Poenulus - Truculentus,Mondadori,2015,9788804653608,"Teatro, Classico",FALSE
+A254,Giovanni Verga,Mastro-don Gesualdo,Mondadori,2017,9788804683072,"Narrativa, Classico",FALSE
+A255,Stephen Chbosky,Noi siamo infinito,Sperling & Kupfer,2015,9788868360153,"Young Adult, Narrativa",FALSE
+A256,Luigi Pirandello,"Uno, nessuno e centomila",Feltrinelli,2016,9788807900419,"Narrativa, Classico",FALSE
+A257,Giorgio Faletti,Niente di vero tranne gli occhi,Mondadori,2004,9788804527374,"Giallo, Thriller",FALSE
+A258,Giuseppe Catozzella,Il grande futuro,Feltrinelli,2016,9788807031759,"Narrativa, Attualità",FALSE
+A259,Anna Todd,Imagines,Sperling & Kupfer,2016,9788820060374,"Young Adult, Rosa",FALSE
+A260,Tacito,Annali,Mondadori,2014,9788804646541,"Saggistica, Storia, Classico",FALSE
+A261,Franco Causio (I. Cucci),Vincere è l’unica cosa che conta,Sperling & Kupfer,2015,9788820059797,"Biografia, Sport, Calcio",FALSE
+A262,Jason R. Briggs,Python per ragazzi,LSWR,2016,9788868953683,"Ragazzi, Informatica, Manualistica",FALSE
+A263,Giuseppe Catozzella,Non dirmi che hai paura,Feltrinelli,2014,9788807030776,"Narrativa, Biografia, Attualità",FALSE
+A264,D. Agasso Jr. A. Celeghini,Uno sarà preso,Effatà,2008,9788874024505,"Saggistica, Storia",FALSE
+A265,John Grogan,Io & Marley,Sperling & Kupfer,2015,9788868361099,"Narrativa, Animali",FALSE
+A266,AA. VV.,Fidati di me,Sperling & Kupfer,2015,9788820059124,"Narrativa, Racconti",FALSE
+A267,Stephen King,On writing,Frassinelli,2015,9788820059347,"Saggistica, Scrittura",FALSE
+A270,"Del Toma, Macrì",L’alimentazione equilibrata,LSWR,2016,9788868954208,"Saggistica, Salute",FALSE
+A271,Douglas Adams,"La vita, l’Universo e tutto quanto",Mondadori,2009,9788804584285,"Fantascienza, Umorismo",FALSE
+A272,Robert Silverberg,Pianeta senza scampo,Mondadori,2002,9788804510062,Fantascienza,FALSE
+A273,Vernor Vinge,I naufraghi del tempo,Mondadori,1986,9788804276186,Fantascienza,FALSE
+A274,Dava Sobel,Longitude,Fourth Estate,1998,9781857025712,"Saggistica, Storia, Scienza (Inglese)",FALSE
+A275,Arthur Conan Doyle,The Memoirs of Sherlock Holmes,Giunti,2001,9788809020788,"Giallo, Classico (Inglese)",FALSE
+A276,Christophe Léon,Reato di fuga,Sinnos,2016,9788876092922,"Ragazzi, Attualità",FALSE
+A277,Arthur Conan Doyle,Sherlock Holmes La valle della paura,Fabbri Editori,2002,9788845180292,"Giallo, Classico",FALSE
+A278,Christopher Paolini,Eragon,Rizzoli,2003,9788817006880,"Ragazzi, Fantasy",FALSE
+A279,Beppe Severgnini,L’italiano. Lezioni semiserie,Rizzoli,2007,9788817013116,"Saggistica, Linguistica",FALSE
+A280,Nicholas Evans,L’uomo che sussurrava ai cavalli,Rizzoli,1995,9788817663185,"Narrativa, Romanzo",FALSE
+A281,Alessio Grosso,Apocalisse bianca,Mursia,2004,9788842531678,"Thriller, Fantascienza",FALSE
+A282,AA. VV.,Racconti di montagna,Einaudi,2008,9788806192137,"Narrativa, Racconti, Montagna",FALSE
+A283,Tom Clancy,La grande fuga dell’Ottobre Rosso,Corriere della Sera,1997,9788817115162,"Thriller, Spionaggio",FALSE
+A284,"Popper, Condry",Cattiva maestra televisione,Donzelli,1994,9788879890670,"Saggistica, Sociologia",FALSE
+A285,Peter Atkins,Le regole del gioco,Zanichelli,2014,9788808255938,"Saggistica, Fisica",FALSE
+A286,Silvia Vaccari,Days in space,Vaccari,2009,9788885335967,"Saggistica, Astronomia",FALSE
+A290,Emanuela Nava,Sulle orme di Gandhi,Editoriale Scienza,2007,9788873073611,"Ragazzi, Biografia, Storia",FALSE
+A291,Andrew Matthews,"L’amore, la vendetta, la magia",Einaudi,2006,9788806179977,"Ragazzi, Mitologia",FALSE
+A292,Beatrice Masini,Signore e signorine,Einaudi,2004,9788806170066,"Ragazzi, Narrativa",FALSE
+A293,Erminia Dell’Oro,Un treno per la vita,Mondadori,2003,9788842496334,"Ragazzi, Storia, Shoah",FALSE
+A294,Luigi Fleischmann,Un ragazzo ebreo nelle retrovie,Ghisetti e Corvi,2004,9788853800267,"Narrativa, Memorie, Shoah",FALSE
+A295,Graziella Favaro,La zuppiera di MarzuK,Carthusia,2002,9788887212265,"Ragazzi, Intercultura",FALSE
+A296,Carla Bisi Castellani,La casa di via Colombo,Ibis,2005,9788871641880,"Saggistica, Memorie, Guerra",FALSE
+A297,Annamaria Gangai,Emozioni,Albatros,2011,9788856738987,"Narrativa, Romanzo",FALSE
+A298,Stefano Mencherini,Il pane loro,Manni,2001,9788881762148,"Teatro, Impegno Civile",FALSE
+A299,-,III concorso lett. codex purpureus,Sistema Bibliotecario Tortonese,2004,-,"Antologia, Locale",FALSE
+A300,"R. Gavoni, G. Ranzini",Il teatro dei ragazzi,Cedam,1997,9788813203521,"Saggistica, Teatro, Pedagogia",FALSE
+A301,Serena Zoli,Il lavoro smobilita l’uomo,Longanesi,2008,9788830425025,"Narrativa, Satira, Società",FALSE
+A302,Riccardo E. Grassi,Il fruscio lieve della gioia,Infinito,2015,9788868610660,"Narrativa, Romanzo",FALSE
+A303,Cinzia Montagna,Chi ha paura di Caterina?,Primula,2016,9788894132433,Romanzo Storico,FALSE
+A304,Igiaba Scego,La mia casa è dove sono,Loescher,2012,9788820136030,"Saggistica, Autobiografia, Intercultura",FALSE
+A305,Ann Brashares,Quattro amiche e un paio di Jeans,Fabbri Editori,2005,9788845110824,"Ragazzi, Young Adult",FALSE
+A306,Gordon Korman,Le 39 chiavi - La falsa nota,Piemme,2008,9788856613765,"Ragazzi, Avventura",FALSE
+A307,-,Il Quotidiano in classe,La Nuova Italia,2012,-,"Scolastico, Attualità",FALSE
+A308,-,Il Quotidiano in classe,La Nuova Italia,2016,-,"Scolastico, Attualità",FALSE
+A309,-,Indovinelli di nonna e giochi di una volta,-,-,-,"Saggistica, Tradizioni, Giochi",FALSE
+A310,-,Modi di dire Pronti all'uso...,-,-,-,"Saggistica, Linguistica",FALSE
+A311,Rudyard Kipling,The Jungle books,Penguin Books,1994,9780140624373,"Ragazzi, Classico (Inglese)",FALSE
+A312,Uhlman - Malle,L'amico ritrovato - Arrivederci ragazzi,Mondadori,2006,9788842417247,"Narrativa, Classico, Formazione",FALSE
+A313,Daniel Defoe,Robinson Crusoe,Oxford University Press,1990,9780192815552,"Avventura, Classico (Inglese)",FALSE
+A314,Lewis Carroll,Alice's adventures in Wonderland...,Oxford University Press,1982,9780192816207,"Ragazzi, Classico (Inglese)",FALSE
+A315,Michael Ende,La storia infinita,Einaudi,1981,9788830400305,"Ragazzi, Fantasy, Classico",FALSE
+A316,Virginia Woolf,Mrs Dalloway,CIDEB,1992,9788871473139,"Narrativa, Classico (Inglese)",FALSE
+A317,Henry Fielding,The History of Tom Jones a foundling,Penguin Books,1999,97800582364141,"Narrativa, Classico (Inglese)",FALSE
+A318,Alain De Botton,The consolations of Philosophy,Penguin Books,2000,9780140276619,"Saggistica, Filosofia (Inglese)",FALSE
+A319,Mark Twain,Le avventure di Huckleberry Finn,Lattes,2012,9788880424573,"Ragazzi, Avventura, Classico",FALSE
+A320,Sir Steve Stevenson,Agatha Mistery L'enigma del faraone,Corriere della Sera,-,-,"Ragazzi, Giallo",FALSE
+A321,"D. Bartolini, R. Pontegobbi",Leggere l'olocausto,Idest,1998,9788887078045,"Saggistica, Didattica, Shoah",FALSE
+A322,Gruppo Integrazione PV,F.O.T.O.S Formazione teatro...,Ufficio Scolastico Pavia,-,-,"Saggistica, Teatro, Locale",FALSE
+A323,Ignazio Silone,L'avventura d'un povero cristiano,Mondadori,1968,-,"Romanzo Storico, Classico",FALSE
+A324,Jean-Paul Sartre,Morti senza tomba - Le mani sporche,Mondadori,1949,-,"Teatro, Classico",FALSE
+A325,Alfredo Panzini,Il padrone sono me,Mondadori,1922,-,"Narrativa, Classico, Umorismo",FALSE

@@ -65,7 +65,7 @@ def discover_isbn_from_title(title):
         return None, 'No title provided'
 
     query = requests.utils.requote_uri(title)
-    url = f"https://www.googleapis.com/books/v1/volumes?q=intitle:{query}&maxResults=5"
+    url = f"https://www.googleapis.com/books/v1/volumes?q=intitle:{query}&maxResults=10"
 
     try:
         response = requests.get(url, timeout=10)
@@ -91,7 +91,7 @@ def discover_isbn_from_title(title):
         return None, f'Connection error: {e}'
 
 
-def main1():
+def search_ISBN():
     check_books = 0
     csv_filename = 'src\\db\\Libri_Lista.csv'
     output_filename = 'src\\db\\Libri_Lista_checked.csv'
@@ -114,10 +114,10 @@ def main1():
                 matched_title = ''
                 result = None
 
-                if len(normalized) == 10 and check_isbn10(normalized):
-                    isbn_status = 'ISBN-10'
-                elif len(normalized) == 13 and check_isbn13(normalized):
+                if len(normalized) == 13 and check_isbn13(normalized):
                     isbn_status = 'ISBN-13'
+                elif len(normalized) == 10 and check_isbn10(normalized):
+                    isbn_status = 'ISBN-10'
                 else:
                     isbn_status = 'invalid'
 
@@ -168,7 +168,7 @@ def main1():
 
     print('ISBN Verificati autentici: ', check_books)
 
-def main():
+def check_ISBN():
     csv_filename = "src\\db\\Libri_Lista_checked.csv"
     
     print("Starting ISBN verification...\n" + "-"*40)
@@ -216,8 +216,8 @@ def main():
     print(f"Not found / error: {not_found}")
 
 if __name__ == "__main__":
-    main()
-    main1()
+    search_ISBN()
+    check_ISBN()
 
 #TODO Checks for switches ISBN and put them in their correct place, 
 # and search for the ISBN using google/books API to check if the book is authentic or not, and if it is not authentic, 

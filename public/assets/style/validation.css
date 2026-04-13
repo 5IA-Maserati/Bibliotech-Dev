@@ -41,7 +41,7 @@ input.error:focus {
 
 .input-group input:focus {
   outline: none;
-  border-color: #4CAF50;
+  border-color: #276328;
   box-shadow: 0 0 0 3px rgb(76 175 80 / 10%)
 }
 
@@ -63,7 +63,7 @@ input.error:focus {
   top: -0.875rem;
   left: 0.5rem;
   font-size: 0.875rem;
-  color: #4CAF50;
+  color: #276328;
 }
 
 /* Error state - label color */
@@ -74,12 +74,12 @@ input.error:focus {
 
 /* Focus styles for accessibility */
 .input-group input:focus-visible {
-  outline: 2px solid #4CAF50;
+  outline: 2px solid #276328;
 }
 
 /* Validation success styling */
 .input-group input:valid:not(.error) {
-  border-color: #4CAF50;
+  border-color: #276328;
 }
 
 /* Accessibility - aria-invalid styling */
@@ -91,7 +91,7 @@ input[aria-invalid="true"] {
 button[type="submit"] {
   width: 100%;
   padding: 0.75rem;
-  background-color: #4CAF50;
+  background-color: #276328;
   color: white;
   border: none;
   border-radius: 4px;
@@ -109,7 +109,7 @@ button[type="submit"]:disabled {
 }
 
 button[type="submit"]:hover:not(:disabled) {
-  background-color: #45a049;
+  background-color: #1D491D;
 }
 
 button[type="submit"]:active:not(:disabled) {

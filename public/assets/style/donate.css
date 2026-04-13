@@ -160,12 +160,12 @@ footer p {
 }
 
 .info-box.warning {
-  border-left-color: #f44336;
+  border-left-color: #A20F0B;
   background: #ffebee;
 }
 
 .info-box.warning h2 {
-  color: #f44336;
+  color: #A20F0B;
 }
 
 /* ===========================
@@ -333,7 +333,7 @@ footer p {
 
 .info-box.warning .donate-list li::before {
   content: "✕";
-  color: #f44336;
+  color: #A20F0B;
 }
 
 /* ===========================

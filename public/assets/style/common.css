@@ -2,14 +2,14 @@
    COLOR VARIABLES
 =========================== */
 :root {
-  --main-color: #51758d;
-  --dark-light-blue: #597992;
-  --medium-blue: #6995ad;
+  --main-color: #39556A;
+  --dark-light-blue: #39556A;
+  --medium-blue: #39556A;
   --light-gray-blue: #cfd8dc;
   --white: #fff;
   --text-dark: #333;
-  --text-light: #666;
-  --muted: #666;
+  --text-light: #000000;
+  --muted: #000000;
   --bg-light: #f5f7f9;
   --bg-white: var(--white);
   --border: var(--light-gray-blue);

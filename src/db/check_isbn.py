@@ -108,6 +108,82 @@ def discover_isbn_from_title(title, publisher=None, year=None, author=None):
         return None, f'Connection error: {e}'
 
 
+def persistent_isbn_search(title, publisher=None, year=None, author=None):
+    """
+    Keep searching for ISBN using progressively broader criteria until a result is found.
+    Returns the first valid ISBN found and the search strategy that worked.
+    """
+    search_strategies = [
+        # Strategy 1: All criteria (most specific)
+        {
+            'name': 'all_criteria',
+            'title': title,
+            'publisher': publisher,
+            'year': year,
+            'author': author
+        },
+        # Strategy 2: Title + Author + Year
+        {
+            'name': 'title_author_year',
+            'title': title,
+            'publisher': None,
+            'year': year,
+            'author': author
+        },
+        # Strategy 3: Title + Author
+        {
+            'name': 'title_author',
+            'title': title,
+            'publisher': None,
+            'year': None,
+            'author': author
+        },
+        # Strategy 4: Title + Publisher
+        {
+            'name': 'title_publisher',
+            'title': title,
+            'publisher': publisher,
+            'year': None,
+            'author': None
+        },
+        # Strategy 5: Title + Year
+        {
+            'name': 'title_year',
+            'title': title,
+            'publisher': None,
+            'year': year,
+            'author': None
+        },
+        # Strategy 6: Title only (least specific)
+        {
+            'name': 'title_only',
+            'title': title,
+            'publisher': None,
+            'year': None,
+            'author': None
+        }
+    ]
+
+    for strategy in search_strategies:
+        print(f"  Trying strategy: {strategy['name']}")
+        candidate_isbn, candidate_title = discover_isbn_from_title(
+            strategy['title'],
+            strategy['publisher'],
+            strategy['year'],
+            strategy['author']
+        )
+
+        if candidate_isbn:
+            print(f"  ✅ Found ISBN using {strategy['name']}: {candidate_isbn}")
+            return candidate_isbn, candidate_title, strategy['name']
+
+        # Add small delay between attempts to be respectful to the API
+        time.sleep(0.5)
+
+    print("  ❌ No ISBN found with any search strategy")
+    return None, 'No ISBN found with any search strategy', 'failed_all'
+
+
 def search_ISBN():
     check_books = 0
     csv_filename = 'src\\db\\Libri_Lista.csv'
@@ -149,17 +225,19 @@ def search_ISBN():
                     check_books += 1
                 elif result is False:
                     action = 'title-mismatch'
-                    candidate_isbn, candidate_title = discover_isbn_from_title(expected_title, publisher, year, author)
+                    print(f"  Title mismatch detected, searching for correct ISBN...")
+                    candidate_isbn, candidate_title, search_strategy = persistent_isbn_search(expected_title, publisher, year, author)
                     if candidate_isbn:
                         authoritative_isbn = candidate_isbn
-                        action = 'corrected-isbn-by-title'
+                        action = f'corrected-isbn-by-{search_strategy}'
                         isbn_status = 'ISBN-10' if len(candidate_isbn) == 10 else 'ISBN-13'
                 else:
-                    candidate_isbn, candidate_title = discover_isbn_from_title(expected_title, publisher, year, author)
+                    print(f"  No valid ISBN found, searching for ISBN...")
+                    candidate_isbn, candidate_title, search_strategy = persistent_isbn_search(expected_title, publisher, year, author)
                     if candidate_isbn:
                         authoritative_isbn = candidate_isbn
                         isbn_status = 'ISBN-10' if len(candidate_isbn) == 10 else 'ISBN-13'
-                        action = 'found-isbn-by-title'
+                        action = f'found-isbn-by-{search_strategy}'
                     else:
                         action = f'not-found ({candidate_title})'
 

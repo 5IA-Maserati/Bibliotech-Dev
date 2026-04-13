@@ -9,10 +9,10 @@ n_inventario,autore,titolo,casa_editrice,anno,isbn,generi,ripetuti,checked_isbn,
 29,Dino Buzzati,Il deserto dei tartari,Mondadori,2000,9788804481072,"Narrativa, Classico",FALSE,9788852031458,ISBN-13,corrected-isbn-by-title,Tuttolegumi
 A1586,Woody Allen,Io e Annie,Feltrinelli,1991,9788807811449,"Poesia, Teatro",FALSE,9788807811449,ISBN-13,ok,Io e Annie
 32,Natalia Ginzburg,Lessico famigliare,Einaudi,1963,-,"Narrativa, Biografia, Memorie",FALSE,9788806203054,ISBN-13,found-isbn-by-title,
-33,Giorgio Bassani,Gli occhiali d’oro,Mondadori,1977,9788804470106,"Narrativa, Romanzo",FALSE,9788858826362,ISBN-13,found-isbn-by-title,ISBN not found in the database
+33,Giorgio Bassani,Gli occhiali d'oro,Mondadori,1977,9788804470106,"Narrativa, Romanzo",FALSE,9788858826362,ISBN-13,found-isbn-by-title,ISBN not found in the database
 35,Giorgio Bassani,Le storie ferraresi,Einaudi,1960,-,"Narrativa, Racconti",FALSE,9788806163907,ISBN-13,found-isbn-by-title,
-57,Miguel de Cervantes,Don Chisciotte della Mancia (Vol. 3),Mondadori,1964,-,"Narrativa, Classico",FALSE,1187081531,ISBN-10,found-isbn-by-title,
-58,Miguel de Cervantes,Don Chisciotte della Mancia (Vol. 2),Mondadori,1964,-,"Narrativa, Classico",FALSE,1187081531,ISBN-10,found-isbn-by-title,
+57,Miguel de Cervantes,Don Chisciotte della Mancia (Vol. 3),Mondadori,1964,-,"Narrativa, Classico",FALSE,1024501329,ISBN-10,found-isbn-by-title,
+58,Miguel de Cervantes,Don Chisciotte della Mancia (Vol. 2),Mondadori,1964,-,"Narrativa, Classico",FALSE,1024501329,ISBN-10,found-isbn-by-title,
 59,Miguel de Cervantes,Don Chisciotte della Mancia (Vol. 1),Mondadori,1964,-,"Narrativa, Classico",FALSE,1024501329,ISBN-10,found-isbn-by-title,
 64,Erodoto,Storie di antichi popoli,Editrice Italiana di Cultura,1964,-,"Saggistica, Storia",FALSE,9791220346481,ISBN-13,found-isbn-by-title,
 66,Carlo Goldoni,La locandiera,Signorelli,1966,-,"Poesia, Teatro",FALSE,9788852057977,ISBN-13,found-isbn-by-title,
@@ -21,18 +21,18 @@ A1586,Woody Allen,Io e Annie,Feltrinelli,1991,9788807811449,"Poesia, Teatro",FAL
 79,W.H. Armstrong,Sounder,Bompiani,1971,9788845233043,"Ragazzi, Romanzo Storico",FALSE,9780062105561,ISBN-13,corrected-isbn-by-title,Effetti collaterali
 81,Beppe Fenoglio,I ventitre giorni della città di Alba,Einaudi,1952,-,"Romanzo Storico, Racconti",FALSE,9791222322322,ISBN-13,found-isbn-by-title,
 91,Lew Wallace,Ben Hur,San Paolo,1966,-,"Romanzo Storico, Avventura",FALSE,1090317662,ISBN-10,found-isbn-by-title,
-103,Vitaliano Brancati,Il bell’Antonio,Bompiani,1963,-,"Narrativa, Romanzo",FALSE,9791223908204,ISBN-13,found-isbn-by-title,
+103,Vitaliano Brancati,Il bell'Antonio,Bompiani,1963,-,"Narrativa, Romanzo",FALSE,9791223908204,ISBN-13,found-isbn-by-title,
 104,André Gide,I falsari,Bompiani,1953,-,"Narrativa, Romanzo",FALSE,8845214125,ISBN-10,found-isbn-by-title,
 113,Herman Melville,Moby Dick (2 volumi),Garzanti,1946,-,"Narrativa, Avventura, Classico",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Moby%20Dick%20(2%20volumi)&maxResults=10),
 114,Herman Melville,Moby Dick (2 volumi),Garzanti,1946,-,"Narrativa, Avventura, Classico",FALSE,9781425046897,ISBN-13,found-isbn-by-title,
 115,Primo Levi,Se questo è un uomo - La tregua,Einaudi,1996,9788806143947,"Biografia, Memorie, Romanzo Storico",FALSE,9782808689649,ISBN-13,found-isbn-by-title,ISBN not found in the database
-118,John Steinbeck,L’inverno del nostro scontento,Mondadori,1962,-,"Narrativa, Romanzo",FALSE,8804477806,ISBN-10,found-isbn-by-title,
+118,John Steinbeck,L'inverno del nostro scontento,Mondadori,1962,-,"Narrativa, Romanzo",FALSE,8804477806,ISBN-10,found-isbn-by-title,
 122,Lev Tolstoj,Guerra e pace,Mondadori,1945,-,"Romanzo Storico, Classico",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Guerra%20e%20pace&maxResults=10),
 123,Lev Tolstoj,Guerra e pace,Mondadori,1945,-,"Romanzo Storico, Classico",FALSE,9788811131434,ISBN-13,found-isbn-by-title,
 136,Natalia Ginzburg,Le piccole virtù,Einaudi,1962,-,"Narrativa, Saggistica",FALSE,8806225731,ISBN-10,found-isbn-by-title,
 141,James Hilton,"Addio, Mister Chips",Mondadori,1938,-,"Narrativa, Romanzo",FALSE,,invalid,not-found (No valid ISBN found in title results),
 150,Carlo Emilio Gadda,Quel pasticciaccio brutto...,Garzanti,1957,-,"Giallo, Thriller, Classico",FALSE,8899545626,ISBN-10,found-isbn-by-title,
-158,John Steinbeck,La valle dell’Eden,Mondadori,1954,-,"Narrativa, Classico",FALSE,8804495871,ISBN-10,found-isbn-by-title,
+158,John Steinbeck,La valle dell'Eden,Mondadori,1954,-,"Narrativa, Classico",FALSE,8804495871,ISBN-10,found-isbn-by-title,
 163,Margaret Mitchell,Via col vento,Mondadori,-,-,Romanzo Storico,FALSE,9788852047572,ISBN-13,found-isbn-by-title,
 168,Arthur Miller,Morte di un commesso viaggiatore,Garzanti,1968,-,"Poesia, Teatro",FALSE,9788858420744,ISBN-13,found-isbn-by-title,
 174,Fëdor Dostoevskij,I fratelli Karamazov,Mondadori,1969,-,"Narrativa, Classico",FALSE,9788858608746,ISBN-13,found-isbn-by-title,
@@ -49,7 +49,7 @@ A1586,Woody Allen,Io e Annie,Feltrinelli,1991,9788807811449,"Poesia, Teatro",FAL
 205,Malvezzi-Pirelli,Lettere di condannati a morte...,Einaudi,1967,-,"Biografia, Memorie, Storia",FALSE,9788858425800,ISBN-13,found-isbn-by-title,
 214,Leonardo Sciascia,A ciascuno il suo,Adelphi,1995,9788845907219,"Giallo, Thriller",FALSE,9782390802747,ISBN-13,found-isbn-by-title,
 248,Luigi Pirandello,Il berretto a sonagli...,Mondadori,1969,-,"Poesia, Teatro",FALSE,1508444919,ISBN-10,found-isbn-by-title,
-260,Italo Calvino,L’entrata in guerra,Einaudi,1974,9788806380625,"Narrativa, Racconti, Romanzo Storico",FALSE,8815111077,ISBN-10,found-isbn-by-title,ISBN not found in the database
+260,Italo Calvino,L'entrata in guerra,Einaudi,1974,9788806380625,"Narrativa, Racconti, Romanzo Storico",FALSE,8815111077,ISBN-10,found-isbn-by-title,ISBN not found in the database
 262,John Steinbeck,Uomini e topi,Bompiani,1995,9788845248436,"Narrativa, Classico",FALSE,9782808689908,ISBN-13,corrected-isbn-by-title,Normal Girl. Una ragazza come le altre
 263,Jack Kerouac,I sotterranei,Feltrinelli,1965,-,"Narrativa, Biografia, Memorie",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:I%20sotterranei&maxResults=10),
 271,Elio Vittorini,Conversazione in Sicilia,Einaudi,1966,-,"Narrativa, Classico",FALSE,9782390802662,ISBN-13,found-isbn-by-title,
@@ -60,18 +60,18 @@ A1586,Woody Allen,Io e Annie,Feltrinelli,1991,9788807811449,"Poesia, Teatro",FAL
 295,Antonio Fogazzaro,Malombra,Mondadori,1974,9788804492529,"Fantasy, Gotico, Classico",FALSE,9788858833186,ISBN-13,found-isbn-by-title,
 304,Franz Kafka,Il castello,Mondadori,1977,9788804135506,"Narrativa, Classico",FALSE,9788804135506,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20castello&maxResults=10),
 306,Franz Kafka,Il processo,Mondadori,1975,9788804307683,"Narrativa, Classico",FALSE,9788804307683,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20processo&maxResults=10),
-309,Jaroslav Hasek,Il buon soldato sc’veik,Feltrinelli,1966,-,"Romanzo Storico, Satira",FALSE,8807810484,ISBN-10,found-isbn-by-title,
+309,Jaroslav Hasek,Il buon soldato sc'veik,Feltrinelli,1966,-,"Romanzo Storico, Satira",FALSE,8807810484,ISBN-10,found-isbn-by-title,
 316,James Joyce,Ulisse,Mondadori,1973,9788804000392,"Narrativa, Classico",FALSE,9788858665442,ISBN-13,found-isbn-by-title,
 326,Gian Luigi Rondi,7 domande a 49 registi,SEI,1975,9788805055372,Saggistica,FALSE,9788805055372,invalid,not-found (No valid ISBN found in title results),
 328,Luigi Pirandello,I vecchi e i giovani,Mondadori,1967,-,Romanzo Storico,FALSE,8817050741,ISBN-10,found-isbn-by-title,
 346,Beppe Fenoglio,La malora,Einaudi,1968,-,"Narrativa, Romanzo",FALSE,8897967221,ISBN-10,found-isbn-by-title,
 349,Raffaello Brignetti,Il gabbiano azzurro,Mondadori,1973,9788804107102,"Narrativa, Romanzo",FALSE,880632201X,ISBN-10,found-isbn-by-title,
-351,Cesare Pavese,Feria d’agosto,Mondadori,1971,9788804092267,"Narrativa, Saggistica, Racconti",FALSE,9788828102878,ISBN-13,found-isbn-by-title,
+351,Cesare Pavese,Feria d'agosto,Mondadori,1971,9788804092267,"Narrativa, Saggistica, Racconti",FALSE,9788828102878,ISBN-13,found-isbn-by-title,
 252,AA. VV.,Diario del Che in Bolivia,Feltrinelli,1968,-,"Biografia, Memorie",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Diario%20del%20Che%20in%20Bolivia&maxResults=10),
 352,Antonio Fogazzaro,Piccolo mondo antico,Mondadori,1970,9788804492574,Romanzo Storico,FALSE,1974132838,ISBN-10,found-isbn-by-title,
-354,Emilio Lussu,Un anno sull’altipiano,Einaudi,1960,-,"Romanzo Storico, Biografia, Memorie",FALSE,8876910883,ISBN-10,found-isbn-by-title,
+354,Emilio Lussu,Un anno sull'altipiano,Einaudi,1960,-,"Romanzo Storico, Biografia, Memorie",FALSE,8876910883,ISBN-10,found-isbn-by-title,
 361,Giorgio Bassani,Il giardino dei Finzi-Contini,Einaudi,1962,-,Romanzo Storico,FALSE,9788858806326,ISBN-13,found-isbn-by-title,
-362,Apollonio,L’uomo nel 2000,Rizzoli,1968,-,Saggistica,FALSE,8809206452,ISBN-10,found-isbn-by-title,
+362,Apollonio,L'uomo nel 2000,Rizzoli,1968,-,Saggistica,FALSE,8809206452,ISBN-10,found-isbn-by-title,
 369,Leonardo Sciascia,La scomparsa di Majorana,Einaudi,1975,9788806437368,"Saggistica, Biografia, Memorie",FALSE,9788806437368,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:La%20scomparsa%20di%20Majorana&maxResults=10),
 373,Giovanni Verga,Tutte le novelle (due volumi),Mondadori,1970,9788804000373,"Narrativa, Racconti",FALSE,9788858656785,ISBN-13,found-isbn-by-title,
 374,Giovanni Verga,Tutte le novelle (due volumi),Mondadori,1970,9788804000373,"Narrativa, Racconti",FALSE,9788858656785,ISBN-13,found-isbn-by-title,
@@ -86,7 +86,7 @@ A1586,Woody Allen,Io e Annie,Feltrinelli,1991,9788807811449,"Poesia, Teatro",FAL
 409,Thomas Mann,"Tonio Kroger, La morte a Venezia...",Garzanti,1982,9788811580556,"Narrativa, Racconti",FALSE,9788811580556,invalid,"not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Tonio%20Kroger,%20La%20morte%20a%20Venezia...&maxResults=10)",
 411,Oreste del Buono,La stampa italiana sotto il fascismo,Feltrinelli,1971,9788807222535,"Saggistica, Storia",FALSE,9788807222535,ISBN-13,not-found (No valid ISBN found in title results),ISBN not found in the database
 413,Carlo Levi,Le parole sono pietre,Einaudi,1980,9788806502264,"Saggistica, Biografia, Memorie",FALSE,883193371X,ISBN-10,found-isbn-by-title,
-414,Renata Viganò,L’Agnese va a morire,Einaudi,1982,9788806034987,Romanzo Storico,FALSE,8806174843,ISBN-10,found-isbn-by-title,
+414,Renata Viganò,L'Agnese va a morire,Einaudi,1982,9788806034987,Romanzo Storico,FALSE,8806174843,ISBN-10,found-isbn-by-title,
 416,Ernest Hemingway,Fiesta,Einaudi,1981,9788806047703,"Narrativa, Classico",FALSE,8855280120,ISBN-10,found-isbn-by-title,
 418,Robert Louis Stevenson,"Romanzi, racconti e saggi",Mondadori,-,9788804125306,"Narrativa, Racconti, Saggistica",FALSE,8804560215,ISBN-10,found-isbn-by-title,
 424,Mario Rigoni Stern,Il bosco degli urogalli,Einaudi,1974,9788806031269,"Narrativa, Racconti",FALSE,9788806031269,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20bosco%20degli%20urogalli&maxResults=10),
@@ -110,11 +110,11 @@ A1627,Elio Vittorini,Uomini e no,Mondadori,1973,9788804000095,Romanzo Storico,FA
 489,Vasco Pratolini,Le ragazze di Sanfrediano,Mondadori,1992,9788804505038,"Neorealismo, Classico, Corale",FALSE,1243819103,ISBN-10,found-isbn-by-title,
 492,Franz Kafka,Lettera al padre,Feltrinelli,1992,9788807820191,"Biografia, Diari",FALSE,8818038427,ISBN-10,found-isbn-by-title,
 496,AA. VV.,Diario del Che in Bolivia,Feltrinelli,1968,-,"Biografia, Diari, Testimonianze",FALSE,8807830019,ISBN-10,found-isbn-by-title,
-499,Domenico Starnone,Segni d’oro,Feltrinelli,1992,9788807811517,"Romanzo, Satira",FALSE,8807811510,ISBN-10,corrected-isbn-by-title,Segni d'oro
+499,Domenico Starnone,Segni d'oro,Feltrinelli,1992,9788807811517,"Romanzo, Satira",FALSE,8807811510,ISBN-10,corrected-isbn-by-title,Segni d'oro
 502,Carlo Cassola,Fausto e Anna,Rizzoli,1992,9788817110198,"Romanzo Storico, Resistenza, Narrativa",FALSE,9788817110198,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Fausto%20e%20Anna&maxResults=10),ISBN not found in the database
 503,Aldo Palazzeschi,Le sorelle Materassi,Mondadori,1990,9788804332306,"Narrativa, Classici",FALSE,9788804332306,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Le%20sorelle%20Materassi&maxResults=10),
 507,William Shakespeare,Amleto,Feltrinelli,1990,9788807820069,"Poesia, Teatro",FALSE,9788807820069,ISBN-13,title-mismatch,Edipo re
-511,Johnny Hart,L’antichissimo mondo di B.C.,Mondadori,1965,-,"Fumetti, Graphic Novel",FALSE,8809062035,ISBN-10,found-isbn-by-title,
+511,Johnny Hart,L'antichissimo mondo di B.C.,Mondadori,1965,-,"Fumetti, Graphic Novel",FALSE,8809062035,ISBN-10,found-isbn-by-title,
 516,Johnny Hart,B.C. in 24 lezioni,Mondadori,1972,-,"Fumetti, Graphic Novel",FALSE,,invalid,not-found (No valid ISBN found in title results),
 519,Clara Sereni,Il gioco dei regni,Giunti,1993,9788809202819,"Romanzo Storico, Biografia, Testimonianze",FALSE,9788809202819,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20gioco%20dei%20regni&maxResults=10),
 520,Clara Sereni,Il gioco dei regni,Giunti,1993,9788809202819,"Romanzo Storico, Biografia, Testimonianze",FALSE,8817010790,ISBN-10,found-isbn-by-title,
@@ -139,7 +139,7 @@ A1609,Bertolt Brecht,Vita di Galileo,Einaudi,1963,9788806062965,"Poesia, Teatro"
 552,Italo Svevo,Senilità,Feltrinelli,1991,9788807811696,"Narrativa, Classici",FALSE,9786558947066,ISBN-13,found-isbn-by-title,
 570,Charles M. Schulz,Un Natale di Charlie Brown,Bompiani,1966,-,"Fumetti, Graphic Novel, Ragazzi",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Un%20Natale%20di%20Charlie%20Brown&maxResults=10),
 587,Pier Paolo Pasolini,Ragazzi di vita,Garzanti,1992,9788811666496,"Narrativa, Ragazzi, Formazione",FALSE,9788811666496,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Ragazzi%20di%20vita&maxResults=10),
-589,Elsa Morante,L’isola di Arturo,Einaudi,1957,-,"Narrativa, Ragazzi, Formazione",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99isola%20di%20Arturo&maxResults=10),
+589,Elsa Morante,L'isola di Arturo,Einaudi,1957,-,"Narrativa, Ragazzi, Formazione",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99isola%20di%20Arturo&maxResults=10),
 591,Natalia Ginzburg,Le voci della sera,Einaudi,1963,-,"Narrativa, Romanzo breve",FALSE,0719008573,ISBN-10,found-isbn-by-title,
 594,Carlo Cassola,La ragazza di Bube,Rizzoli,1973,9788817100344,"Narrativa, Romanzo Storico",FALSE,8820104555,ISBN-10,found-isbn-by-title,
 601,Carlo Emilio Gadda,Quel pasticciaccio brutto...,Garzanti,1991,9788811661122,"Giallo, Thriller, Narrativa",FALSE,8899545626,ISBN-10,corrected-isbn-by-title,Dolce come il cioccolato
@@ -155,7 +155,7 @@ A1609,Bertolt Brecht,Vita di Galileo,Einaudi,1963,9788806062965,"Poesia, Teatro"
 625,Walter Scott,Ivanhoe,Penguin Books,1986,9780140431431,"Lingue Straniere, Romanzo Storico",FALSE,9780140431431,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Ivanhoe&maxResults=10),
 626,Gustave Flaubert,L'education sentimentale,Folio,1965,9782070360661,"Lingue Straniere, Narrativa",FALSE,9782070360661,invalid,not-found (No valid ISBN found in title results),
 628,Sibilla Aleramo,Una donna,Feltrinelli,1992,9788807804472,"Narrativa, Biografia, Testimonianze",FALSE,8596547478942,ISBN-13,found-isbn-by-title,ISBN not found in the database
-629,Charles Darwin,L’origine della specie,Einaudi,2009,9788806196234,"Saggistica, Scienze",FALSE,9788858600566,ISBN-13,found-isbn-by-title,
+629,Charles Darwin,L'origine della specie,Einaudi,2009,9788806196234,"Saggistica, Scienze",FALSE,9788858600566,ISBN-13,found-isbn-by-title,
 636,Italo Svevo,La coscienza di Zeno,Mondadori,1987,9788842430031,"Narrativa, Classici, Biografia, Diari",FALSE,9788842430031,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:La%20coscienza%20di%20Zeno&maxResults=10),
 637,Alberto Moravia,Gli indifferenti,Bompiani,1995,9788845213601,"Narrativa, Classici",FALSE,8845259633,ISBN-10,found-isbn-by-title,ISBN not found in the database
 638,Alberto Moravia,Gli indifferenti,Bompiani,1995,9788845213601,"Narrativa, Classici",FALSE,8845259633,ISBN-10,found-isbn-by-title,ISBN not found in the database
@@ -163,7 +163,7 @@ A1609,Bertolt Brecht,Vita di Galileo,Einaudi,1963,9788806062965,"Poesia, Teatro"
 640,Hermann Hesse,Gertrud,Mondadori,1980,9788804179374,"Classico, Psicologico, Musicale",FALSE,8840368337,ISBN-10,found-isbn-by-title,
 641,Hermann Hesse,Racconti,Mondadori,2001,9788804493037,"Narrativa, Racconti",FALSE,9788804493037,ISBN-13,ok,Sessanta racconti
 642,Hermann Hesse,Sotto la ruota,Mondadori,1999,9788804467380,"Narrativa, Ragazzi, Formazione",FALSE,9788804467380,ISBN-13,title-mismatch,Francia
-643,Franz Kafka,Il messaggio dell’imperatore,Adelphi,1994,9788845904325,"Narrativa, Racconti",FALSE,8834865332,ISBN-10,corrected-isbn-by-title,Pensieri diversi
+643,Franz Kafka,Il messaggio dell'imperatore,Adelphi,1994,9788845904325,"Narrativa, Racconti",FALSE,8834865332,ISBN-10,corrected-isbn-by-title,Pensieri diversi
 A1615,Samuel Beckett,Aspettando Godot,Einaudi,1969,-,"Poesia, Teatro",FALSE,9791222307732,ISBN-13,found-isbn-by-title,
 644,J. W. Goethe,Favola,Adelphi,1990,9788845907876,"Narrativa, Racconti",FALSE,9788845907876,ISBN-13,title-mismatch,Incontri con Anna Achmatova (1938-1941)
 645,Michele Serra,Il nuovo che avanza,Feltrinelli,1997,9788807811739,"Narrativa, Racconti, Attualità",FALSE,9788807811739,ISBN-13,ok,Il nuovo che avanza
@@ -206,9 +206,9 @@ A1611,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narra
 846,Howard Post,Gli emarginati,Mondadori,1973,9788804423455,"Fumetti, Graphic Novel",FALSE,9788804423455,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Gli%20emarginati&maxResults=10),
 A1612,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE,9788806376513,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20mare%20color%20del%20vino&maxResults=10),
 847,Charles M. Schulz,Il bambino a una dimensione,Mondadori,1971,-,"Fumetti, Graphic Novel",FALSE,,invalid,not-found (No valid ISBN found in title results),
-848,Charles M. Schulz,E’ domani Charlie Brown,Mondadori,1974,9788804113332,"Fumetti, Graphic Novel",FALSE,9788804113332,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:E%E2%80%99%20domani%20Charlie%20Brown&maxResults=10),
+848,Charles M. Schulz,E' domani Charlie Brown,Mondadori,1974,9788804113332,"Fumetti, Graphic Novel",FALSE,9788804113332,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:E%E2%80%99%20domani%20Charlie%20Brown&maxResults=10),
 A1613,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE,9788845972393,ISBN-13,found-isbn-by-title,
-849,Elzie Crisler Segar,Fino all’ultimo spinacio,Mondadori,1974,-,"Fumetti, Graphic Novel",FALSE,8880333305,ISBN-10,found-isbn-by-title,
+849,Elzie Crisler Segar,Fino all'ultimo spinacio,Mondadori,1974,-,"Fumetti, Graphic Novel",FALSE,8880333305,ISBN-10,found-isbn-by-title,
 A1614,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE,9788845972393,ISBN-13,found-isbn-by-title,
 850,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narrativa, Racconti",FALSE,9788845972393,ISBN-13,found-isbn-by-title,
 851,Mort Walker,Manuale della recluta,Mondadori,1973,-,"Fumetti, Graphic Novel",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Manuale%20della%20recluta&maxResults=10),
@@ -225,10 +225,10 @@ A1614,Leonardo Sciascia,Il mare color del vino,Einaudi,1973,9788806376513,"Narra
 1698,Natalia Ginzburg,Caro Michele,Mondadori,1973,9788806371197,"Narrativa, Romanzo",FALSE,8806133535,ISBN-10,found-isbn-by-title,ISBN not found in the database
 1699,Ugo Foscolo,Ultime lettere di Jacopo Ortis,Einaudi,1963,-,"Narrativa, Classico",FALSE,,invalid,not-found (No valid ISBN found in title results),
 1833,Rolf-Ulrich,Guida alla musica,Mondadori,1969,-,"Saggistica, Musica",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Guida%20alla%20musica&maxResults=10),
-1851,Jay M. Savage,L’evoluzione,Zanichelli,1967,-,"Saggistica, Scienze",FALSE,9788858623718,ISBN-13,found-isbn-by-title,
+1851,Jay M. Savage,L'evoluzione,Zanichelli,1967,-,"Saggistica, Scienze",FALSE,9788858623718,ISBN-13,found-isbn-by-title,
 2194,AA. VV.,Programmazione neurolinguistica,Astrolabio,1982,9788834007098,"Saggistica, Scienze",FALSE,180179961X,ISBN-10,found-isbn-by-title,
 2266,AA. VV.,Pragmatica della comunicazione umana,Astrolabio,1971,9788834001423,"Saggistica, Scienze",FALSE,8863587906,ISBN-10,found-isbn-by-title,
-2587,Antonio Tabucchi,Il filo dell’orizzonte,Feltrinelli,1991,9788807811463,"Narrativa, Romanzo, Giallo",FALSE,9788862426480,ISBN-13,corrected-isbn-by-title,Il filo dell'orizzonte
+2587,Antonio Tabucchi,Il filo dell'orizzonte,Feltrinelli,1991,9788807811463,"Narrativa, Romanzo, Giallo",FALSE,9788862426480,ISBN-13,corrected-isbn-by-title,Il filo dell'orizzonte
 2599,Eschilo,I Persiani,Feltrinelli,1991,9788807820122,"Poesia, Teatro, Classico",FALSE,1547171936,ISBN-10,found-isbn-by-title,
 2604,Sofocle,Edipo Re,Feltrinelli,1991,9788807820283,"Poesia, Teatro, Classico",FALSE,9788807820283,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Edipo%20Re&maxResults=10),
 2675,Carlo Emilio Gadda,Il primo libro delle favole,Mondadori,1990,9788804332411,"Narrativa, Ragazzi",FALSE,8809767055,ISBN-10,corrected-isbn-by-title,Ho tanto sonno
@@ -250,7 +250,7 @@ A068,Zita Dazzi,In equilibrio perfetto,Sinnos,2016,9788876093258,Ragazzi,FALSE,9
 A069,Catherine Forde,A bomba,Sinnos,2011,9788876091971,Ragazzi,FALSE,9788876091971,ISBN-13,title-mismatch,Vecchie storie. Cofanetto
 A070,Christophe Léon,Reato di fuga,Sinnos,2016,9788876093159,Ragazzi,FALSE,887609296X,ISBN-10,corrected-isbn-by-title,Scrivere come
 A071,Federico Appel,Pesi massimi,Sinnos,2014,9788876092787,"Fumetti, Graphic Novel, Ragazzi",FALSE,8887676356,ISBN-10,found-isbn-by-title,ISBN not found in the database
-A072,AA. VV.,Il libro dell’economia,Gribaudo,2015,9788858012642,"Saggistica, Economia",FALSE,9788858012642,ISBN-13,title-mismatch,La guida completa con tutti i personaggi. Lego friends. Con gadget
+A072,AA. VV.,Il libro dell'economia,Gribaudo,2015,9788858012642,"Saggistica, Economia",FALSE,9788858012642,ISBN-13,title-mismatch,La guida completa con tutti i personaggi. Lego friends. Con gadget
 A073,Aude de Tocqueville,Atlante delle città perdute,Bompiani,2014,9788845277870,"Saggistica, Geografia",FALSE,8845280675,ISBN-10,found-isbn-by-title,ISBN not found in the database
 A074,Dominique Lanni,Atlante dei paesi sognati,Bompiani,2016,9788845283123,"Saggistica, Geografia",FALSE,8845282651,ISBN-10,corrected-isbn-by-title,L'arte di sparire
 A075,Umberto Eco,Storia delle terre... leggendari,Bompiani,2014,9788845278143,Saggistica,FALSE,8830100617,ISBN-10,corrected-isbn-by-title,Sette notti
@@ -295,14 +295,14 @@ A1009,Dino Buzzati,Il deserto dei Tartari,Mondadori,-,9788804492475,"Narrativa, 
 A101,Enrico Deaglio,La banalità del bene,Feltrinelli,2012,9788807884764,"Narrativa, Romanzo Storico, Shoah narrativa",FALSE,8807070243,ISBN-10,found-isbn-by-title,ISBN not found in the database
 A1010,Gabriele D'Annunzio,Motti dannunziani,Newton Compton,-,9788879835335,"Saggistica, Filosofia",FALSE,8863441286,ISBN-10,found-isbn-by-title,
 A1011,James Joyce,Gente di Dublino,Newton Compton,2010,9788854120358,"Narrativa, Racconti, Classici",FALSE,9788858623916,ISBN-13,corrected-isbn-by-title,Totem e tabù e altri saggi di antropologia. Ediz. integrali
-A1012,Terry Brooks,L’ultima magia,Mondadori,-,9788804470923,Fantasy,FALSE,9788823529786,ISBN-13,found-isbn-by-title,
+A1012,Terry Brooks,L'ultima magia,Mondadori,-,9788804470923,Fantasy,FALSE,9788823529786,ISBN-13,found-isbn-by-title,
 A1013,Terry Brooks,Il ciclo di Shannara,Mondadori,-,9788804375177,Fantasy,FALSE,9788852041310,ISBN-13,found-isbn-by-title,
 A1014,Terry Brooks,Il labirinto,Mondadori,-,9788804533032,Fantasy,FALSE,9788833360560,ISBN-13,found-isbn-by-title,
 A1015,David Eddings,La grande dea,Sperling & Kupfer,-,9788820008535,Fantasy,FALSE,8894428818,ISBN-10,found-isbn-by-title,
 A1016-a,Miguel de Cervantes,Don Chisciotte della Mancia I,De Agostini,-,-,"Narrativa, Classici",FALSE,9788817014632,ISBN-13,found-isbn-by-title,
 A1016-b,Miguel de Cervantes,Don Chisciotte della Mancia II,De Agostini,-,-,"Narrativa, Classici",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Don%20Chisciotte%20della%20Mancia%20II&maxResults=10),
 A1017,Philip Pullman,La lama sottile,Salani,1997,9788884514783,Fantasy,FALSE,9788862563505,ISBN-13,corrected-isbn-by-title,La cura dei sogni
-A1018,Philip Pullman,Il cannocchiale d’ambra,TEA,2004,9788850207558,Fantasy,FALSE,9788850207558,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20cannocchiale%20d%E2%80%99ambra&maxResults=10),ISBN not found in the database
+A1018,Philip Pullman,Il cannocchiale d'ambra,TEA,2004,9788850207558,Fantasy,FALSE,9788850207558,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20cannocchiale%20d%E2%80%99ambra&maxResults=10),ISBN not found in the database
 A1019,Christopher Paolini,Eldest,Rizzoli,2005,9788817008471,Fantasy,FALSE,9788858602690,ISBN-13,corrected-isbn-by-title,Chador
 A102,Banana Yoshimoto,Kitchen,Feltrinelli,2011,9788807880490,"Letteratura Giapponese, Sentimentale",FALSE,880781868X,ISBN-10,corrected-isbn-by-title,Piccoli equivoci senza importanza
 A1020,J. R. R. Tolkien,Lo Hobbit,Bompiani,2003,9788845254581,"Fantasy, Ragazzi",FALSE,9788858757437,ISBN-13,corrected-isbn-by-title,La catastrofe di Nietzsche a Torino
@@ -319,20 +319,20 @@ A1029,Harper Lee,Il buio oltre la siepe,Feltrinelli,-,9788807880944,"Narrativa, 
 A103,Valentina Camerini,Il secondo momento migliore,Feltrinelli,2014,9788807910081,"Romanzo, Sentimentale",FALSE,9788858817865,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1030,Paolo Giordano,La solitudine dei numeri primi,Mondadori,-,9788804577028,"Narrativa, Ragazzi, Adolescenza",FALSE,9782390802884,ISBN-13,found-isbn-by-title,
 A1031,Alessandro Baricco,The game,Einaudi,-,9788806235315,"Saggistica, Scienze, Attualità",FALSE,9788806235315,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:The%20game&maxResults=10),
-A1032,Carlos Ruiz Zafón,L’ombra del vento,Mondadori,2004,9788804527336,"Narrativa, Giallo, Thriller, Gotico",FALSE,9788852098161,ISBN-13,corrected-isbn-by-title,L'ombra del vento
+A1032,Carlos Ruiz Zafón,L'ombra del vento,Mondadori,2004,9788804527336,"Narrativa, Giallo, Thriller, Gotico",FALSE,9788852098161,ISBN-13,corrected-isbn-by-title,L'ombra del vento
 A1033,Vanessa Diffenbaugh,Il linguaggio segreto dei fiori,Garzanti,2011,9788811670394,"Romanzo, Sentimentale, Formazione",FALSE,881168661X,ISBN-10,found-isbn-by-title,
 A1034,Siobhan Vivian,La lista,Feltrinelli,-,9788807921968,"Narrativa, Ragazzi, Adolescenza",FALSE,9788807921968,invalid,not-found (No valid ISBN found in title results),
-A1035,Arthur Schopenhauer,L’arte di ottenere ragione,Adelphi,-,9788845908568,"Saggistica, Filosofia",FALSE,9788845978906,ISBN-13,found-isbn-by-title,
+A1035,Arthur Schopenhauer,L'arte di ottenere ragione,Adelphi,-,9788845908568,"Saggistica, Filosofia",FALSE,9788845978906,ISBN-13,found-isbn-by-title,
 A1036,Carlo Rovelli,Sette brevi lezioni di Fisica,Adelphi,2014,9788845929250,"Saggistica, Scienze",FALSE,9788845929250,ISBN-13,ok,Sette brevi lezioni di fisica
 A1037,Sigmund Freud,Il sogno e la sua interpretazione,Newton Compton,2010,9788854124356,"Saggistica, Filosofia, Scienze",FALSE,9788854124356,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20sogno%20e%20la%20sua%20interpretazione&maxResults=10),ISBN not found in the database
-A1038,Paulo Coelho,L’Alchimista,Bompiani,-,9788845241283,"Narrativa, Filosofia",FALSE,8845228673,ISBN-10,found-isbn-by-title,
+A1038,Paulo Coelho,L'Alchimista,Bompiani,-,9788845241283,"Narrativa, Filosofia",FALSE,8845228673,ISBN-10,found-isbn-by-title,
 A1039,Gandhi,La voce della verità,Newton Compton,-,9788879831962,"Saggistica, Biografia, Testimonianze",FALSE,1021378615,ISBN-10,found-isbn-by-title,
 A104,Paul Dowswell,Auslander,Feltrinelli,2016,9788807910203,"Romanzo Storico, Ragazzi, Guerra",FALSE,9781599907741,ISBN-13,corrected-isbn-by-title,Il sogno di Anna
 A1040,Giorgio Vasari,Le vite de' più eccellenti pittori...,Newton Compton,1997,9788881830633,"Saggistica, Biografia, Storia",FALSE,9788881830633,ISBN-13,title-mismatch,Storia della banca in Italia
 A1041,Franz Kafka,Tutti i racconti,Newton Compton,1993,9788879831932,"Narrativa, Racconti, Classici",FALSE,9788858635254,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1042,Edgar Lee Masters,Antologia di Spoon River,Newton Compton,1993,9788879830072,"Poesia, Teatro",FALSE,9788879830072,ISBN-13,title-mismatch,Il diavolo in corpo
 A1043,Edgar Lee Masters,Il nuovo Spoon River,Newton Compton,1995,9788879838030,"Poesia, Teatro",FALSE,9788879838030,ISBN-13,title-mismatch,Il mistero della signora scomparsa
-A1044,Luigi Pirandello,Sei personaggi in cerca d’autore,Crescere,-,9788883371690,"Poesia, Teatro",FALSE,9788898403066,ISBN-13,found-isbn-by-title,
+A1044,Luigi Pirandello,Sei personaggi in cerca d'autore,Crescere,-,9788883371690,"Poesia, Teatro",FALSE,9788898403066,ISBN-13,found-isbn-by-title,
 A1045,Luigi Pirandello,Maschere nude (Vol. 1),Newton Compton,1993,9788879831345,"Poesia, Teatro",FALSE,9783961645596,ISBN-13,corrected-isbn-by-title,Il grillo del focolare
 A1046,Rosetta Loy,La parola ebreo,Einaudi,-,9788806145393,"Romanzo Storico, Shoah narrativa, Biografia",FALSE,9788858417959,ISBN-13,found-isbn-by-title,
 A1047,Roy Lewis,Il più grande uomo scimmia del pleistocene,Adelphi,1992,9788845909244,"Umorismo, Satira, Preistorico",FALSE,9788845909244,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20pi%C3%B9%20grande%20uomo%20scimmia%20del%20pleistocene&maxResults=10),
@@ -342,10 +342,10 @@ A105,Stefano Benni,La compagnia dei Celestini,Feltrinelli,2006,9788807812675,"Na
 A1050,Valerio Massimo Manfredi,Il mio nome è Nessuno (Il giuramento),Mondadori,2012,9788804624158,"Romanzo Storico, Narrativa",FALSE,8804725931,ISBN-10,found-isbn-by-title,ISBN not found in the database
 A1051,Ernest Hemingway,Storie della guerra di Spagna,Mondadori,-,9788804665047,"Narrativa, Racconti, Romanzo Storico, Guerra",FALSE,9788804665047,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Storie%20della%20guerra%20di%20Spagna&maxResults=10),
 A1052,Valerio Massimo Manfredi,Idi di marzo,Mondadori,2008,9788804579939,"Romanzo Storico, Narrativa",FALSE,9788804579939,ISBN-13,title-mismatch,Rifondazione della fede
-A1053,Valerio Massimo Manfredi,L’armata perduta,Mondadori,2007,9788804562108,"Romanzo Storico, Narrativa",FALSE,9788852010644,ISBN-13,corrected-isbn-by-title,L'armata perduta
+A1053,Valerio Massimo Manfredi,L'armata perduta,Mondadori,2007,9788804562108,"Romanzo Storico, Narrativa",FALSE,9788852010644,ISBN-13,corrected-isbn-by-title,L'armata perduta
 A1054,Ernest Hemingway,Per chi suona la campana,Mondadori,-,9788804492758,"Romanzo Storico, Guerra, Narrativa",FALSE,9788852020490,ISBN-13,found-isbn-by-title,
 A1055,E. M. Remarque,Niente di nuovo sul fronte occidentale,Rizzoli,2016,9788817117562,"Romanzo Storico, Guerra, Narrativa, Classici",FALSE,9788854522381,ISBN-13,corrected-isbn-by-title,L'inganno di Prometeo
-A1056,Oriana Fallaci,La rabbia e l’orgoglio,Rizzoli,-,9788817129759,"Saggistica, Attualità",FALSE,9788858600719,ISBN-13,found-isbn-by-title,
+A1056,Oriana Fallaci,La rabbia e l'orgoglio,Rizzoli,-,9788817129759,"Saggistica, Attualità",FALSE,9788858600719,ISBN-13,found-isbn-by-title,
 A1057,Oriana Fallaci,Quel giorno sulla luna,Rizzoli,-,9788817036897,"Saggistica, Attualità, Storia",FALSE,9788858600696,ISBN-13,found-isbn-by-title,
 A1058,AA. VV.,Grande guerra un racconto in 100 immagini,Stato Maggiore Difesa,2016,9788898185252,"Saggistica, Storia, Guerra",FALSE,8894262472,ISBN-10,found-isbn-by-title,ISBN not found in the database
 A1059,"Folman, Polonsky",Anne Frank - Diario (Graphic),Einaudi,2017,9788806233761,"Fumetti, Graphic Novel, Shoah narrativa",FALSE,9788858427057,ISBN-13,found-isbn-by-title,ISBN not found in the database
@@ -354,7 +354,7 @@ A1060,Herman Melville,Moby Dick,Mondadori,2014,9788804676836,"Fumetti, Graphic N
 A1061,Luigi Pirandello,"Uno, nessuno e centomila",Newton Compton,-,9788854117098,"Narrativa, Classici",FALSE,9788854117098,invalid,"not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Uno,%20nessuno%20e%20centomila&maxResults=10)",
 A1062,Grazia Deledda,Canne al vento,San Paolo,-,9788821553553,"Narrativa, Classici",FALSE,1981502300,ISBN-10,found-isbn-by-title,
 A1063,Stefano Benni,Achille piè veloce,Feltrinelli,-,9788807016404,"Umorismo, Grottesco",FALSE,9788807016404,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Achille%20pi%C3%A8%20veloce&maxResults=10),
-A1064,Oscar Wilde,L’importanza di essere Franco,Rusconi,-,9788818029515,"Poesia, Teatro",FALSE,9788818029515,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99importanza%20di%20essere%20Franco&maxResults=10),
+A1064,Oscar Wilde,L'importanza di essere Franco,Rusconi,-,9788818029515,"Poesia, Teatro",FALSE,9788818029515,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99importanza%20di%20essere%20Franco&maxResults=10),
 A1065,Oscar Wilde,Aforismi,Barbera Editore,-,9788878990264,"Saggistica, Filosofia",FALSE,9788858861899,ISBN-13,found-isbn-by-title,
 A1066,Siobhan Dowd,La bambina dimenticata dal tempo,Uovonero,-,9788896918127,"Narrativa, Ragazzi, Adolescenza",FALSE,8896918162,ISBN-10,found-isbn-by-title,
 A1067,Jane Austen,Tutti i romanzi,Newton Compton,-,9788854111720,"Narrativa, Classici",FALSE,9788854111720,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Tutti%20i%20romanzi&maxResults=10),
@@ -365,7 +365,7 @@ A1070,F. Scott Fitzgerald,Il grande Gatsby,Newton Compton,-,9788854124379,"Narra
 A1071,Gabriele D'Annunzio,Il piacere,Newton Compton,-,9788854117036,"Narrativa, Classici",FALSE,9788868651732,ISBN-13,found-isbn-by-title,
 A1072,Michail Bulgakov,Il maestro e Margherita,Newton Compton,-,9788854117074,"Narrativa, Fantasy, Classici",FALSE,9788854117074,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20maestro%20e%20Margherita&maxResults=10),
 A1073,Oriana Fallaci,Intervista Oriana Fallaci,Corriere della Sera,-,-,"Saggistica, Storia, Attualità",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Intervista%20Oriana%20Fallaci&maxResults=10),
-A1074,Renata Viganò,L’Agnese va a morire,Einaudi,-,9788806222667,"Romanzo Storico, Resistenza, Narrativa",FALSE,8806174843,ISBN-10,found-isbn-by-title,
+A1074,Renata Viganò,L'Agnese va a morire,Einaudi,-,9788806222667,"Romanzo Storico, Resistenza, Narrativa",FALSE,8806174843,ISBN-10,found-isbn-by-title,
 A1075,Carlo Goldoni,La locandiera,Mondadori,-,9788804508923,"Poesia, Teatro",FALSE,9788852057977,ISBN-13,found-isbn-by-title,
 A1076,Antonio Skarmeta,Il postino di Neruda,Garzanti,-,9788811668261,"Narrativa, Romanzo Storico",FALSE,8811668301,ISBN-10,found-isbn-by-title,
 A1077,Annie Franҫois,La lettrice,Guanda,-,9788882460678,"Saggistica, Umorismo, Libri",FALSE,9788854198401,ISBN-13,found-isbn-by-title,
@@ -417,9 +417,9 @@ A1118,Fulvia Degl'Innocenti,La libraia,San Paolo,2014,9788821592652,Ragazzi,FALS
 A1119,Marie-Aude Murail,https://www.google.com/search?q=Persidivista.com,Giunti,2017,9788809836365,Ragazzi,FALSE,9788809836365,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:https://www.google.com/search?q=Persidivista.com&maxResults=10),ISBN not found in the database
 A112,Javier Ruescas,Tutti i colori di te,Feltrinelli,2016,9788807910227,Ragazzi,FALSE,8807910233,ISBN-10,corrected-isbn-by-title,Apple e Rain
 A1120,Carlo Greppi,Non restare indietro,Feltrinelli,2015,9788807910180,"Saggistica, Storia",FALSE,9788858841143,ISBN-13,found-isbn-by-title,ISBN not found in the database
-A1121,Alessandro Barbero,La storia (l’origine dell’umanità),Corriere della Sera,2017,-,"Saggistica, Storia",FALSE,,invalid,not-found (No valid ISBN found in title results),
+A1121,Alessandro Barbero,La storia (l'origine dell'umanità),Corriere della Sera,2017,-,"Saggistica, Storia",FALSE,,invalid,not-found (No valid ISBN found in title results),
 A1122,"Salerno, Bernini",La storia di Voghera,Guardamagna,2016,9788895193489,"Saggistica, Storia",FALSE,8898832400,ISBN-10,corrected-isbn-by-title,Il futuro nella memoria
-A1123,Dominique Lapierre,Più grandi dell’amore,Mondadori,1990,9788804340150,"Saggistica, Attualità",FALSE,9788804340150,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Pi%C3%B9%20grandi%20dell%E2%80%99amore&maxResults=10),
+A1123,Dominique Lapierre,Più grandi dell'amore,Mondadori,1990,9788804340150,"Saggistica, Attualità",FALSE,9788804340150,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Pi%C3%B9%20grandi%20dell%E2%80%99amore&maxResults=10),
 A1124,Lemony Snicket,Un infausto inizio,Salani,2017,9788869181955,"Ragazzi, Fantasy",FALSE,9788869181955,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Un%20infausto%20inizio&maxResults=10),ISBN not found in the database
 A1125,Italo Svevo,Senilità,Bompiani,1985,9788845212390,"Narrativa, Classico",FALSE,9788845212390,ISBN-13,title-mismatch,Il libro del riso e dell'oblio
 A1126,J. R. R. Tolkien,Lo Hobbit,Adelphi,2018,9788845932595,"Fantasy, Classico, Ragazzi",FALSE,9788858757437,ISBN-13,found-isbn-by-title,ISBN not found in the database
@@ -437,7 +437,7 @@ A1136,Roberto Piumini,Uomini con figure,Einaudi,1990,9788828600861,"Ragazzi, Bio
 A1137,Tim Bruno,"NEOS, la città sospesa",Salani,-,9788862561913,"Ragazzi, Fantasy",FALSE,9788862561913,invalid,"not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:NEOS,%20la%20citt%C3%A0%20sospesa&maxResults=10)",
 A1138,Barbara D'Alto,La stanza delle mele,Guida,-,9788860424562,"Narrativa, Romanzo",FALSE,9788860424562,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:La%20stanza%20delle%20mele&maxResults=10),
 A1139,Ann Brashares,La seconda estate,Rizzoli,-,9788817013584,Ragazzi,FALSE,9788820090968,ISBN-13,found-isbn-by-title,
-A114,Shane Peacock,L’occhio del corvo,Feltrinelli,2015,9788807910166,"Ragazzi, Giallo, Thriller",FALSE,9788807910166,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99occhio%20del%20corvo&maxResults=10),ISBN not found in the database
+A114,Shane Peacock,L'occhio del corvo,Feltrinelli,2015,9788807910166,"Ragazzi, Giallo, Thriller",FALSE,9788807910166,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99occhio%20del%20corvo&maxResults=10),ISBN not found in the database
 A1140,Richelle Mead,Midnight Jewel,LSWR,-,9788868955211,"Ragazzi, Fantasy",FALSE,9788868955625,ISBN-13,found-isbn-by-title,
 A1141,Fred Uhlman,L'amico ritrovato,Feltrinelli,-,9788807880708,"Romanzo Storico, Classico",FALSE,9788807880708,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L'amico%20ritrovato&maxResults=10),
 A1142-a,"Antonielli, Chittolini",Storia della Lombardia (Vol. 1),Laterza,2001,9788842062189,"Saggistica, Storia",FALSE,9788842062189,ISBN-13,not-found (No valid ISBN found in title results),ISBN not found in the database
@@ -446,12 +446,12 @@ A1142-c,"Antonielli, Chittolini",Storia della Lombardia (Vol. 3),Laterza,2001,97
 A1142-d,"Antonielli, Chittolini",Storia della Lombardia (Vol. 4),Laterza,2001,9788842062189,"Saggistica, Storia",FALSE,9788842062189,ISBN-13,not-found (No valid ISBN found in title results),ISBN not found in the database
 A1142-e,"Antonielli, Chittolini",Storia della Lombardia (Vol. 5),Laterza,2001,9788842062189,"Saggistica, Storia",FALSE,9788842062189,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Storia%20della%20Lombardia%20(Vol.%205)&maxResults=10),ISBN not found in the database
 A1143,Daniel Defoe,Robinson Crusoe,Garzanti,-,9788811360349,"Narrativa, Avventura, Classico",FALSE,9788865260487,ISBN-13,found-isbn-by-title,
-A1144,Elena Ferrante,L’amica geniale,Edizioni e/o,2018,9788866320326,"Narrativa, Romanzo",FALSE,9788866320951,ISBN-13,found-isbn-by-title,ISBN not found in the database
+A1144,Elena Ferrante,L'amica geniale,Edizioni e/o,2018,9788866320326,"Narrativa, Romanzo",FALSE,9788866320951,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1145,Michael Zadoorian,Beautiful Music,Marcos y Marcos,2018,9788871688176,"Narrativa, Romanzo",FALSE,189008333X,ISBN-10,corrected-isbn-by-title,Anime perse
 A1145-1,"Portinari, Carbone",174517 deportato: Primo Levi,La Meridiana,2019,9788879168694,"Fumetti, Graphic Novel, Romanzo Storico",FALSE,8861536913,ISBN-10,corrected-isbn-by-title,"Paris, un Lieu Commun"
 A1146,"Barilli, De Carli",Il delitto Matteotti,BeccoGiallo,2018,9788899016937,"Fumetti, Graphic Novel, Storia",FALSE,9788899016937,ISBN-13,title-mismatch,Heart and brain
 A1147,Chiara Gamberale,Le luci nelle case degli altri,Mondadori,2017,9788804608639,"Narrativa, Romanzo",FALSE,9788852017223,ISBN-13,corrected-isbn-by-title,Fuori dalla guerra
-A1148,Todd Strasser,L’onda,Rizzoli,2018,9788817032735,"Ragazzi, Romanzo Storico",FALSE,9788858694046,ISBN-13,corrected-isbn-by-title,Manuale del perfetto turista
+A1148,Todd Strasser,L'onda,Rizzoli,2018,9788817032735,"Ragazzi, Romanzo Storico",FALSE,9788858694046,ISBN-13,corrected-isbn-by-title,Manuale del perfetto turista
 A1149,Giuseppe Catozzella,E tu splendi,Feltrinelli,2018,9788807032844,"Ragazzi, Narrativa",FALSE,9788807032844,ISBN-13,title-mismatch,Il dottor Zivago
 A115,Erri De Luca,Il peso della farfalla,Feltrinelli,2016,9788807888595,"Narrativa, Racconti",FALSE,9788807888595,ISBN-13,title-mismatch,Opere
 A1150,Alessandro D'Avenia,Ciò che inferno non è,Mondadori,2019,9788804646273,"Romanzo Storico, Biografia, Memorie",FALSE,9788852057243,ISBN-13,found-isbn-by-title,ISBN not found in the database
@@ -463,7 +463,7 @@ A1155,Paolo Giordano,La solitudine dei numeri primi,Mondadori,2018,9788804685609
 A1156,Ryszard Kapuściński,Shah-in-shah,Feltrinelli,2017,9788807881077,"Saggistica, Storia",FALSE,8807817780,ISBN-10,corrected-isbn-by-title,Vento rosso e altri racconti
 A1157,William Golding,Il signore delle mosche,Mondadori,2018,9788804667001,"Narrativa, Classico, Fantasy",FALSE,9782808690096,ISBN-13,corrected-isbn-by-title,Idi di marzo
 A1158,Matt Killeen,La bambina di Hitler,Garzanti,2019,9788811604594,"Ragazzi, Romanzo Storico",FALSE,9788811608912,ISBN-13,found-isbn-by-title,ISBN not found in the database
-A1159,Alessandro D'Avenia,L’arte di essere fragili,Mondadori,2019,9788804684121,"Saggistica, Letteratura",FALSE,9788852077418,ISBN-13,found-isbn-by-title,ISBN not found in the database
+A1159,Alessandro D'Avenia,L'arte di essere fragili,Mondadori,2019,9788804684121,"Saggistica, Letteratura",FALSE,9788852077418,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A116,Corrado Ceschinelli,Cambiamente,Curcu & Genovese,-,9788896737521,Saggistica,FALSE,9788836007059,ISBN-13,corrected-isbn-by-title,"Lo slang di Bolzano. Frasi, parole, espressioni: il primo vocabolario altoatesino al 100 per cento"
 A1160,Alessandro D'Avenia,Bianca come il latte rossa come il sangue,Mondadori,2010,9788804595199,"Ragazzi, Narrativa",FALSE,9788804595199,ISBN-13,title-mismatch,Nostalgia della ruggine
 A1161,Amélie Nothomb,Acido solforico,Voland,2015,9788862430166,"Narrativa, Fantasy",FALSE,8862434235,ISBN-10,corrected-isbn-by-title,Metafisica dei tubi
@@ -479,14 +479,14 @@ A117,Arthur Conan Doyle,Sherlock Holmes - Tutti i racconti,Einaudi,2015,97888062
 A1170,"Mentana, Segre",La memoria rende liberi,Rizzoli,2018,9788817107952,"Biografia, Memorie, Storia",FALSE,9788858676554,ISBN-13,corrected-isbn-by-title,I fratelli Karamazov
 A1171,Luigi Garlando,Per questo mi chiamo Giovanni,Rizzoli,2018,9788817103268,"Ragazzi, Attualità",FALSE,9788817026147,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1625,Fabio Geda,Nel mare ci sono i coccodrilli,Baldini+Castoldi,2017,9788868520281,"Narrativa, Biografia, Memorie",FALSE,9791254942475,ISBN-13,corrected-isbn-by-title,Un piccolo dio
-A1173,Anthony De Mello,Messaggio di un’aquila...,Piemme,2015,9788856627688,"Saggistica, Spiritualità",FALSE,9788858522226,ISBN-13,found-isbn-by-title,ISBN not found in the database
+A1173,Anthony De Mello,Messaggio di un'aquila...,Piemme,2015,9788856627688,"Saggistica, Spiritualità",FALSE,9788858522226,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1174,Michele Serra,Gli sdraiati,Feltrinelli,2016,9788807884399,"Narrativa, Romanzo",FALSE,9788858859094,ISBN-13,corrected-isbn-by-title,L'estrema fortuna
 A1175,Michele Serra,Il nuovo che avanza,Feltrinelli,2013,9788807811739,"Saggistica, Attualità",FALSE,9788807811739,ISBN-13,ok,Il nuovo che avanza
 A1176,Mates,Veri amici,Mondadori,2016,9788891809384,"Ragazzi, Biografia, Memorie",FALSE,9788891809384,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Veri%20amici&maxResults=10),ISBN not found in the database
 A1177,Luigi Pirandello,Sei personaggi in cerca d'autore,Rusconi,-,9788818031334,"Poesia, Teatro",FALSE,9788898403066,ISBN-13,found-isbn-by-title,
 A1178,K. Kressmann Taylor,Destinatario sconosciuto,Rizzoli,-,9788817106095,Romanzo Storico,FALSE,9788858654361,ISBN-13,found-isbn-by-title,
 A1179,Robert Louis Stevenson,Lo strano caso del Dr. Jekyll...,Epoca,-,-,"Fantasy, Gotico, Classico",FALSE,9788830530720,ISBN-13,found-isbn-by-title,
-A118,Joseph Conrad,La linea d’ombra,Einaudi,2015,9788806217441,"Narrativa, Classico",FALSE,9788806217441,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:La%20linea%20d%E2%80%99ombra&maxResults=10),
+A118,Joseph Conrad,La linea d'ombra,Einaudi,2015,9788806217441,"Narrativa, Classico",FALSE,9788806217441,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:La%20linea%20d%E2%80%99ombra&maxResults=10),
 A1180,Lois Lowry,The Giver,Giunti,2017,9788809058143,"Ragazzi, Fantasy",FALSE,9788809058143,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:The%20Giver&maxResults=10),
 A1181,Anonimo,Le mille e una notte Vol. II,Corriere della Sera,-,-,"Narrativa, Classico",FALSE,9783752475906,ISBN-13,found-isbn-by-title,
 A1182,Luigi Pirandello,Amori senza amore e altre novelle,Rusconi,-,9788818029522,"Narrativa, Racconti, Classici",FALSE,9788818029522,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Amori%20senza%20amore%20e%20altre%20novelle&maxResults=10),
@@ -732,7 +732,7 @@ A1297,Stefania De Nardis,Caterina II di Russia,Corriere della Sera,2020,-,"Biogr
 A1298,Loredana Garlati,Elisabetta d'Austria,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Elisabetta%20d'Austria&maxResults=10),
 A1299,Denis Forasacco,Vittoria,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE,9788868264901,ISBN-13,found-isbn-by-title,
 A130,Alexandre Dumas,I tre moschettieri,Einaudi,2017,9788806216260,"Narrativa, Romanzo Storico, Classici",FALSE,9788851125516,ISBN-13,found-isbn-by-title,
-A1602,Gabriel García Márquez,L’autunno del patriarca,Mondadori,2002,9788804508601,"Narrativa, Classici",FALSE,8804255552,ISBN-10,corrected-isbn-by-title,Il potere e la gloria
+A1602,Gabriel García Márquez,L'autunno del patriarca,Mondadori,2002,9788804508601,"Narrativa, Classici",FALSE,8804255552,ISBN-10,corrected-isbn-by-title,Il potere e la gloria
 A1300,Filippo Danovi,Maria Antonietta,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE,1021432989,ISBN-10,found-isbn-by-title,
 A1301,Barbara Biscotti,Giovanna D'Arco,Corriere della Sera,2020,-,"Biografia, Testimonianze",FALSE,8816404809,ISBN-10,found-isbn-by-title,
 A1302,Luca Mori,Saffo,Corriere della Sera,2020,-,"Biografia, Poesia, Teatro",FALSE,,invalid,not-found (No valid ISBN found in title results),
@@ -780,7 +780,7 @@ A1317,Paula Hawkins,Dentro l'acqua,Piemme,2017,9788856660142,"Giallo, Thriller",
 A1318,Mario Rigoni Stern,Stagioni,Einaudi,2021,9788806250355,"Narrativa, Natura, Guerra",FALSE,9788852026454,ISBN-13,corrected-isbn-by-title,Quando non ci sono
 A1319,"Ceci, Puleo",Possiamo essere tutto,Tunué,2022,9788867904396,"Fumetti, Graphic Novel",FALSE,8867903888,ISBN-10,found-isbn-by-title,ISBN not found in the database
 A132,Fabio Bonacina,Giovanni Paolo II viaggi di speranza,Vaccari,2006,9788885335837,"Saggistica, Religione",FALSE,8885335837,ISBN-10,corrected-isbn-by-title,Giovanni Paolo II. Viaggi di speranza. I francobolli del mondo testimoniano le visite di papa Wojtyla
-A1573,Gabriel García Márquez,Cent’anni di solitudine,Mondadori,1996,9788804415436,"Narrativa, Romanzo, Classico",FALSE,8807830094,ISBN-10,found-isbn-by-title,
+A1573,Gabriel García Márquez,Cent'anni di solitudine,Mondadori,1996,9788804415436,"Narrativa, Romanzo, Classico",FALSE,8807830094,ISBN-10,found-isbn-by-title,
 A1320,P. Boccalario,L'isola del tesoro (Stevenson),Corriere della Sera,2022,-,"Ragazzi, Avventura, Classico",FALSE,9791222108766,ISBN-13,found-isbn-by-title,
 A1321,Sarah Rossi,Racconti di E. A. Poe,Corriere della Sera,2022,-,"Ragazzi, Giallo, Thriller",FALSE,9788862774734,ISBN-13,found-isbn-by-title,
 A1322,Roberto Piumini,I Promessi Sposi (Manzoni),Corriere della Sera,2022,-,"Ragazzi, Classico",FALSE,1067482180,ISBN-10,found-isbn-by-title,
@@ -790,7 +790,7 @@ A1325,Joseph Roth,La Cripta dei Cappuccini,Newton Compton,2010,9788854117075,"Ro
 A1326,Siobhan Dowd,Il mistero del London Eye,Uovonero,2011,9788896918074,"Ragazzi, Giallo, Thriller",FALSE,889691809X,ISBN-10,corrected-isbn-by-title,Animali di versi
 A1327,Colum McCann,Questo bacio vada al mondo intero,Rizzoli,2017,9788817094016,"Narrativa, Romanzo",FALSE,9788817094016,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Questo%20bacio%20vada%20al%20mondo%20intero&maxResults=10),ISBN not found in the database
 A1328,Albert Einstein,Il significato della relatività...,Newton Compton,2015,9788854181311,"Saggistica, Scienze",FALSE,8881835851,ISBN-10,corrected-isbn-by-title,La cucina ligure di mare
-A133,Nicolas Barreau,Gli ingredienti segreti dell’amore,Feltrinelli,2012,9788807019184,"Narrativa, Rosa",FALSE,9788807018589,ISBN-13,found-isbn-by-title,
+A133,Nicolas Barreau,Gli ingredienti segreti dell'amore,Feltrinelli,2012,9788807019184,"Narrativa, Rosa",FALSE,9788807018589,ISBN-13,found-isbn-by-title,
 A1339,Alicia Giménez Bartlett,Un Natale di pietra,La Repubblica,2020,-,"Giallo, Thriller, Racconti",FALSE,9788845976414,ISBN-13,found-isbn-by-title,
 A1647,Luigi Pirandello,"Uno, nessuno e centomila",Einaudi,2014,9788806219277,"Narrativa, Classico",FALSE,9788806219277,ISBN-13,title-mismatch,Il partigiano Johnny
 A134,F. Scott Fitzgerald,Gli ultimi fuochi,Mondadori,1974,9788804117861,"Narrativa, Romanzo, Classico",FALSE,8889153547,ISBN-10,found-isbn-by-title,
@@ -998,8 +998,8 @@ A1486,Oscar Wilde,Un marito ideale,Newton Compton,1994,9788879836562,"Teatro, Cl
 A1487,Oscar Wilde,Un marito ideale,Newton Compton,1994,9788879836562,"Teatro, Classico",FALSE,9788897140580,ISBN-13,corrected-isbn-by-title,L'aids
 A1488,George Orwell,1984,Crescere,2024,9791254542036,"Narrativa, Distopico, Classico",FALSE,8804507454,ISBN-10,found-isbn-by-title,
 A1489,Herman Melville,Le cento pagine più belle,Mondadori,1982,-,"Antologia, Classico",FALSE,9788858158340,ISBN-13,found-isbn-by-title,
-A149,Gabriele D'Annunzio,L’innocente,Mondadori,1976,9788804008279,"Narrativa, Classico",TRUE,9782528014004,ISBN-13,found-isbn-by-title,ISBN not found in the database
-A149,Giampaolo Pansa,Ma l’amore no,Sperling & Kupfer,1994,9788820018788,Romanzo Storico,TRUE,9798321035252,ISBN-13,corrected-isbn-by-title,I geni e il nostro futuro
+A149,Gabriele D'Annunzio,L'innocente,Mondadori,1976,9788804008279,"Narrativa, Classico",TRUE,9782528014004,ISBN-13,found-isbn-by-title,ISBN not found in the database
+A149,Giampaolo Pansa,Ma l'amore no,Sperling & Kupfer,1994,9788820018788,Romanzo Storico,TRUE,9798321035252,ISBN-13,corrected-isbn-by-title,I geni e il nostro futuro
 A1490,Vincenzo Cerami,Un borghese piccolo piccolo,Corriere della Sera,2003,-,"Narrativa, Romanzo, Classico",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Un%20borghese%20piccolo%20piccolo&maxResults=10),
 A1491,Charles Darwin,L'origine delle specie,Corriere della Sera,2010,-,"Saggistica, Scienze, Classico",FALSE,,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L'origine%20delle%20specie&maxResults=10),
 A1492,Adam Smith,La ricchezza delle nazioni,Corriere della Sera,2010,-,"Saggistica, Economia, Classico",FALSE,9788854125728,ISBN-13,found-isbn-by-title,
@@ -1023,7 +1023,7 @@ A1507,Vincenzo Arte,Crescere senza voti,Mondadori,2023,9788804764892,"Saggistica
 A1508,John Green,Cercando Alaska,Rizzoli,2019,9788817109727,"Ragazzi, Young Adult",FALSE,0142402516,ISBN-10,found-isbn-by-title,ISBN not found in the database
 A1509,Kathleen Glasgow,E poi ci sono io,Rizzoli,2018,9788817101899,"Ragazzi, Attualità",FALSE,9788858690833,ISBN-13,corrected-isbn-by-title,Battezzeresti un extraterrestre?... e altre domande tra scienza e fede poste all'Osservatorio astronomico vaticano
 A1653,Andrea Camilleri,Donne,Rizzoli,2016,9788817089456,"Narrativa, Racconti",FALSE,9788817089456,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Donne&maxResults=10),ISBN not found in the database
-A151,Paola Mastrocola,L’anno che non caddero le foglie,Guanda,2016,9788823514782,"Narrativa, Favola",FALSE,9788823515956,ISBN-13,found-isbn-by-title,ISBN not found in the database
+A151,Paola Mastrocola,L'anno che non caddero le foglie,Guanda,2016,9788823514782,"Narrativa, Favola",FALSE,9788823515956,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1510,Harper Lee,Il buio oltre la siepe,Feltrinelli,-,9788807881558,"Narrativa, Classico",FALSE,9788858837641,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1511,Luigi Garlando,Presentami un sogno,HarperCollins,2021,9788869058288,"Ragazzi, Sport",FALSE,8877514671,ISBN-10,corrected-isbn-by-title,Per la mia strada. Partire e rinascere in montagna
 A1512,Irene Vallejo,Il fischio dell'arciere,Bompiani,2023,9788830119420,"Narrativa, Mitologia, Storico",FALSE,9788835710691,ISBN-13,corrected-isbn-by-title,La formidabile miss Cassidy
@@ -1047,7 +1047,7 @@ A1527,Graham Greene,The Honorary Consul,Penguin Books,-,-,"Narrativa, Romanzo (I
 A1528,AA. VV.,Le Mille e una notte (Vol. 1-2),Corriere della Sera,-,-,"Classico, Favola",FALSE,9788893214896,ISBN-13,found-isbn-by-title,
 A1529,"Mentana, Segre",La memoria rende liberi,Rizzoli,2015,9788817083072,"Saggistica, Memorie, Shoah",FALSE,9788817083072,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:La%20memoria%20rende%20liberi&maxResults=10),ISBN not found in the database
 A1679,Seneca,La vera gioia,Newton Compton,1995,9788881832101,"Filosofia, Classico",FALSE,9791280428431,ISBN-13,corrected-isbn-by-title,Vita di un perdigiorno
-A153,Marco Malvaldi,L’infinito tra parentesi,Rizzoli,2016,9788817087643,"Saggistica, Scienza",FALSE,9788817087643,ISBN-13,title-mismatch,Il Turista
+A153,Marco Malvaldi,L'infinito tra parentesi,Rizzoli,2016,9788817087643,"Saggistica, Scienza",FALSE,9788817087643,ISBN-13,title-mismatch,Il Turista
 A1530,Luis Sepúlveda,Il vecchio che leggeva romanzi d'amore,Guanda,1989,9788882460235,"Narrativa, Romanzo",FALSE,9788882460235,ISBN-13,title-mismatch,Poesie esoteriche. Testo originale a fronte
 A1531,Luis Sepúlveda,Storia di una gabbianella...,Salani,1998,9788877826060,"Ragazzi, Favola",FALSE,9788877826060,ISBN-13,title-mismatch,Lektro
 A1532,Chuck Palahniuk,Invisible Monsters,Mondadori,2012,9788804616238,"Narrativa, Romanzo",FALSE,8804685379,ISBN-10,corrected-isbn-by-title,Venti racconti allegri e uno triste
@@ -1091,7 +1091,7 @@ A1646,Jostein Gaarder,Il mondo di Anna,Longanesi,2013,9788830436152,"Ragazzi, Na
 A162,Giorgio Amendola,Una scelta di vita,Rizzoli,1976,9788817123303,"Saggistica, Biografia, Politica",FALSE,9788817123303,ISBN-13,not-found (No valid ISBN found in title results),ISBN not found in the database
 A1591,Federico Moccia,Tre metri sopra il cielo,Mondadori,2005,9788804545804,"Narrativa, Rosa, Young Adult",FALSE,9788858829943,ISBN-13,corrected-isbn-by-title,Il ritorno del Cantore. Il vento di fuoco
 A163,Patricia Cornwell,Oggetti di reato,Mondadori,1992,9788804358896,"Giallo, Thriller",TRUE,9788804358896,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Oggetti%20di%20reato&maxResults=10),
-A163,Paola Zannoner,Sopra l’acqua sotto il cielo,Mondadori,2007,9788804573159,"Ragazzi, Narrativa",TRUE,9788852051197,ISBN-13,corrected-isbn-by-title,Le prigioni di Hitler. Il sistema carcerario del Terzo Reich
+A163,Paola Zannoner,Sopra l'acqua sotto il cielo,Mondadori,2007,9788804573159,"Ragazzi, Narrativa",TRUE,9788852051197,ISBN-13,corrected-isbn-by-title,Le prigioni di Hitler. Il sistema carcerario del Terzo Reich
 A1681,Luigi Pirandello,Amori senza amore,Newton Compton,1995,9788881831814,"Racconti, Classico",FALSE,8804403225,ISBN-10,corrected-isbn-by-title,La repubblica di Salò
 A164,"Ossorio, Zoungrana",Se entri nel cerchio sei libero,Mondadori,2010,9788804598466,"Ragazzi, Formazione",FALSE,9788804598466,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Se%20entri%20nel%20cerchio%20sei%20libero&maxResults=10),ISBN not found in the database
 A165,Apuleio,La favola di Amore e Psiche,Newton Compton,1995,9788879833660,"Classico, Mitologia",TRUE,9788879833660,ISBN-13,title-mismatch,Il segno rosso del coraggio
@@ -1112,16 +1112,16 @@ A172,Aleksandr Solženicyn,Una giornata di Ivàn Denìsovič,Newton Compton,1993
 A1667,Giorgio Faletti,Fuori da un evidente destino,Baldini+Castoldi,2006,9788860730121,"Giallo, Thriller",FALSE,9788834606636,ISBN-13,corrected-isbn-by-title,Tutte le strisce dei Peanuts. Anni 80-90: Il grande libro dei Peanuts. Tutte le strisce degli anni 80-Il grande libro dei Peanuts. Tutte le strisce degli anni 90
 A173,Torey L. Hayden,La foresta dei girasoli,TEA,2011,9788850225132,"Narrativa, Drammatico",FALSE,8850224486,ISBN-10,corrected-isbn-by-title,Romancing Miss Brontë
 A1666,Giorgio Faletti,Niente di vero tranne gli occhi,Baldini+Castoldi,2004,9788884906006,"Giallo, Thriller",FALSE,9788834606612,ISBN-13,found-isbn-by-title,
-A174,AA. VV.,Incontri nell’aula 18,Libreria Ticinum Editore,2016,9788890479366,"Narrativa, Racconti",TRUE,8899574081,ISBN-10,corrected-isbn-by-title,"Sibylla of Altavilla. Countess of Conversano, Duchess of Noramndy"
+A174,AA. VV.,Incontri nell'aula 18,Libreria Ticinum Editore,2016,9788890479366,"Narrativa, Racconti",TRUE,8899574081,ISBN-10,corrected-isbn-by-title,"Sibylla of Altavilla. Countess of Conversano, Duchess of Noramndy"
 A174,Jenny Lawson,Facciamo finta di niente,Sperling & Kupfer,2016,9788820060930,"Saggistica, Umorismo, Memorie",TRUE,9788820095444,ISBN-13,corrected-isbn-by-title,Isis S.p.a.
-A175,Giorgio Amendola,Un’isola,Rizzoli,1982,9788817123181,"Saggistica, Biografia, Politica",TRUE,8807103354,ISBN-10,corrected-isbn-by-title,Demetrio Pianelli
+A175,Giorgio Amendola,Un'isola,Rizzoli,1982,9788817123181,"Saggistica, Biografia, Politica",TRUE,8807103354,ISBN-10,corrected-isbn-by-title,Demetrio Pianelli
 A175,G. C. Giacobbe,Come smettere di farsi le seghe...,Ponte alle grazie,2003,9788879286466,"Saggistica, Psicologia, Umorismo",TRUE,9788862207737,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1617,Dario Sabbatucci,"Tarquinia, la pittura etrusca",De Agostini,-,-,"Saggistica, Arte, Storia",FALSE,8841553022,ISBN-10,found-isbn-by-title,
 A176,Roberto Perrone,Banana football Club,Rizzoli,2012,9788817056069,"Narrativa, Sport",FALSE,8845111687,ISBN-10,found-isbn-by-title,ISBN not found in the database
 A177,Jerry Spinelli,Per sempre Stargirl,Mondadori,2012,9788804620075,"Ragazzi, Narrativa",FALSE,9788804620075,ISBN-13,title-mismatch,Il sosia
 A1619,Karen Blixen,La mia Africa,Feltrinelli,1992,9788807810329,"Narrativa, Memorie, Classico",FALSE,9788858827161,ISBN-13,corrected-isbn-by-title,Boccalone
-A1597,John N. Wilford,L’enigma dei dinosauri,Mondadori,1994,9788804391626,"Saggistica, Paleontologia",FALSE,9788841884997,ISBN-13,found-isbn-by-title,
-A178,Giuseppe Culicchia,Un’estate al mare,Garzanti,2007,9788811685817,"Narrativa, Romanzo",FALSE,9788811685817,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Un%E2%80%99estate%20al%20mare&maxResults=10),
+A1597,John N. Wilford,L'enigma dei dinosauri,Mondadori,1994,9788804391626,"Saggistica, Paleontologia",FALSE,9788841884997,ISBN-13,found-isbn-by-title,
+A178,Giuseppe Culicchia,Un'estate al mare,Garzanti,2007,9788811685817,"Narrativa, Romanzo",FALSE,9788811685817,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Un%E2%80%99estate%20al%20mare&maxResults=10),
 A1691,Steven Weinberg,I primi tre minuti,Mondadori,1994,9788804388480,"Saggistica, Scienza",FALSE,8804177527,ISBN-10,found-isbn-by-title,
 A179,Nicholas Sparks,Le parole che non ti ho detto,Frassinelli,1998,9788876845344,"Narrativa, Rosa",FALSE,9788876845344,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Le%20parole%20che%20non%20ti%20ho%20detto&maxResults=10),
 A180,Sinesio,Elogio della calvizie,Newton Compton,1995,9788879838382,"Saggistica, Filosofia, Classico",FALSE,8877683236,ISBN-10,corrected-isbn-by-title,Storia del movimento psicoanalitico e l'interesse per la psicoanalisi
@@ -1132,7 +1132,7 @@ A1589,Jack London,Zanna Bianca,Giunti,2004,9788809033870,"Ragazzi, Avventura, Cl
 A181,Nicholas Sparks,Quando ho aperto gli occhi,Frassinelli,2003,9788876847591,"Narrativa, Rosa",FALSE,9788876847591,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Quando%20ho%20aperto%20gli%20occhi&maxResults=10),
 A1606,Gerhard Konzelmann,Maometto,Bompiani,1991,9788845217431,"Saggistica, Biografia, Religione",FALSE,8886639260,ISBN-10,found-isbn-by-title,
 A182,Paolo Mosca,Il nuovo senso della vita,Sperling & Kupfer,2003,9788820035074,"Saggistica, Spiritualità",FALSE,9788827231760,ISBN-13,found-isbn-by-title,
-A1607,Enzo Biagi,Lettera d’amore a una ragazza di una volta,Rizzoli,2003,9788817872655,"Saggistica, Memorie",FALSE,9788817872655,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Lettera%20d%E2%80%99amore%20a%20una%20ragazza%20di%20una%20volta&maxResults=10),
+A1607,Enzo Biagi,Lettera d'amore a una ragazza di una volta,Rizzoli,2003,9788817872655,"Saggistica, Memorie",FALSE,9788817872655,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Lettera%20d%E2%80%99amore%20a%20una%20ragazza%20di%20una%20volta&maxResults=10),
 A183,Andrew Lane,Young Sherlock Holmes,De Agostini,2014,9788851121852,"Ragazzi, Giallo",FALSE,9788851139636,ISBN-13,found-isbn-by-title,
 A184,Albert Einstein,Lo spazio è una questione di tempo,RBA,2014,9788447376483,"Saggistica, Fisica",FALSE,9788858682760,ISBN-13,corrected-isbn-by-title,"Dalton, la teoría atómica"
 A1587,Haruki Murakami,Norwegian Wood,Einaudi,1987,9788806216467,"Narrativa, Romanzo",FALSE,9788806216467,ISBN-13,ok,Norwegian wood. Tokyo blues
@@ -1140,26 +1140,26 @@ A1596,John le Carré,Il canto della missione,Mondadori,2006,9788804550978,"Giall
 A185,Enti Autori,Italiane Vol III - dizionario biografico,-,2004,-,"Saggistica, Biografia",FALSE,8849132697,ISBN-10,found-isbn-by-title,
 A1595,Ellis Peters,Un cadavere di troppo,TEA,1990,9788878191630,"Giallo, Storico",FALSE,9788850257287,ISBN-13,found-isbn-by-title,
 A186,Charles Dickens,Le campane,Newton Compton,1993,9788879830577,"Narrativa, Classico",FALSE,9788879830577,ISBN-13,title-mismatch,Hermann Lauscher
-A1610,Luigi Pirandello,Sei personaggi in cerca d’autore,Newton Compton,1993,9788879830583,"Teatro, Classico",FALSE,9788898403066,ISBN-13,found-isbn-by-title,
+A1610,Luigi Pirandello,Sei personaggi in cerca d'autore,Newton Compton,1993,9788879830583,"Teatro, Classico",FALSE,9788898403066,ISBN-13,found-isbn-by-title,
 A187,Vamba,Il giornalino di Gian Burrasca,De Agostini,2009,9788841856642,"Ragazzi, Classico, Umorismo",FALSE,9788854128484,ISBN-13,corrected-isbn-by-title,Abruzzo
 A1605,Gabriel García Márquez,Cronaca di una morte annunciata,Mondadori,1981,9788804213193,"Narrativa, Classico",FALSE,9788804567899,ISBN-13,found-isbn-by-title,
-A188,Victor Hugo,L’ultimo giorno di un condannato...,Newton Compton,1993,9788879832793,"Narrativa, Classico",FALSE,9788868161460,ISBN-13,corrected-isbn-by-title,"Roma di ieri, Roma di oggi"
+A188,Victor Hugo,L'ultimo giorno di un condannato...,Newton Compton,1993,9788879832793,"Narrativa, Classico",FALSE,9788868161460,ISBN-13,corrected-isbn-by-title,"Roma di ieri, Roma di oggi"
 A1594,Robert Louis Stevenson,Lo strano caso del Dr. Jekyll e Mr. Hyde,Newton Compton,1992,9788879830170,"Narrativa, Classico, Horror",FALSE,9788868651985,ISBN-13,found-isbn-by-title,
 A189,Conor Grennan,Sette fiori di senape,Piemme,2011,9788856616421,"Narrativa, Memorie, Viaggi",FALSE,9788856611885,ISBN-13,found-isbn-by-title,
 A190,Antonio Forcellino,1545,Laterza,2008,9788842085934,"Saggistica, Storia, Arte",TRUE,110498637X,ISBN-10,found-isbn-by-title,
 A190,Charles Dickens,Le avventure di Oliver Twist,Mondadori,2015,9788804655611,"Narrativa, Classico",TRUE,9788899941949,ISBN-13,found-isbn-by-title,
 A191,Giuseppe Sicheri,Vino è salute,Saviolo Edizioni,2008,9788895122112,"Saggistica, Enogastronomia",FALSE,8854826022,ISBN-10,found-isbn-by-title,
 A1618,Margherita Oggero,Amen,Effatà,2014,9788874029419,"Saggistica, Religione",FALSE,9788858840184,ISBN-13,corrected-isbn-by-title,Sala della comunità e Chiesa
-A192,Luca Nascimbene,Il ragazzo che cantava poesie d’amore,Youcanprint,2017,9788892647786,"Poesia, Amore",TRUE,8878990302,ISBN-10,found-isbn-by-title,
+A192,Luca Nascimbene,Il ragazzo che cantava poesie d'amore,Youcanprint,2017,9788892647786,"Poesia, Amore",TRUE,8878990302,ISBN-10,found-isbn-by-title,
 A192,Giancarlo Galli,Gli Agnelli,Mondadori,1997,9788804429814,"Saggistica, Biografia, Economia",TRUE,9788882620998,ISBN-13,corrected-isbn-by-title,L'ultimo re d'Irlanda
-A1672,Ken Follett,L’uomo di Pietroburgo,Mondadori,1982,9788804245637,"Giallo, Thriller, Storico",FALSE,9788852031175,ISBN-13,found-isbn-by-title,
+A1672,Ken Follett,L'uomo di Pietroburgo,Mondadori,1982,9788804245637,"Giallo, Thriller, Storico",FALSE,9788852031175,ISBN-13,found-isbn-by-title,
 A1601,Giorgio Rochat,Le guerre italiane 1935- 1943,Einaudi,2005,9788806177974,"Saggistica, Storia, Militaria",FALSE,8806270826,ISBN-10,found-isbn-by-title,
-A193,Gian Luca Favetto,Un’eterna solitudine,Effatà,2012,9788874027477,"Saggistica, Spiritualità",FALSE,9788807104657,ISBN-13,found-isbn-by-title,ISBN not found in the database
+A193,Gian Luca Favetto,Un'eterna solitudine,Effatà,2012,9788874027477,"Saggistica, Spiritualità",FALSE,9788807104657,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1676,Ken Follett,Il terzo gemello,Mondadori,1997,9788804423851,"Giallo, Thriller",FALSE,9788804423851,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20terzo%20gemello&maxResults=10),
-A194,Elena Loewenthal,Un’annunciazione,Effatà,2014,9788874029310,"Saggistica, Religione",FALSE,9788874029167,ISBN-13,corrected-isbn-by-title,Milena la terribile ragazza di Praga
+A194,Elena Loewenthal,Un'annunciazione,Effatà,2014,9788874029310,"Saggistica, Religione",FALSE,9788874029167,ISBN-13,corrected-isbn-by-title,Milena la terribile ragazza di Praga
 A195,Don Antonio Mazzi,Pinocchio e i suoi fratelli,Piemme,1995,9788838424266,"Saggistica, Attualità",FALSE,8838419973,ISBN-10,found-isbn-by-title,
 A1616,Mario Dal Bello,Caravaggio,Effatà,2007,9788874023400,"Saggistica, Arte",FALSE,9788891216182,ISBN-13,corrected-isbn-by-title,Cristiani oggi
-A196,Sigmund Freud,L’interpretazione dei sogni,Rusconi,2016,9788818031389,"Saggistica, Psicologia, Classico",FALSE,9788833971650,ISBN-13,found-isbn-by-title,
+A196,Sigmund Freud,L'interpretazione dei sogni,Rusconi,2016,9788818031389,"Saggistica, Psicologia, Classico",FALSE,9788833971650,ISBN-13,found-isbn-by-title,
 A1585,Silvana De Mari,Giuseppe figlio di Giacobbe,Effatà,2014,9788874029297,"Ragazzi, Religione",FALSE,9788874029297,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A197,Amy Hempel,Ragioni di vivere,Serra e Riva Editori,1986,9788877980075,"Narrativa, Racconti",FALSE,9788852025631,ISBN-13,found-isbn-by-title,
 A1675,Alessandro Gisotti,11 settembre. Una storia che continua,Effatà,2011,9788874027170,"Saggistica, Storia, Attualità",FALSE,9788874027118,ISBN-13,corrected-isbn-by-title,Appunti per la vita
@@ -1185,29 +1185,29 @@ A1570,Bram Stoker,Dracula,Einaudi,2016,9788806219278,"Horror, Classico",FALSE,97
 A207,Wilbur Smith,Monsone,Longanesi,1999,9788830416970,"Avventura, Romanzo Storico",FALSE,9788830524217,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A1574,Luca Reteuna,Sorella Acqua,Effatà,2012,9788874027781,"Saggistica, Ecologia",FALSE,8883870255,ISBN-10,corrected-isbn-by-title,Ernst Jünger
 A208,E.J. Michael,Regina del sole,Sonzogno,1996,9788845408991,Romanzo Storico,FALSE,8804458607,ISBN-10,corrected-isbn-by-title,Terrarossa
-A1571,Gabriel García Márquez,Cent’anni di solitudine,Mondadori,1987,9788804305713,"Narrativa, Classico, Realismo Magico",FALSE,8807830094,ISBN-10,found-isbn-by-title,
-A1572,Gabriel García Márquez,Cent’anni di solitudine,Feltrinelli,1987,-,"Narrativa, Classico, Realismo Magico",FALSE,8807830094,ISBN-10,found-isbn-by-title,
+A1571,Gabriel García Márquez,Cent'anni di solitudine,Mondadori,1987,9788804305713,"Narrativa, Classico, Realismo Magico",FALSE,8807830094,ISBN-10,found-isbn-by-title,
+A1572,Gabriel García Márquez,Cent'anni di solitudine,Feltrinelli,1987,-,"Narrativa, Classico, Realismo Magico",FALSE,8807830094,ISBN-10,found-isbn-by-title,
 A209,Ken Follett,Un luogo chiamato libertà,Mondadori,1995,9788804406283,Romanzo Storico,FALSE,9788852013713,ISBN-13,found-isbn-by-title,
 A1569,Stephen Badsey / David G. Chandler,Normandia 1944,Edizioni del Prado,1998,9788483720035,"Saggistica, Storia, Militaria",FALSE,8478389776,ISBN-10,corrected-isbn-by-title,Le truppe specializzate di Napoleone
-A210,Carlo Cassola,L’antagonista,Rizzoli,1976,9788817110037,"Narrativa, Romanzo",FALSE,9788817110037,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99antagonista&maxResults=10),ISBN not found in the database
-A211,Giacobbe Fragomeni,All’ultimo round. La mia storia,Limina,2013,9788860411624,"Biografia, Sport",FALSE,8860411637,ISBN-10,found-isbn-by-title,ISBN not found in the database
+A210,Carlo Cassola,L'antagonista,Rizzoli,1976,9788817110037,"Narrativa, Romanzo",FALSE,9788817110037,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99antagonista&maxResults=10),ISBN not found in the database
+A211,Giacobbe Fragomeni,All'ultimo round. La mia storia,Limina,2013,9788860411624,"Biografia, Sport",FALSE,8860411637,ISBN-10,found-isbn-by-title,ISBN not found in the database
 A1568,Elizabeth Bowen,The House in Paris,Penguin Books,1976,140005358,"Narrativa, Romanzo (Inglese)",FALSE,9781984899972,ISBN-13,found-isbn-by-title,
 A1567,Stefano Zecchi,Amata per caso,Mondadori,2004,9771123835008,"Narrativa, Romanzo",FALSE,9771123835008,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Amata%20per%20caso&maxResults=10),ISBN not found in the database
 A212,Albert Einstein,Come io vedo il mondo,Newton Compton,1993,9788879833073,"Saggistica, Fisica, Filosofia",FALSE,9791220271332,ISBN-13,corrected-isbn-by-title,Tutte le fiabe
-A1565,Mika Waltari,Turms l’Etrusco,Mondadori,1985,9788804266606,Romanzo Storico,FALSE,8876159541,ISBN-10,found-isbn-by-title,
-A213,Paolo D’Agostini,Dizionari del cinema: Commedia,Electa,2009,9788837057039,"Saggistica, Cinema",FALSE,9788837057039,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Dizionari%20del%20cinema:%20Commedia&maxResults=10),ISBN not found in the database
+A1565,Mika Waltari,Turms l'Etrusco,Mondadori,1985,9788804266606,Romanzo Storico,FALSE,8876159541,ISBN-10,found-isbn-by-title,
+A213,Paolo D'Agostini,Dizionari del cinema: Commedia,Electa,2009,9788837057039,"Saggistica, Cinema",FALSE,9788837057039,ISBN-13,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Dizionari%20del%20cinema:%20Commedia&maxResults=10),ISBN not found in the database
 A214,Giuseppe De Grassi,Occhi di ragazzo,Rai Eri,2002,9788839712065,"Biografia, Musica",FALSE,8893494426,ISBN-10,found-isbn-by-title,
 A1566,Margaret Mazzantini,Mare al mattino,Einaudi,2011,9788845119323,"Narrativa, Attualità",FALSE,9788806211134,ISBN-13,corrected-isbn-by-title,Volo nella notte
 A215,Frances Hardinge,Volo nella notte,Fabbri Editori,2006,9788845119026,"Ragazzi, Fantasy",FALSE,8845119327,ISBN-10,found-isbn-by-title,ISBN not found in the database
-A216,B. Taylor Bradford,L’amore non può attendere,Sperling & Kupfer,2009,9788820047719,"Narrativa, Rosa",FALSE,8820047292,ISBN-10,corrected-isbn-by-title,Racconto d'inverno. Peter Coniglio
+A216,B. Taylor Bradford,L'amore non può attendere,Sperling & Kupfer,2009,9788820047719,"Narrativa, Rosa",FALSE,8820047292,ISBN-10,corrected-isbn-by-title,Racconto d'inverno. Peter Coniglio
 A287,Giovanni Boccaccio,Decameron,Mondadori,2015,9788804648781,"Classico, Racconti",FALSE,9788804648781,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Decameron&maxResults=10),
-A217,John Grisham,L’uomo della pioggia,Mondadori,1997,9788804423010,"Giallo, Thriller",FALSE,8878191876,ISBN-10,found-isbn-by-title,ISBN not found in the database
+A217,John Grisham,L'uomo della pioggia,Mondadori,1997,9788804423010,"Giallo, Thriller",FALSE,8878191876,ISBN-10,found-isbn-by-title,ISBN not found in the database
 A218,William Shakespeare,La tempesta,Mondadori,2017,9788804677767,"Teatro, Classico",FALSE,9788897313656,ISBN-13,found-isbn-by-title,
-A219,Luis Sepúlveda,Il vecchio che leggeva romanzi d’amore,Guanda,2001,9788882463761,"Narrativa, Romanzo",FALSE,888246752X,ISBN-10,found-isbn-by-title,
+A219,Luis Sepúlveda,Il vecchio che leggeva romanzi d'amore,Guanda,2001,9788882463761,"Narrativa, Romanzo",FALSE,888246752X,ISBN-10,found-isbn-by-title,
 A220,Javier Ruescas,Tutti i colori di te,Feltrinelli,2016,9788807922736,"Young Adult, Rosa",FALSE,8807910233,ISBN-10,found-isbn-by-title,
 A221,Jenny Lawson,Follemente felice,Sperling & Kupfer,2015,9788820059346,"Saggistica, Umorismo, Memorie",FALSE,9788820059346,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Follemente%20felice&maxResults=10),
-A222,Gavriel Savit,Anna e l’Uomo delle rondini,Sperling & Kupfer,2016,9788820059889,"Romanzo Storico, Ragazzi",FALSE,9788820059889,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Anna%20e%20l%E2%80%99Uomo%20delle%20rondini&maxResults=10),
-A223,Shakespeare,Sogno di una notte di mezz’estate,Mondadori,2017,9788804677750,"Teatro, Classico",FALSE,1517511364,ISBN-10,found-isbn-by-title,
+A222,Gavriel Savit,Anna e l'Uomo delle rondini,Sperling & Kupfer,2016,9788820059889,"Romanzo Storico, Ragazzi",FALSE,9788820059889,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Anna%20e%20l%E2%80%99Uomo%20delle%20rondini&maxResults=10),
+A223,Shakespeare,Sogno di una notte di mezz'estate,Mondadori,2017,9788804677750,"Teatro, Classico",FALSE,1517511364,ISBN-10,found-isbn-by-title,
 A224,Alex Soojung/Kim Pang,Dipendenza digitale,LSWR,2013,9788868951443,"Saggistica, Tecnologia, Psicologia",FALSE,9788868951443,ISBN-13,ok,Dipendenza digitale. Istruzioni per un uso equilibrato e felice della tecnologia
 A244,Charles Baudelaire,I fiori del male,Mondadori,2014,9788804627838,"Poesia, Classico",FALSE,9788804627838,ISBN-13,ok,I fiori del male. Testo francese a fronte
 A225,Nadia Tempest,10 cose che non avresti mai pensato...,Sperling & Kupfer,2016,9788820060960,"Saggistica, Curiosità, Young Adult",FALSE,9788820060960,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:10%20cose%20che%20non%20avresti%20mai%20pensato...&maxResults=10),
@@ -1225,15 +1225,15 @@ A236,Kiera Cass,The Selection,Sperling & Kupfer,2015,9788820053703,"Young Adult,
 A237,S. Calvani M. Albertazzi,Saccheggio mondiale,Effatà,2011,9788874027209,"Saggistica, Attualità, Economia",FALSE,9788874026630,ISBN-13,found-isbn-by-title,
 A238,Arwen Elys Dayton,Seeker,Sperling & Kupfer,2016,9788820060380,"Ragazzi, Fantasy",FALSE,8871685059,ISBN-10,found-isbn-by-title,
 A239,Edmondo De Amicis,Cuore,Mondadori,2016,9788804660486,"Ragazzi, Classico",FALSE,9788804660486,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Cuore&maxResults=10),
-A240,Paul Dowswell,L’ultima alba di guerra,Feltrinelli,2016,9788807921852,"Ragazzi, Romanzo Storico",FALSE,9788858826324,ISBN-13,found-isbn-by-title,
-A241,Alessia Gazzola,L’allieva,Longanesi,2016,9788830429948,"Giallo, Romanzo",FALSE,9788830429948,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99allieva&maxResults=10),
+A240,Paul Dowswell,L'ultima alba di guerra,Feltrinelli,2016,9788807921852,"Ragazzi, Romanzo Storico",FALSE,9788858826324,ISBN-13,found-isbn-by-title,
+A241,Alessia Gazzola,L'allieva,Longanesi,2016,9788830429948,"Giallo, Romanzo",FALSE,9788830429948,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:L%E2%80%99allieva&maxResults=10),
 A242,Andrew Fukuda,The Hunt,Il Castoro,2013,9788880336968,"Young Adult, Horror",FALSE,9788880336968,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:The%20Hunt&maxResults=10),
 A243,Seneca,Apokolokyntosis,Mondadori,2017,9788804674339,"Classico, Satira",FALSE,9788804674339,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Apokolokyntosis&maxResults=10),
 A245,Luca Reteuna,Speriamo nel mare!,Effatà,2013,9788874028306,"Saggistica, Ecologia",FALSE,9788874028306,ISBN-13,title-mismatch,Esercizi di felicità
 A246,Jonathan Coe,Lo specchio dei desideri,Feltrinelli,2012,9788807018996,"Narrativa, Romanzo",FALSE,9788807018996,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Lo%20specchio%20dei%20desideri&maxResults=10),
 A247,Patrick Süskind,Il profumo,TEA,1985,9788878191297,"Thriller, Romanzo Storico",FALSE,8879726072,ISBN-10,corrected-isbn-by-title,I quattro dell'oca selvaggio
 A248,Nicolas Vanier,Belle & Sebastien,Sperling & Kupfer,2014,9788820055745,"Ragazzi, Avventura",FALSE,4064066071455,ISBN-13,corrected-isbn-by-title,Vacanze da Tiffany
-A249,Robin Hobb,L’assassino,Sperling & Kupfer,2015,9788820059636,"Fantasy, Formazione",FALSE,9788834728697,ISBN-13,found-isbn-by-title,
+A249,Robin Hobb,L'assassino,Sperling & Kupfer,2015,9788820059636,"Fantasy, Formazione",FALSE,9788834728697,ISBN-13,found-isbn-by-title,
 A250,Alessandro Gisotti,Dio e Obama,Effatà,2010,9788874026005,"Saggistica, Politica, Religione",FALSE,9788874025657,ISBN-13,corrected-isbn-by-title,Se non ami...
 A251,Fëdor Dostoevskij,Il sosia,Mondadori,2016,9788804660493,"Narrativa, Classico",FALSE,9788804660493,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Il%20sosia&maxResults=10),
 A252,Erasmo da Rotterdam,Elogio della follia,Mondadori,2017,9788804674353,"Filosofia, Classico",FALSE,9788818034738,ISBN-13,found-isbn-by-title,
@@ -1245,15 +1245,15 @@ A257,Giorgio Faletti,Niente di vero tranne gli occhi,Mondadori,2004,978880452737
 A258,Giuseppe Catozzella,Il grande futuro,Feltrinelli,2016,9788807031759,"Narrativa, Attualità",FALSE,9788858827598,ISBN-13,found-isbn-by-title,
 A259,Anna Todd,Imagines,Sperling & Kupfer,2016,9788820060374,"Young Adult, Rosa",FALSE,8897646077,ISBN-10,corrected-isbn-by-title,The crown. The selection
 A260,Tacito,Annali,Mondadori,2014,9788804646541,"Saggistica, Storia, Classico",FALSE,8817123099,ISBN-10,found-isbn-by-title,
-A261,Franco Causio (I. Cucci),Vincere è l’unica cosa che conta,Sperling & Kupfer,2015,9788820059797,"Biografia, Sport, Calcio",FALSE,9788820094003,ISBN-13,found-isbn-by-title,
+A261,Franco Causio (I. Cucci),Vincere è l'unica cosa che conta,Sperling & Kupfer,2015,9788820059797,"Biografia, Sport, Calcio",FALSE,9788820094003,ISBN-13,found-isbn-by-title,
 A262,Jason R. Briggs,Python per ragazzi,LSWR,2016,9788868953683,"Ragazzi, Informatica, Manualistica",FALSE,9798307281086,ISBN-13,corrected-isbn-by-title,A volontà. Giornata semi-vera in compagnia di due amiche che sfidano i pregiudizi sulla grassofobia
 A263,Giuseppe Catozzella,Non dirmi che hai paura,Feltrinelli,2014,9788807030776,"Narrativa, Biografia, Attualità",FALSE,9788858840160,ISBN-13,found-isbn-by-title,
 A264,D. Agasso Jr. A. Celeghini,Uno sarà preso,Effatà,2008,9788874024505,"Saggistica, Storia",FALSE,8874024061,ISBN-10,found-isbn-by-title,
 A265,John Grogan,Io & Marley,Sperling & Kupfer,2015,9788868361099,"Narrativa, Animali",FALSE,9788831815048,ISBN-13,corrected-isbn-by-title,Batte il cuore
 A266,AA. VV.,Fidati di me,Sperling & Kupfer,2015,9788820059124,"Narrativa, Racconti",FALSE,9788820059124,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Fidati%20di%20me&maxResults=10),
 A267,Stephen King,On writing,Frassinelli,2015,9788820059347,"Saggistica, Scrittura",FALSE,9788892740907,ISBN-13,corrected-isbn-by-title,Recupera una vista perfetta con lo yoga per gli occhi
-A270,"Del Toma, Macrì",L’alimentazione equilibrata,LSWR,2016,9788868954208,"Saggistica, Salute",FALSE,8868952637,ISBN-10,corrected-isbn-by-title,Lino Selvatico - Una seconda Belle Époque
-A271,Douglas Adams,"La vita, l’Universo e tutto quanto",Mondadori,2009,9788804584285,"Fantascienza, Umorismo",FALSE,9788852022586,ISBN-13,corrected-isbn-by-title,Addio all'estate
+A270,"Del Toma, Macrì",L'alimentazione equilibrata,LSWR,2016,9788868954208,"Saggistica, Salute",FALSE,8868952637,ISBN-10,corrected-isbn-by-title,Lino Selvatico - Una seconda Belle Époque
+A271,Douglas Adams,"La vita, l'Universo e tutto quanto",Mondadori,2009,9788804584285,"Fantascienza, Umorismo",FALSE,9788852022586,ISBN-13,corrected-isbn-by-title,Addio all'estate
 A272,Robert Silverberg,Pianeta senza scampo,Mondadori,2002,9788804510062,Fantascienza,FALSE,9788852077814,ISBN-13,corrected-isbn-by-title,Le porte di Damasco
 A273,Vernor Vinge,I naufraghi del tempo,Mondadori,1986,9788804276186,Fantascienza,FALSE,8869110664,ISBN-10,found-isbn-by-title,
 A274,Dava Sobel,Longitude,Fourth Estate,1998,9781857025712,"Saggistica, Storia, Scienza (Inglese)",FALSE,9780007382002,ISBN-13,found-isbn-by-title,ISBN not found in the database
@@ -1261,18 +1261,18 @@ A275,Arthur Conan Doyle,The Memoirs of Sherlock Holmes,Giunti,2001,9788809020788
 A276,Christophe Léon,Reato di fuga,Sinnos,2016,9788876092922,"Ragazzi, Attualità",FALSE,887609296X,ISBN-10,found-isbn-by-title,
 A277,Arthur Conan Doyle,Sherlock Holmes La valle della paura,Fabbri Editori,2002,9788845180292,"Giallo, Classico",FALSE,9788845180292,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Sherlock%20Holmes%20La%20valle%20della%20paura&maxResults=10),
 A278,Christopher Paolini,Eragon,Rizzoli,2003,9788817006880,"Ragazzi, Fantasy",FALSE,9788858615119,ISBN-13,corrected-isbn-by-title,Brand. Poema drammatico in cinque atti
-A279,Beppe Severgnini,L’italiano. Lezioni semiserie,Rizzoli,2007,9788817013116,"Saggistica, Linguistica",FALSE,9788817027441,ISBN-13,corrected-isbn-by-title,L'italiano
-A280,Nicholas Evans,L’uomo che sussurrava ai cavalli,Rizzoli,1995,9788817663185,"Narrativa, Romanzo",FALSE,9788817202268,ISBN-13,found-isbn-by-title,
+A279,Beppe Severgnini,L'italiano. Lezioni semiserie,Rizzoli,2007,9788817013116,"Saggistica, Linguistica",FALSE,9788817027441,ISBN-13,corrected-isbn-by-title,L'italiano
+A280,Nicholas Evans,L'uomo che sussurrava ai cavalli,Rizzoli,1995,9788817663185,"Narrativa, Romanzo",FALSE,9788817202268,ISBN-13,found-isbn-by-title,
 A281,Alessio Grosso,Apocalisse bianca,Mursia,2004,9788842531678,"Thriller, Fantascienza",FALSE,8842532754,ISBN-10,corrected-isbn-by-title,La Casa rossa
 A282,AA. VV.,Racconti di montagna,Einaudi,2008,9788806192137,"Narrativa, Racconti, Montagna",FALSE,8864903526,ISBN-10,found-isbn-by-title,
-A283,Tom Clancy,La grande fuga dell’Ottobre Rosso,Corriere della Sera,1997,9788817115162,"Thriller, Spionaggio",FALSE,8817672750,ISBN-10,corrected-isbn-by-title,"onorevole, stia zitto"
+A283,Tom Clancy,La grande fuga dell'Ottobre Rosso,Corriere della Sera,1997,9788817115162,"Thriller, Spionaggio",FALSE,8817672750,ISBN-10,corrected-isbn-by-title,"onorevole, stia zitto"
 A284,"Popper, Condry",Cattiva maestra televisione,Donzelli,1994,9788879890670,"Saggistica, Sociologia",FALSE,9788829705184,ISBN-13,corrected-isbn-by-title,Dalla politica alla ragion di stato
 A285,Peter Atkins,Le regole del gioco,Zanichelli,2014,9788808255938,"Saggistica, Fisica",FALSE,9788830431577,ISBN-13,found-isbn-by-title,ISBN not found in the database
 A286,Silvia Vaccari,Days in space,Vaccari,2009,9788885335967,"Saggistica, Astronomia",FALSE,9788885335967,ISBN-13,title-mismatch,Carta bollata e marche da bollo del Regno Lombardo-Veneto e dei territori italiani passati all'Impero Austriaco
 A290,Emanuela Nava,Sulle orme di Gandhi,Editoriale Scienza,2007,9788873073611,"Ragazzi, Biografia, Storia",FALSE,9788873075578,ISBN-13,corrected-isbn-by-title,Piccola posta. Con gadget
-A291,Andrew Matthews,"L’amore, la vendetta, la magia",Einaudi,2006,9788806179977,"Ragazzi, Mitologia",FALSE,8847710464,ISBN-10,corrected-isbn-by-title,Metà di un sole giallo
+A291,Andrew Matthews,"L'amore, la vendetta, la magia",Einaudi,2006,9788806179977,"Ragazzi, Mitologia",FALSE,8847710464,ISBN-10,corrected-isbn-by-title,Metà di un sole giallo
 A292,Beatrice Masini,Signore e signorine,Einaudi,2004,9788806170066,"Ragazzi, Narrativa",FALSE,8846733592,ISBN-10,found-isbn-by-title,ISBN not found in the database
-A293,Erminia Dell’Oro,Un treno per la vita,Mondadori,2003,9788842496334,"Ragazzi, Storia, Shoah",FALSE,8842402001,ISBN-10,found-isbn-by-title,
+A293,Erminia Dell'Oro,Un treno per la vita,Mondadori,2003,9788842496334,"Ragazzi, Storia, Shoah",FALSE,8842402001,ISBN-10,found-isbn-by-title,
 A294,Luigi Fleischmann,Un ragazzo ebreo nelle retrovie,Ghisetti e Corvi,2004,9788853800267,"Narrativa, Memorie, Shoah",FALSE,8880139088,ISBN-10,found-isbn-by-title,
 A295,Graziella Favaro,La zuppiera di MarzuK,Carthusia,2002,9788887212265,"Ragazzi, Intercultura",FALSE,9788887212265,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:La%20zuppiera%20di%20MarzuK&maxResults=10),
 A296,Carla Bisi Castellani,La casa di via Colombo,Ibis,2005,9788871641880,"Saggistica, Memorie, Guerra",FALSE,9788871641880,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:La%20casa%20di%20via%20Colombo&maxResults=10),
@@ -1280,7 +1280,7 @@ A297,Annamaria Gangai,Emozioni,Albatros,2011,9788856738987,"Narrativa, Romanzo",
 A298,Stefano Mencherini,Il pane loro,Manni,2001,9788881762148,"Teatro, Impegno Civile",FALSE,8881762218,ISBN-10,found-isbn-by-title,
 A299,-,III concorso lett. codex purpureus,Sistema Bibliotecario Tortonese,2004,-,"Antologia, Locale",FALSE,1508196605,ISBN-10,found-isbn-by-title,
 A300,"R. Gavoni, G. Ranzini",Il teatro dei ragazzi,Cedam,1997,9788813203521,"Saggistica, Teatro, Pedagogia",FALSE,8836650546,ISBN-10,found-isbn-by-title,
-A301,Serena Zoli,Il lavoro smobilita l’uomo,Longanesi,2008,9788830425025,"Narrativa, Satira, Società",FALSE,8830424455,ISBN-10,found-isbn-by-title,
+A301,Serena Zoli,Il lavoro smobilita l'uomo,Longanesi,2008,9788830425025,"Narrativa, Satira, Società",FALSE,8830424455,ISBN-10,found-isbn-by-title,
 A302,Riccardo E. Grassi,Il fruscio lieve della gioia,Infinito,2015,9788868610660,"Narrativa, Romanzo",FALSE,8868611082,ISBN-10,found-isbn-by-title,
 A303,Cinzia Montagna,Chi ha paura di Caterina?,Primula,2016,9788894132433,Romanzo Storico,FALSE,9788894132433,invalid,not-found (Connection error: 503 Server Error: Service Unavailable for url: https://www.googleapis.com/books/v1/volumes?q=intitle:Chi%20ha%20paura%20di%20Caterina?&maxResults=10),
 A304,Igiaba Scego,La mia casa è dove sono,Loescher,2012,9788820136030,"Saggistica, Autobiografia, Intercultura",FALSE,8858302710,ISBN-10,found-isbn-by-title,

@@ -60,12 +60,29 @@ def check_isbn13(isbn: str) -> bool:
     return check_digit == int(isbn[12])
 
 
-def discover_isbn_from_title(title):
+def discover_isbn_from_title(title, publisher=None, year=None, author=None):
     if not title:
         return None, 'No title provided'
 
-    query = requests.utils.requote_uri(title)
-    url = f"https://www.googleapis.com/books/v1/volumes?q=intitle:{query}&maxResults=10"
+    # Build query components
+    query_parts = [f"intitle:{requests.utils.requote_uri(title)}"]
+
+    if publisher:
+        query_parts.append(f"inpublisher:{requests.utils.requote_uri(publisher)}")
+
+    if author:
+        query_parts.append(f"inauthor:{requests.utils.requote_uri(author)}")
+
+    # For year, create a range (year ± 2 years) to account for reprints/editions
+    if year and year.isdigit():
+        year_int = int(year)
+        before_year = year_int + 2
+        after_year = max(1800, year_int - 2)  # Don't go before 1800
+        query_parts.append(f"before:{before_year}")
+        query_parts.append(f"after:{after_year}")
+
+    query = "&".join(query_parts)
+    url = f"https://www.googleapis.com/books/v1/volumes?q={query}&maxResults=10"
 
     try:
         response = requests.get(url, timeout=10)
@@ -74,7 +91,7 @@ def discover_isbn_from_title(title):
 
         items = data.get('items', [])
         if not items:
-            return None, 'No title matches found'
+            return None, 'No matches found with the provided criteria'
 
         for item in items:
             volume_info = item.get('volumeInfo', {})
@@ -85,7 +102,7 @@ def discover_isbn_from_title(title):
                     if (len(isbn_candidate) == 10 and check_isbn10(isbn_candidate)) or (len(isbn_candidate) == 13 and check_isbn13(isbn_candidate)):
                         return isbn_candidate, volume_info.get('title', '')
 
-        return None, 'No valid ISBN found in title results'
+        return None, 'No valid ISBN found in search results'
 
     except requests.exceptions.RequestException as e:
         return None, f'Connection error: {e}'
@@ -94,7 +111,7 @@ def discover_isbn_from_title(title):
 def search_ISBN():
     check_books = 0
     csv_filename = 'src\\db\\Libri_Lista.csv'
-    output_filename = 'src\\db\\Libri_Lista_checked.csv'
+    output_filename = 'src\\db\\Libri_Lista_checked_EXAMPLE.csv'
 
     print('Starting ISBN verification...\n' + '-'*40)
 
@@ -107,6 +124,9 @@ def search_ISBN():
             for row in reader:
                 isbn = row.get('isbn', '').strip()
                 expected_title = row.get('titolo', row.get('title', '')).strip()
+                publisher = row.get('casa_editrice', '').strip()
+                year = row.get('anno', '').strip()
+                author = row.get('autore', '').strip()
                 normalized = normalize_isbn(isbn)
 
                 isbn_status = 'invalid'
@@ -129,13 +149,13 @@ def search_ISBN():
                     check_books += 1
                 elif result is False:
                     action = 'title-mismatch'
-                    candidate_isbn, candidate_title = discover_isbn_from_title(expected_title)
+                    candidate_isbn, candidate_title = discover_isbn_from_title(expected_title, publisher, year, author)
                     if candidate_isbn:
                         authoritative_isbn = candidate_isbn
                         action = 'corrected-isbn-by-title'
                         isbn_status = 'ISBN-10' if len(candidate_isbn) == 10 else 'ISBN-13'
                 else:
-                    candidate_isbn, candidate_title = discover_isbn_from_title(expected_title)
+                    candidate_isbn, candidate_title = discover_isbn_from_title(expected_title, publisher, year, author)
                     if candidate_isbn:
                         authoritative_isbn = candidate_isbn
                         isbn_status = 'ISBN-10' if len(candidate_isbn) == 10 else 'ISBN-13'
@@ -143,7 +163,7 @@ def search_ISBN():
                     else:
                         action = f'not-found ({candidate_title})'
 
-                print(f"Checking ISBN: {isbn} -> {authoritative_isbn} ({isbn_status}) -> {action}; title: '{expected_title}' ; api title: '{matched_title}'")
+                print(f"Checking ISBN: {isbn} -> {authoritative_isbn} ({isbn_status}) -> {action}; title: '{expected_title}' ; publisher: '{publisher}' ; year: '{year}' ; author: '{author}' ; api title: '{matched_title}'")
 
                 row['checked_isbn'] = authoritative_isbn
                 row['isbn_type'] = isbn_status

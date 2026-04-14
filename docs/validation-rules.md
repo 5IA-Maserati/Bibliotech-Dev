@@ -106,7 +106,7 @@ This document outlines the input validation and sanitization implementation acro
 
 #### Confirm Password
 - **Type:** Password
-- **ID:** `confirm-password`
+- **ID:** `confirm_password`
 - **Requirements:**
   - Must match the Password field exactly
 - **Error Message:** "Le password non coincidono"

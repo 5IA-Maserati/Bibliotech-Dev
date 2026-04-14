@@ -17,8 +17,11 @@ const FormValidator = {
     password: {
       minLength: 8,
       maxLength: 50,
-      pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/, // At least 1 uppercase, 1 lowercase, 1 digit
+      pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&()_+\-=\[\]{}|;:,.<>?]{8,}$/, // At least 1 uppercase, 1 lowercase, 1 digit
       message: 'La password deve contenere almeno 8 caratteri, inclusi una maiuscola, una minuscola e un numero'
+    },
+    confirm_password: {
+  message: 'Le password non corrispondono'
     },
     email: {
       pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -39,8 +42,8 @@ const FormValidator = {
     birthdate: {
       minLength: 10,
       maxLength: 10,
-      pattern: /^\d{2}-\d{2}-\d{4}$/,
-      message: 'Inserisci una data valida nel formato GG-MM-AAAA'
+      pattern: /^\d{4}-\d{2}-\d{2}$/,
+      message: 'Inserisci una data valida'
     },
     search: {
       maxLength: 255,
@@ -98,6 +101,7 @@ const FormValidator = {
     if (value === '' && !this.isRequired(fieldId)) {
       return { valid: true, message: '' }
     }
+    
 
     // Apply validation rules if they exist
     if (rule) {
@@ -112,6 +116,14 @@ const FormValidator = {
       }
     }
 
+    // Logica specifica per il confronto password
+    if (fieldId === 'confirm_password') {
+      const passwordField = document.getElementById('password');
+      if (passwordField && value !== passwordField.value) {
+        return { valid: false, message: this.rules.confirm_password.message };
+      }
+    }
+
     return { valid: true, message: '' }
   },
 
@@ -122,7 +134,7 @@ const FormValidator = {
     const form = document.getElementById(formId)
     if (!form) return { valid: false, errors: ['not found'] }
 
-    const inputs = form.querySelectorAll('input[type!="submit"][type!="button"]')
+    const inputs = form.querySelectorAll('input:not([type="submit"]):not([type="button"])')
     const errors = []
     let isValid = true
 
@@ -161,7 +173,7 @@ const FormValidator = {
     const form = document.getElementById(formId)
     if (!form) return null
 
-    const inputs = form.querySelectorAll('input[type!="submit"][type!="button"]')
+    const inputs = form.querySelectorAll('input:not([type="submit"]):not([type="button"])')
     const sanitizedData = {}
 
     inputs.forEach(input => {
@@ -214,7 +226,7 @@ const FormValidator = {
     const form = document.getElementById(formId)
     if (!form) return
 
-    const inputs = form.querySelectorAll('input[type!="submit"][type!="button"]')
+    const inputs = form.querySelectorAll('input:not([type="submit"]):not([type="button"])')
     inputs.forEach(input => {
       input.addEventListener('blur', () => {
         const validation = this.validateField(input.id)

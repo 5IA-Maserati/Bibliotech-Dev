@@ -51,7 +51,7 @@ include dirname(__DIR__) . '/includes/form-input.php';
 $fi_password = ob_get_clean() ?: '';
 
 $type = 'password';
-$id = 'confirm-password';
+$id = 'confirm_password';
 $label = 'Conferma password';
 $aria_label = 'Conferma la tua password';
 ob_start();

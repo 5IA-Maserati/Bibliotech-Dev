@@ -11,6 +11,7 @@ document.getElementById('register-form').addEventListener('submit', function (e)
 
   // Validate all fields
   const validation = FormValidator.validateForm('register-form')
+  console.log('Validation result:', validation)
 
   if (!validation.valid) {
     console.error('Form validation failed:', validation.errors)
@@ -20,10 +21,12 @@ document.getElementById('register-form').addEventListener('submit', function (e)
 
   // Check if passwords match
   const password = document.getElementById('password').value
-  const confirm = document.getElementById('confirm-password').value
+  const confirm = document.getElementById('confirm_password').value
+  console.log('Password:', password, 'Confirm:', confirm)
 
   if (password !== confirm) {
-    FormValidator.markFieldError('confirm-password', 'Le password non coincidono')
+    console.log('Passwords do not match')
+    FormValidator.markFieldError('confirm_password', 'Le password non coincidono')
     return
   }
 

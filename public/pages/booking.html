@@ -5,19 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prenotazione</title>
     <link rel="stylesheet" href="../assets/style/booking.css">
+    <link rel="stylesheet" href="../assets/style/validation.css">
 </head>
 <body>
     <div class="container">
         <h1>Prenotazione</h1>
 
         <div class="description">
-            <p>Descrizione del libro</p>
+            <p>Compila il form per prenotare un libro.</p>
         </div>
 
-        <a>Prenota</a>
+        <form id="booking-form">
+            <div class="input-group">
+                <input type="text" id="name" name="name" aria-label="Nome dello studente" required>
+                <label for="name">Nome dello Studente</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" name="email" aria-label="Email dello studente" required>
+                <label for="email">Email dello Studente</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="book_title" name="book_title" aria-label="Titolo del libro" required>
+                <label for="book_title">Titolo del Libro</label>
+            </div>
+            <div class="input-group">
+                <input type="date" id="booking_date" name="booking_date" aria-label="Data di prenotazione" required>
+                <label for="booking_date">Data di Prenotazione</label>
+            </div>
+            <button type="submit">Prenota</button>
+        </form>
 
-        <a href = "search.php">Torna all'elenco libri</a>
+        <a href="search.html">Torna all'elenco libri</a>
         <a href="../index.php">Torna alla home</a>
     </div>
+
+    <script src="../assets/js/form-validator.js"></script>
+    <script src="../assets/js/booking.js"></script>
 </body>
 </html>

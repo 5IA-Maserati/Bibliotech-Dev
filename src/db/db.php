@@ -37,7 +37,7 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
             // --- PHASE 1: CHECK IF THE BOOK ALREADY EXISTS ---
             // Search by ISBN (if present) or by Title + Author
             $stmt = $pdo->prepare("SELECT id FROM books WHERE (isbn <> '' AND isbn = ?) OR (title = ? AND author = ?)");
-            $stmt->execute([$isbn, $author, $title]);
+            $stmt->execute([$isbn, $title, $author]);
             $book = $stmt->fetch();
 
             if ($book) {

@@ -56,6 +56,12 @@ const FormValidator = {
       pattern: /^[a-zA-Z0-9àèéìòù\s\-',.&:()]+$/,
       message: 'Il titolo del libro contiene caratteri non validi'
     },
+    'book-title': {
+      minLength: 1,
+      maxLength: 255,
+      pattern: /^[a-zA-Z0-9àèéìòù\s\-',.&:()]+$/,
+      message: 'Il titolo del libro contiene caratteri non validi'
+    },
     student_name: {
       minLength: 2,
       maxLength: 50,
@@ -67,6 +73,12 @@ const FormValidator = {
       message: 'Inserisci un indirizzo email valido'
     },
     booking_date: {
+      minLength: 10,
+      maxLength: 10,
+      pattern: /^\d{4}-\d{2}-\d{2}$/,
+      message: 'Inserisci una data valida'
+    },
+    'booking-date': {
       minLength: 10,
       maxLength: 10,
       pattern: /^\d{4}-\d{2}-\d{2}$/,

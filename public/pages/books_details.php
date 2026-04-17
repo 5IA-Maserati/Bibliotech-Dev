@@ -29,8 +29,7 @@ if ($bookId > 0) {
 }
 
 if ($book === null) {
-    http_response_code(404);
-    echo 'Libro non trovato. Assicurati di usare ?id=<numero>.';
+    http_response_code(404); // Should make a reference to page404.html
     exit;
 }
 

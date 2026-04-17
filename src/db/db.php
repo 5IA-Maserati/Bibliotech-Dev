@@ -1,10 +1,14 @@
 <?php
-// 1. Connessione al database (Dati aggiornati)
-$host = 'localhost';
-$db   = 'bibliotech';
-$user = 'bibliotech';
-$pass = 'x325rqweT2dftg'; 
-$charset = 'utf8mb4';
+// 1. Connessione al database (Credenziali da variabili d'ambiente)
+$host = getenv('DB_HOST') ?: 'localhost';
+$db   = getenv('DB_NAME') ?: 'bibliotech';
+$user = getenv('DB_USER') ?: 'bibliotech';
+$pass = getenv('DB_PASS');
+$charset = getenv('DB_CHARSET') ?: 'utf8mb4';
+
+if ($pass === false || $pass === '') {
+    die("Errore di configurazione: variabile d'ambiente DB_PASS non impostata.");
+}
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 try {
@@ -37,7 +41,7 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
             // --- PHASE 1: CHECK IF THE BOOK ALREADY EXISTS ---
             // Search by ISBN (if present) or by Title + Author
             $stmt = $pdo->prepare("SELECT id FROM books WHERE (isbn <> '' AND isbn = ?) OR (title = ? AND author = ?)");
-            $stmt->execute([$isbn, $author, $title]);
+            $stmt->execute([$isbn, $title, $author]);
             $book = $stmt->fetch();
 
             if ($book) {

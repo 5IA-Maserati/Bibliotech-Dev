@@ -240,7 +240,7 @@ footer p {
   user-select: none;
   transition: all 0.2s ease;
   fill: #333;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #map text.zoom-in:hover,

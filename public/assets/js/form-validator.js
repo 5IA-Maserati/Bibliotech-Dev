@@ -116,7 +116,7 @@ const FormValidator = {
       }
     }
 
-    // Logica specifica per il confronto password
+    // Specific logic for password comparison
     if (fieldId === 'confirm_password') {
       const passwordField = document.getElementById('password');
       if (passwordField && value !== passwordField.value) {

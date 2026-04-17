@@ -205,7 +205,6 @@ def search_ISBN():
                 author = row.get('autore', '').strip()
                 normalized = normalize_isbn(isbn)
 
-                isbn_status = 'invalid'
                 authoritative_isbn = normalized
                 matched_title = ''
                 result = None

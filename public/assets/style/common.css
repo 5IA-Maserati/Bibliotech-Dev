@@ -8,8 +8,8 @@
   --light-gray-blue: #cfd8dc;
   --white: #fff;
   --text-dark: #333;
-  --text-light: #000000;
-  --muted: #000000;
+  --text-light: #000;
+  --muted: #000;
   --bg-light: #f5f7f9;
   --bg-white: var(--white);
   --border: var(--light-gray-blue);
@@ -221,4 +221,18 @@ main {
 .btn-nav.donate:hover {
   background-color: var(--dark-light-blue);
   box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+}
+
+/* ===========================
+   COMMON FOOTER
+=========================== */
+.footer {
+  height: 120px;
+  padding: 20px 5%;
+  text-align: center;
+  color: white;
+  background-color: var(--dark-light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

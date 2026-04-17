@@ -79,7 +79,7 @@ const FormValidator = {
    */
   isRequired: function (fieldId) {
     const field = document.getElementById(fieldId)
-    return field && field.hasAttribute('required')
+    return field && field.hasAttribute('richiesto')
   },
 
   /**
@@ -87,14 +87,14 @@ const FormValidator = {
    */
   validateField: function (fieldId) {
     const field = document.getElementById(fieldId)
-    if (!field) return { valid: false, message: 'Field not found' }
+    if (!field) return { valid: false, message: 'campo non trovato' }
 
     const value = field.value.trim()
     const rule = this.rules[fieldId]
 
     // Check if field is empty
     if (value === '' && this.isRequired(fieldId)) {
-      return { valid: false, message: 'This field is required' }
+      return { valid: false, message: 'Questo campo è obbligatorio' }
     }
 
     // Skip validation if empty and not required
@@ -115,7 +115,7 @@ const FormValidator = {
       }
     }
 
-    // Logica specifica per il confronto password
+    // Specific logic for password comparison
     if (fieldId === 'confirm_password') {
       const passwordField = document.getElementById('password')
       if (passwordField && value !== passwordField.value) {

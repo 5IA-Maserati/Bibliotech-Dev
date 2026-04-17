@@ -1,5 +1,5 @@
 <?php
-// 1. Connessione al database (Credenziali da variabili d'ambiente)
+
 $host = getenv('DB_HOST') ?: 'localhost';
 $db   = getenv('DB_NAME') ?: 'bibliotech';
 $user = getenv('DB_USER') ?: 'bibliotech';
@@ -19,11 +19,11 @@ try {
 
 $filename = 'Libri_Lista_FINALE.csv';
 if (($handle = fopen($filename, "r")) !== FALSE) {
-    
+
     fgetcsv($handle, 1000, ","); // Skip header row
 
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-        
+
         $inventory      = trim($data[0]);
         $author         = trim($data[1]);
         $title          = trim($data[2]);
@@ -49,7 +49,7 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
                 $bookId = $book['id'];
             } else {
                 // The book does NOT exist, insert it
-                $sqlBook = "INSERT INTO books (author, title, publisher, publication_year, isbn) 
+                $sqlBook = "INSERT INTO books (author, title, publisher, publication_year, isbn)
                             VALUES (?, ?, ?, ?, ?)";
                 $stmt = $pdo->prepare($sqlBook);
                 $stmt->execute([$author, $title, $publisher, $year, $isbn]);

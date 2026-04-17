@@ -132,7 +132,7 @@ const FormValidator = {
    */
   validateForm: function (formId) {
     const form = document.getElementById(formId)
-    if (!form) return { valid: false, errors: ['not found'] }
+    if (!form) return { valid: false, errors: [`Form not found: ${formId}`] }
 
     const inputs = form.querySelectorAll('input:not([type="submit"]):not([type="button"])')
     const errors = []

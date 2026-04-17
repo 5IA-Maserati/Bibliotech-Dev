@@ -29,8 +29,7 @@ if ($bookId > 0) {
 }
 
 if ($book === null) {
-    http_response_code(404);
-    echo 'Libro non trovato. Assicurati di usare ?id=<numero>.';
+    header('Location: /pages/page_404.php');
     exit;
 }
 

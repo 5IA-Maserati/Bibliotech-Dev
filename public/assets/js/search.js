@@ -42,8 +42,8 @@ if (searchInput && searchButton) {
 
     FormValidator.clearFieldError('q')
 
-    // TODO: Replace this with actual search logic
-    // Example: searchAPI(sanitizedSearch, genre, sort)
+    // Call search API
+    searchAPI(sanitizedSearch, genre, sort)
   })
 
   // Real-time validation: clear error if user types
@@ -67,4 +67,59 @@ if (searchInput && searchButton) {
   if (_sortFilter) {
     _sortFilter.addEventListener('change', () => searchButton.click())
   }
+}
+
+/**
+ * Search API Function
+ */
+function searchAPI(query, genre, sort) {
+  const resultsDiv = document.getElementById('results')
+  const countSpan = document.getElementById('count')
+
+  resultsDiv.innerHTML = '<p>Ricerca in corso...</p>'
+
+  const params = new URLSearchParams({
+    q: query,
+    genre: genre,
+    sort: sort
+  })
+
+  fetch(`/api/books/search.php?${params}`)
+    .then(response => response.json())
+    .then(data => {
+      if (data.error || !data.books || data.books.length === 0) {
+        resultsDiv.innerHTML = '<div class="no-results">Nessun libro trovato.</div>'
+        countSpan.textContent = '0'
+        return
+      }
+
+      resultsDiv.innerHTML = data.books
+        .map(book => `
+          <div class="book-card" data-id="${book.id}">
+            <div class="book-cover">${book.title.charAt(0)}</div>
+            <div class="book-info">
+              <h3 class="book-title">${book.title}</h3>
+              <p class="book-author">di ${book.author}</p>
+              <p class="book-year">${book.publication_year || 'N/A'}</p>
+              <p class="book-isbn">ISBN: ${book.isbn || 'N/A'}</p>
+              ${book.genres ? `<p class="book-genres">${book.genres}</p>` : ''}
+            </div>
+          </div>
+        `)
+        .join('')
+
+      countSpan.textContent = data.books.length
+
+      // Add click handlers to book cards
+      document.querySelectorAll('.book-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const bookId = card.dataset.id
+          window.location.href = `/pages/books_details.php?id=${bookId}`
+        })
+      })
+    })
+    .catch(error => {
+      console.error('Search error:', error)
+      resultsDiv.innerHTML = '<div class="no-results">Errore nella ricerca.</div>'
+    })
 }

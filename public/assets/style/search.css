@@ -77,6 +77,87 @@ header {
   transform: translateY(-2px);
 }
 
+/* Book Card Styles (for individual books) */
+.book-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+}
+
+.book-cover {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, #e0e7ff 0%, #cffafe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.book-info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-author {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.book-year {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: auto;
+}
+
+.book-isbn {
+  font-size: 0.8rem;
+  color: #aaa;
+  font-family: monospace;
+}
+
+.book-genres {
+  font-size: 0.8rem;
+  color: var(--medium-blue);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
 .title {
   font-size: 1.2rem;
   font-weight: 600;

@@ -16,7 +16,7 @@ if ($bookId > 0) {
 
     /** @var \PDO $pdo */
     $stmt = $pdo->prepare(
-        'SELECT b.*, c.username AS category
+        'SELECT b.*, c.name AS category
          FROM books b
          LEFT JOIN categories c ON b.category_id = c.id
          WHERE b.id = :id'

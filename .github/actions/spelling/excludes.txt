@@ -13,7 +13,7 @@
 
 ^\Q.github/actions/spelling/expect.txt\E$
 ^\Q.github/wordlists/tech.txt\E$
-^src/db/data/raw-data-db\.csv$
+^/src/db
 ^docs/validation-rules\.md$
 
 ^\Qpublic/assets/js/libs/.dist/leaflet.js\E$

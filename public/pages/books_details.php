@@ -8,7 +8,7 @@ include dirname(__DIR__) . '/includes/header.php';
 $header = ob_get_clean() ?: '';
 
 $book = null;
-// Id del libro tramite query string: books_details.php?id=123
+// book id by query string: books_details.php?id=123
 $bookId = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
 if ($bookId > 0) {

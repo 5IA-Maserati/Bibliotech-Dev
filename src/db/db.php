@@ -16,7 +16,7 @@ try {
 $filename = 'Libri_Lista_FINALE.csv';
 if (($handle = fopen($filename, "r")) !== FALSE) {
     
-    fgetcsv($handle, 1000, ","); // Salta intestazione
+    fgetcsv($handle, 1000, ","); // Skip header row
 
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         
@@ -34,24 +34,24 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
                 $year = null;
             }
 
-            // --- FASE 1: CONTROLLO SE IL LIBRO ESISTE GIÀ ---
-            // Cerchiamo per ISBN (se c'è) o per Titolo + Autore
+            // --- PHASE 1: CHECK IF THE BOOK ALREADY EXISTS ---
+            // Search by ISBN (if present) or by Title + Author
             $stmt = $pdo->prepare("SELECT id FROM books WHERE (isbn <> '' AND isbn = ?) OR (title = ? AND author = ?)");
             $stmt->execute([$isbn, $author, $title]);
             $book = $stmt->fetch();
 
             if ($book) {
-                // Il libro esiste già, prendiamo il suo ID
+                // The book already exists, retrieve its ID
                 $bookId = $book['id'];
             } else {
-                // Il libro NON esiste, lo inseriamo
+                // The book does NOT exist, insert it
                 $sqlBook = "INSERT INTO books (author, title, publisher, publication_year, isbn) 
                             VALUES (?, ?, ?, ?, ?)";
                 $stmt = $pdo->prepare($sqlBook);
                 $stmt->execute([$author, $title, $publisher, $year, $isbn]);
                 $bookId = $pdo->lastInsertId();
 
-                // Gestione dei generi (solo se il libro è nuovo per non duplicare i legami)
+                // Genre handling (only for new books to avoid duplicate links)
                 $genresArray = explode(',', $genres_string);
                 foreach ($genresArray as $genreName) {
                     $genreName = trim($genreName);
@@ -69,8 +69,8 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
                 }
             }
 
-            // --- FASE 2: INSERIMENTO DELLA COPIA FISICA ---
-            // Inseriamo il numero d'inventario collegandolo all'ID del libro (nuovo o esistente)
+            // --- PHASE 2: INSERT PHYSICAL COPY ---
+            // Insert the inventory number linked to the book ID (new or existing)
             $stmt = $pdo->prepare("INSERT IGNORE INTO copies (book_id, inventory_number) VALUES (?, ?)");
             $stmt->execute([$bookId, $inventory]);
 

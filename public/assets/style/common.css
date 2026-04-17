@@ -222,3 +222,17 @@ main {
   background-color: var(--dark-light-blue);
   box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
 }
+
+/* ===========================
+   COMMON FOOTER
+=========================== */
+.footer {
+  height: 120px;
+  padding: 20px 5%;
+  text-align: center;
+  color: white;
+  background-color: var(--dark-light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $title = 'Pagina libri';
 $show_nav = false;

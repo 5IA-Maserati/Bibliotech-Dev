@@ -17,11 +17,11 @@ const FormValidator = {
     password: {
       minLength: 8,
       maxLength: 50,
-      pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&()_+\-=\[\]{}|;:,.<>?]{8,}$/, // At least 1 uppercase, 1 lowercase, 1 digit
+      pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&()_+\-=[\]{}|;:,.<>?]{8,}$/, // At least 1 uppercase, 1 lowercase, 1 digit
       message: 'La password deve contenere almeno 8 caratteri, inclusi una maiuscola, una minuscola e un numero'
     },
     confirm_password: {
-  message: 'Le password non corrispondono'
+      message: 'Le password non corrispondono'
     },
     email: {
       pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -101,7 +101,6 @@ const FormValidator = {
     if (value === '' && !this.isRequired(fieldId)) {
       return { valid: true, message: '' }
     }
-    
 
     // Apply validation rules if they exist
     if (rule) {
@@ -118,9 +117,9 @@ const FormValidator = {
 
     // Logica specifica per il confronto password
     if (fieldId === 'confirm_password') {
-      const passwordField = document.getElementById('password');
+      const passwordField = document.getElementById('password')
       if (passwordField && value !== passwordField.value) {
-        return { valid: false, message: this.rules.confirm_password.message };
+        return { valid: false, message: this.rules.confirm_password.message }
       }
     }
 

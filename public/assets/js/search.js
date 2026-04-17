@@ -72,7 +72,7 @@ if (searchInput && searchButton) {
 /**
  * Search API Function
  */
-function searchAPI(query, genre, sort) {
+function searchAPI (query, genre, sort) {
   const resultsDiv = document.getElementById('results')
   const countSpan = document.getElementById('count')
 
@@ -80,8 +80,8 @@ function searchAPI(query, genre, sort) {
 
   const params = new URLSearchParams({
     q: query,
-    genre: genre,
-    sort: sort
+    genre,
+    sort
   })
 
   fetch(`/api/books/search.php?${params}`)

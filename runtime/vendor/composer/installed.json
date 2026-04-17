@@ -1,6 +1,38 @@
 {
     "packages": [
         {
+            "name": "composer-phar/phpcbf",
+            "version": "4.0.0",
+            "version_normalized": "4.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer-phar/phpcbf.git",
+                "reference": "f8c0d4474512a4a2171bf259b28d849b8bd4dcde"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer-phar/phpcbf/zipball/f8c0d4474512a4a2171bf259b28d849b8bd4dcde",
+                "reference": "f8c0d4474512a4a2171bf259b28d849b8bd4dcde",
+                "shasum": ""
+            },
+            "time": "2025-10-13T07:07:03+00:00",
+            "bin": [
+                "phpcbf.phar"
+            ],
+            "type": "library",
+            "installation-source": "source",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "PHPCSStandards/PHP_CodeSniffer",
+            "support": {
+                "issues": "https://github.com/composer-phar/phpcbf/issues",
+                "source": "https://github.com/composer-phar/phpcbf/tree/4.0.0"
+            },
+            "install-path": "../composer-phar/phpcbf"
+        },
+        {
             "name": "squizlabs/php_codesniffer",
             "version": "4.0.1",
             "version_normalized": "4.0.1.0",

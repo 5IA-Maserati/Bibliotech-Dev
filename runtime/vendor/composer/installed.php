@@ -1,11 +1,9 @@
-<?php
-
-return array(
+<?php return array(
     'root' => array(
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c6234cb3880740b3d263b9dd697631dc3dd5f2f2',
+        'reference' => '228a3af86d5e8b5c61cfb5f0cdc2bef59af1d848',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -15,9 +13,18 @@ return array(
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c6234cb3880740b3d263b9dd697631dc3dd5f2f2',
+            'reference' => '228a3af86d5e8b5c61cfb5f0cdc2bef59af1d848',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'composer-phar/phpcbf' => array(
+            'pretty_version' => '4.0.0',
+            'version' => '4.0.0.0',
+            'reference' => 'f8c0d4474512a4a2171bf259b28d849b8bd4dcde',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../composer-phar/phpcbf',
             'aliases' => array(),
             'dev_requirement' => false,
         ),

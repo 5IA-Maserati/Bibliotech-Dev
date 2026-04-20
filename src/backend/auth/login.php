@@ -8,7 +8,7 @@ header('Content-Type: application/json');
 
 require_once __DIR__ . '/../../db/db.php';
 
-use src\backend\libs\PDO;
+use PDO;
 
 /** @var PDO $pdo */
 

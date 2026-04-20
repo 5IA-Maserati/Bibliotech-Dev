@@ -1,4 +1,3 @@
-// spellcheck-prep.js
 // Safely removes user-facing string literals from selected JS files
 // Handles message properties, alert() calls, and FormValidator.markFieldError()
 // Overwrites files and prints cleaned content
@@ -6,17 +5,6 @@
 
 import fs from 'fs'
 import path from 'path'
-
-/**
- * List of filenames to process (just the filename, no path)
- */
-const filenamesToProcess = [
-  'booking.js',
-  'login.js',
-  'signup.js',
-  'search.js',
-  'form-validator.js'
-]
 
 /**
  * Recursively get all JS files in a directory
@@ -66,13 +54,23 @@ function removeUserStrings (jsContent) {
   return cleaned
 }
 
-// Get all JS files in the current project
+// Gather all js filess
 const allJsFiles = getAllJsFiles(process.cwd())
 
-// Filter files by filename only
-const filesToProcess = allJsFiles.filter((filePath) =>
-  filenamesToProcess.includes(path.basename(filePath))
-)
+// Exclude the script itself
+const SCRIPT_PATH = path.resolve(process.argv[1])
+
+const filesToProcess = allJsFiles.filter(filePath => {
+  const normalized = filePath.replace(/\\/g, '/')
+
+  return (
+    normalized.endsWith('.js') &&
+    filePath !== SCRIPT_PATH &&
+    !normalized.includes('node_modules') &&
+    !normalized.includes('dist') &&
+    !normalized.includes('build')
+  )
+})
 
 if (filesToProcess.length === 0) {
   console.log('No matching files found to process.')

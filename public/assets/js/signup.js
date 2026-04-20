@@ -36,6 +36,15 @@ document.getElementById('register-form').addEventListener('submit', function (e)
   // Show success message (in production, send to server)
   console.log('Sanitized form data:', sanitizedData)
   alert('Registrazione completata!')
+
+  // Clear all form fields after successful submission
+  document.getElementById('register-form').reset()
+
+  // Clear any remaining error messages
+  const inputs = document.querySelectorAll('#register-form input')
+  inputs.forEach(input => {
+    FormValidator.clearFieldError(input.id)
+  })
 })
 
 // Enable real-time validation on blur

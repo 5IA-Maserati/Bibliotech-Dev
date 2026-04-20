@@ -7,6 +7,8 @@ ob_start(); // rendering the header
 include dirname(__DIR__) . '/includes/header.php';
 $header = ob_get_clean() ?: '';
 
+use src\backend\libs\PDO;
+
 $book = null;
 // book id by query string: books_details.php?id=123
 $bookId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
@@ -18,7 +20,7 @@ if ($bookId === false || $bookId === null) {
 if ($bookId > 0) {
     require_once __DIR__ . '/../../src/db/db.php';
 
-    /** @var \PDO $pdo */
+    /** @var PDO $pdo */
     $stmt = $pdo->prepare(
         'SELECT b.*, c.name AS category
          FROM books b

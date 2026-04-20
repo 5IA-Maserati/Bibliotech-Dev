@@ -10,10 +10,13 @@ if ($pass === false || $pass === '') {
     die("Errore di configurazione: variabile d'ambiente DB_PASS non impostata.");
 }
 
+use src\backend\libs\PDO;
+use src\backend\libs\PDOException;
+
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 try {
-     $pdo = new \PDO($dsn, $user, $pass, [\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION]);
-} catch (\PDOException $e) {
+     $pdo = new PDO($dsn, $user, $pass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+} catch (PDOException $e) {
      die("Errore di connessione: " . $e->getMessage());
 }
 

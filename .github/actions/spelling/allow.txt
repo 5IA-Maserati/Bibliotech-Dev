@@ -55,6 +55,7 @@ callback
 caniuse
 ccc
 cffafb
+cffafe
 cgi
 charset
 cheatsheets
@@ -150,7 +151,10 @@ exe
 EXITCODE
 express
 extactly
+fafafa
 fclose
+fecaca
+fef
 feof
 fetchpolicy
 ffd
@@ -501,6 +505,7 @@ utexas
 utf
 uuid
 validator
+validators
 Validators
 Validators
 var

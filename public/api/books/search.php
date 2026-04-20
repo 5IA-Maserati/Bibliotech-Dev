@@ -5,7 +5,9 @@ use Exception;
 
 header('Content-Type: application/json');
 
-/** @var \PDO $pdo */
+/**
+ * @var PDO $pdo
+*/
 $pdo = require dirname(__DIR__, 2) . '/../src/db/db.php';
 
 $q = $_GET['q'] ?? '';
@@ -53,7 +55,7 @@ try {
     $stmt = $pdo->prepare($query);
     $stmt->execute($params);
 
-    $books = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     echo json_encode([
         'success' => true,

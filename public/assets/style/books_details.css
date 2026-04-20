@@ -20,7 +20,7 @@ body {
 }
 
 .breadcrumb a {
-  color: #0066cc;
+  color: #06c;
   text-decoration: none;
 }
 
@@ -35,7 +35,7 @@ body {
   align-items: start;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 22px rgb(0 0 0 / 8%);
   padding: 1.25rem;
 }
 
@@ -105,7 +105,7 @@ body {
   margin-top: 1.2rem;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 22px rgb(0 0 0 / 8%);
   padding: 1.1rem;
 }
 
@@ -140,7 +140,7 @@ body {
   min-height: 180px;
 }
 
-@media (max-width: 860px) {
+@media (width <= 860px) {
   .book-meta {
     grid-template-columns: 1fr;
   }

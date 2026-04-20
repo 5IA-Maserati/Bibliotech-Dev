@@ -3,6 +3,9 @@
 $title = 'Catalogo';
 $show_nav = false;
 
+// Include database connection
+require_once dirname(__DIR__) . '/../src/db/db.php';
+
 // Render header
 ob_start();
 include dirname(__DIR__) . '/includes/header.php';

@@ -4,8 +4,38 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46b3ea2175094eb8cc39e41a27306c38",
-    "packages": [],
+    "content-hash": "d61f8281f703e1f828840e44147ec09b",
+    "packages": [
+        {
+            "name": "composer-phar/phpcbf",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer-phar/phpcbf.git",
+                "reference": "f8c0d4474512a4a2171bf259b28d849b8bd4dcde"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer-phar/phpcbf/zipball/f8c0d4474512a4a2171bf259b28d849b8bd4dcde",
+                "reference": "f8c0d4474512a4a2171bf259b28d849b8bd4dcde",
+                "shasum": ""
+            },
+            "bin": [
+                "phpcbf.phar"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "PHPCSStandards/PHP_CodeSniffer",
+            "support": {
+                "issues": "https://github.com/composer-phar/phpcbf/issues",
+                "source": "https://github.com/composer-phar/phpcbf/tree/4.0.0"
+            },
+            "time": "2025-10-13T07:07:03+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",

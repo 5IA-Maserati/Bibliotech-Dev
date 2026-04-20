@@ -17,11 +17,11 @@ const FormValidator = {
     password: {
       minLength: 8,
       maxLength: 50,
-      pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&()_+\-=\[\]{}|;:,.<>?]{8,}$/, // At least 1 uppercase, 1 lowercase, 1 digit
+      pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&()_+\-=[\]{}|;:,.<>?]{8,}$/, // At least 1 uppercase, 1 lowercase, 1 digit
       message: 'La password deve contenere almeno 8 caratteri, inclusi una maiuscola, una minuscola e un numero'
     },
     confirm_password: {
-  message: 'Le password non corrispondono'
+      message: 'Le password non corrispondono'
     },
     email: {
       pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -56,6 +56,12 @@ const FormValidator = {
       pattern: /^[a-zA-Z0-9àèéìòù\s\-',.&:()]+$/,
       message: 'Il titolo del libro contiene caratteri non validi'
     },
+    'book-title': {
+      minLength: 1,
+      maxLength: 255,
+      pattern: /^[a-zA-Z0-9àèéìòù\s\-',.&:()]+$/,
+      message: 'Il titolo del libro contiene caratteri non validi'
+    },
     student_name: {
       minLength: 2,
       maxLength: 50,
@@ -71,6 +77,12 @@ const FormValidator = {
       maxLength: 10,
       pattern: /^\d{4}-\d{2}-\d{2}$/,
       message: 'Inserisci una data valida'
+    },
+    'booking-date': {
+      minLength: 10,
+      maxLength: 10,
+      pattern: /^\d{4}-\d{2}-\d{2}$/,
+      message: 'Inserisci una data valida'
     }
   },
 
@@ -79,7 +91,7 @@ const FormValidator = {
    */
   isRequired: function (fieldId) {
     const field = document.getElementById(fieldId)
-    return field && field.hasAttribute('required')
+    return field && (field.hasAttribute('required')
   },
 
   /**
@@ -87,21 +99,20 @@ const FormValidator = {
    */
   validateField: function (fieldId) {
     const field = document.getElementById(fieldId)
-    if (!field) return { valid: false, message: 'Field not found' }
+    if (!field) return { valid: false, message: 'campo non trovato' }
 
     const value = field.value.trim()
     const rule = this.rules[fieldId]
 
     // Check if field is empty
     if (value === '' && this.isRequired(fieldId)) {
-      return { valid: false, message: 'This field is required' }
+      return { valid: false, message: 'Questo campo è obbligatorio' }
     }
 
     // Skip validation if empty and not required
     if (value === '' && !this.isRequired(fieldId)) {
       return { valid: true, message: '' }
     }
-    
 
     // Apply validation rules if they exist
     if (rule) {
@@ -116,11 +127,11 @@ const FormValidator = {
       }
     }
 
-    // Logica specifica per il confronto password
+    // Specific logic for password comparison
     if (fieldId === 'confirm_password') {
-      const passwordField = document.getElementById('password');
+      const passwordField = document.getElementById('password')
       if (passwordField && value !== passwordField.value) {
-        return { valid: false, message: this.rules.confirm_password.message };
+        return { valid: false, message: this.rules.confirm_password.message }
       }
     }
 
@@ -132,7 +143,7 @@ const FormValidator = {
    */
   validateForm: function (formId) {
     const form = document.getElementById(formId)
-    if (!form) return { valid: false, errors: ['not found'] }
+    if (!form) return { valid: false, errors: [`Form not found: ${formId}`] }
 
     const inputs = form.querySelectorAll('input:not([type="submit"]):not([type="button"])')
     const errors = []

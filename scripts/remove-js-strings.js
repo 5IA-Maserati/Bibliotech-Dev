@@ -1,4 +1,3 @@
-// spellcheck-prep.js
 // Safely removes user-facing string literals from selected JS files
 // Handles message properties, alert() calls, and FormValidator.markFieldError()
 // Overwrites files and prints cleaned content
@@ -6,17 +5,6 @@
 
 import fs from 'fs'
 import path from 'path'
-
-/**
- * List of filenames to process (just the filename, no path)
- */
-const filenamesToProcess = [
-  'booking.js',
-  'login.js',
-  'signup.js',
-  'search.js',
-  'form-validator.js'
-]
 
 /**
  * Recursively get all JS files in a directory
@@ -54,8 +42,8 @@ function removeUserStrings (jsContent) {
   // 1️⃣ Remove message strings in validators
   cleaned = cleaned.replace(/(message\s*:\s*)['"`][\s\S]*?['"`]/g, '$1""')
 
-  // 2️⃣ Remove strings inside alert(...) calls
-  cleaned = cleaned.replace(/alert\s*\(\s*(['"`])[\s\S]*?\1\s*\)/g, 'alert("")')
+  // 2️⃣ Remove entire alert(...) calls
+  cleaned = cleaned.replace(/alert\s*\(\s*(['"`])[\s\S]*?\1\s*\)\s*;?/g, '')
 
   // 3️⃣ Remove second argument of FormValidator.markFieldError(id, '...')
   cleaned = cleaned.replace(
@@ -66,13 +54,23 @@ function removeUserStrings (jsContent) {
   return cleaned
 }
 
-// Get all JS files in the current project
+// Gather all js files
 const allJsFiles = getAllJsFiles(process.cwd())
 
-// Filter files by filename only
-const filesToProcess = allJsFiles.filter((filePath) =>
-  filenamesToProcess.includes(path.basename(filePath))
-)
+// Exclude the script itself
+const SCRIPT_PATH = path.resolve(process.argv[1])
+
+const filesToProcess = allJsFiles.filter(filePath => {
+  const normalized = filePath.replace(/\\/g, '/')
+
+  return (
+    normalized.endsWith('.js') &&
+    filePath !== SCRIPT_PATH &&
+    !normalized.includes('node_modules') &&
+    !normalized.includes('dist') &&
+    !normalized.includes('build')
+  )
+})
 
 if (filesToProcess.length === 0) {
   console.log('No matching files found to process.')

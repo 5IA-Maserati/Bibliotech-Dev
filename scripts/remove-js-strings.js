@@ -54,8 +54,8 @@ function removeUserStrings (jsContent) {
   // 1️⃣ Remove message strings in validators
   cleaned = cleaned.replace(/(message\s*:\s*)['"`][\s\S]*?['"`]/g, '$1""')
 
-  // 2️⃣ Remove strings inside alert(...) calls
-  cleaned = cleaned.replace(/alert\s*\(\s*(['"`])[\s\S]*?\1\s*\)/g, 'alert("")')
+  // 2️⃣ Remove entire alert(...) calls
+  cleaned = cleaned.replace(/alert\s*\(\s*(['"`])[\s\S]*?\1\s*\)\s*;?/g, '')
 
   // 3️⃣ Remove second argument of FormValidator.markFieldError(id, '...')
   cleaned = cleaned.replace(

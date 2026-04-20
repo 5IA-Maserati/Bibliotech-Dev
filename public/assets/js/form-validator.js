@@ -91,7 +91,7 @@ const FormValidator = {
    */
   isRequired: function (fieldId) {
     const field = document.getElementById(fieldId)
-    return field && (field.hasAttribute('required')
+    return field && (field.hasAttribute('required'))
   },
 
   /**

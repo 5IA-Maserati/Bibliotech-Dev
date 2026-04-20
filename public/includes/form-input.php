@@ -41,6 +41,19 @@ if ($placeholder !== null) {
     $attrs['placeholder'] = htmlspecialchars($placeholder, ENT_QUOTES, 'UTF-8');
 }
 
+// Add date constraints for birthdate field
+if ($type === 'date' && $id === 'birthdate') {
+    $today = new DateTime();
+    
+    // Minimum date: 120 years ago
+    $minDate = $today->modify('-120 years');
+    $attrs['min'] = $minDate->format('Y-m-d');
+    
+    // Maximum date: 14 years ago 
+    $maxDate = $today->modify('-14 years'); // Reset to today and then subtract 14 years
+    $attrs['max'] = $maxDate->format('Y-m-d');
+}
+
 // Convert attributes array into HTML-safe string
 $attrString = '';
 foreach ($attrs as $key => $value) {

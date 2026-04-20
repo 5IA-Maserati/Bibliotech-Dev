@@ -45,6 +45,9 @@ const FormValidator = {
       pattern: /^\d{4}-\d{2}-\d{2}$/,
       message: 'Inserisci una data valida'
     },
+    confirm_password: {
+      message: 'Le password non corrispondono'
+    },
     search: {
       maxLength: 255,
       pattern: /^[a-zA-Z0-9àèéìòù\s\-',.&()]*$/,
@@ -132,6 +135,27 @@ const FormValidator = {
       const passwordField = document.getElementById('password')
       if (passwordField && value !== passwordField.value) {
         return { valid: false, message: this.rules.confirm_password.message }
+      }
+    }
+
+    // Specific logic for birthdate range validation
+    if (fieldId === 'birthdate') {
+      const birthDate = new Date(value)
+      const today = new Date()
+      
+      // Calculate minimum date (120 years ago)
+      const minDate = new Date(today)
+      minDate.setFullYear(today.getFullYear() - 120)
+      
+      // Calculate maximum date (today)
+      const maxDate = new Date(today)
+      maxDate.setFullYear(today.getFullYear() - 14) // Allow only users 14 years or older
+      
+      if (birthDate < minDate) {
+        return { valid: false, message: 'La data di nascita non può essere più vecchia di 120 anni' }
+      }
+      if (birthDate > maxDate) {
+        return { valid: false, message: 'La data di nascita non può essere inferiore a 14 anni fa' }
       }
     }
 

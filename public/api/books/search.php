@@ -5,6 +5,10 @@ header('Content-Type: application/json');
 // Include database connection
 require_once dirname(__DIR__, 2) . '/../src/db/db.php';
 
+use src\backend\libs\PDO;
+
+/** @var PDO $pdo */
+
 $q = $_GET['q'] ?? '';
 $genre = $_GET['genre'] ?? '';
 $sort = $_GET['sort'] ?? 'title';

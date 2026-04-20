@@ -54,7 +54,7 @@ function removeUserStrings (jsContent) {
   return cleaned
 }
 
-// Gather all js filess
+// Gather all js files
 const allJsFiles = getAllJsFiles(process.cwd())
 
 // Exclude the script itself

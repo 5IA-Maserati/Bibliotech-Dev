@@ -4,6 +4,7 @@
         "vimeo/psalm": "^5.0"
     },
     "require": {
-        "composer-phar/phpcbf": "^4.0"
+        "composer-phar/phpcbf": "^4.0",
+        "ext-pdo": "*"
     }
 }

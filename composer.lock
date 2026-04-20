@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a4d0c68e016e1a591ff23b2a4f930c9",
+    "content-hash": "a1fef05c7f7bcb64a62c9a0b3e2a1111",
     "packages": [
         {
             "name": "composer-phar/phpcbf",
@@ -2228,7 +2228,9 @@
     "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
+    "platform": {
+        "ext-pdo": "*"
+    },
     "platform-dev": {},
     "plugin-api-version": "2.9.0"
 }

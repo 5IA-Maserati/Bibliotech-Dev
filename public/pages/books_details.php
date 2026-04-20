@@ -7,8 +7,6 @@ ob_start(); // rendering the header
 include dirname(__DIR__) . '/includes/header.php';
 $header = ob_get_clean() ?: '';
 
-use src\backend\libs\PDO;
-
 $book = null;
 // book id by query string: books_details.php?id=123
 $bookId = isset($_GET['id']) ? (int) $_GET['id'] : 0;

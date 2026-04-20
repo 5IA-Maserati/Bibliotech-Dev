@@ -10,8 +10,8 @@ if ($pass === false || $pass === '') {
     die("Errore di configurazione: variabile d'ambiente DB_PASS non impostata.");
 }
 
-use PDO;
-use PDOException;
+use \PDO;
+use \PDOException;
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 try {

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
+use \PDO;
+use \RuntimeException;
+
 require_once __DIR__ . '/../../../public/bootstrap.php';
 
 header('Content-Type: application/json');
 
-require_once __DIR__ . '/../../db/db.php';
-
-use PDO;
-
-/** @var PDO $pdo */
+/** @var \PDO $pdo */
+$pdo = require __DIR__ . '/../../db/db.php';
 
 $rawInput = file_get_contents('php://input');
 $data = json_decode($rawInput, true);
@@ -35,14 +35,18 @@ $stmt = $pdo->prepare(
 );
 
 if ($stmt === false) {
-    throw new \RuntimeException('Impossibile preparare la query');
+    throw new RuntimeException('Impossibile preparare la query');
 }
 
 $stmt->execute(['email' => $email]);
 
-$user = $stmt->fetch();
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if ($user === false || !password_verify($password, $user['password'])) {
+if (
+    $user === false ||
+    !isset($user['password']) ||
+    !password_verify($password, (string) $user['password'])
+) {
     http_response_code(401);
     echo json_encode(['error' => 'Email o password errati']);
     exit;

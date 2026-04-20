@@ -44,6 +44,10 @@ if (searchInput && searchButton) {
 
     // TODO: Replace this with actual search logic
     // Example: searchAPI(sanitizedSearch, genre, sort)
+    alert('Ricerca completata!')
+
+    // Clear search field after successful search
+    searchInput.value = ''
   })
 
   // Real-time validation: clear error if user types

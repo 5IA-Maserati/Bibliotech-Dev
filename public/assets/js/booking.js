@@ -1,5 +1,3 @@
-/* global FormValidator, alert */
-
 document.addEventListener('DOMContentLoaded', function () {
   const bookingForm = document.getElementById('booking-form')
   if (!bookingForm || typeof FormValidator === 'undefined') return
@@ -21,6 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Success feedback
     console.log('Sanitized booking data:', sanitizedData)
     alert('Prenotazione completata!')
+
+    // Clear all form fields after successful submission
+    bookingForm.reset()
+
+    // Clear any remaining error messages
+    const inputs = bookingForm.querySelectorAll('input')
+    inputs.forEach(input => {
+      FormValidator.clearFieldError(input.id)
+    })
   })
 
   // Enable real-time validation on blur

@@ -4,7 +4,7 @@ import fs from 'fs'
 import path from 'path'
 
 // Recursively get all JS files in a directory
-function getAllJsFiles(dir) {
+function getAllJsFiles (dir) {
   let results = []
   const list = fs.readdirSync(dir, { withFileTypes: true })
 
@@ -22,7 +22,7 @@ function getAllJsFiles(dir) {
 }
 
 // This replaces every string literal with ""
-function removeAllStrings(jsContent) {
+function removeAllStrings (jsContent) {
   return jsContent.replace(/(['"`])(?:\\.|(?!\1).)*\1/g, '""')
 }
 

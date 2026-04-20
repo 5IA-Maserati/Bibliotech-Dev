@@ -50,9 +50,9 @@ $replacements = [
     '{{BOOK_AVAILABILITY}}' => ((int)($book['available_copies'] ?? 0) > 0) ? 'Disponibile' : 'Esaurito',
     '{{BOOK_PUBLISHER}}' => htmlspecialchars((string)($book['publisher'] ?? 'N/D'), ENT_QUOTES, 'UTF-8'),
     '{{BOOK_EDITION}}' => htmlspecialchars((string)($book['edition'] ?? '1ª'), ENT_QUOTES, 'UTF-8'),
-    '{{BOOK_DESCRIPTION}}' => htmlspecialchars((string)($book['description'] ?? 'Descrizione non disponibile.'), ENT_QUOTES, 'UTF-8'),
+    '{{BOOK_DESC}}' => htmlspecialchars((string)($book['description'] ?? 'non disponibile.'), ENT_QUOTES, 'UTF-8'),
     '{{BOOK_FORMAT}}' => htmlspecialchars((string)($book['format'] ?? 'Cartaceo'), ENT_QUOTES, 'UTF-8'),
-    '{{BOOK_COVER}}' => htmlspecialchars((string)($book['cover_url'] ?? '/assets/img/common/placeholder-book.png'), ENT_QUOTES, 'UTF-8'),
+    '{{BOOK_COVER}}' => htmlspecialchars((string)($book['cover_url'] ?? 'N/D'), ENT_QUOTES, 'UTF-8'),
 ];
 $html = str_replace(array_keys($replacements), array_values($replacements), $html);
 echo $html;

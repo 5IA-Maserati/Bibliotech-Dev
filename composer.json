@@ -1,7 +1,9 @@
 {
-    "require": {
+    "require-dev": {
         "squizlabs/php_codesniffer": "^4.0",
-        "composer-phar/phpcbf": "^4.0",
-        "faapz/pdo":"^2.2"
+        "vimeo/psalm": "^5.0"
+    },
+    "require": {
+        "composer-phar/phpcbf": "^4.0"
     }
 }

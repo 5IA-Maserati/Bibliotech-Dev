@@ -9,12 +9,16 @@ $header = ob_get_clean() ?: '';
 
 $book = null;
 // book id by query string: books_details.php?id=123
-$bookId = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+$bookId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
+if ($bookId === false || $bookId === null) {
+    $bookId = 0;
+}
 
 if ($bookId > 0) {
     require_once __DIR__ . '/../../src/db/db.php';
 
-    /** @var PDO $pdo */
+    /** @var \PDO $pdo */
     $stmt = $pdo->prepare(
         'SELECT b.*, c.name AS category
          FROM books b

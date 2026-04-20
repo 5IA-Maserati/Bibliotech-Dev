@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 // Include database connection
 require_once dirname(__DIR__, 2) . '/../src/db/db.php';
 
-/** @var PDO $pdo */
+/** @var \PDO $pdo */
 
 $q = $_GET['q'] ?? '';
 $genre = $_GET['genre'] ?? '';
@@ -43,7 +43,7 @@ try {
 
     $stmt = $pdo->prepare($query);
     $stmt->execute($params);
-    $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $books = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
     echo json_encode(['success' => true, 'books' => $books]);
 } catch (Exception $e) {

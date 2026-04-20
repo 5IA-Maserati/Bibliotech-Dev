@@ -1,4 +1,5 @@
 <?php
+
 header('Content-Type: application/json');
 
 // Include database connection
@@ -46,4 +47,3 @@ try {
 } catch (Exception $e) {
     echo json_encode(['error' => $e->getMessage(), 'books' => []]);
 }
-?>

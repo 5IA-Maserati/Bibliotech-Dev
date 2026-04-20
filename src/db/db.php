@@ -18,12 +18,10 @@ try {
 }
 
 $filename = 'Libri_Lista_FINALE.csv';
-if (($handle = fopen($filename, "r")) !== FALSE) {
-
+if (($handle = fopen($filename, "r")) !== false) {
     fgetcsv($handle, 1000, ","); // Skip header row
 
-    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-
+    while (($data = fgetcsv($handle, 1000, ",")) !== false) {
         $inventory      = trim($data[0]);
         $author         = trim($data[1]);
         $title          = trim($data[2]);
@@ -33,7 +31,6 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
         $genres_string  = $data[6];
 
         try {
-
             if ($year == "-") {
                 $year = null;
             }
@@ -59,7 +56,9 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
                 $genresArray = explode(',', $genres_string);
                 foreach ($genresArray as $genreName) {
                     $genreName = trim($genreName);
-                    if (empty($genreName)) continue;
+                    if (empty($genreName)) {
+                        continue;
+                    }
 
                     $stmt = $pdo->prepare("INSERT IGNORE INTO categories (name) VALUES (?)");
                     $stmt->execute([$genreName]);
@@ -77,7 +76,6 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
             // Insert the inventory number linked to the book ID (new or existing)
             $stmt = $pdo->prepare("INSERT IGNORE INTO copies (book_id, inventory_number) VALUES (?, ?)");
             $stmt->execute([$bookId, $inventory]);
-
         } catch (Exception $e) {
             echo "Errore con l'inventario $inventory ($title): " . $e->getMessage() . "<br>";
         }
@@ -87,4 +85,3 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
 } else {
     echo "Impossibile aprire il file CSV.";
 }
-?>

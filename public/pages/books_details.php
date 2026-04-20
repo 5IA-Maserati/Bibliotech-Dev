@@ -1,6 +1,6 @@
 <?php
 
-use PDO;
+include 'src/backend/libs/PDO.php';
 
 $title = 'Pagina libri';
 $show_nav = false;
@@ -18,7 +18,7 @@ if ($bookId === false || $bookId === null) {
 }
 
 if ($bookId > 0) {
-    /** @var \PDO $pdo */
+    /** @var PDO $pdo */
     $pdo = require __DIR__ . '/../../src/db/db.php';
 
     $stmt = $pdo->prepare(

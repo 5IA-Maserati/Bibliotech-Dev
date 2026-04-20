@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-use PDO;
+include 'src/backend/libs/PDO.php';
 use RuntimeException;
 
 require_once __DIR__ . '/../../../public/bootstrap.php';
 
 header('Content-Type: application/json');
 
-/** @var \PDO $pdo */
+/** @var PDO $pdo */
 $pdo = require __DIR__ . '/../../db/db.php';
 
 $rawInput = file_get_contents('php://input');

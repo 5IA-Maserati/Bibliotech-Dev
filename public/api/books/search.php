@@ -1,6 +1,6 @@
 <?php
 
-use PDO;
+include 'src/backend/libs/PDO.php';
 use Exception;
 
 header('Content-Type: application/json');

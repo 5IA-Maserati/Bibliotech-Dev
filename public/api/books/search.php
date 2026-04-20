@@ -1,7 +1,7 @@
 <?php
 
-use \PDO;
-use \Exception;
+use PDO;
+use Exception;
 
 header('Content-Type: application/json');
 

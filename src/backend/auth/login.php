@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use \PDO;
-use \RuntimeException;
+use PDO;
+use RuntimeException;
 
 require_once __DIR__ . '/../../../public/bootstrap.php';
 

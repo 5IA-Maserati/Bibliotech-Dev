@@ -1,6 +1,6 @@
 <?php
 
-use \PDO;
+use PDO;
 
 $title = 'Pagina libri';
 $show_nav = false;

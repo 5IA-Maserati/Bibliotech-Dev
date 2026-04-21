@@ -72,6 +72,8 @@ if (searchInput && searchButton) {
 /**
  * Search API Function
  */
+
+/*
 function searchAPI (query, genre, sort) {
   const resultsDiv = document.getElementById('results')
   const countSpan = document.getElementById('count')
@@ -82,7 +84,7 @@ function searchAPI (query, genre, sort) {
     q: query,
     genre,
     sort
-  })
+  }) 
 
   fetch(`/api/books/search.php?${params}`)
     .then(response => response.json())
@@ -122,4 +124,4 @@ function searchAPI (query, genre, sort) {
       console.error('Search error:', error)
       resultsDiv.innerHTML = '<div class="no-results">Errore nella ricerca.</div>'
     })
-}
+} */

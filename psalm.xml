@@ -9,8 +9,6 @@
         <directory name="src" />
     </projectFiles>
     <stubs>
-        <file name="src/backend/libs/PDO.php" />
-        <file name="src/backend/libs/PDOException.php" />
-        <file name="src/backend/libs/PDOStatement.php" />
+        <file name="vendor/vimeo/psalm/stubs/CoreGenericFunctions.php" />
     </stubs>
 </psalm>

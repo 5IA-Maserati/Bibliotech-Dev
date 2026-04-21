@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-include 'src/backend/libs/PDO.php';
+use src\backend\libs\PDO;
 use RuntimeException;
 
 require_once __DIR__ . '/../../../public/bootstrap.php';

@@ -1,13 +1,14 @@
 <?php
 
-use PDO;
+use src\backend\libs\PDO;
 use Exception;
+
+/**
+ * @var PDO $pdo
+*/
 
 header('Content-Type: application/json');
 
-/**
- * @var \PDO $pdo
-*/
 $pdo = require dirname(__DIR__, 2) . '/../src/db/db.php';
 
 $q = $_GET['q'] ?? '';

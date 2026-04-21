@@ -13,7 +13,8 @@ $book = null;
 
 $bookId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
-if ($bookId === false || $bookId === null) {
+try{
+    if ($bookId === false || $bookId === null) {
     $bookId = 0;
 }
 
@@ -28,11 +29,10 @@ if ($bookId > 0) {
          WHERE b.id = :id'
     );
 
-    if ($stmt !== false) {
         $stmt->execute(['id' => $bookId]);
         $book = $stmt->fetch(PDO::FETCH_ASSOC);
-    }
 }
+
 
 if ($book === false || $book === null) {
     header('Location: /pages/page_404.php');
@@ -68,3 +68,9 @@ $replacements = [
 $html = str_replace(array_keys($replacements), array_values($replacements), $html);
 
 echo $html;
+
+} catch (Exception $e) {
+    header('Location: /pages/page_404.php');
+    exit;
+}
+

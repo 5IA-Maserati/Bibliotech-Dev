@@ -54,12 +54,8 @@ class PDO
         }
     }
 
-    public function prepare(string $query, array $options = []): PDOStatement{
+    public function prepare(string $query, array $options = []): PDOStatement {
     $stmt = $this->pdo->prepare($query, $options);
-
-    if ($stmt === false) {
-        throw new PDOException("Failed to prepare statement");
-    }
 
     return new PDOStatement($stmt);
     }

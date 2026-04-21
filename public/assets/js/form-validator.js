@@ -140,15 +140,15 @@ const FormValidator = {
     if (fieldId === 'birthdate') {
       const birthDate = new Date(value)
       const today = new Date()
-      
+
       // Calculate minimum date (120 years ago)
       const minDate = new Date(today)
       minDate.setFullYear(today.getFullYear() - 120)
-      
+
       // Calculate maximum date (today)
       const maxDate = new Date(today)
       maxDate.setFullYear(today.getFullYear() - 14) // Allow only users 14 years or older
-      
+
       if (birthDate < minDate) {
         return { valid: false, message: 'La data di nascita non può essere più vecchia di 120 anni' }
       }

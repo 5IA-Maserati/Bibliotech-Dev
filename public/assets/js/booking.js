@@ -1,5 +1,5 @@
-  import FormValidator from './form-validator.js';
-  
+import FormValidator from './form-validator.js'
+
 document.addEventListener('DOMContentLoaded', function () {
   const bookingForm = document.getElementById('booking-form')
   if (!bookingForm || typeof FormValidator === 'undefined') return

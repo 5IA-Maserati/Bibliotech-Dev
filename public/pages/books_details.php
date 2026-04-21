@@ -13,40 +13,40 @@ $book = null;
 
 $bookId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
-try{
+try {
     if ($bookId === false || $bookId === null) {
-    $bookId = 0;
-}
+        $bookId = 0;
+    }
 
-if ($bookId > 0) {
-    /** @var PDO $pdo */
-    $pdo = require __DIR__ . '/../../src/db/db.php';
+    if ($bookId > 0) {
+        /** @var PDO $pdo */
+        $pdo = require __DIR__ . '/../../src/db/db.php';
 
-    $stmt = $pdo->prepare(
-        'SELECT b.*, c.name AS category
+        $stmt = $pdo->prepare(
+            'SELECT b.*, c.name AS category
          FROM books b
          LEFT JOIN categories c ON b.category_id = c.id
          WHERE b.id = :id'
-    );
+        );
 
-        $stmt->execute(['id' => $bookId]);
-        $book = $stmt->fetch(PDO::FETCH_ASSOC);
-}
+            $stmt->execute(['id' => $bookId]);
+            $book = $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 
 
-if ($book === false || $book === null) {
-    header('Location: /pages/page_404.php');
-    exit;
-}
+    if ($book === false || $book === null) {
+        header('Location: /pages/page_404.php');
+        exit;
+    }
 
-$tpl = __DIR__ . '/books_details.html';
-$html = file_get_contents($tpl);
+    $tpl = __DIR__ . '/books_details.html';
+    $html = file_get_contents($tpl);
 
-if ($html === false) {
-    throw new RuntimeException('Impossibile leggere books_details.html');
-}
+    if ($html === false) {
+        throw new RuntimeException('Impossibile leggere books_details.html');
+    }
 
-$replacements = [
+    $replacements = [
     '{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
     '{{HEADER}}' => $header,
     '{{BOOK_TITLE}}' => htmlspecialchars((string) ($book['title'] ?? 'N/D'), ENT_QUOTES, 'UTF-8'),
@@ -63,14 +63,12 @@ $replacements = [
     '{{BOOK_DESC}}' => htmlspecialchars((string) ($book['description'] ?? 'non disponibile.'), ENT_QUOTES, 'UTF-8'),
     '{{BOOK_FORMAT}}' => htmlspecialchars((string) ($book['format'] ?? 'Cartaceo'), ENT_QUOTES, 'UTF-8'),
     '{{BOOK_COVER}}' => htmlspecialchars((string) ($book['cover_url'] ?? 'N/D'), ENT_QUOTES, 'UTF-8'),
-];
+    ];
 
-$html = str_replace(array_keys($replacements), array_values($replacements), $html);
+    $html = str_replace(array_keys($replacements), array_values($replacements), $html);
 
-echo $html;
-
+    echo $html;
 } catch (Exception $e) {
     header('Location: /pages/page_404.php');
     exit;
 }
-

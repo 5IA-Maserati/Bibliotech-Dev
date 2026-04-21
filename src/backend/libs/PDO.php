@@ -54,10 +54,11 @@ class PDO
         }
     }
 
-    public function prepare(string $query, array $options = []): PDOStatement {
-    $stmt = $this->pdo->prepare($query, $options);
+    public function prepare(string $query, array $options = []): PDOStatement
+    {
+        $stmt = $this->pdo->prepare($query, $options);
 
-    return new PDOStatement($stmt);
+        return new PDOStatement($stmt);
     }
 
     public function beginTransaction(): bool

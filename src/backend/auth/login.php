@@ -13,7 +13,6 @@ header('Content-Type: application/json');
 $pdo = require __DIR__ . '/../../db/db.php';
 
 try {
-
     $rawInput = file_get_contents('php://input');
     $data = json_decode($rawInput, true);
 

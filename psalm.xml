@@ -8,7 +8,4 @@
         <directory name="public" />
         <directory name="src" />
     </projectFiles>
-    <stubs>
-        <file name="vendor/vimeo/psalm/stubs/CoreGenericFunctions.php" />
-    </stubs>
 </psalm>

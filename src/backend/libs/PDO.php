@@ -54,10 +54,14 @@ class PDO
         }
     }
 
-    public function prepare(string $query, array $options = []): PDOStatement|false
-    {
-        $stmt = $this->pdo->prepare($query, $options);
-        return $stmt === false ? false : new PDOStatement($stmt);
+    public function prepare(string $query, array $options = []): PDOStatement{
+    $stmt = $this->pdo->prepare($query, $options);
+
+    if ($stmt === false) {
+        throw new PDOException("Failed to prepare statement");
+    }
+
+    return new PDOStatement($stmt);
     }
 
     public function beginTransaction(): bool

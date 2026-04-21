@@ -1,6 +1,6 @@
 <?php
 
-use src\point_backend\libs\PDO;
+use src\backend\libs\PDO;
 use Exception;
 
 /**

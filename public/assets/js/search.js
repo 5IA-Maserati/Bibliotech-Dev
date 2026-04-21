@@ -84,7 +84,7 @@ function searchAPI (query, genre, sort) {
     q: query,
     genre,
     sort
-  }) 
+  })
 
   fetch(`/api/books/search.php?${params}`)
     .then(response => response.json())

@@ -1,6 +1,6 @@
 <?php
 
-namespace src\backend\libs;
+namespace src\point_backend\libs;
 
 class PDO
 {

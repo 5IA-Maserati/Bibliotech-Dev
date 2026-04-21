@@ -1,12 +1,12 @@
 <?php
 
-require 'src/backend/libs/PDO.php';
+use PDO;
 use Exception;
 
 header('Content-Type: application/json');
 
 /**
- * @var PDO $pdo
+ * @var \PDO $pdo
 */
 $pdo = require dirname(__DIR__, 2) . '/../src/db/db.php';
 

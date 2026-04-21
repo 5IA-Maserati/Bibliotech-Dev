@@ -8,9 +8,4 @@
         <directory name="public" />
         <directory name="src" />
     </projectFiles>
-    <stubs>
-        <file name="src/backend/libs/PDO.php" />
-        <file name="src/backend/libs/PDOException.php" />
-        <file name="src/backend/libs/PDOStatement.php" />
-    </stubs>
 </psalm>

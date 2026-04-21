@@ -1,6 +1,6 @@
 <?php
 
-include 'src/backend/libs/PDO.php';
+use src\backend\libs\PDO;
 
 $title = 'Pagina libri';
 $show_nav = false;

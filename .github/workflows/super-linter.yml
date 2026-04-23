@@ -73,5 +73,5 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           LOG_LEVEL: INFO
           INGORE_GITIGNORED_FILES: true
-          FILTER_REGEX_EXCLUDE: "vendor/.*|\\.git/.*|\\.dist/.*|build/.*|runtime/.*"
+          FILTER_REGEX_EXCLUDE: "^vendor/.*|^\\.git/.*|^\\.dist/.*|^build/.*|^runtime/.*"
           LINTER_RULES_PATH: .

@@ -27,7 +27,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
           LOG_LEVEL: INFO
-          FILTER_REGEX_EXCLUDE: "^(/vendor/|\\.git/|\\.dist/|build/|runtime/)"
+          FILTER_REGEX_EXCLUDE: "^(vendor/|\\.git/|\\.dist/|build/|runtime/)"
           LINTER_RULES_PATH: .
 
           # Enabled fixes for the supported tools
@@ -73,5 +73,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: true
           LOG_LEVEL: INFO
-          FILTER_REGEX_EXCLUDE: "^(/vendor/|\\.git/|\\.dist/|build/|runtime/)"
+          FILTER_REGEX_EXCLUDE: "^(vendor/|\\.git/|\\.dist/|build/|runtime/)"
           LINTER_RULES_PATH: .

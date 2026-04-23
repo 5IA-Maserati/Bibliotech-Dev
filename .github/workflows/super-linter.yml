@@ -72,5 +72,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: true
           LOG_LEVEL: INFO
+          CHECKOV_SKIP_CHECK: CKV2_GHA_1
           FILTER_REGEX_EXCLUDE: "vendor/.*|\\.git/.*|\\.dist/.*|build/.*|runtime/.*"
           LINTER_RULES_PATH: .

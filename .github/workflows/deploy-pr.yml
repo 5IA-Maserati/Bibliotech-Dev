@@ -1,0 +1,70 @@
+name: Create Deploy PR from main
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      # =========================
+      # 1. Checkout repository
+      # =========================
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # =========================
+      # 2. Create filtered deploy branch
+      # =========================
+      - name: Build deploy branch content (filtered)
+        run: |
+          git checkout -B deploy
+
+          # Clean working directory except git metadata
+          find . -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
+
+          # Copy only allowed folders/files from main
+          git checkout main -- src public composer.json composer.lock
+
+      # =========================
+      # 3. Commit filtered state
+      # =========================
+      - name: Commit deploy snapshot
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add .
+          git commit -m "Deploy snapshot from main (${GITHUB_SHA})" || echo "No changes to commit"
+
+      # =========================
+      # 4. Push deploy branch
+      # =========================
+      - name: Push deploy branch
+        run: |
+          git push origin deploy --force
+
+      # =========================
+      # 5. Create Pull Request main -> deploy
+      # =========================
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: main
+          destination_branch: deploy
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: "Deploy PR from main"
+          pr_body: |
+            This PR was automatically generated.
+
+            - Source: main
+            - Target: deploy
+            - Contains filtered production-ready code only
+
+            Please review CI checks before merging.
+          pr_label: automated-deploy
+          pr_draft: true

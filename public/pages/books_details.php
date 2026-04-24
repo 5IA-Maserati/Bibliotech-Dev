@@ -1,7 +1,6 @@
 <?php
 
 use src\backend\libs\DatabasePDO;
-use Exception;
 
 $title = 'Pagina libri';
 $show_nav = false;

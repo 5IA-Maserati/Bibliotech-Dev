@@ -7,7 +7,7 @@ use src\backend\libs\DatabasePDO;
 use src\backend\libs\DatabasePDOException;
 
 $host = getenv('DB_HOST') ?: '127.0.0.1';
-$db   = getenv('DB_NAME') ?: 'test';
+$db   = getenv('DB_NAME') ?: 'bibliotech';
 $dbport = getenv('DB_PORT') ?: '3306';
 $user = getenv('DB_USER') ?: 'root';
 $pass = getenv('DB_PASS') ?: 'Beso2007?';

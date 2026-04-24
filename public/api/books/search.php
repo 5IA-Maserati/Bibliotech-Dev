@@ -1,7 +1,6 @@
 <?php
 
 use src\backend\libs\DatabasePDO;
-use Exception;
 
 header('Content-Type: application/json');
 
@@ -16,17 +15,38 @@ $q = is_string($q) ? $q : '';
 $genre = is_string($genre) ? $genre : '';
 $sort = is_string($sort) ? $sort : 'title';
 
-if (strlen($q) < 2) {
-    echo json_encode([
-        'error' => 'Search term too short',
-        'books' => []
-    ]);
-    exit;
-}
-
 try {
+    // If no search query, return all books
+    if (strlen($q) < 2) {
+        $query = "
+            SELECT id, title, author, publisher, publication_year, isbn
+            FROM books
+        ";
+        $params = [];
+
+        if ($genre !== '') {
+            // Genre filter not supported without genres column
+        }
+
+        if ($sort === 'year-desc') {
+            $query .= " ORDER BY publication_year DESC";
+        } else {
+            $query .= " ORDER BY title ASC";
+        }
+
+        $query .= " LIMIT 50"; // TODO: This should be increased for a real application
+
+        $books = $db->query($query, $params);
+
+        echo json_encode([
+            'success' => true,
+            'books' => $books
+        ]);
+        exit;
+    }
+
     $query = "
-        SELECT id, title, author, publisher, publication_year, isbn, genres
+        SELECT id, title, author, publisher, publication_year, isbn
         FROM books
         WHERE (title LIKE ? OR author LIKE ? OR isbn LIKE ?)
     ";
@@ -38,8 +58,7 @@ try {
     ];
 
     if ($genre !== '') {
-        $query .= " AND genres LIKE ?";
-        $params[] = "%$genre%";
+        // Genre filter not supported without genres column
     }
 
     if ($sort === 'year-desc') {

@@ -63,6 +63,7 @@ cheatsheetseries
 checkbox
 checkboxes
 circlemarker
+CKV
 class
 classmap
 classname

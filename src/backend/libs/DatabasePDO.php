@@ -14,7 +14,7 @@ class DatabasePDO
         ]);
     }
 
-    // SELECT multipli
+    // SELECT multiple
     public function query(string $sql, array $params = []): array
     {
         $stmt = $this->pdo->prepare($sql);
@@ -22,7 +22,7 @@ class DatabasePDO
         return $stmt->fetchAll();
     }
 
-    // SELECT singolo
+    // SELECT single
     public function queryOne(string $sql, array $params = []): ?array
     {
         $stmt = $this->pdo->prepare($sql);
@@ -43,7 +43,7 @@ class DatabasePDO
         return $this->pdo->lastInsertId();
     }
 
-    // TRANSAZIONI (top)
+    // Transaction (top)
     public function begin(): void
     {
         $this->pdo->beginTransaction();

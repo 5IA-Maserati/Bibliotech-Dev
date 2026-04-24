@@ -13,18 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # =========================
-      # Checkout
-      # =========================
-      - name: Checkout Repo
+      - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # =========================
-      # Create filtered folder ONLY (no git hacks)
+      # Build filtered folder
       # =========================
-      - name: Create filtered deploy content
+      - name: Build filtered snapshot
         run: |
-          mkdir filtered
+          rm -rf filtered
+          mkdir -p filtered
 
           rsync -av \
             --include='src/***' \
@@ -35,20 +35,24 @@ jobs:
             ./ filtered/
 
       # =========================
-      # Create PR ONLY (like image workflow)
+      # Create PR (NO manual git!)
       # =========================
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
+
           base: deploy
-          title: Deploy PR from main
-          branch: deploy-auto-${{ github.sha }}
-          commit-message: Deploy snapshot from main
+          title: "Deploy PR from main"
           body: |
             Auto-generated deploy PR
 
-            Source: main  
-            Target: deploy  
+            Source: main
+            Target: deploy
 
-            Contains filtered production-ready code only.
+            This PR contains filtered production-ready code only.
+
+          branch: deploy-auto
+          delete-branch: true
+
+          commit-message: "Deploy snapshot from main"

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-use src\backend\libs\PDO;
+use src\backend\libs\DatabasePDO;
 use RuntimeException;
 
 require_once __DIR__ . '/../../../public/bootstrap.php';
 
 header('Content-Type: application/json');
 
-/** @var PDO $pdo */
-$pdo = require __DIR__ . '/../../db/db.php';
+/** @var DatabasePDO $db */
+$db = require __DIR__ . '/../../db/db.php';
 
 try {
     $rawInput = file_get_contents('php://input');
@@ -22,8 +22,8 @@ try {
         exit;
     }
 
-    $email = isset($data['email']) ? trim((string) $data['email']) : '';
-    $password = isset($data['password']) ? (string) $data['password'] : '';
+    $email = trim((string)($data['email'] ?? ''));
+    $password = (string)($data['password'] ?? '');
 
     if ($email === '' || $password === '') {
         http_response_code(400);
@@ -31,18 +31,15 @@ try {
         exit;
     }
 
-    $stmt = $pdo->prepare(
-        'SELECT id, password, role FROM users WHERE email = :email'
+    $user = $db->queryOne(
+        'SELECT id, password, role FROM users WHERE email = ?',
+        [$email]
     );
 
-    $stmt->execute(['email' => $email]);
-
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
     if (
-        $user === false ||
+        !$user ||
         !isset($user['password']) ||
-        !password_verify($password, (string) $user['password'])
+        !password_verify($password, $user['password'])
     ) {
         http_response_code(401);
         echo json_encode(['error' => 'Email o password errati']);
@@ -59,6 +56,6 @@ try {
         'role' => $user['role'],
     ]);
 } catch (Exception $e) {
-    header('Location: /pages/page_404.php');
-    exit;
+    http_response_code(500);
+    echo json_encode(['error' => 'Errore server']);
 }

@@ -1,15 +1,12 @@
 <?php
 
-use src\backend\libs\PDO;
+use src\backend\libs\DatabasePDO;
 use Exception;
-
-/**
- * @var PDO $pdo
-*/
 
 header('Content-Type: application/json');
 
-$pdo = require dirname(__DIR__, 2) . '/../src/db/db.php';
+/** @var DatabasePDO $db */
+$db = require dirname(__DIR__, 2) . '/../src/db/db.php';
 
 $q = $_GET['q'] ?? '';
 $genre = $_GET['genre'] ?? '';
@@ -31,18 +28,18 @@ try {
     $query = "
         SELECT id, title, author, publisher, publication_year, isbn, genres
         FROM books
-        WHERE 1=1
+        WHERE (title LIKE ? OR author LIKE ? OR isbn LIKE ?)
     ";
 
-    $params = [];
-
-    $query .= " AND (title LIKE ? OR author LIKE ? OR isbn LIKE ?)";
-    $searchTerm = '%' . $q . '%';
-    $params = [$searchTerm, $searchTerm, $searchTerm];
+    $params = [
+        "%$q%",
+        "%$q%",
+        "%$q%"
+    ];
 
     if ($genre !== '') {
         $query .= " AND genres LIKE ?";
-        $params[] = '%' . $genre . '%';
+        $params[] = "%$genre%";
     }
 
     if ($sort === 'year-desc') {
@@ -53,10 +50,7 @@ try {
 
     $query .= " LIMIT 50";
 
-    $stmt = $pdo->prepare($query);
-    $stmt->execute($params);
-
-    $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $books = $db->query($query, $params);
 
     echo json_encode([
         'success' => true,

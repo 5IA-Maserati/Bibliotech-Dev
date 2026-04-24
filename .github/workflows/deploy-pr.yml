@@ -22,9 +22,9 @@ jobs:
           fetch-depth: 0
 
       # =========================
-      # 2. Create filtered snapshot (ONLY LOCAL)
+      # 2. Build filtered snapshot
       # =========================
-      - name: Build filtered content
+      - name: Create filtered deploy folder
         run: |
           mkdir filtered
 
@@ -37,14 +37,15 @@ jobs:
             ./ filtered/
 
       # =========================
-      # 3. Create TEMP branch ONLY in runner
+      # 3. Create temporary branch from snapshot
       # =========================
-      - name: Create temp branch
+      - name: Create temp deploy branch
         run: |
           git checkout --orphan deploy-temp
 
-          rm -rf .
-          cp -r filtered/* .
+          git clean -fd
+
+          cp -r filtered/. .
 
           git config user.name "github-actions"
           git config user.email "actions@github.com"
@@ -53,7 +54,7 @@ jobs:
           git commit -m "Filtered deploy snapshot from main"
 
       # =========================
-      # 4. Create PR (NO PUSH MANUAL)
+      # 4. Create PR (NO direct push to deploy)
       # =========================
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
@@ -63,11 +64,12 @@ jobs:
           head: deploy-temp
           title: Deploy PR from main
           body: |
-            Auto-generated PR
+            Automated deploy PR
 
-            Source: main  
-            Target: deploy  
+            - Source: main
+            - Target: deploy
+            - Contains filtered production-ready files only
 
-            Contains filtered production-ready build.
-          draft: true
+            Merge this PR to deploy changes.
+          draft: false
           delete-branch: true

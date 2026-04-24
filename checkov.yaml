@@ -1,0 +1,9 @@
+skip-path:
+  - vendor
+  - runtime
+  - build
+  - .git
+  - .dist
+
+skip-check:
+  - CKV2_GHA_1

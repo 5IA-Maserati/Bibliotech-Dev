@@ -14,17 +14,15 @@ jobs:
 
     steps:
       # =========================
-      # 1. Checkout main
+      # Checkout
       # =========================
-      - name: Checkout repository
+      - name: Checkout Repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       # =========================
-      # 2. Build filtered snapshot
+      # Create filtered folder ONLY (no git hacks)
       # =========================
-      - name: Create filtered deploy folder
+      - name: Create filtered deploy content
         run: |
           mkdir filtered
 
@@ -37,39 +35,20 @@ jobs:
             ./ filtered/
 
       # =========================
-      # 3. Create temporary branch from snapshot
-      # =========================
-      - name: Create temp deploy branch
-        run: |
-          git checkout --orphan deploy-temp
-
-          git clean -fd
-
-          cp -r filtered/. .
-
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-
-          git add .
-          git commit -m "Filtered deploy snapshot from main"
-
-      # =========================
-      # 4. Create PR (NO direct push to deploy)
+      # Create PR ONLY (like image workflow)
       # =========================
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: deploy
-          head: deploy-temp
           title: Deploy PR from main
+          branch: deploy-auto-${{ github.sha }}
+          commit-message: Deploy snapshot from main
           body: |
-            Automated deploy PR
+            Auto-generated deploy PR
 
-            - Source: main
-            - Target: deploy
-            - Contains filtered production-ready files only
+            Source: main  
+            Target: deploy  
 
-            Merge this PR to deploy changes.
-          draft: false
-          delete-branch: true
+            Contains filtered production-ready code only.

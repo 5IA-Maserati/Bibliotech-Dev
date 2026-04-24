@@ -13,53 +13,54 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # =========================
+      # 1. Checkout main
+      # =========================
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # =========================
-      # Build filtered snapshot
+      # 2. Create filtered branch
       # =========================
-      - name: Build filtered deploy content
+      - name: Create filtered deploy branch
         run: |
-          mkdir deploy-build
+          git checkout -B deploy-update
 
-          rsync -av \
-            --include='src/***' \
-            --include='public/***' \
-            --include='composer.json' \
-            --include='composer.lock' \
-            --exclude='*' \
-            ./ deploy-build/
-
-      # =========================
-      # Prepare deploy branch
-      # =========================
-      - name: Create deploy branch content
-        run: |
-          git checkout -B deploy
-
+          # clean everything except git
           find . -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
 
-          cp -r deploy-build/* .
-          rm -rf deploy-build
+          # bring only allowed files from main
+          git checkout main -- src public composer.json composer.lock
 
+      # =========================
+      # 3. Commit filtered snapshot
+      # =========================
       - name: Commit deploy snapshot
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
           git add .
-          git commit -m "Deploy snapshot from main" || echo "No changes"
+          git commit -m "Filtered deploy snapshot from main" || echo "No changes"
 
       # =========================
-      # Create PR
+      # 4. Push temp branch
+      # =========================
+      - name: Push branch
+        run: |
+          git push origin deploy-update --force
+
+      # =========================
+      # 5. Create PR main → deploy
       # =========================
       - name: Create Pull Request
-        if: success()
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: deploy
+          head: deploy-update
           title: Deploy PR from main
           body: |
             Auto-generated deploy PR
@@ -69,4 +70,3 @@ jobs:
 
             Contains filtered production-ready code.
           branch: deploy-update
-          commit-message: Deploy snapshot from main

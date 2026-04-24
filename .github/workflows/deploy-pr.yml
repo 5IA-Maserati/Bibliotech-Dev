@@ -1,4 +1,4 @@
-name: Create Deploy PR from main
+name: Create Deploy PR
 
 on:
   push:

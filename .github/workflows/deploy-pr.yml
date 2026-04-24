@@ -22,51 +22,52 @@ jobs:
           fetch-depth: 0
 
       # =========================
-      # 2. Create filtered branch
+      # 2. Create filtered snapshot (ONLY LOCAL)
       # =========================
-      - name: Create filtered deploy branch
+      - name: Build filtered content
         run: |
-          git checkout -B deploy-update
+          mkdir filtered
 
-          # clean everything except git
-          find . -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
-
-          # bring only allowed files from main
-          git checkout main -- src public composer.json composer.lock
+          rsync -av \
+            --include='src/***' \
+            --include='public/***' \
+            --include='composer.json' \
+            --include='composer.lock' \
+            --exclude='*' \
+            ./ filtered/
 
       # =========================
-      # 3. Commit filtered snapshot
+      # 3. Create TEMP branch ONLY in runner
       # =========================
-      - name: Commit deploy snapshot
+      - name: Create temp branch
         run: |
+          git checkout --orphan deploy-temp
+
+          rm -rf .
+          cp -r filtered/* .
+
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
           git add .
-          git commit -m "Filtered deploy snapshot from main" || echo "No changes"
+          git commit -m "Filtered deploy snapshot from main"
 
       # =========================
-      # 4. Push temp branch
-      # =========================
-      - name: Push branch
-        run: |
-          git push origin deploy-update --force
-
-      # =========================
-      # 5. Create PR main → deploy
+      # 4. Create PR (NO PUSH MANUAL)
       # =========================
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: deploy
-          head: deploy-update
+          head: deploy-temp
           title: Deploy PR from main
           body: |
-            Auto-generated deploy PR
+            Auto-generated PR
 
             Source: main  
             Target: deploy  
 
-            Contains filtered production-ready code.
-          branch: deploy-update
+            Contains filtered production-ready build.
+          draft: true
+          delete-branch: true

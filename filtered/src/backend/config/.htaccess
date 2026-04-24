@@ -1,0 +1,17 @@
+# This file allows the url to be BEAUTIFUL
+# NO: site.com/pages/donate.php
+# YES: site.com/donate
+
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} \.php
+RewriteRule ^ - [F]
+
+RewriteRule ^$ index.php [L]
+
+RewriteRule ^donate/?$ pages/donate.php [L]
+RewriteRule ^search/?$ pages/search.php [L]
+RewriteRule ^login/?$ pages/login.php [L]
+RewriteRule ^booking/?$ pages/booking.php [L]
+
+ErrorDocument 404 pages/404.php

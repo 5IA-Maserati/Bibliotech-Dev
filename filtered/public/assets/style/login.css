@@ -1,0 +1,229 @@
+@import url("./common.css");
+
+/* -----------------------------------
+   Global Reset
+----------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -----------------------------------
+   Base Layout
+----------------------------------- */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #eef4fb;
+}
+
+/* -----------------------------------
+   Header
+----------------------------------- */
+header {
+    width: 100%;
+    background-color: #39556A;
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+}
+
+/* Navbar container */
+header.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Logo area inside header */
+.logo-area {
+    position: absolute;
+    left: 2rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.75rem;
+}
+
+header .container {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+header p {
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+/* -----------------------------------
+   Main Content / Login
+----------------------------------- */
+.login-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Login card */
+.login-card {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgb(0 0 0 / 10%);
+    text-align: center;
+}
+
+/* Card titles */
+.login-card h1 {
+    color: #51758D;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* -----------------------------------
+   Form Inputs
+----------------------------------- */
+.input-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 2px solid #d1d5db;
+    font-size: 15px;
+    outline: none;
+    background: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #9ca3af;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* Input focus / valid state */
+.input-group input:focus,
+.input-group input:valid {
+    border-bottom-color: #51758D;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -6px;
+    font-size: 12px;
+    color: #51758D;
+}
+
+/* Fixed label for pre-filled inputs */
+label.fixed {
+    top: -6px;
+    font-size: 12px;
+    color: #51758D;
+}
+
+/* -----------------------------------
+   Buttons
+----------------------------------- */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #39556A;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4e6a80;
+}
+
+/* -----------------------------------
+   Links
+----------------------------------- */
+.back-link {
+    display: block;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #39556A;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.home-btn {
+    display: block;
+    margin-top: 12px;
+    padding: 12px;
+    border: 2px solid #39556A;
+    border-radius: 8px;
+    color: #39556A;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.home-btn:hover {
+    background: #39556A;
+    color: white;
+}
+
+/* -----------------------------------
+   Footer
+----------------------------------- */
+footer {
+    width: 100%;
+    background-color: #39556A;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* Small note inside cards (used on signup under title) */
+.card-note {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Error message styling */
+.error-message {
+    display: block;
+    margin-top: 5px;
+    color: #dc2626;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    background-color: #fef2f2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #fecaca;
+}

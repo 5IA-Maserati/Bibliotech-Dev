@@ -1,0 +1,138 @@
+/**
+ * Form Validation Styling
+ * Provides visual feedback for form validation states
+ */
+
+/* Error state styling for input fields */
+input.error {
+  border-color: #d32f2f !important;
+  background-color: #ffebee;
+}
+
+input.error:focus {
+  outline: none;
+  border-color: #d32f2f !important;
+  box-shadow: 0 0 0 3px rgb(211 47 47 / 10%)
+}
+
+/* Error message styling */
+.error-message {
+  display: block;
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Input group styling for organized layout */
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #276328;
+  box-shadow: 0 0 0 3px rgb(76 175 80 / 10%)
+}
+
+.input-group label {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  pointer-events: none;
+  font-size: 1rem;
+  color: #444;
+  transition: all 0.3s ease;
+  background: white;
+  padding: 0 0.25rem;
+}
+
+/* Label positioning when input has content or focus */
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group input:focus ~ label {
+  top: -0.875rem;
+  left: 0.5rem;
+  font-size: 0.875rem;
+  color: #276328;
+}
+
+/* Error state - label color */
+.input-group input.error:focus ~ label,
+.input-group input.error:not(:placeholder-shown) ~ label {
+  color: #d32f2f;
+}
+
+/* Focus styles for accessibility */
+.input-group input:focus-visible {
+  outline: 2px solid #276328;
+}
+
+/* Validation success styling */
+.input-group input:valid:not(.error) {
+  border-color: #276328;
+}
+
+/* Accessibility - aria-invalid styling */
+input[aria-invalid="true"] {
+  border-color: #d32f2f !important;
+}
+
+/* Button styling for form submission */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #276328;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background-color: #1D491D;
+}
+
+button[type="submit"]:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Form styling */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (width <= 480px) {
+  .input-group input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  button[type="submit"] {
+    padding: 1rem;
+  }
+
+  .error-message {
+    font-size: 0.8rem;
+  }
+}

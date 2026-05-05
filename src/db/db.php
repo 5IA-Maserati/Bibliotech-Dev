@@ -18,9 +18,9 @@ $dsn = "mysql:host=$host;port=$dbport;dbname=$db;charset=$charset";
 try {
     $database = new DatabasePDO($dsn, $user, $pass);
 } catch (DatabasePDOException $e) {
-    die("Errore di connessione: " . $e->getMessage());
+    die("Connection error: " . $e->getMessage());
 } catch (Exception $e) {
-    die("Errore sconosciuto: " . $e->getMessage());
+    die("Unknown error: " . $e->getMessage());
 }
 
 return $database;

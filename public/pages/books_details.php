@@ -5,6 +5,8 @@ use src\backend\libs\DatabasePDO;
 $title = 'Pagina libri';
 $show_nav = false;
 
+require_once dirname(__DIR__) . '/bootstrap.php';
+
 ob_start();
 include dirname(__DIR__) . '/includes/header.php';
 $header = ob_get_clean() ?: '';

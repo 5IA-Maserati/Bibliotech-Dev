@@ -109,6 +109,7 @@ header p {
 .auth-area {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
 }
 
 .btn-auth-text {

@@ -10,10 +10,10 @@ include dirname(__DIR__) . '/includes/header.php';
 $header = ob_get_clean() ?: '';
 
 // Render form inputs
-$type = 'text';
-$id = 'username';
-$label = 'Username';
-$aria_label = 'Inserisci il tuo username';
+$type = 'email';
+$id = 'email';
+$label = 'Email';
+$aria_label = 'Inserisci la tua email';
 ob_start();
 include dirname(__DIR__) . '/includes/form-input.php';
 $form_input_username = ob_get_clean() ?: '';

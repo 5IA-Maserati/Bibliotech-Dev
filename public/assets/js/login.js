@@ -8,33 +8,45 @@
 const loginForm = document.getElementById('login-form')
 
 if (loginForm) {
-  loginForm.addEventListener('submit', function (e) {
+  loginForm.addEventListener('submit', async function (e) {
     e.preventDefault()
 
-    // Validate all fields
     const validation = FormValidator.validateForm('login-form')
-
     if (!validation.valid) {
       console.error('Form validation failed:', validation.errors)
       return
     }
 
-    // Sanitize all inputs
     const sanitizedData = FormValidator.sanitizeForm('login-form')
     console.log('Sanitized form data:', sanitizedData)
 
-    alert('Login completato!')
+    try {
+      const response = await fetch('/auth/login.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(sanitizedData)
+      })
 
-    // Clear all form fields after successful submission
-    document.getElementById('login-form').reset()
+      const result = await response.json()
+      if (!response.ok) {
+        const message = result.error || 'Errore di login'
+        FormValidator.markFieldError('email', message)
+        return
+      }
 
-    // Clear any remaining error messages
-    const inputs = document.querySelectorAll('#login-form input')
-    inputs.forEach(input => {
-      FormValidator.clearFieldError(input.id)
-    })
+      alert('Login completato!')
+      loginForm.reset()
+      document.querySelectorAll('#login-form input').forEach(input => {
+        FormValidator.clearFieldError(input.id)
+      })
+      window.location.href = '/pages/search.php'
+    } catch (error) {
+      console.error('Login request failed:', error)
+      alert('Impossibile effettuare il login. Riprovare più tardi.')
+    }
   })
 
-  // Enable real-time validation on blur
   FormValidator.enableRealTimeValidation('login-form')
 }

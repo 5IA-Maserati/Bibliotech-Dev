@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use src\backend\libs\DatabasePDO;
-use RuntimeException;
 
 require_once __DIR__ . '/../../../public/bootstrap.php';
 
@@ -32,14 +31,14 @@ try {
     }
 
     $user = $db->queryOne(
-        'SELECT id, password, role FROM users WHERE email = ?',
+        'SELECT id, passwords, role FROM users WHERE email = ?',
         [$email]
     );
 
     if (
         !$user ||
-        !isset($user['password']) ||
-        !password_verify($password, $user['password'])
+        !isset($user['passwords']) ||
+        !password_verify($password, $user['passwords'])
     ) {
         http_response_code(401);
         echo json_encode(['error' => 'Email o password errati']);
@@ -48,12 +47,12 @@ try {
 
     $_SESSION['user'] = [
         'id' => $user['id'],
-        'role' => $user['role'],
+        'role' => $user['role'] ?? 'user',
     ];
 
     echo json_encode([
         'success' => true,
-        'role' => $user['role'],
+        'role' => $user['role'] ?? 'user',
     ]);
 } catch (Exception $e) {
     http_response_code(500);

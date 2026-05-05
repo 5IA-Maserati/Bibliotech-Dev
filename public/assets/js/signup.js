@@ -5,7 +5,7 @@
  */
 
 // Select the registration form and attach an event listener to it
-document.getElementById('register-form').addEventListener('submit', function (e) {
+document.getElementById('register-form').addEventListener('submit', async function (e) {
   // Prevent the form from submitting
   e.preventDefault()
 
@@ -32,19 +32,34 @@ document.getElementById('register-form').addEventListener('submit', function (e)
 
   // Sanitize all inputs
   const sanitizedData = FormValidator.sanitizeForm('register-form')
+  delete sanitizedData.confirm_password
 
-  // Show success message (in production, send to server)
-  console.log('Sanitized form data:', sanitizedData)
-  alert('Registrazione completata!')
+  try {
+    const response = await fetch('/auth/register.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(sanitizedData)
+    })
 
-  // Clear all form fields after successful submission
-  document.getElementById('register-form').reset()
+    const result = await response.json()
+    if (!response.ok) {
+      const message = result.error || 'Errore di registrazione'
+      FormValidator.markFieldError('email', message)
+      return
+    }
 
-  // Clear any remaining error messages
-  const inputs = document.querySelectorAll('#register-form input')
-  inputs.forEach(input => {
-    FormValidator.clearFieldError(input.id)
-  })
+    alert('Registrazione completata! Verrai reindirizzato al login.')
+    document.getElementById('register-form').reset()
+    document.querySelectorAll('#register-form input').forEach(input => {
+      FormValidator.clearFieldError(input.id)
+    })
+    window.location.href = '/pages/login.php'
+  } catch (error) {
+    console.error('Registration request failed:', error)
+    alert('Impossibile completare la registrazione. Riprovare più tardi.')
+  }
 })
 
 // Enable real-time validation on blur

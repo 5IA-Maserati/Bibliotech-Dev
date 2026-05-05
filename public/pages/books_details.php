@@ -14,26 +14,25 @@ $book = null;
 $bookId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
 try {
-    if ($bookId === false || $bookId === null || $bookId <= 0) {
-        header('Location: /pages/page_404.php');
-        exit;
-    }
+    //if ($bookId === false || $bookId === null || $bookId <= 0) {
+        //header('Location: /pages/page_404.php');
+        //exit;
+    //}
 
     /** @var DatabasePDO $db */
     $db = require __DIR__ . '/../../src/db/db.php';
 
     $book = $db->queryOne(
-        'SELECT b.*, c.name AS category
+        'SELECT b.*
          FROM books b
-         LEFT JOIN categories c ON b.category_id = c.id
          WHERE b.id = ?',
         [$bookId]
     );
 
-    if (!$book) {
-        header('Location: /pages/page_404.php');
-        exit;
-    }
+    //if (!$book) {
+        //header('Location: /pages/page_404.php');
+        //exit;
+    //}
 
     $tpl = __DIR__ . '/books_details.html';
     $html = file_get_contents($tpl);
@@ -65,6 +64,7 @@ try {
 
     echo $html;
 } catch (Exception $e) {
-    header('Location: /pages/page_404.php');
-    exit;
+    //header('Location: /pages/page_404.php');
+    //exit;
+    echo $e->getMessage();
 }

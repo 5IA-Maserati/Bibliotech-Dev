@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Profilo">
+    <title>{{TITLE}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/login.css">
+    <link rel="stylesheet" href="/assets/style/validation.css">
+</head>
+<body>
+    {{HEADER}}
+
+    <div class="login-container">
+        <div class="login-card">
+            <h2>Profilo utente</h2>
+            <div class="profile-details">
+                <p><strong>Username:</strong> {{USERNAME}}</p>
+                <p><strong>Cognome:</strong> {{SURNAME}}</p>
+                <p><strong>Email:</strong> {{EMAIL}}</p>
+                <p><strong>Ruolo:</strong> {{ROLE}}</p>
+                <p><strong>Registrato il:</strong> {{CREATED_AT}}</p>
+            </div>
+
+            <h3>Cambia password</h3>
+            <br>
+            <form id="change-password-form">
+                <div class="input-group">
+                    <input type="password" id="current_password" name="current_password" aria-label="Password attuale" required>
+                    <label for="current_password">Password attuale</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" name="password" aria-label="Nuova password" required>
+                    <label for="password">Nuova password</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="confirm_password" name="confirm_password" aria-label="Conferma nuova password" required>
+                    <label for="confirm_password">Conferma nuova password</label>
+                </div>
+
+                <button type="submit">Aggiorna password</button>
+            </form>
+
+            <a href="/pages/search.php" class="back-link">← Torna al catalogo</a>
+            <a href="/index.php" class="home-btn">Torna alla Home</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Scolastica. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="/assets/js/form-validator.js"></script>
+    <script src="/assets/js/profile.js"></script>
+</body>
+</html>

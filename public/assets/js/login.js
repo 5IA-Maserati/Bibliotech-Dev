@@ -41,7 +41,7 @@ if (loginForm) {
       document.querySelectorAll('#login-form input').forEach(input => {
         FormValidator.clearFieldError(input.id)
       })
-      window.location.href = '/pages/search.php'
+      window.location.href = '/index.php'
     } catch (error) {
       console.error('Login request failed:', error)
       alert('Impossibile effettuare il login. Riprovare più tardi.')

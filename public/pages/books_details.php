@@ -23,6 +23,10 @@ try {
 
     /** @var DatabasePDO $db */
     $db = require __DIR__ . '/../../src/db/db.php';
+    if ($bookId === false || $bookId === null || $bookId <= 0) {
+        header('Location: /pages/page_404.php');
+        exit;
+    }
 
     $book = $db->queryOne(
         'SELECT b.*
@@ -31,10 +35,24 @@ try {
         [$bookId]
     );
 
-    //if (!$book) {
-        //header('Location: /pages/page_404.php');
-        //exit;
-    //}
+    $book_categories = [];
+    try {
+        $book_categories = $db->query(
+            'SELECT c.name
+             FROM categories c
+             JOIN books_categories bc ON c.id = bc.category_id
+             WHERE bc.book_id = ?',
+            [$bookId]
+        );
+    } catch (Exception $e) {
+        // Missing category tables or schema mismatch; continue without genre data.
+        $book_categories = [];
+    }
+
+    if (!$book) {
+        header('Location: /pages/page_404.php');
+        exit;
+    }
 
     $tpl = __DIR__ . '/books_details.html';
     $html = file_get_contents($tpl);
@@ -49,7 +67,7 @@ try {
         '{{BOOK_TITLE}}' => htmlspecialchars($book['title'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_AUTHOR}}' => htmlspecialchars($book['author'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_SUBTITLE}}' => htmlspecialchars($book['subtitle'] ?? '', ENT_QUOTES, 'UTF-8'),
-        '{{BOOK_GENRE}}' => htmlspecialchars($book['category'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
+        '{{BOOK_GENRE}}' => htmlspecialchars(implode(', ', array_column($book_categories, 'name')), ENT_QUOTES, 'UTF-8'),
         '{{BOOK_YEAR}}' => htmlspecialchars($book['publication_year'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_COPIES}}' => htmlspecialchars($book['copies_number'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_ISBN}}' => htmlspecialchars($book['isbn'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
@@ -66,7 +84,5 @@ try {
 
     echo $html;
 } catch (Exception $e) {
-    //header('Location: /pages/page_404.php');
-    //exit;
     echo $e->getMessage();
 }

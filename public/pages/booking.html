@@ -3,43 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prenotazione</title>
+    <title>{{TITLE}}</title>
     <link rel="stylesheet" href="/assets/style/booking.css">
     <link rel="stylesheet" href="/assets/style/validation.css">
 </head>
 <body>
+    {{HEADER}}
+
     <div class="container">
-        <h1>Prenotazione</h1>
+        <h1>{{TITLE}}</h1>
 
         <div class="description">
-            <p>Compila il form per prenotare un libro.</p>
+            <p>Seleziona un libro dal catalogo e conferma la prenotazione.</p>
         </div>
 
-        <form id="booking-form">
-            <div class="input-group">
-                <input type="text" id="name" name="name" aria-label="Nome dello studente" required>
-                <label for="name">Nome dello Studente</label>
+        <div id="book-search-section" class="book-search-section" style="{{SEARCH_SECTION_DISPLAY}}">
+            <div class="search-card">
+                <p>Cerca un libro per titolo, autore o ISBN e scegli una prenotazione tra i risultati.</p>
+                <div class="search-bar">
+                    <input type="search" id="book-search-input" placeholder="Cerca libro..." aria-label="Cerca libro" autocomplete="off">
+                    <button type="button" id="book-search-button">Cerca</button>
+                </div>
+                <div id="search-results" class="search-results"></div>
             </div>
-            <div class="input-group">
-                <input type="email" id="email" name="email" aria-label="Email dello studente" required>
-                <label for="email">Email dello Studente</label>
+        </div>
+
+        <div id="book-suggestions-section" class="book-search-section" style="{{SUGGESTIONS_SECTION_DISPLAY}}">
+            <div class="search-card">
+                <p>Questi sono i tuoi libri preferiti. Clicca sul titolo per selezionarlo e procedere con la prenotazione.</p>
+                {{SUGGESTIONS}}
             </div>
+        </div>
+
+        <div class="booking-info">
+            <p><strong>Studente:</strong> {{USER_NAME}}</p>
+            <p><strong>Email:</strong> {{USER_EMAIL}}</p>
+            <p><strong>Libro:</strong> <span id="selected-book-title">{{BOOK_TITLE}}</span></p>
+        </div>
+
+        <div class="message">{{MESSAGE}}</div>
+
+        <form id="booking-form" method="post" style="{{BOOK_FORM_DISPLAY}}">
+            <input type="hidden" name="book_id" id="book-id" value="{{BOOK_ID}}">
             <div class="input-group">
-                <input type="text" id="book-title" name="book_title" aria-label="Titolo del libro" required>
-                <label for="book-title">Titolo del Libro</label>
+                <input type="date" id="booking-date" name="booking_date" aria-label="Data di restituzione prevista" required>
+                <label for="booking-date">Data di restituzione prevista</label>
             </div>
-            <div class="input-group">
-                <input type="date" id="booking-date" name="booking_date" aria-label="Data di prenotazione" required>
-                <label for="booking-date">Data di Prenotazione</label>
-            </div>
-            <button type="submit">Prenota</button>
+            <button type="submit">Conferma prenotazione</button>
         </form>
 
-        <a href="/pages/search.php">Torna all'elenco libri</a>
-        <a href="/index.php">Torna alla home</a>
+        <div class="actions">
+            <a href="/pages/search.php">Torna all'elenco libri</a>
+            <a href="/pages/profile.php">Vai al profilo</a>
+        </div>
     </div>
 
     <script src="/assets/js/form-validator.js"></script>
-    <script src="/assets/js/booking.js"></script>
+    <script type="module" src="/assets/js/booking.js"></script>
 </body>
 </html>

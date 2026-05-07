@@ -16,10 +16,10 @@ $book = null;
 $bookId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
 try {
-    //if ($bookId === false || $bookId === null || $bookId <= 0) {
-        //header('Location: /pages/page_404.php');
-        //exit;
-    //}
+    if ($bookId === false || $bookId === null || $bookId <= 0) {
+        header('Location: /pages/page_404.php');
+        exit;
+    }
 
     /** @var DatabasePDO $db */
     $db = require __DIR__ . '/../../src/db/db.php';
@@ -61,6 +61,19 @@ try {
         throw new Exception('Impossibile leggere books_details.html');
     }
 
+    $favoriteStatus = false;
+    $userId = $_SESSION['user']['id'] ?? null;
+    if ($userId) {
+        try {
+            $favoriteStatus = (bool)$db->queryOne(
+                'SELECT id FROM favorites WHERE user_id = ? AND book_id = ?',
+                [$userId, $bookId]
+            );
+        } catch (Exception $e) {
+            $favoriteStatus = false;
+        }
+    }
+
     $replacements = [
         '{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
         '{{HEADER}}' => $header,
@@ -78,6 +91,9 @@ try {
         '{{BOOK_DESC}}' => htmlspecialchars($book['description'] ?? 'non disponibile.', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_FORMAT}}' => htmlspecialchars($book['format'] ?? 'Cartaceo', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_COVER}}' => htmlspecialchars($book['cover_url'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
+        '{{BOOK_ID}}' => htmlspecialchars($bookId, ENT_QUOTES, 'UTF-8'),
+        '{{FAVORITE_BUTTON_TEXT}}' => $favoriteStatus ? 'Preferito' : 'Aggiungi ai preferiti',
+        '{{FAVORITE_BUTTON_DISABLED}}' => $favoriteStatus ? 'disabled' : '',
     ];
 
     $html = str_replace(array_keys($replacements), array_values($replacements), $html);

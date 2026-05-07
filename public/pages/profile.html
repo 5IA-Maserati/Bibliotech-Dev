@@ -6,6 +6,7 @@
     <title>{{TITLE}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/style/login.css">
+    <link rel="stylesheet" href="/assets/style/profile.css">
     <link rel="stylesheet" href="/assets/style/validation.css">
 </head>
 <body>
@@ -13,16 +14,44 @@
 
     <div class="login-container">
         <div class="login-card">
-            <h2>Profilo utente</h2>
-            <div class="profile-details">
-                <p><strong>Username:</strong> {{USERNAME}}</p>
-                <p><strong>Cognome:</strong> {{SURNAME}}</p>
-                <p><strong>Email:</strong> {{EMAIL}}</p>
-                <p><strong>Ruolo:</strong> {{ROLE}}</p>
-                <p><strong>Registrato il:</strong> {{CREATED_AT}}</p>
+            <div class="profile-header">
+                <div class="profile-avatar">{{AVATAR_INITIAL}}</div>
+                <div class="profile-user">
+                    <h2>Profilo utente</h2>
+                    <p><strong>Username:</strong> {{USERNAME}}</p>
+                    <p><strong>Cognome:</strong> {{SURNAME}}</p>
+                    <p><strong>Email:</strong> {{EMAIL}}</p>
+                    <p><strong>Ruolo:</strong> {{ROLE}}</p>
+                    <p><strong>Registrato il:</strong> {{CREATED_AT}}</p>
+                </div>
             </div>
-            
+
+            <div class="profile-stats">
+                {{STATS}}
+            </div>
+
+            <div class="profile-section">
+                <h3>Libri attualmente in prestito</h3>
+                {{CURRENT_BORROWED}}
+            </div>
+
+            <div class="profile-section">
+                <h3>Cronologia prestiti</h3>
+                {{BORROW_HISTORY}}
+            </div>
+
+            <div class="profile-section">
+                <h3>Preferiti</h3>
+                {{FAVORITES}}
+            </div>
+
+            <div class="profile-section">
+                <h3>Generi più letti</h3>
+                <p class="most-read-genres">{{MOST_READ_GENRES}}</p>
+            </div>
+
             <br>
+
             <form id="change-password-form">
                 <div class="input-group">
                     <input type="password" id="current_password" name="current_password" aria-label="Password attuale" required>

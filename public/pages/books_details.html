@@ -39,8 +39,8 @@
                     <p class="availability" id="book-availability">Disponibilità: <span>{{BOOK_AVAILABILITY}}</span></p>
 
                     <div class="actions">
-                        <button class="btn-primary" id="reserve-button">Prenota libro</button>
-                        <button class="btn-secondary" id="favorite-button">Aggiungi ai preferiti</button>
+                        <button type="button" class="btn-primary" id="reserve-button">Prenota libro</button>
+                        <button type="button" class="btn-secondary" id="favorite-button" data-book-id="{{BOOK_ID}}" {{FAVORITE_BUTTON_DISABLED}}>{{FAVORITE_BUTTON_TEXT}}</button>
                     </div>
                 </article>
             </section>

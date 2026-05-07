@@ -1,19 +1,142 @@
 <?php
 
+use src\backend\libs\DatabasePDO;
+
 $title = 'Prenotazione';
 $show_nav = false;
 
-// Render header
+require_once dirname(__DIR__) . '/bootstrap.php';
+require_once dirname(__DIR__) . '/../src/db/db.php';
+
+$userId = $_SESSION['user']['id'] ?? null;
+if (!$userId) {
+    header('Location: /pages/login.php');
+    exit;
+}
+
+/** @var DatabasePDO $database */
+$database = require dirname(__DIR__) . '/../src/db/db.php';
+$user = $database->queryOne(
+    'SELECT username, email FROM users WHERE id = ?',
+    [$userId]
+);
+
+$bookId = filter_input(INPUT_GET, 'book_id', FILTER_VALIDATE_INT);
+$message = '';
+$bookTitle = 'Seleziona un libro';
+$hasBookId = $bookId !== null && $bookId !== false && $bookId > 0;
+
+if ($hasBookId) {
+    $book = $database->queryOne(
+        'SELECT title FROM books WHERE id = ?',
+        [$bookId]
+    );
+    if ($book) {
+        $bookTitle = $book['title'];
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $postedBookId = filter_input(INPUT_POST, 'book_id', FILTER_VALIDATE_INT);
+    $dueDate = filter_input(INPUT_POST, 'booking_date', FILTER_SANITIZE_STRING);
+
+    if ($postedBookId === false || $postedBookId === null) {
+        $message = '<span class="message-error">Libro non valido. Riprova.</span>';
+    } elseif (!$dueDate) {
+        $message = '<span class="message-error">Devi selezionare una data di restituzione prevista.</span>';
+    } else {
+        $bookId = $postedBookId;
+        $book = $database->queryOne(
+            'SELECT title FROM books WHERE id = ?',
+            [$bookId]
+        );
+        $bookTitle = $book['title'] ?? $bookTitle;
+
+        try {
+            $existingLoan = $database->queryOne(
+                'SELECT id FROM loans WHERE user_id = ? AND book_id = ? AND (returned_at IS NULL OR returned_at = "" OR returned_at = "0000-00-00")',
+                [$userId, $bookId]
+            );
+
+            if ($existingLoan) {
+                $message = '<span class="message-error">Hai già un prestito attivo per questo libro.</span>';
+            } else {
+                $success = $database->execute(
+                    'INSERT INTO loans (user_id, book_id, borrowed_at, due_at) VALUES (?, ?, NOW(), ?)',
+                    [$userId, $bookId, $dueDate]
+                );
+
+                if ($success) {
+                    $message = '<span class="message-success">Prenotazione registrata con successo.</span>';
+                } else {
+                    $message = '<span class="message-error">Impossibile completare la prenotazione.</span>';
+                }
+            }
+        } catch (Exception $e) {
+            $message = '<span class="message-error">Errore database: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</span>';
+        }
+    }
+}
+
+$bookSuggestions = [];
+try {
+    $bookSuggestions = $database->query(
+        'SELECT b.id, b.title, b.author, b.publication_year
+         FROM favorites f
+         JOIN books b ON b.id = f.book_id
+         WHERE f.user_id = ?
+         ORDER BY f.created_at DESC
+         LIMIT 6',
+        [$userId]
+    );
+} catch (Exception $e) {
+    $bookSuggestions = [];
+}
+
+function renderSuggestionList(array $books, string $emptyMessage): string
+{
+    if (empty($books)) {
+        return '<p class="empty-state">' . htmlspecialchars($emptyMessage, ENT_QUOTES, 'UTF-8') . '</p>';
+    }
+
+    $html = '<div id="suggestions-list" class="search-results">';
+    foreach ($books as $book) {
+        $title = htmlspecialchars($book['title'] ?? 'Titolo sconosciuto', ENT_QUOTES, 'UTF-8');
+        $author = htmlspecialchars($book['author'] ?? 'Autore sconosciuto', ENT_QUOTES, 'UTF-8');
+        $year = htmlspecialchars($book['publication_year'] ?? 'N/D', ENT_QUOTES, 'UTF-8');
+        $bookId = (int)($book['id'] ?? 0);
+
+        $html .= '<button type="button" class="search-result-item" data-book-id="' . $bookId . '" data-book-title="' . $title . '">';
+        $html .= '<div class="search-result-item-title">' . $title . '</div>';
+        $html .= '<div class="search-result-item-meta">' . $author . ' · ' . $year . '</div>';
+        $html .= '<span class="favorite-badge">Preferito</span>';
+        $html .= '</button>';
+    }
+    $html .= '</div>';
+
+    return $html;
+}
+
+$bookSuggestionsHtml = renderSuggestionList($bookSuggestions, 'Non ci sono libri visti di recente. Prova a prenotare un nuovo libro dal catalogo.');
+
 ob_start();
 include dirname(__DIR__) . '/includes/header.php';
 $header = ob_get_clean() ?: '';
 
-// Load template and replace
 $tpl = __DIR__ . '/booking.html';
 $html = file_get_contents($tpl);
 $replacements = [
     '{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
     '{{HEADER}}' => $header,
+    '{{USER_NAME}}' => htmlspecialchars($user['username'] ?? '', ENT_QUOTES, 'UTF-8'),
+    '{{USER_EMAIL}}' => htmlspecialchars($user['email'] ?? '', ENT_QUOTES, 'UTF-8'),
+    '{{BOOK_TITLE}}' => htmlspecialchars($bookTitle, ENT_QUOTES, 'UTF-8'),
+    '{{BOOK_ID}}' => htmlspecialchars($bookId ?? '', ENT_QUOTES, 'UTF-8'),
+    '{{BOOK_FORM_DISPLAY}}' => $hasBookId ? 'display:block;' : 'display:none;',
+    '{{SEARCH_SECTION_DISPLAY}}' => $hasBookId ? 'display:none;' : 'display:block;',
+    '{{SUGGESTIONS_SECTION_DISPLAY}}' => $hasBookId ? 'display:none;' : 'display:block;',
+    '{{SUGGESTIONS}}' => $bookSuggestionsHtml,
+    '{{MESSAGE}}' => $message,
 ];
 $html = str_replace(array_keys($replacements), array_values($replacements), $html);
 echo $html;

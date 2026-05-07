@@ -7,13 +7,19 @@ const searchButton = document.querySelector('.btn-search')
 const genreFilter = document.getElementById('genre')
 const sortFilter = document.getElementById('sort')
 
-// Display user's books on page load if logged in
-if (window.myBooks && window.myBooks.length > 0) {
+function renderBookResults (books, title) {
   const resultsDiv = document.getElementById('results')
   const countSpan = document.getElementById('count')
 
-  resultsDiv.innerHTML = '<h3 class="section-title">I tuoi libri</h3>' +
-    window.myBooks.map(book => `
+  if (!books || books.length === 0) {
+    resultsDiv.innerHTML = '<div class="no-results">Nessun libro trovato.</div>'
+    countSpan.textContent = '0'
+    return
+  }
+
+  resultsDiv.innerHTML = `
+    <h3 class="section-title">${title}</h3>
+    ${books.map(book => `
       <div class="book-card" data-id="${book.id}">
         <div class="book-cover">${book.title.charAt(0)}</div>
         <div class="book-info">
@@ -23,9 +29,10 @@ if (window.myBooks && window.myBooks.length > 0) {
           <p class="book-isbn">ISBN: ${book.isbn || 'N/A'}</p>
         </div>
       </div>
-    `).join('')
+    `).join('')}
+  `
 
-  countSpan.textContent = window.myBooks.length
+  countSpan.textContent = books.length
 
   document.querySelectorAll('.book-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -34,6 +41,20 @@ if (window.myBooks && window.myBooks.length > 0) {
     })
   })
 }
+
+function initSearchPage () {
+  const genre = genreFilter ? genreFilter.value : ''
+  const sort = sortFilter ? sortFilter.value : ''
+
+  if (window.myBooks && window.myBooks.length > 0) {
+    renderBookResults(window.myBooks, 'Tutti i libri')
+    return
+  }
+
+  searchAPI('', genre, sort)
+}
+
+window.addEventListener('DOMContentLoaded', initSearchPage)
 
 if (searchInput && searchButton) {
   searchButton.addEventListener('click', function (e) {

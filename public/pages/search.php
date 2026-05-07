@@ -37,14 +37,31 @@ $myBooks = $database->query(
      LIMIT 50"
 );
 
-    // Convert books to JSON for JavaScript
-    $myBooksJson = json_encode($myBooks);
-
-    // Inject the books into the page before the closing body tag
-    $html = str_replace(
-        '</body>',
-        "<script>window.myBooks = $myBooksJson;</script>\n</body>",
-        $html
+$genres = [];
+try {
+    $genres = $database->query(
+        "SELECT name FROM categories ORDER BY name ASC"
     );
+} catch (Exception $e) {
+    $genres = [];
+}
 
-    echo $html;
+$genreOptions = '<option value="">Tutti i generi</option>';
+foreach ($genres as $genre) {
+    $genreName = htmlspecialchars($genre['name'] ?? '', ENT_QUOTES, 'UTF-8');
+    $genreOptions .= "<option value=\"{$genreName}\">{$genreName}</option>";
+}
+
+// Convert books to JSON for JavaScript
+$myBooksJson = json_encode($myBooks);
+
+// Inject the books into the page before the closing body tag
+$html = str_replace(
+    '</body>',
+    "<script>window.myBooks = $myBooksJson;</script>\n</body>",
+    $html
+);
+
+$html = str_replace('{{GENRE_OPTIONS}}', $genreOptions, $html);
+
+echo $html;

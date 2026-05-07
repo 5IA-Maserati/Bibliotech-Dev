@@ -16,55 +16,40 @@ $genre = is_string($genre) ? $genre : '';
 $sort = is_string($sort) ? $sort : 'title';
 
 try {
-    // If no search query, return all books
-    if (strlen($q) < 2) {
-        $query = "
-            SELECT id, title, author, publisher, publication_year, isbn
-            FROM books
-        ";
-        $params = [];
-
-        if ($genre !== '') {
-            // Genre filter not supported without genres column
-        }
-
-        if ($sort === 'year-desc') {
-            $query .= " ORDER BY publication_year DESC";
-        } else {
-            $query .= " ORDER BY title ASC";
-        }
-
-        $query .= " LIMIT 50"; // TODO: This should be increased for a real application
-
-        $books = $db->query($query, $params);
-
-        echo json_encode([
-            'success' => true,
-            'books' => $books
-        ]);
-        exit;
-    }
-
+    $params = [];
     $query = "
-        SELECT id, title, author, publisher, publication_year, isbn
-        FROM books
-        WHERE (title LIKE ? OR author LIKE ? OR isbn LIKE ?)
+        SELECT DISTINCT b.id, b.title, b.author, b.publisher, b.publication_year, b.isbn
+        FROM books b
     ";
 
-    $params = [
-        "%$q%",
-        "%$q%",
-        "%$q%"
-    ];
+    if ($genre !== '') {
+        $query .= "
+            JOIN books_categories bc ON bc.book_id = b.id
+            JOIN categories c ON c.id = bc.category_id
+        ";
+    }
+
+    $whereClauses = [];
+    if (strlen($q) >= 2) {
+        $whereClauses[] = "(b.title LIKE ? OR b.author LIKE ? OR b.isbn LIKE ?)";
+        $params[] = "%$q%";
+        $params[] = "%$q%";
+        $params[] = "%$q%";
+    }
 
     if ($genre !== '') {
-        // Genre filter not supported without genres column
+        $whereClauses[] = "c.name = ?";
+        $params[] = $genre;
+    }
+
+    if (!empty($whereClauses)) {
+        $query .= ' WHERE ' . implode(' AND ', $whereClauses);
     }
 
     if ($sort === 'year-desc') {
-        $query .= " ORDER BY publication_year DESC";
+        $query .= " ORDER BY b.publication_year DESC";
     } else {
-        $query .= " ORDER BY title ASC";
+        $query .= " ORDER BY b.title ASC";
     }
 
     $query .= " LIMIT 50";

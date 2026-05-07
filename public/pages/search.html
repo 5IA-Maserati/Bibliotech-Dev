@@ -24,17 +24,13 @@
       <h2 class="catalog-title">Catalogo</h2>
       <div class="search-bar">
         <input id="q" type="text" placeholder="Cerca per titolo, autore o ISBN" aria-label="Cerca libri">
-        <button class="btn-search">Cerca</button>
+        <button type="button" class="btn-nav btn-search">Cerca</button>
       </div>
     </section>
 
-    <div class="filters-dropdown">
+    <div class="filters">
       <select id="genre">
-        <option value="">Tutti i generi</option>
-        <option>Romanzo</option>
-        <option>Saggistica</option>
-        <option>Storia</option>
-        <option>Fantascienza</option>
+        {{GENRE_OPTIONS}}
       </select>
       <select id="sort">
         <option value="title">Ordina: Titolo</option>

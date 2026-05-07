@@ -96,12 +96,12 @@ try {
 
 try {
     $currentBorrowed = $database->query(
-        'SELECT b.id, b.title, b.author, b.publication_year, l.borrowed_at, l.due_at
+        'SELECT b.id, b.title, b.author, b.publication_year, l.loan_date as borrowed_at, l.return_date as due_at
          FROM loans l
          JOIN books b ON b.id = l.book_id
          WHERE l.user_id = ?
-           AND (l.returned_at IS NULL OR l.returned_at = "" OR l.returned_at = "0000-00-00")
-         ORDER BY l.due_at ASC
+           AND l.return_date IS NULL
+         ORDER BY l.return_date ASC
          LIMIT 10',
         [$userId]
     );
@@ -113,13 +113,12 @@ try {
 
 try {
     $borrowHistory = $database->query(
-        'SELECT b.id, b.title, b.author, b.publication_year, l.borrowed_at, l.returned_at
+        'SELECT b.id, b.title, b.author, b.publication_year, l.loan_date as borrowed_at, l.return_date as returned_at
          FROM loans l
          JOIN books b ON b.id = l.book_id
          WHERE l.user_id = ?
-           AND l.returned_at IS NOT NULL
-           AND l.returned_at != ""
-         ORDER BY l.returned_at DESC
+           AND l.return_date IS NOT NULL
+         ORDER BY l.return_date DESC
          LIMIT 10',
         [$userId]
     );
@@ -150,8 +149,7 @@ try {
          JOIN books_categories bc ON bc.book_id = l.book_id
          JOIN categories c ON c.id = bc.category_id
          WHERE l.user_id = ?
-           AND l.returned_at IS NOT NULL
-           AND l.returned_at != ""
+           AND l.return_date IS NOT NULL
          GROUP BY c.name
          ORDER BY total DESC
          LIMIT 3',

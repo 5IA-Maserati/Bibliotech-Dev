@@ -45,35 +45,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!$dueDate) {
         $message = '<span class="message-error">Devi selezionare una data di restituzione prevista.</span>';
     } else {
-        $bookId = $postedBookId;
-        $book = $database->queryOne(
-            'SELECT title FROM books WHERE id = ?',
-            [$bookId]
-        );
-        $bookTitle = $book['title'] ?? $bookTitle;
+        // Validate return date
+        $returnDateTime = DateTime::createFromFormat('Y-m-d', $dueDate);
+        $today = new DateTime();
+        $oneYearFromNow = new DateTime();
+        $oneYearFromNow->modify('+1 year');
 
-        try {
-            $existingLoan = $database->queryOne(
-                'SELECT id FROM loans WHERE user_id = ? AND book_id = ? AND (returned_at IS NULL OR returned_at = "" OR returned_at = "0000-00-00")',
-                [$userId, $bookId]
+        if (!$returnDateTime) {
+            $message = '<span class="message-error">Data di restituzione non valida.</span>';
+        } elseif ($returnDateTime < $today) {
+            $message = '<span class="message-error">La data di restituzione non può essere nel passato.</span>';
+        } elseif ($returnDateTime > $oneYearFromNow) {
+            $message = '<span class="message-error">La data di restituzione non può essere oltre un anno da oggi.</span>';
+        } else {
+            $bookId = $postedBookId;
+            $book = $database->queryOne(
+                'SELECT title FROM books WHERE id = ?',
+                [$bookId]
             );
+            $bookTitle = $book['title'] ?? $bookTitle;
 
-            if ($existingLoan) {
-                $message = '<span class="message-error">Hai già un prestito attivo per questo libro.</span>';
-            } else {
-                $success = $database->execute(
-                    'INSERT INTO loans (user_id, book_id, borrowed_at, due_at) VALUES (?, ?, NOW(), ?)',
-                    [$userId, $bookId, $dueDate]
+            try {
+                $existingLoan = $database->queryOne(
+                    'SELECT id FROM loans WHERE user_id = ? AND book_id = ? AND return_date IS NULL',
+                    [$userId, $bookId]
                 );
 
-                if ($success) {
-                    $message = '<span class="message-success">Prenotazione registrata con successo.</span>';
+                if ($existingLoan) {
+                    $message = '<span class="message-error">Hai già un prestito attivo per questo libro.</span>';
                 } else {
-                    $message = '<span class="message-error">Impossibile completare la prenotazione.</span>';
+                    $success = $database->execute(
+                        'INSERT INTO loans (user_id, book_id, loan_date, return_date) VALUES (?, ?, CURDATE(), ?)',
+                        [$userId, $bookId, $dueDate]
+                    );
+
+                    if ($success) {
+                        $message = '<span class="message-success">Prenotazione registrata con successo.</span>';
+                    } else {
+                        $message = '<span class="message-error">Impossibile completare la prenotazione.</span>';
+                    }
                 }
+            } catch (Exception $e) {
+                $message = '<span class="message-error">Errore database: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</span>';
             }
-        } catch (Exception $e) {
-            $message = '<span class="message-error">Errore database: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</span>';
         }
     }
 }

@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     bookIdInput.value = bookId
     selectedBookTitle.textContent = bookTitle
-    bookingForm.style.display = 'block'
+    bookingForm.classList.remove('hidden')
+    bookingForm.classList.add('block')
     if (suggestionsSection) {
       suggestionsSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }

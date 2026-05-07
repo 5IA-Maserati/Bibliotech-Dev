@@ -17,7 +17,7 @@
             <p>Seleziona un libro dal catalogo e conferma la prenotazione.</p>
         </div>
 
-        <div id="book-search-section" class="book-search-section" style="{{SEARCH_SECTION_DISPLAY}}">
+        <div id="book-search-section" class="book-search-section {{SEARCH_SECTION_DISPLAY}}">
             <div class="search-card">
                 <p>Cerca un libro per titolo, autore o ISBN e scegli una prenotazione tra i risultati.</p>
                 <div class="search-bar">
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div id="book-suggestions-section" class="book-search-section" style="{{SUGGESTIONS_SECTION_DISPLAY}}">
+        <div id="book-suggestions-section" class="book-search-section {{SUGGESTIONS_SECTION_DISPLAY}}">
             <div class="search-card">
                 <p>Questi sono i tuoi libri preferiti. Clicca sul titolo per selezionarlo e procedere con la prenotazione.</p>
                 {{SUGGESTIONS}}
@@ -43,7 +43,7 @@
 
         <div class="message">{{MESSAGE}}</div>
 
-        <form id="booking-form" method="post" style="{{BOOK_FORM_DISPLAY}}">
+        <form id="booking-form" method="post" class="{{BOOK_FORM_DISPLAY}}">
             <input type="hidden" name="book_id" id="book-id" value="{{BOOK_ID}}">
             <div class="input-group">
                 <input type="date" id="booking-date" name="booking_date" aria-label="Data di restituzione prevista" required>

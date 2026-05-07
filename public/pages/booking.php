@@ -146,9 +146,9 @@ $replacements = [
     '{{USER_EMAIL}}' => htmlspecialchars($user['email'] ?? '', ENT_QUOTES, 'UTF-8'),
     '{{BOOK_TITLE}}' => htmlspecialchars($bookTitle, ENT_QUOTES, 'UTF-8'),
     '{{BOOK_ID}}' => htmlspecialchars($bookId ?? '', ENT_QUOTES, 'UTF-8'),
-    '{{BOOK_FORM_DISPLAY}}' => $hasBookId ? 'display:block;' : 'display:none;',
-    '{{SEARCH_SECTION_DISPLAY}}' => $hasBookId ? 'display:none;' : 'display:block;',
-    '{{SUGGESTIONS_SECTION_DISPLAY}}' => $hasBookId ? 'display:none;' : 'display:block;',
+    '{{BOOK_FORM_DISPLAY}}' => $hasBookId ? 'block' : 'none',
+    '{{SEARCH_SECTION_DISPLAY}}' => $hasBookId ? 'none' : 'block',
+    '{{SUGGESTIONS_SECTION_DISPLAY}}' => $hasBookId ? 'none' : 'block',
     '{{SUGGESTIONS}}' => $bookSuggestionsHtml,
     '{{MESSAGE}}' => $message,
 ];

@@ -53,6 +53,18 @@ header h1 {
   margin-bottom: 2rem;
 }
 
+.book-search-section.hidden {
+  display: none;
+}
+
+#booking-form.hidden {
+  display: none;
+}
+
+#booking-form.block {
+  display: block;
+}
+
 .search-card {
   background: white;
   border-radius: 8px;

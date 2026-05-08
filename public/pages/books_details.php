@@ -74,6 +74,8 @@ try {
         }
     }
 
+    $coverUrl = $book['isbn'] ? "https://covers.openlibrary.org/b/isbn/{$book['isbn']}-L.jpg" : 'https://via.placeholder.com/200x300/e0e7ff/cffafe?text=No+Cover';
+
     $replacements = [
         '{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
         '{{HEADER}}' => $header,
@@ -90,7 +92,7 @@ try {
         '{{BOOK_EDITION}}' => htmlspecialchars($book['edition'] ?? '1ª', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_DESC}}' => htmlspecialchars($book['description'] ?? 'non disponibile.', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_FORMAT}}' => htmlspecialchars($book['format'] ?? 'Cartaceo', ENT_QUOTES, 'UTF-8'),
-        '{{BOOK_COVER}}' => htmlspecialchars($book['cover_url'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
+        '{{BOOK_COVER}}' => htmlspecialchars($coverUrl, ENT_QUOTES, 'UTF-8'),
         '{{BOOK_ID}}' => htmlspecialchars($bookId, ENT_QUOTES, 'UTF-8'),
         '{{FAVORITE_BUTTON_TEXT}}' => $favoriteStatus ? 'Preferito' : 'Aggiungi ai preferiti',
         '{{FAVORITE_BUTTON_DISABLED}}' => $favoriteStatus ? 'disabled' : '',

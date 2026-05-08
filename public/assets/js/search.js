@@ -19,9 +19,11 @@ function renderBookResults (books, title) {
 
   resultsDiv.innerHTML = `
     <h3 class="section-title">${title}</h3>
-    ${books.map(book => `
+    ${books.map(book => {
+      const coverUrl = book.isbn ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg` : 'https://via.placeholder.com/200x300/e0e7ff/cffafe?text=No+Cover'
+      return `
       <div class="book-card" data-id="${book.id}">
-        <div class="book-cover">${book.title.charAt(0)}</div>
+        <img class="book-cover" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x300/e0e7ff/cffafe?text=No+Cover'">
         <div class="book-info">
           <h3 class="book-title">${book.title}</h3>
           <p class="book-author">di ${book.author}</p>
@@ -29,7 +31,8 @@ function renderBookResults (books, title) {
           <p class="book-isbn">ISBN: ${book.isbn || 'N/A'}</p>
         </div>
       </div>
-    `).join('')}
+      `
+    }).join('')}
   `
 
   countSpan.textContent = books.length
@@ -117,9 +120,11 @@ function searchAPI (query, genre, sort) {
         return
       }
 
-      resultsDiv.innerHTML = data.books.map(book => `
+      resultsDiv.innerHTML = data.books.map(book => {
+        const coverUrl = book.isbn ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg` : 'https://via.placeholder.com/200x300/e0e7ff/cffafe?text=No+Cover'
+        return `
         <div class="book-card" data-id="${book.id}">
-          <div class="book-cover">${book.title.charAt(0)}</div>
+          <img class="book-cover" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x300/e0e7ff/cffafe?text=No+Cover'">
           <div class="book-info">
             <h3 class="book-title">${book.title}</h3>
             <p class="book-author">di ${book.author}</p>
@@ -127,7 +132,8 @@ function searchAPI (query, genre, sort) {
             <p class="book-isbn">ISBN: ${book.isbn || 'N/A'}</p>
           </div>
         </div>
-      `).join('')
+      `
+      }).join('')
 
       countSpan.textContent = data.books.length
 

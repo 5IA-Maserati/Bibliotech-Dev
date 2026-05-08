@@ -33,9 +33,6 @@ Search Query:        Max 255 chars, alphanumeric + special chars allowed
 
 ### 4. Booking Form (`/pages/booking.php`)
 ```text
-Book Title:          1-255 chars, alphanumeric + punctuation allowed
-Student Name:        2-50 chars, letters only
-Student Email:       Valid email format required
 Booking Date:        Date in YYYY-MM-DD format
 ```
 

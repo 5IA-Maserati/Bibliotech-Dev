@@ -74,9 +74,6 @@
 | Register | Password | 8 | 50 | Complex | Same as Login |
 | Register | Confirm Password | - | - | Match | Must match Password field |
 | Search | Query | - | 255 | Alphanum | `^[a-zA-Z0-9àèéìòù\s\-',.&()]*$` |
-| Booking | Book Title | 1 | 255 | Alphanum | `^[a-zA-Z0-9àèéìòù\s\-',.&:()]+$` |
-| Booking | Student Name | 2 | 50 | Letters | `^[a-zA-Zàèéìòù\s'-]+$` |
-| Booking | Student Email | - | - | Email | `^[^\s@]+@[^\s@]+\.[^\s@]+$` |
 | Booking | Booking Date | 10 | 10 | Date | `^\d{4}-\d{2}-\d{2}$` |
 
 ---

@@ -130,37 +130,6 @@ This document outlines the input validation and sanitization implementation acro
 
 ### 4. Booking Form
 
-#### Book Title
-- **Type:** Text
-- **ID:** `book-title`
-- **Requirements:**
-  - Minimum length: 1 character
-  - Maximum length: 255 characters
-  - Allowed characters: Letters (including Italian accents), numbers, spaces, hyphen (-), apostrophe ('), comma (,), period (.), ampersand (&), colon (:), parentheses ( )
-  - Pattern: `^[a-zA-Z0-9àèéìòù\s\-',.&:()]+$`
-- **Error Message:** "Il titolo del libro contiene caratteri non validi"
-- **Required:** Yes
-
-#### Student Name
-- **Type:** Text
-- **ID:** `student-name`
-- **Requirements:**
-  - Minimum length: 2 characters
-  - Maximum length: 50 characters
-  - Allowed characters: Letters (including Italian accents), spaces, apostrophe ('), hyphen (-)
-  - Pattern: `^[a-zA-Zàèéìòù\s'-]+$`
-- **Error Message:** "Il nome deve contenere solo lettere e spazi"
-- **Required:** Yes
-
-#### Student Email
-- **Type:** Email
-- **ID:** `student-email`
-- **Requirements:**
-  - Must be a valid email format
-  - Pattern: `^[^\s@]+@[^\s@]+\.[^\s@]+$`
-- **Error Message:** "Inserisci un indirizzo email valido"
-- **Required:** Yes
-
 #### Booking Date
 - **Type:** Date
 - **ID:** `booking-date`

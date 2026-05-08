@@ -14,12 +14,12 @@
         <h1>{{TITLE}}</h1>
 
         <div class="description">
-            <p>Seleziona un libro dal catalogo e conferma la prenotazione.</p>
+            <p>Seleziona un libro dal catalogo e conferma il prestito.</p>
         </div>
 
         <div id="book-search-section" class="book-search-section {{SEARCH_SECTION_DISPLAY}}">
             <div class="search-card">
-                <p>Cerca un libro per titolo, autore o ISBN e scegli una prenotazione tra i risultati.</p>
+                <p>Cerca un libro per titolo, autore o ISBN e scegli un prestito tra i risultati.</p>
                 <div class="search-bar">
                     <input type="search" id="book-search-input" placeholder="Cerca libro..." aria-label="Cerca libro" autocomplete="off">
                     <button type="button" id="book-search-button">Cerca</button>
@@ -30,7 +30,7 @@
 
         <div id="book-suggestions-section" class="book-search-section {{SUGGESTIONS_SECTION_DISPLAY}}">
             <div class="search-card">
-                <p>Questi sono i tuoi libri preferiti. Clicca sul titolo per selezionarlo e procedere con la prenotazione.</p>
+                <p>Questi sono i tuoi libri preferiti. Clicca sul titolo per selezionarlo e procedere con il prestito.</p>
                 {{SUGGESTIONS}}
             </div>
         </div>
@@ -49,7 +49,7 @@
                 <input type="date" id="booking-date" name="booking_date" aria-label="Data di restituzione prevista" required>
                 <label for="booking-date">Data di restituzione prevista</label>
             </div>
-            <button type="submit">Conferma prenotazione</button>
+            <button type="submit">Conferma prestito</button>
         </form>
 
         <div class="actions">

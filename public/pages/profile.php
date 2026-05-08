@@ -25,6 +25,23 @@ if (!$user) {
     exit;
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['return_loan_id'])) {
+    $loanId = filter_input(INPUT_POST, 'return_loan_id', FILTER_VALIDATE_INT);
+    if ($loanId) {
+        try {
+            $database->execute(
+                'UPDATE loans SET return_date = CURDATE() WHERE id = ? AND user_id = ? AND return_date IS NULL',
+                [$loanId, $userId]
+            );
+            // Redirect to refresh the page
+            header('Location: ' . $_SERVER['REQUEST_URI']);
+            exit;
+        } catch (Exception $e) {
+            // Handle error, maybe add a message
+        }
+    }
+}
+
 $createdAt = isset($user['created_at']) && $user['created_at'] !== null
     ? date('d/m/Y H:i', strtotime($user['created_at']))
     : 'N/A';
@@ -39,7 +56,7 @@ function formatDate(?string $date): string
     return $timestamp ? date('d/m/Y', $timestamp) : 'N/A';
 }
 
-function renderBookList(array $books, string $emptyMessage, bool $showBorrowed = false, bool $showDue = false, bool $showReturned = false): string
+function renderBookList(array $books, string $emptyMessage, bool $showBorrowed = false, bool $showDue = false, bool $showReturned = false, bool $showReturn = false): string
 {
     if (empty($books)) {
         return '<p class="empty-state">' . htmlspecialchars($emptyMessage, ENT_QUOTES, 'UTF-8') . '</p>';
@@ -53,6 +70,7 @@ function renderBookList(array $books, string $emptyMessage, bool $showBorrowed =
         $borrowedAt = formatDate($book['borrowed_at'] ?? null);
         $dueAt = formatDate($book['due_at'] ?? null);
         $returnedAt = formatDate($book['returned_at'] ?? null);
+        $loanId = $book['loan_id'] ?? null;
 
         $html .= '<div class="book-card-small">';
         $html .= '<h4>' . $title . '</h4>';
@@ -66,6 +84,12 @@ function renderBookList(array $books, string $emptyMessage, bool $showBorrowed =
         }
         if ($showReturned) {
             $html .= '<p class="book-date"><strong>Restituito:</strong> ' . $returnedAt . '</p>';
+        }
+        if ($showReturn && $loanId) {
+            $html .= '<form method="post" style="display: inline;">';
+            $html .= '<input type="hidden" name="return_loan_id" value="' . htmlspecialchars($loanId, ENT_QUOTES, 'UTF-8') . '">';
+            $html .= '<button type="submit" class="btn-return">Restituisci</button>';
+            $html .= '</form>';
         }
 
         $html .= '</div>';
@@ -96,7 +120,7 @@ try {
 
 try {
     $currentBorrowed = $database->query(
-        'SELECT b.id, b.title, b.author, b.publication_year, l.loan_date as borrowed_at, l.return_date as due_at
+        'SELECT l.id as loan_id, b.id, b.title, b.author, b.publication_year, l.loan_date as borrowed_at, l.return_date as due_at
          FROM loans l
          JOIN books b ON b.id = l.book_id
          WHERE l.user_id = ?
@@ -164,7 +188,7 @@ $statsHtml .= '<div class="stat-card"><span class="stat-value">' . $totalBorrowe
 $statsHtml .= '<div class="stat-card"><span class="stat-value">' . $favoriteCount . '</span><span class="stat-label">Libri preferiti</span></div>';
 $statsHtml .= '<div class="stat-card"><span class="stat-value">' . count($mostReadGenres) . '</span><span class="stat-label">Generi più letti</span></div>';
 
-$currentBorrowedHtml = renderBookList($currentBorrowed, 'Nessun libro in prestito al momento.', true, true, false);
+$currentBorrowedHtml = renderBookList($currentBorrowed, 'Nessun libro in prestito al momento.', true, true, false, true);
 $borrowHistoryHtml = renderBookList($borrowHistory, 'Nessuna cronologia di prestiti disponibile.', true, false, true);
 $favoritesHtml = renderBookList($favorites, 'Nessun libro preferito.', false, false, false);
 $mostReadGenresText = !empty($mostReadGenres)

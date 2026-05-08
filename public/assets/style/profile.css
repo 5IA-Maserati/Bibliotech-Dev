@@ -101,6 +101,21 @@
     line-height: 1.5;
 }
 
+.btn-return {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.btn-return:hover {
+    background-color: #b91c1c;
+}
+
 .empty-state {
     border: 1px dashed #9ca3af;
     background: #f8fafc;

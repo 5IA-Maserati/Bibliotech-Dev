@@ -2,7 +2,7 @@
 
 use src\backend\libs\DatabasePDO;
 
-$title = 'Prenotazione';
+$title = 'Prestito';
 $show_nav = false;
 
 require_once dirname(__DIR__) . '/bootstrap.php';
@@ -80,9 +80,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     );
 
                     if ($success) {
-                        $message = '<span class="message-success">Prenotazione registrata con successo.</span>';
+                        $message = '<span class="message-success">Prestito registrato con successo.</span>';
                     } else {
-                        $message = '<span class="message-error">Impossibile completare la prenotazione.</span>';
+                        $message = '<span class="message-error">Impossibile completare il prestito.</span>';
                     }
                 }
             } catch (Exception $e) {
@@ -131,7 +131,7 @@ function renderSuggestionList(array $books, string $emptyMessage): string
     return $html;
 }
 
-$bookSuggestionsHtml = renderSuggestionList($bookSuggestions, 'Non ci sono libri visti di recente. Prova a prenotare un nuovo libro dal catalogo.');
+$bookSuggestionsHtml = renderSuggestionList($bookSuggestions, 'Non ci sono libri visti di recente. Prova a prendere in prestito un nuovo libro dal catalogo.');
 
 ob_start();
 include dirname(__DIR__) . '/includes/header.php';

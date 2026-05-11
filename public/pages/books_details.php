@@ -74,7 +74,7 @@ try {
         }
     }
 
-    $coverUrl = $book['isbn'] ? "https://covers.openlibrary.org/b/isbn/{$book['isbn']}-L.jpg" : 'https://via.placeholder.com/200x300/e0e7ff/cffafe?text=No+Cover';
+    $coverUrl = $book['isbn'] ? "https://covers.openlibrary.org/b/isbn/{$book['isbn']}-L.jpg" : '';
 
     $replacements = [
         '{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),

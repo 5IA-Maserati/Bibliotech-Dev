@@ -21,7 +21,14 @@
 
             <section class="book-meta">
                 <article class="book-cover">
-                    <img src="{{BOOK_COVER}}" alt="Book cover" id="book-cover">
+                    <img
+                        src="{{BOOK_COVER}}"
+                        alt="Copertina di {{BOOK_TITLE}}"
+                        id="book-cover"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                        >       
                 </article>
 
                 <article class="book-info">

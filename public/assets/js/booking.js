@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const selectedBookTitle = document.getElementById('selected-book-title')
   const bookingDateInput = document.getElementById('booking-date')
 
-  function validateReturnDate(dateString) {
+  function validateReturnDate (dateString) {
     if (!dateString) return { valid: false, message: 'Seleziona una data di restituzione.' }
 
     const returnDate = new Date(dateString)
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return { valid: true }
   }
 
-  function selectBook(bookId, bookTitle) {
+  function selectBook (bookId, bookTitle) {
     if (!bookIdInput || !selectedBookTitle || !bookingForm) return
 
     bookIdInput.value = bookId
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     bookingDateInput.setAttribute('max', maxDate)
 
     // Add real-time validation for return date
-    bookingDateInput.addEventListener('change', function() {
+    bookingDateInput.addEventListener('change', function () {
       const validation = validateReturnDate(this.value)
       if (!validation.valid) {
         this.setCustomValidity(validation.message)
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
 
-    bookingDateInput.addEventListener('input', function() {
+    bookingDateInput.addEventListener('input', function () {
       const validation = validateReturnDate(this.value)
       if (!validation.valid) {
         this.setCustomValidity(validation.message)
@@ -107,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!dateValidation.valid) {
           e.preventDefault()
           alert(dateValidation.message)
-          return
         }
       }
     })

@@ -33,7 +33,7 @@ async function loadGoogleBooksCoverImage (imgElement, isbn) {
   }
 }
 
-function getBookId() {
+function getBookId () {
   const bookIdFromAttr = favoriteButton?.dataset.bookId
   if (bookIdFromAttr) {
     return bookIdFromAttr
@@ -92,7 +92,7 @@ if (favoriteButton) {
 }
 
 // Load related books
-async function loadRelatedBooks() {
+async function loadRelatedBooks () {
   const bookId = getBookId()
   if (!bookId) {
     return
@@ -141,7 +141,6 @@ async function loadRelatedBooks() {
         window.location.href = `/pages/books_details.php?id=${bookId}`
       })
     })
-
   } catch (error) {
     console.error('Error loading related books:', error)
     relatedBooksList.innerHTML = '<p class="no-related-books">Errore nel caricamento dei libri correlati.</p>'

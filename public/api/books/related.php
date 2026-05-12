@@ -99,7 +99,6 @@ try {
         'success' => true,
         'books' => $relatedBooks
     ]);
-
 } catch (Exception $e) {
     error_log('Related books error: ' . $e->getMessage());
     http_response_code(500);

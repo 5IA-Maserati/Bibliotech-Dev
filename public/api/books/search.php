@@ -20,8 +20,12 @@ $page = is_numeric($page) ? (int)$page : 1;
 $limit = is_numeric($limit) ? (int)$limit : 50;
 
 // Validate parameters
-if ($page < 1) $page = 1;
-if ($limit < 1 || $limit > 100) $limit = 50; // Max 100 per page
+if ($page < 1) {
+    $page = 1;
+}
+if ($limit < 1 || $limit > 100) {
+    $limit = 50; // Max 100 per page
+}
 
 $offset = ($page - 1) * $limit;
 

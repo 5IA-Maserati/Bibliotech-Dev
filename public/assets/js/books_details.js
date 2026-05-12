@@ -84,7 +84,7 @@ async function loadRelatedBooks() {
     }
 
     const booksHtml = data.books.map(book => {
-      const coverUrl = book.isbn ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg` : 'https://via.placeholder.com/150x200/e0e7ff/cffafe?text=No+Cover'
+      const coverUrl = book.isbn ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg` : 'https://via.placeholder.com/150x200/e0e7ff/cffafe?text=No+Cover'
       return `
         <div class="related-book-card" data-id="${book.id}">
           <img class="related-book-cover" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/150x200/e0e7ff/cffafe?text=No+Cover'">

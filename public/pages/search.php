@@ -30,13 +30,6 @@ $html = str_replace(array_keys($replacements), array_values($replacements), $htm
 /** @var DatabasePDO $database */
 $database = require dirname(__DIR__) . '/../src/db/db.php';
 
-$myBooks = $database->query(
-    "SELECT id, author, title, publisher, publication_year, isbn
-     FROM books
-     ORDER BY title ASC 
-     LIMIT 50"
-);
-
 $genres = [];
 try {
     $genres = $database->query(
@@ -53,7 +46,7 @@ foreach ($genres as $genre) {
 }
 
 // Convert books to JSON for JavaScript
-$myBooksJson = json_encode($myBooks);
+$myBooksJson = json_encode([]); // Start with empty array, will be loaded via API
 
 // Inject the books into the page before the closing body tag
 $html = str_replace(

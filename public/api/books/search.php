@@ -25,6 +25,11 @@ if ($limit < 1 || $limit > 100) $limit = 50; // Max 100 per page
 
 $offset = ($page - 1) * $limit;
 
+function escapeLikePattern(string $value): string
+{
+    return str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $value);
+}
+
 try {
     $params = [];
     $countParams = [];
@@ -50,13 +55,16 @@ try {
 
     $whereClauses = [];
     if (strlen($q) >= 2) {
-        $whereClauses[] = "(b.title LIKE ? OR b.author LIKE ? OR b.isbn LIKE ?)";
-        $params[] = "%$q%";
-        $params[] = "%$q%";
-        $params[] = "%$q%";
-        $countParams[] = "%$q%";
-        $countParams[] = "%$q%";
-        $countParams[] = "%$q%";
+        $escapedQuery = escapeLikePattern($q);
+        $searchPattern = "%{$escapedQuery}%";
+
+        $whereClauses[] = "(b.title LIKE ? COLLATE utf8mb4_unicode_ci OR b.author LIKE ? COLLATE utf8mb4_unicode_ci OR b.isbn LIKE ? COLLATE utf8mb4_unicode_ci)";
+        $params[] = $searchPattern;
+        $params[] = $searchPattern;
+        $params[] = $searchPattern;
+        $countParams[] = $searchPattern;
+        $countParams[] = $searchPattern;
+        $countParams[] = $searchPattern;
     }
 
     if ($genre !== '') {

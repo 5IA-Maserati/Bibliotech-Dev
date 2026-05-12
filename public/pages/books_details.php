@@ -74,7 +74,43 @@ try {
         }
     }
 
-    $coverUrl = $book['isbn'] ? "https://covers.openlibrary.org/b/isbn/{$book['isbn']}-L.jpg" : '';
+    function getGoogleBooksCoverUrl(string $isbn): string
+    {
+        $isbn = trim($isbn);
+        if ($isbn === '') {
+            return '';
+        }
+
+        $apiUrl = 'https://www.googleapis.com/books/v1/volumes?q=isbn:' . urlencode($isbn);
+        $context = stream_context_create([
+            'http' => [
+                'method' => 'GET',
+                'timeout' => 5,
+                'header' => "User-Agent: Bibliotech/1.0\r\n"
+            ]
+        ]);
+
+        $response = @file_get_contents($apiUrl, false, $context);
+        if ($response === false) {
+            return '';
+        }
+
+        $data = json_decode($response, true);
+        if (!is_array($data) || empty($data['items'][0]['volumeInfo']['imageLinks'])) {
+            return '';
+        }
+
+        $imageLinks = $data['items'][0]['volumeInfo']['imageLinks'];
+        return $imageLinks['extraLarge'] ?? $imageLinks['large'] ?? $imageLinks['medium'] ?? $imageLinks['thumbnail'] ?? $imageLinks['smallThumbnail'] ?? '';
+    }
+
+    $coverUrl = '';
+    if (!empty($book['isbn'])) {
+        $coverUrl = getGoogleBooksCoverUrl($book['isbn']);
+    }
+    if ($coverUrl === '') {
+        $coverUrl = '/assets/img/common/default_cover.png';
+    }
 
     $replacements = [
         '{{TITLE}}' => htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),

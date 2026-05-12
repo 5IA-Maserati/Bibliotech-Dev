@@ -3,6 +3,35 @@
 
 const reserveButton = document.getElementById('reserve-button')
 const favoriteButton = document.getElementById('favorite-button')
+const placeholderRelatedCoverUrl = '/assets/img/common/default_cover.png'
+
+async function loadGoogleBooksCoverImage (imgElement, isbn) {
+  if (!imgElement || !isbn) {
+    return
+  }
+
+  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${encodeURIComponent(isbn)}`
+
+  try {
+    const response = await fetch(apiUrl)
+    if (!response.ok) {
+      return
+    }
+
+    const data = await response.json()
+    const imageLinks = data?.items?.[0]?.volumeInfo?.imageLinks
+    if (!imageLinks) {
+      return
+    }
+
+    const coverUrl = imageLinks.extraLarge || imageLinks.large || imageLinks.medium || imageLinks.thumbnail || imageLinks.smallThumbnail
+    if (coverUrl) {
+      imgElement.src = coverUrl.replace(/^http:/, 'https:')
+    }
+  } catch (error) {
+    console.error('Google Books cover load failed:', error)
+  }
+}
 
 function getBookId() {
   const bookIdFromAttr = favoriteButton?.dataset.bookId
@@ -84,10 +113,10 @@ async function loadRelatedBooks() {
     }
 
     const booksHtml = data.books.map(book => {
-      const coverUrl = book.isbn ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg` : 'https://via.placeholder.com/150x200/e0e7ff/cffafe?text=No+Cover'
+      const coverUrl = placeholderRelatedCoverUrl
       return `
         <div class="related-book-card" data-id="${book.id}">
-          <img class="related-book-cover" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/150x200/e0e7ff/cffafe?text=No+Cover'">
+          <img class="related-book-cover" data-isbn="${book.isbn || ''}" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='${placeholderRelatedCoverUrl}'">
           <div class="related-book-info">
             <h4 class="related-book-title">${book.title}</h4>
             <p class="related-book-author">di ${book.author}</p>
@@ -98,6 +127,12 @@ async function loadRelatedBooks() {
     }).join('')
 
     relatedBooksList.innerHTML = booksHtml
+    relatedBooksList.querySelectorAll('.related-book-cover[data-isbn]').forEach(img => {
+      const isbn = img.dataset.isbn
+      if (isbn) {
+        loadGoogleBooksCoverImage(img, isbn)
+      }
+    })
 
     // Add click handlers
     document.querySelectorAll('.related-book-card').forEach(card => {

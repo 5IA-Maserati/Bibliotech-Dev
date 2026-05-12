@@ -7,6 +7,36 @@ const searchButton = document.querySelector('.btn-search')
 const genreFilter = document.getElementById('genre')
 const sortFilter = document.getElementById('sort')
 
+const placeholderCoverUrl = '/assets/img/common/default_cover.png'
+
+async function loadGoogleBooksCoverImage (imgElement, isbn) {
+  if (!imgElement || !isbn) {
+    return
+  }
+
+  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${encodeURIComponent(isbn)}`
+
+  try {
+    const response = await fetch(apiUrl)
+    if (!response.ok) {
+      return
+    }
+
+    const data = await response.json()
+    const imageLinks = data?.items?.[0]?.volumeInfo?.imageLinks
+    if (!imageLinks) {
+      return
+    }
+
+    const coverUrl = imageLinks.extraLarge || imageLinks.large || imageLinks.medium || imageLinks.thumbnail || imageLinks.smallThumbnail
+    if (coverUrl) {
+      imgElement.src = coverUrl.replace(/^http:/, 'https:')
+    }
+  } catch (error) {
+    console.error('Google Books cover load failed:', error)
+  }
+}
+
 // Pagination elements
 const paginationDiv = document.getElementById('pagination')
 const prevButton = document.getElementById('prev-page')
@@ -37,10 +67,10 @@ function renderBookResults (books, title, pagination) {
   resultsDiv.innerHTML = `
     <h3 class="section-title">${title}</h3>
     ${books.map(book => {
-      const coverUrl = book.isbn ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg` : 'https://via.placeholder.com/200x300/e0e7ff/cffafe?text=No+Cover'
+      const coverUrl = placeholderCoverUrl
       return `
       <div class="book-card" data-id="${book.id}">
-        <img class="book-cover" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x300/e0e7ff/cffafe?text=No+Cover'">
+        <img class="book-cover" data-isbn="${book.isbn || ''}" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='${placeholderCoverUrl}'">
         <div class="book-info">
           <h3 class="book-title">${book.title}</h3>
           <p class="book-author">di ${book.author}</p>
@@ -51,6 +81,13 @@ function renderBookResults (books, title, pagination) {
       `
     }).join('')}
   `
+
+  resultsDiv.querySelectorAll('.book-cover[data-isbn]').forEach(img => {
+    const isbn = img.dataset.isbn
+    if (isbn) {
+      loadGoogleBooksCoverImage(img, isbn)
+    }
+  })
 
   countSpan.textContent = books.length
 

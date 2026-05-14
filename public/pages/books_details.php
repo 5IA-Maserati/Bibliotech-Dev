@@ -22,7 +22,9 @@ try {
     }
 
     /** @var DatabasePDO $db */
+    require_once __DIR__ . '/../../src/backend/libs/DatabaseSchema.php';
     $db = require __DIR__ . '/../../src/db/db.php';
+    \src\backend\libs\DatabaseSchema::ensureFavoritesTableExists($db);
     if ($bookId === false || $bookId === null || $bookId <= 0) {
         header('Location: /pages/page_404.php');
         exit;

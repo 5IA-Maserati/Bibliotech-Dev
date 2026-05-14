@@ -5,6 +5,7 @@ $subtitle = 'Visualizza i tuoi dati e cambia la password';
 $show_auth = true;
 
 require_once dirname(__DIR__) . '/bootstrap.php';
+require_once dirname(__DIR__) . '/../src/backend/libs/DatabaseSchema.php';
 require_once dirname(__DIR__) . '/../src/db/db.php';
 
 $userId = $_SESSION['user']['id'] ?? null;
@@ -15,6 +16,7 @@ if (!$userId) {
 
 /** @var src\backend\libs\DatabasePDO $database */
 $database = require dirname(__DIR__) . '/../src/db/db.php';
+\src\backend\libs\DatabaseSchema::ensureFavoritesTableExists($database);
 $user = $database->queryOne(
     'SELECT username, surname, email, role, created_at FROM users WHERE id = ?',
     [$userId]
@@ -25,19 +27,36 @@ if (!$user) {
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['return_loan_id'])) {
-    $loanId = filter_input(INPUT_POST, 'return_loan_id', FILTER_VALIDATE_INT);
-    if ($loanId) {
-        try {
-            $database->execute(
-                'UPDATE loans SET return_date = CURDATE() WHERE id = ? AND user_id = ? AND return_date IS NULL',
-                [$loanId, $userId]
-            );
-            // Redirect to refresh the page
-            header('Location: ' . $_SERVER['REQUEST_URI']);
-            exit;
-        } catch (Exception $e) {
-            // Handle error, maybe add a message
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['return_loan_id'])) {
+        $loanId = filter_input(INPUT_POST, 'return_loan_id', FILTER_VALIDATE_INT);
+        if ($loanId) {
+            try {
+                $database->execute(
+                    'UPDATE loans SET return_date = CURDATE() WHERE id = ? AND user_id = ? AND return_date IS NULL',
+                    [$loanId, $userId]
+                );
+                header('Location: ' . $_SERVER['REQUEST_URI']);
+                exit;
+            } catch (Exception $e) {
+                // Handle error, maybe add a message
+            }
+        }
+    }
+
+    if (isset($_POST['remove_favorite_id'])) {
+        $favoriteId = filter_input(INPUT_POST, 'remove_favorite_id', FILTER_VALIDATE_INT);
+        if ($favoriteId) {
+            try {
+                $database->execute(
+                    'DELETE FROM favorites WHERE user_id = ? AND book_id = ?',
+                    [$userId, $favoriteId]
+                );
+                header('Location: ' . $_SERVER['REQUEST_URI']);
+                exit;
+            } catch (Exception $e) {
+                // Handle error, maybe add a message
+            }
         }
     }
 }
@@ -56,7 +75,7 @@ function formatDate(?string $date): string
     return $timestamp ? date('d/m/Y', $timestamp) : 'N/A';
 }
 
-function renderBookList(array $books, string $emptyMessage, bool $showBorrowed = false, bool $showDue = false, bool $showReturned = false, bool $showReturn = false): string
+function renderBookList(array $books, string $emptyMessage, bool $showBorrowed = false, bool $showDue = false, bool $showReturned = false, bool $showReturn = false, bool $showDetailsLink = false, bool $showRemoveFavorite = false): string
 {
     if (empty($books)) {
         return '<p class="empty-state">' . htmlspecialchars($emptyMessage, ENT_QUOTES, 'UTF-8') . '</p>';
@@ -71,9 +90,15 @@ function renderBookList(array $books, string $emptyMessage, bool $showBorrowed =
         $dueAt = formatDate($book['due_at'] ?? null);
         $returnedAt = formatDate($book['returned_at'] ?? null);
         $loanId = $book['loan_id'] ?? null;
+        $bookId = isset($book['id']) ? (int)$book['id'] : null;
+
+        $titleHtml = $title;
+        if ($showDetailsLink && $bookId) {
+            $titleHtml = '<a href="/pages/books_details.php?id=' . $bookId . '" class="book-link">' . $title . '</a>';
+        }
 
         $html .= '<div class="book-card-small">';
-        $html .= '<h4>' . $title . '</h4>';
+        $html .= '<h4>' . $titleHtml . '</h4>';
         $html .= '<p class="book-meta">' . $author . ' · ' . $year . '</p>';
 
         if ($showBorrowed) {
@@ -89,6 +114,12 @@ function renderBookList(array $books, string $emptyMessage, bool $showBorrowed =
             $html .= '<form method="post" style="display: inline;">';
             $html .= '<input type="hidden" name="return_loan_id" value="' . htmlspecialchars($loanId, ENT_QUOTES, 'UTF-8') . '">';
             $html .= '<button type="submit" class="btn-return">Restituisci</button>';
+            $html .= '</form>';
+        }
+        if ($showRemoveFavorite && $bookId) {
+            $html .= '<form method="post" class="favorite-remove-form">';
+            $html .= '<input type="hidden" name="remove_favorite_id" value="' . $bookId . '">';
+            $html .= '<button type="submit" class="btn-secondary">Rimuovi preferito</button>';
             $html .= '</form>';
         }
 
@@ -190,7 +221,7 @@ $statsHtml .= '<div class="stat-card"><span class="stat-value">' . count($mostRe
 
 $currentBorrowedHtml = renderBookList($currentBorrowed, 'Nessun libro in prestito al momento.', true, true, false, true);
 $borrowHistoryHtml = renderBookList($borrowHistory, 'Nessuna cronologia di prestiti disponibile.', true, false, true);
-$favoritesHtml = renderBookList($favorites, 'Nessun libro preferito.', false, false, false);
+$favoritesHtml = renderBookList($favorites, 'Nessun libro preferito.', false, false, false, false, true, true);
 $mostReadGenresText = !empty($mostReadGenres)
     ? implode(', ', array_map(static fn($genre) => htmlspecialchars($genre['name'], ENT_QUOTES, 'UTF-8'), $mostReadGenres))
     : 'Nessun genere registrato.';

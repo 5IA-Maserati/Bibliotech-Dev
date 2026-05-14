@@ -1,11 +1,12 @@
 <?php
 
 use src\backend\libs\DatabasePDO;
+use src\backend\libs\DatabaseSchema;
 
 header('Content-Type: application/json');
 
-require_once dirname(__DIR__) . '/../bootstrap.php';
-require_once dirname(__DIR__) . '/../../src/db/db.php';
+require_once dirname(__DIR__) . '/bootstrap.php';
+require_once dirname(__DIR__) . '/../src/backend/libs/DatabaseSchema.php';
 
 $userId = $_SESSION['user']['id'] ?? null;
 if (!$userId) {
@@ -24,7 +25,8 @@ if ($bookId === false || $bookId === null) {
 }
 
 /** @var DatabasePDO $database */
-$database = require dirname(__DIR__) . '/../../src/db/db.php';
+$database = require dirname(__DIR__) . '/../src/db/db.php';
+DatabaseSchema::ensureFavoritesTableExists($database);
 
 $book = $database->queryOne('SELECT id FROM books WHERE id = ?', [$bookId]);
 if (!$book) {

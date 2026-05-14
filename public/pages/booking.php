@@ -6,6 +6,7 @@ $title = 'Prestito';
 $show_nav = false;
 
 require_once dirname(__DIR__) . '/bootstrap.php';
+require_once dirname(__DIR__) . '/../src/backend/libs/DatabaseSchema.php';
 require_once dirname(__DIR__) . '/../src/db/db.php';
 
 $userId = $_SESSION['user']['id'] ?? null;
@@ -16,6 +17,7 @@ if (!$userId) {
 
 /** @var DatabasePDO $database */
 $database = require dirname(__DIR__) . '/../src/db/db.php';
+\src\backend\libs\DatabaseSchema::ensureFavoritesTableExists($database);
 $user = $database->queryOne(
     'SELECT username, email FROM users WHERE id = ?',
     [$userId]

@@ -11,9 +11,11 @@ class DatabaseSchema
             return;
         } catch (\Exception $e) {
             $message = $e->getMessage();
-            if (strpos($message, '1146') === false
+            if (
+                strpos($message, '1146') === false
                 && stripos($message, 'doesn\'t exist') === false
-                && stripos($message, 'no such table') === false) {
+                && stripos($message, 'no such table') === false
+            ) {
                 throw $e;
             }
 

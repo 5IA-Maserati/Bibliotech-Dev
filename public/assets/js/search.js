@@ -73,6 +73,7 @@ function renderBookResults (books, title, pagination) {
         <img class="book-cover" data-isbn="${book.isbn || ''}" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='${placeholderCoverUrl}'">
         <div class="book-info">
           <h3 class="book-title">${book.title}</h3>
+          ${book.favorite ? '<span class="favorite-badge">Preferito</span>' : ''}
           <p class="book-author">di ${book.author}</p>
           <p class="book-year">${book.publication_year || 'N/A'}</p>
           <p class="book-isbn">ISBN: ${book.isbn || 'N/A'}</p>

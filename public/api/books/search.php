@@ -4,6 +4,10 @@ use src\backend\libs\DatabasePDO;
 
 header('Content-Type: application/json');
 
+require_once dirname(__DIR__, 2) . '/bootstrap.php';
+
+$userId = $_SESSION['user']['id'] ?? null;
+
 /** @var DatabasePDO $db */
 $db = require dirname(__DIR__, 2) . '/../src/db/db.php';
 
@@ -37,14 +41,26 @@ function escapeLikePattern(string $value): string
 try {
     $params = [];
     $countParams = [];
+
+    $favoriteSelect = $userId !== null
+        ? 'CASE WHEN f.id IS NOT NULL THEN 1 ELSE 0 END AS favorite'
+        : '0 AS favorite';
+
     $query = "
-        SELECT DISTINCT b.id, b.title, b.author, b.publisher, b.publication_year, b.isbn
+        SELECT DISTINCT b.id, b.title, b.author, b.publisher, b.publication_year, b.isbn, {$favoriteSelect}
         FROM books b
     ";
     $countQuery = "
         SELECT COUNT(*) as total
         FROM books b
     ";
+
+    if ($userId !== null) {
+        $query .= "
+            LEFT JOIN favorites f ON f.book_id = b.id AND f.user_id = ?
+        ";
+        $params[] = $userId;
+    }
 
     if ($genre !== '') {
         $query .= "

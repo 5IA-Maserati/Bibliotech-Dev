@@ -112,6 +112,13 @@ try {
 
     $books = $db->query($query, $params);
 
+    foreach ($books as &$book) {
+        if (!isset($book['isbn']) || $book['isbn'] === null) {
+            $book['isbn'] = '';
+        }
+    }
+    unset($book);
+
     echo json_encode([
         'success' => true,
         'books' => $books,

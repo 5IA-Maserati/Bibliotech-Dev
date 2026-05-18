@@ -9,9 +9,9 @@ const sortFilter = document.getElementById('sort')
 
 const placeholderCoverUrl = (window.BookCovers && window.BookCovers.placeholderCoverUrl) || '/assets/img/common/default_cover.png'
 
-const loadGoogleBooksCoverImage = (imgElement, isbn) => {
-  if (window.BookCovers && typeof window.BookCovers.loadGoogleBooksCoverImage === 'function') {
-    return window.BookCovers.loadGoogleBooksCoverImage(imgElement, isbn)
+const loadBookCoverImage = (imgElement, isbn) => {
+  if (window.BookCovers && typeof window.BookCovers.loadBookCoverImage === 'function') {
+    return window.BookCovers.loadBookCoverImage(imgElement, isbn)
   }
   return Promise.resolve()
 }
@@ -25,7 +25,7 @@ const totalSpan = document.getElementById('total')
 
 // Pagination state
 let currentPage = 1
-const itemsPerPage = 50
+const itemsPerPage = 10
 let totalPages = 1
 let totalItems = 0
 let currentQuery = ''
@@ -49,7 +49,7 @@ function renderBookResults (books, title, pagination) {
       const coverUrl = placeholderCoverUrl
       return `
       <div class="book-card" data-id="${book.id}">
-        <img class="book-cover" data-isbn="${book.isbn || ''}" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='${placeholderCoverUrl}'">
+        <img class="book-cover" data-isbn="${book.isbn || ''}" src="${coverUrl}" alt="Cover of ${book.title}">
         <div class="book-info">
           <h3 class="book-title">${book.title}</h3>
           ${book.favorite ? '<span class="favorite-badge">Preferito</span>' : ''}
@@ -65,7 +65,7 @@ function renderBookResults (books, title, pagination) {
   resultsDiv.querySelectorAll('.book-cover[data-isbn]').forEach(img => {
     const isbn = img.dataset.isbn
     if (isbn) {
-      loadGoogleBooksCoverImage(img, isbn)
+      loadBookCoverImage(img, isbn)
     }
   })
 

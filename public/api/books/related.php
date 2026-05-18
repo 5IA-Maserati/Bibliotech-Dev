@@ -95,6 +95,13 @@ try {
     // Limit to 6 books total
     $relatedBooks = array_slice($relatedBooks, 0, 6);
 
+    foreach ($relatedBooks as &$relatedBook) {
+        if (!isset($relatedBook['isbn']) || $relatedBook['isbn'] === null) {
+            $relatedBook['isbn'] = '';
+        }
+    }
+    unset($relatedBook);
+
     echo json_encode([
         'success' => true,
         'books' => $relatedBooks

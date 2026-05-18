@@ -78,8 +78,7 @@ try {
 
     function getGoogleBooksCoverUrl(string $isbn): string
     {
-        $isbn = trim($isbn);
-        if ($isbn === '') {
+        if (!is_string($isbn) || $isbn === '') {
             return '';
         }
 
@@ -106,9 +105,11 @@ try {
         return $imageLinks['extraLarge'] ?? $imageLinks['large'] ?? $imageLinks['medium'] ?? $imageLinks['thumbnail'] ?? $imageLinks['smallThumbnail'] ?? '';
     }
 
+    $isbnRaw = $book['isbn'] ?? '';
+    $bookIsbn = $isbnRaw;
     $coverUrl = '';
-    if (!empty($book['isbn'])) {
-        $coverUrl = getGoogleBooksCoverUrl($book['isbn']);
+    if ($bookIsbn !== '') {
+        $coverUrl = getGoogleBooksCoverUrl($bookIsbn);
     }
     if ($coverUrl === '') {
         $coverUrl = '/assets/img/common/default_cover.png';
@@ -123,7 +124,7 @@ try {
         '{{BOOK_GENRE}}' => htmlspecialchars(implode(', ', array_column($book_categories, 'name')), ENT_QUOTES, 'UTF-8'),
         '{{BOOK_YEAR}}' => htmlspecialchars($book['publication_year'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_COPIES}}' => htmlspecialchars($book['copies_number'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
-        '{{BOOK_ISBN}}' => htmlspecialchars($book['isbn'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
+        '{{BOOK_ISBN}}' => htmlspecialchars($bookIsbn ?: 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_LANGUAGE}}' => 'Italiano',
         '{{BOOK_AVAILABILITY}}' => ((int)($book['available_copies'] ?? 0) > 0) ? 'Disponibile' : 'Esaurito',
         '{{BOOK_PUBLISHER}}' => htmlspecialchars($book['publisher'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),

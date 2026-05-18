@@ -46,15 +46,6 @@ foreach ($genres as $genre) {
 }
 
 // Convert books to JSON for JavaScript
-$myBooksJson = json_encode([]); // Start with empty array, will be loaded via API
-
-// Inject the books into the page before the closing body tag
-$html = str_replace(
-    '</body>',
-    "<script>window.myBooks = $myBooksJson;</script>\n</body>",
-    $html
-);
-
 $html = str_replace('{{GENRE_OPTIONS}}', $genreOptions, $html);
 
 echo $html;

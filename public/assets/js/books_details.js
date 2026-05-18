@@ -5,9 +5,9 @@ const reserveButton = document.getElementById('reserve-button')
 const favoriteButton = document.getElementById('favorite-button')
 const placeholderRelatedCoverUrl = (window.BookCovers && window.BookCovers.placeholderCoverUrl) || '/assets/img/common/default_cover.png'
 
-const loadGoogleBooksCoverImage = (imgElement, isbn) => {
-  if (window.BookCovers && typeof window.BookCovers.loadGoogleBooksCoverImage === 'function') {
-    return window.BookCovers.loadGoogleBooksCoverImage(imgElement, isbn)
+const loadBookCoverImage = (imgElement, isbn) => {
+  if (window.BookCovers && typeof window.BookCovers.loadBookCoverImage === 'function') {
+    return window.BookCovers.loadBookCoverImage(imgElement, isbn)
   }
   return Promise.resolve()
 }
@@ -95,7 +95,7 @@ async function loadRelatedBooks () {
       const coverUrl = placeholderRelatedCoverUrl
       return `
         <div class="related-book-card" data-id="${book.id}">
-          <img class="related-book-cover" data-isbn="${book.isbn || ''}" src="${coverUrl}" alt="Cover of ${book.title}" onerror="this.onerror=null;this.src='${placeholderRelatedCoverUrl}'">
+          <img class="related-book-cover" data-isbn="${book.isbn || ''}" src="${coverUrl}" alt="Cover of ${book.title}">
           <div class="related-book-info">
             <h4 class="related-book-title">${book.title}</h4>
             <p class="related-book-author">di ${book.author}</p>
@@ -109,7 +109,7 @@ async function loadRelatedBooks () {
     relatedBooksList.querySelectorAll('.related-book-cover[data-isbn]').forEach(img => {
       const isbn = img.dataset.isbn
       if (isbn) {
-        loadGoogleBooksCoverImage(img, isbn)
+        loadBookCoverImage(img, isbn)
       }
     })
 
@@ -130,6 +130,12 @@ async function loadRelatedBooks () {
 function loadBookCover () {
   const bookCoverImg = document.getElementById('book-cover')
   if (!bookCoverImg) {
+    return
+  }
+
+  const isbn = bookCoverImg.dataset.isbn
+  if (isbn) {
+    loadBookCoverImage(bookCoverImg, isbn)
     return
   }
 

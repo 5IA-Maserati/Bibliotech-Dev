@@ -136,6 +136,11 @@ function loadBookCover () {
   const coverUrl = bookCoverImg.dataset.cover
   if (coverUrl && coverUrl.trim() !== '') {
     bookCoverImg.src = coverUrl
+    // Add error handler to fall back to placeholder if image fails to load
+    bookCoverImg.onerror = function () {
+      this.onerror = null
+      this.src = '/assets/img/common/default_cover.png'
+    }
   }
 }
 

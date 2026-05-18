@@ -126,5 +126,21 @@ async function loadRelatedBooks () {
   }
 }
 
+// Load book cover image from data attribute
+function loadBookCover () {
+  const bookCoverImg = document.getElementById('book-cover')
+  if (!bookCoverImg) {
+    return
+  }
+
+  const coverUrl = bookCoverImg.dataset.cover
+  if (coverUrl && coverUrl.trim() !== '') {
+    bookCoverImg.src = coverUrl
+  }
+}
+
 // Load related books when page loads
-document.addEventListener('DOMContentLoaded', loadRelatedBooks)
+document.addEventListener('DOMContentLoaded', () => {
+  loadBookCover()
+  loadRelatedBooks()
+})

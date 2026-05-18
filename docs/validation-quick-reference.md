@@ -34,6 +34,14 @@ Search Query:        Max 255 chars, alphanumeric + special chars allowed
 ### 4. Booking Form (`/pages/booking.php`)
 ```text
 Booking Date:        Date in YYYY-MM-DD format
+                     Must be today or within one year from now
+```
+
+### 5. Profile Password Change Form (`/pages/profile.php`)
+```text
+Current Password:    8-50 chars, uppercase + lowercase + digit required
+New Password:        8-50 chars, uppercase + lowercase + digit required
+Confirm Password:    Must match New Password field
 ```
 
 ---

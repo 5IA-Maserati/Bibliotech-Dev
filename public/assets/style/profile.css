@@ -130,6 +130,8 @@
     line-height: 1.6;
 }
 
+/* stylelint-disable media-feature-range-notation */
+
 @media (max-width: 640px) {
     .profile-header {
         flex-direction: column;

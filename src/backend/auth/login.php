@@ -5,6 +5,7 @@ declare(strict_types=1);
 use src\backend\libs\DatabasePDO;
 
 require_once __DIR__ . '/../../../public/bootstrap.php';
+require_once __DIR__ . '/common.php';
 
 header('Content-Type: application/json');
 
@@ -12,21 +13,13 @@ header('Content-Type: application/json');
 $db = require __DIR__ . '/../../db/db.php';
 
 try {
-    $rawInput = file_get_contents('php://input');
-    $data = json_decode($rawInput, true);
-
-    if (!is_array($data)) {
-        http_response_code(400);
-        echo json_encode(['error' => 'JSON non valido']);
-        exit;
-    }
+    $data = readJson();
 
     $email = trim((string)($data['email'] ?? ''));
     $password = (string)($data['password'] ?? '');
 
     if ($email === '' || $password === '') {
-        http_response_code(400);
-        echo json_encode(['error' => 'Inserisci email e password']);
+        sendJsonError('Inserisci email e password', 400);
         exit;
     }
 
@@ -40,8 +33,7 @@ try {
         !isset($user['passwords']) ||
         !password_verify($password, $user['passwords'])
     ) {
-        http_response_code(401);
-        echo json_encode(['error' => 'Email o password errati']);
+        sendJsonError('Email o password errati', 401);
         exit;
     }
 
@@ -50,11 +42,7 @@ try {
         'role' => $user['role'] ?? 'user',
     ];
 
-    echo json_encode([
-        'success' => true,
-        'role' => $user['role'] ?? 'user',
-    ]);
+    sendJson(['success' => true, 'role' => $user['role'] ?? 'user']);
 } catch (Exception $e) {
-    http_response_code(500);
-    echo json_encode(['error' => 'Errore server']);
+    sendJsonError('Errore server', 500);
 }

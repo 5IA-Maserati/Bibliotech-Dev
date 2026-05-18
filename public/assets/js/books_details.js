@@ -3,34 +3,13 @@
 
 const reserveButton = document.getElementById('reserve-button')
 const favoriteButton = document.getElementById('favorite-button')
-const placeholderRelatedCoverUrl = '/assets/img/common/default_cover.png'
+const placeholderRelatedCoverUrl = (window.BookCovers && window.BookCovers.placeholderCoverUrl) || '/assets/img/common/default_cover.png'
 
-async function loadGoogleBooksCoverImage (imgElement, isbn) {
-  if (!imgElement || !isbn) {
-    return
+const loadGoogleBooksCoverImage = (imgElement, isbn) => {
+  if (window.BookCovers && typeof window.BookCovers.loadGoogleBooksCoverImage === 'function') {
+    return window.BookCovers.loadGoogleBooksCoverImage(imgElement, isbn)
   }
-
-  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${encodeURIComponent(isbn)}`
-
-  try {
-    const response = await fetch(apiUrl)
-    if (!response.ok) {
-      return
-    }
-
-    const data = await response.json()
-    const imageLinks = data?.items?.[0]?.volumeInfo?.imageLinks
-    if (!imageLinks) {
-      return
-    }
-
-    const coverUrl = imageLinks.extraLarge || imageLinks.large || imageLinks.medium || imageLinks.thumbnail || imageLinks.smallThumbnail
-    if (coverUrl) {
-      imgElement.src = coverUrl.replace(/^http:/, 'https:')
-    }
-  } catch (error) {
-    console.error('Google Books cover load failed:', error)
-  }
+  return Promise.resolve()
 }
 
 function getBookId () {

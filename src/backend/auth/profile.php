@@ -5,6 +5,7 @@ declare(strict_types=1);
 use src\backend\libs\DatabasePDO;
 
 require_once __DIR__ . '/../../../public/bootstrap.php';
+
 header('Content-Type: application/json');
 
 /** @var DatabasePDO $db */

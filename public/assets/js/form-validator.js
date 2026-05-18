@@ -20,6 +20,12 @@ const FormValidator = {
       pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&()_+\-=[\]{}|;:,.<>?]{8,}$/, // At least 1 uppercase, 1 lowercase, 1 digit
       message: 'La password deve contenere almeno 8 caratteri, inclusi una maiuscola, una minuscola e un numero'
     },
+    current_password: {
+      minLength: 8,
+      maxLength: 50,
+      pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&()_+\-=[\]{}|;:,.<>?]{8,}$/, // At least 1 uppercase, 1 lowercase, 1 digit
+      message: 'La password deve contenere almeno 8 caratteri, inclusi una maiuscola, una minuscola e un numero'
+    },
     confirm_password: {
       message: 'Le password non corrispondono'
     },

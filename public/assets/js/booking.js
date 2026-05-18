@@ -1,6 +1,15 @@
 import FormValidator from './form-validator.js'
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Apply display classes from data attributes
+  const elementsWithDisplay = document.querySelectorAll('[data-display]')
+  elementsWithDisplay.forEach(el => {
+    const displayClass = el.dataset.display
+    if (displayClass) {
+      el.classList.add(displayClass)
+    }
+  })
+
   const bookingForm = document.getElementById('booking-form')
   const suggestionsSection = document.getElementById('book-suggestions-section')
   const suggestionsList = document.getElementById('suggestions-list')

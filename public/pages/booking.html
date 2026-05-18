@@ -17,7 +17,7 @@
             <p>Seleziona un libro dal catalogo e conferma il prestito.</p>
         </div>
 
-        <div id="book-search-section" class="book-search-section {{search-section-display}}">
+        <div id="book-search-section" class="book-search-section" data-display="{{search-section-display}}">
             <div class="search-card">
                 <p>Cerca un libro per titolo, autore o ISBN e scegli un prestito tra i risultati.</p>
                 <div class="search-bar">
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div id="book-suggestions-section" class="book-search-section {{suggestions-section-display}}">
+        <div id="book-suggestions-section" class="book-search-section" data-display="{{suggestions-section-display}}">
             <div class="search-card">
                 <p>Questi sono i tuoi libri preferiti. Clicca sul titolo per selezionarlo e procedere con il prestito.</p>
                 {{SUGGESTIONS}}
@@ -43,7 +43,7 @@
 
         <div class="message">{{MESSAGE}}</div>
 
-        <form id="booking-form" method="post" class="{{book-form-display}}">
+        <form id="booking-form" method="post" data-display="{{book-form-display}}">
             <input type="hidden" name="book_id" id="book-id" value="{{BOOK_ID}}">
             <div class="input-group">
                 <input type="date" id="booking-date" name="booking_date" aria-label="Data di restituzione prevista" required>

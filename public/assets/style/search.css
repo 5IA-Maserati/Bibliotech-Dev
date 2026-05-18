@@ -264,15 +264,15 @@ footer span {
   font-size: 0.95rem;
 }
 
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .pagination-controls button:hover:not(:disabled) {
   background: var(--light-blue);
   border-color: var(--medium-blue);
   color: white;
-}
-
-.pagination-controls button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 #page-info {
@@ -282,13 +282,13 @@ footer span {
 }
 
 /* Ensure at least 3 books per row on larger screens */
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   .book-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .filters select {
     flex: 1;
   }

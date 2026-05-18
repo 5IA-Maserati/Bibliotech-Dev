@@ -141,24 +141,28 @@ body {
     transform 0.2s ease;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover {
-  transform: translateY(-1px);
-}
-
 .btn-primary {
   background-color: #2d77f7;
   color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #1f63d6;
 }
 
 .btn-secondary {
   background-color: #f1f1f1;
   color: #333;
 }
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-1px);
+}
+
+
+
+.btn-primary:hover {
+  background-color: #1f63d6;
+}
+
+
 
 .btn-secondary:hover {
   background-color: #e5e5e5;
@@ -275,7 +279,7 @@ body {
 .related-book-title {
   font-size: 1rem;
   font-weight: 600;
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.25rem;
   line-height: 1.3;
   color: #222;
   display: -webkit-box;
@@ -286,7 +290,7 @@ body {
 }
 
 .related-book-author {
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.25rem;
   color: #666;
   font-size: 0.9rem;
   font-style: italic;

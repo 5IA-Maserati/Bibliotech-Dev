@@ -78,7 +78,11 @@ try {
         $escapedQuery = escapeLikePattern($q);
         $searchPattern = "%{$escapedQuery}%";
 
-        $whereClauses[] = "(b.title LIKE ? COLLATE utf8mb4_unicode_ci OR b.author LIKE ? COLLATE utf8mb4_unicode_ci OR b.isbn LIKE ? COLLATE utf8mb4_unicode_ci)";
+        $whereClauses[] = "
+                            (b.title LIKE ? COLLATE utf8mb4_unicode_ci 
+                            OR b.author LIKE ? COLLATE utf8mb4_unicode_ci 
+                            OR b.isbn LIKE ? COLLATE utf8mb4_unicode_ci)
+                            ";
         $params[] = $searchPattern;
         $params[] = $searchPattern;
         $params[] = $searchPattern;

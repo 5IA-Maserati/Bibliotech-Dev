@@ -120,7 +120,8 @@ $renderBookList = function (
         }
         if ($showReturn && $loanId) {
             $html .= '<form method="post" style="display: inline;">';
-            $html .= '<input type="hidden" name="return_loan_id" value="' . htmlspecialchars($loanId, ENT_QUOTES, 'UTF-8') . '">';
+            $html .= '<input type="hidden" name="return_loan_id" value="'
+                . htmlspecialchars($loanId, ENT_QUOTES, 'UTF-8') . '">';
             $html .= '<button type="submit" class="btn-return">Restituisci</button>';
             $html .= '</form>';
         }

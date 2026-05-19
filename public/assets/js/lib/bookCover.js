@@ -103,7 +103,7 @@
 
     const task = requestQueue.shift()
     activeRequests += 1
-    void loadCoverTask(task.imgElement, task.isbn)
+    loadCoverTask(task.imgElement, task.isbn)
       .catch(() => {
         // ignore per-image task errors; fallback will show placeholder
       })

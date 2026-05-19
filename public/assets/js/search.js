@@ -25,7 +25,7 @@ const totalSpan = document.getElementById('total')
 
 // Pagination state
 let currentPage = 1
-const itemsPerPage = 10
+const itemsPerPage = 11
 let totalPages = 1
 let totalItems = 0
 let currentQuery = ''

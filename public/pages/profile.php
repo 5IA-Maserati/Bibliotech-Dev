@@ -101,7 +101,7 @@ $renderBookList = function (
 
         $titleHtml = $title;
         if ($showDetailsLink && $bookId) {
-            $titleHtml = '<a href="/pages/books_details.php?id=' 
+            $titleHtml = '<a href="/pages/books_details.php?id='
                 . $bookId . '" class="book-link">' . $title . '</a>';
         }
 
@@ -217,26 +217,26 @@ try {
          GROUP BY c.name
          ORDER BY total DESC
          LIMIT 3',
-         [$userId]
+        [$userId]
     );
 } catch (Exception $e) {
     $mostReadGenres = [];
 }
 
-$statsHtml = '<div class="stat-card"><span class="stat-value">' 
-    . $currentBorrowedCount 
+$statsHtml = '<div class="stat-card"><span class="stat-value">'
+    . $currentBorrowedCount
     . '</span><span class="stat-label">Attualmente in prestito</span></div>';
-    
-$statsHtml .= '<div class="stat-card"><span class="stat-value">' 
-    . $totalBorrowed 
+
+$statsHtml .= '<div class="stat-card"><span class="stat-value">'
+    . $totalBorrowed
     . '</span><span class="stat-label">Libri presi in prestito</span></div>';
-    
-$statsHtml .= '<div class="stat-card"><span class="stat-value">' 
-    . $favoriteCount 
+
+$statsHtml .= '<div class="stat-card"><span class="stat-value">'
+    . $favoriteCount
     . '</span><span class="stat-label">Libri preferiti</span></div>';
-    
-$statsHtml .= '<div class="stat-card"><span class="stat-value">' 
-    . count($mostReadGenres) 
+
+$statsHtml .= '<div class="stat-card"><span class="stat-value">'
+    . count($mostReadGenres)
     . '</span><span class="stat-label">Generi più letti</span></div>';
 
 $currentBorrowedHtml = $renderBookList(

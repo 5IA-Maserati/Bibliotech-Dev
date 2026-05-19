@@ -45,12 +45,12 @@ try {
     }
 
     if (strlen($newPassword) < 8 || !preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/', $newPassword)) {
-    http_response_code(400);
-    echo json_encode([
+        http_response_code(400);
+        echo json_encode([
         'error' => 'La password deve contenere almeno 8 caratteri, '
             . 'inclusi una maiuscola, una minuscola e un numero'
-    ]);
-    exit;
+        ]);
+        exit;
     }
 
     $user = $db->queryOne('SELECT passwords FROM users WHERE id = ?', [$userId]);

@@ -33,7 +33,7 @@ if ($limit < 1 || $limit > 100) {
 
 $offset = ($page - 1) * $limit;
 
-$escapeLikePattern = function(string $value): string {
+$escapeLikePattern = function (string $value): string {
     return str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $value);
 };
 

@@ -89,8 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             } catch (Exception $e) {
-                $message = '<span class="message-error">Errore database: ' 
-                    . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') 
+                $message = '<span class="message-error">Errore database: '
+                    . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8')
                     . '</span>';
             }
         }
@@ -112,7 +112,7 @@ try {
     $bookSuggestions = [];
 }
 
-$renderSuggestionList = function(array $books, string $emptyMessage): string {
+$renderSuggestionList = function (array $books, string $emptyMessage): string {
     if (empty($books)) {
         return '<p class="empty-state">' . htmlspecialchars($emptyMessage, ENT_QUOTES, 'UTF-8') . '</p>';
     }
@@ -124,10 +124,10 @@ $renderSuggestionList = function(array $books, string $emptyMessage): string {
         $year = htmlspecialchars($book['publication_year'] ?? 'N/D', ENT_QUOTES, 'UTF-8');
         $bookId = (int)($book['id'] ?? 0);
 
-        
-        $html .= '<button type="button" class="search-result-item" data-book-id="' 
+
+        $html .= '<button type="button" class="search-result-item" data-book-id="'
             . $bookId . '" data-book-title="' . $title . '">';
-            
+
         $html .= '<div class="search-result-item-title">' . $title . '</div>';
         $html .= '<div class="search-result-item-meta">' . $author . ' · ' . $year . '</div>';
         $html .= '<span class="favorite-badge">Preferito</span>';
@@ -140,7 +140,7 @@ $renderSuggestionList = function(array $books, string $emptyMessage): string {
 
 
 $bookSuggestionsHtml = $renderSuggestionList(
-    $bookSuggestions, 
+    $bookSuggestions,
     'Non ci sono libri visti di recente. Prova a prendere in prestito un nuovo libro dal catalogo.'
 );
 

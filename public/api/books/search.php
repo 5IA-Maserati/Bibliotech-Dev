@@ -33,10 +33,9 @@ if ($limit < 1 || $limit > 100) {
 
 $offset = ($page - 1) * $limit;
 
-function escapeLikePattern(string $value): string
-{
+$escapeLikePattern = function(string $value): string {
     return str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $value);
-}
+};
 
 try {
     $params = [];
@@ -75,7 +74,7 @@ try {
 
     $whereClauses = [];
     if (strlen($q) >= 2) {
-        $escapedQuery = escapeLikePattern($q);
+        $escapedQuery = $escapeLikePattern($q);
         $searchPattern = "%{$escapedQuery}%";
 
         $whereClauses[] = "

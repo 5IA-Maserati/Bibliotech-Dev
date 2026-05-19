@@ -58,7 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif ($returnDateTime < $today) {
             $message = '<span class="message-error">La data di restituzione non può essere nel passato.</span>';
         } elseif ($returnDateTime > $oneYearFromNow) {
-            $message = '<span class="message-error">La data di restituzione non può essere oltre un anno da oggi.</span>';
+            $message = '<span class="message-error">La data di restituzione '
+                . 'non può essere oltre un anno da oggi.</span>';
         } else {
             $bookId = $postedBookId;
             $book = $database->queryOne(
@@ -88,7 +89,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             } catch (Exception $e) {
-                $message = '<span class="message-error">Errore database: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</span>';
+                $message = '<span class="message-error">Errore database: ' 
+                    . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') 
+                    . '</span>';
             }
         }
     }
@@ -109,8 +112,7 @@ try {
     $bookSuggestions = [];
 }
 
-function renderSuggestionList(array $books, string $emptyMessage): string
-{
+$renderSuggestionList = function(array $books, string $emptyMessage): string {
     if (empty($books)) {
         return '<p class="empty-state">' . htmlspecialchars($emptyMessage, ENT_QUOTES, 'UTF-8') . '</p>';
     }
@@ -122,7 +124,10 @@ function renderSuggestionList(array $books, string $emptyMessage): string
         $year = htmlspecialchars($book['publication_year'] ?? 'N/D', ENT_QUOTES, 'UTF-8');
         $bookId = (int)($book['id'] ?? 0);
 
-        $html .= '<button type="button" class="search-result-item" data-book-id="' . $bookId . '" data-book-title="' . $title . '">';
+        
+        $html .= '<button type="button" class="search-result-item" data-book-id="' 
+            . $bookId . '" data-book-title="' . $title . '">';
+            
         $html .= '<div class="search-result-item-title">' . $title . '</div>';
         $html .= '<div class="search-result-item-meta">' . $author . ' · ' . $year . '</div>';
         $html .= '<span class="favorite-badge">Preferito</span>';
@@ -131,9 +136,13 @@ function renderSuggestionList(array $books, string $emptyMessage): string
     $html .= '</div>';
 
     return $html;
-}
+};
 
-$bookSuggestionsHtml = renderSuggestionList($bookSuggestions, 'Non ci sono libri visti di recente. Prova a prendere in prestito un nuovo libro dal catalogo.');
+
+$bookSuggestionsHtml = $renderSuggestionList(
+    $bookSuggestions, 
+    'Non ci sono libri visti di recente. Prova a prendere in prestito un nuovo libro dal catalogo.'
+);
 
 ob_start();
 include dirname(__DIR__) . '/includes/header.php';

@@ -76,8 +76,8 @@ try {
         }
     }
 
-    function getGoogleBooksCoverUrl(string $isbn): string
-    {
+    
+    $getGoogleBooksCoverUrl = function (string $isbn): string {
         if (!is_string($isbn) || $isbn === '') {
             return '';
         }
@@ -102,14 +102,21 @@ try {
         }
 
         $imageLinks = $data['items'][0]['volumeInfo']['imageLinks'];
-        return $imageLinks['extraLarge'] ?? $imageLinks['large'] ?? $imageLinks['medium'] ?? $imageLinks['thumbnail'] ?? $imageLinks['smallThumbnail'] ?? '';
-    }
+        
+        
+        return $imageLinks['extraLarge']
+            ?? $imageLinks['large']
+            ?? $imageLinks['medium']
+            ?? $imageLinks['thumbnail']
+            ?? $imageLinks['smallThumbnail']
+            ?? '';
+    };
 
     $isbnRaw = $book['isbn'] ?? '';
     $bookIsbn = $isbnRaw;
     $coverUrl = '';
     if ($bookIsbn !== '') {
-        $coverUrl = getGoogleBooksCoverUrl($bookIsbn);
+        $coverUrl = $getGoogleBooksCoverUrl($bookIsbn);
     }
     if ($coverUrl === '') {
         $coverUrl = '/assets/img/common/default_cover.png';
@@ -121,7 +128,14 @@ try {
         '{{BOOK_TITLE}}' => htmlspecialchars($book['title'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_AUTHOR}}' => htmlspecialchars($book['author'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_SUBTITLE}}' => htmlspecialchars($book['subtitle'] ?? '', ENT_QUOTES, 'UTF-8'),
-        '{{BOOK_GENRE}}' => htmlspecialchars(implode(', ', array_column($book_categories, 'name')), ENT_QUOTES, 'UTF-8'),
+        
+        
+        '{{BOOK_GENRE}}' => htmlspecialchars(
+            implode(', ', array_column($book_categories, 'name')),
+            ENT_QUOTES,
+            'UTF-8'
+        ),
+        
         '{{BOOK_YEAR}}' => htmlspecialchars($book['publication_year'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_COPIES}}' => htmlspecialchars($book['copies_number'] ?? 'N/D', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_ISBN}}' => htmlspecialchars($bookIsbn ?: 'N/D', ENT_QUOTES, 'UTF-8'),

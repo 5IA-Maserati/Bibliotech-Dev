@@ -65,18 +65,25 @@ $createdAt = isset($user['created_at']) && $user['created_at'] !== null
     ? date('d/m/Y H:i', strtotime($user['created_at']))
     : 'N/A';
 
-function formatDate(?string $date): string
-{
+$formatDate = function (?string $date): string {
     if (!$date) {
         return 'N/A';
     }
 
     $timestamp = strtotime($date);
     return $timestamp ? date('d/m/Y', $timestamp) : 'N/A';
-}
+};
 
-function renderBookList(array $books, string $emptyMessage, bool $showBorrowed = false, bool $showDue = false, bool $showReturned = false, bool $showReturn = false, bool $showDetailsLink = false, bool $showRemoveFavorite = false): string
-{
+$renderBookList = function (
+    array $books,
+    string $emptyMessage,
+    bool $showBorrowed = false,
+    bool $showDue = false,
+    bool $showReturned = false,
+    bool $showReturn = false,
+    bool $showDetailsLink = false,
+    bool $showRemoveFavorite = false
+) use ($formatDate): string {
     if (empty($books)) {
         return '<p class="empty-state">' . htmlspecialchars($emptyMessage, ENT_QUOTES, 'UTF-8') . '</p>';
     }
@@ -86,15 +93,16 @@ function renderBookList(array $books, string $emptyMessage, bool $showBorrowed =
         $title = htmlspecialchars($book['title'] ?? 'Titolo sconosciuto', ENT_QUOTES, 'UTF-8');
         $author = htmlspecialchars($book['author'] ?? 'Autore sconosciuto', ENT_QUOTES, 'UTF-8');
         $year = htmlspecialchars($book['publication_year'] ?? 'N/D', ENT_QUOTES, 'UTF-8');
-        $borrowedAt = formatDate($book['borrowed_at'] ?? null);
-        $dueAt = formatDate($book['due_at'] ?? null);
-        $returnedAt = formatDate($book['returned_at'] ?? null);
+        $borrowedAt = $formatDate($book['borrowed_at'] ?? null);
+        $dueAt = $formatDate($book['due_at'] ?? null);
+        $returnedAt = $formatDate($book['returned_at'] ?? null);
         $loanId = $book['loan_id'] ?? null;
         $bookId = isset($book['id']) ? (int)$book['id'] : null;
 
         $titleHtml = $title;
         if ($showDetailsLink && $bookId) {
-            $titleHtml = '<a href="/pages/books_details.php?id=' . $bookId . '" class="book-link">' . $title . '</a>';
+            $titleHtml = '<a href="/pages/books_details.php?id=' 
+                . $bookId . '" class="book-link">' . $title . '</a>';
         }
 
         $html .= '<div class="book-card-small">';
@@ -128,7 +136,7 @@ function renderBookList(array $books, string $emptyMessage, bool $showBorrowed =
     $html .= '</div>';
 
     return $html;
-}
+};
 
 $avatarInitial = strtoupper(substr($user['username'] ?? 'U', 0, 1));
 $currentBorrowed = [];
@@ -151,7 +159,8 @@ try {
 
 try {
     $currentBorrowed = $database->query(
-        'SELECT l.id as loan_id, b.id, b.title, b.author, b.publication_year, l.loan_date as borrowed_at, l.return_date as due_at
+        'SELECT l.id as loan_id, b.id, b.title, b.author, b.publication_year, '
+         . 'l.loan_date as borrowed_at, l.return_date as due_at
          FROM loans l
          JOIN books b ON b.id = l.book_id
          WHERE l.user_id = ?
@@ -208,22 +217,45 @@ try {
          GROUP BY c.name
          ORDER BY total DESC
          LIMIT 3',
-        [$userId]
+         [$userId]
     );
 } catch (Exception $e) {
     $mostReadGenres = [];
 }
 
-$statsHtml = '<div class="stat-card"><span class="stat-value">' . $currentBorrowedCount . '</span><span class="stat-label">Attualmente in prestito</span></div>';
-$statsHtml .= '<div class="stat-card"><span class="stat-value">' . $totalBorrowed . '</span><span class="stat-label">Libri presi in prestito</span></div>';
-$statsHtml .= '<div class="stat-card"><span class="stat-value">' . $favoriteCount . '</span><span class="stat-label">Libri preferiti</span></div>';
-$statsHtml .= '<div class="stat-card"><span class="stat-value">' . count($mostReadGenres) . '</span><span class="stat-label">Generi più letti</span></div>';
+$statsHtml = '<div class="stat-card"><span class="stat-value">' 
+    . $currentBorrowedCount 
+    . '</span><span class="stat-label">Attualmente in prestito</span></div>';
+    
+$statsHtml .= '<div class="stat-card"><span class="stat-value">' 
+    . $totalBorrowed 
+    . '</span><span class="stat-label">Libri presi in prestito</span></div>';
+    
+$statsHtml .= '<div class="stat-card"><span class="stat-value">' 
+    . $favoriteCount 
+    . '</span><span class="stat-label">Libri preferiti</span></div>';
+    
+$statsHtml .= '<div class="stat-card"><span class="stat-value">' 
+    . count($mostReadGenres) 
+    . '</span><span class="stat-label">Generi più letti</span></div>';
 
-$currentBorrowedHtml = renderBookList($currentBorrowed, 'Nessun libro in prestito al momento.', true, true, false, true);
-$borrowHistoryHtml = renderBookList($borrowHistory, 'Nessuna cronologia di prestiti disponibile.', true, false, true);
-$favoritesHtml = renderBookList($favorites, 'Nessun libro preferito.', false, false, false, false, true, true);
+$currentBorrowedHtml = $renderBookList(
+    $currentBorrowed,
+    'Nessun libro in prestito al momento.',
+    true,
+    true,
+    false,
+    true
+);
+
+$borrowHistoryHtml = $renderBookList($borrowHistory, 'Nessuna cronologia di prestiti disponibile.', true, false, true);
+$favoritesHtml = $renderBookList($favorites, 'Nessun libro preferito.', false, false, false, false, true, true);
+
 $mostReadGenresText = !empty($mostReadGenres)
-    ? implode(', ', array_map(static fn($genre) => htmlspecialchars($genre['name'], ENT_QUOTES, 'UTF-8'), $mostReadGenres))
+    ? implode(', ', array_map(
+        static fn($genre) => htmlspecialchars($genre['name'], ENT_QUOTES, 'UTF-8'),
+        $mostReadGenres
+    ))
     : 'Nessun genere registrato.';
 
 ob_start();

@@ -41,7 +41,8 @@ if ($hasBookId) {
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedBookId = filter_input(INPUT_POST, 'book_id', FILTER_VALIDATE_INT);
     // FILTER_SANITIZE_STRING è deprecato in PHP 8.1+. Leggiamo direttamente e castiamo a stringa.
-    $dueDate = trim((string)($_POST['booking_date'] ?? ''));
+    $dueDateRaw = $_POST['booking_date'] ?? '';
+    $dueDate = is_string($dueDateRaw) ? trim($dueDateRaw) : '';
 
     if ($postedBookId === false || $postedBookId === null) {
         $message = '<span class="message-error">Libro non valido. Riprova.</span>';

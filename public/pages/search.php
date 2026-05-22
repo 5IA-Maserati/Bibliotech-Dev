@@ -27,7 +27,7 @@ $replacements = [
 $html = str_replace(array_keys($replacements), array_values($replacements), $html);
 
 // Fetch all books from the database
-/** @var DatabasePDO $database */
+/** @var \src\backend\libs\DatabasePDO $database */
 $database = require dirname(__DIR__) . '/../src/db/db.php';
 
 $genres = [];

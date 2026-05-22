@@ -2,6 +2,10 @@
 
 namespace src\backend\libs;
 
+/**
+ * @psalm-suppress UndefinedClass
+ */
+
 class DatabasePDO
 {
     private \PDO $pdo;

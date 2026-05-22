@@ -74,7 +74,7 @@ try {
 
 
     $getGoogleBooksCoverUrl = function (string $isbn): string {
-        if (!is_string($isbn) || $isbn === '') {
+        if ($isbn === '') {
             return '';
         }
 

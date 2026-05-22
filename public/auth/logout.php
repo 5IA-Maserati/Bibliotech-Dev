@@ -9,10 +9,10 @@ if (ini_get('session.use_cookies')) {
         session_name() ?: 'PHPSESSID',
         '',
         time() - 42000,
-        $params['path'] ?? '',
-        $params['domain'] ?? '',
-        $params['secure'] ?? false,
-        $params['httponly'] ?? false
+        $params['path'],
+        $params['domain'],
+        $params['secure'],
+        $params['httponly']
     );
 }
 

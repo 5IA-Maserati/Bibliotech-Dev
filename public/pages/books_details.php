@@ -25,10 +25,6 @@ try {
     require_once __DIR__ . '/../../src/backend/libs/DatabaseSchema.php';
     $db = require __DIR__ . '/../../src/db/db.php';
     \src\backend\libs\DatabaseSchema::ensureFavoritesTableExists($db);
-    if ($bookId === false || $bookId === null || $bookId <= 0) {
-        header('Location: /pages/page_404.php');
-        exit;
-    }
 
     $book = $db->queryOne(
         'SELECT b.*
@@ -146,7 +142,7 @@ try {
         '{{BOOK_DESC}}' => htmlspecialchars($book['description'] ?? 'non disponibile.', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_FORMAT}}' => htmlspecialchars($book['format'] ?? 'Cartaceo', ENT_QUOTES, 'UTF-8'),
         '{{BOOK_COVER}}' => htmlspecialchars($coverUrl, ENT_QUOTES, 'UTF-8'),
-        '{{BOOK_ID}}' => htmlspecialchars($bookId, ENT_QUOTES, 'UTF-8'),
+        '{{BOOK_ID}}' => htmlspecialchars((string)$bookId, ENT_QUOTES, 'UTF-8'),
         '{{FAVORITE_BUTTON_TEXT}}' => $favoriteStatus ? 'Preferito' : 'Aggiungi ai preferiti',
         '{{FAVORITE_BUTTON_DISABLED}}' => $favoriteStatus ? 'disabled' : '',
     ];

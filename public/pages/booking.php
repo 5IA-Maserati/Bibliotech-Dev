@@ -38,13 +38,14 @@ if ($hasBookId) {
     }
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedBookId = filter_input(INPUT_POST, 'book_id', FILTER_VALIDATE_INT);
-    $dueDate = filter_input(INPUT_POST, 'booking_date', FILTER_SANITIZE_STRING);
+    // FILTER_SANITIZE_STRING è deprecato in PHP 8.1+. Leggiamo direttamente e castiamo a stringa.
+    $dueDate = trim((string)($_POST['booking_date'] ?? ''));
 
     if ($postedBookId === false || $postedBookId === null) {
         $message = '<span class="message-error">Libro non valido. Riprova.</span>';
-    } elseif (!$dueDate) {
+    } elseif ($dueDate === '') {
         $message = '<span class="message-error">Devi selezionare una data di restituzione prevista.</span>';
     } else {
         // Validate return date
@@ -156,7 +157,8 @@ $replacements = [
     '{{USER_NAME}}' => htmlspecialchars($user['username'] ?? '', ENT_QUOTES, 'UTF-8'),
     '{{USER_EMAIL}}' => htmlspecialchars($user['email'] ?? '', ENT_QUOTES, 'UTF-8'),
     '{{BOOK_TITLE}}' => htmlspecialchars($bookTitle, ENT_QUOTES, 'UTF-8'),
-    '{{BOOK_ID}}' => htmlspecialchars($bookId ?? '', ENT_QUOTES, 'UTF-8'),
+    // Uso l'operatore ternario di fallback più il casting a stringa per evitare i conflitti di tipo con 'false'
+    '{{BOOK_ID}}' => htmlspecialchars((string)($bookId ?: ''), ENT_QUOTES, 'UTF-8'),
     '{{BOOK_FORM_DISPLAY}}' => $hasBookId ? 'block' : 'hidden',
     '{{SEARCH_SECTION_DISPLAY}}' => $hasBookId ? 'hidden' : 'block',
     '{{SUGGESTIONS_SECTION_DISPLAY}}' => $hasBookId ? 'hidden' : 'block',

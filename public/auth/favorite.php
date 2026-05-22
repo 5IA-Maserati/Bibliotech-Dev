@@ -18,7 +18,7 @@ if (!$userId) {
 $input = json_decode(file_get_contents('php://input'), true);
 $bookId = isset($input['book_id']) ? filter_var($input['book_id'], FILTER_VALIDATE_INT) : false;
 
-if ($bookId === false || $bookId === null) {
+if ($bookId === false) {
     http_response_code(400);
     echo json_encode(['error' => 'ID libro non valido.']);
     exit;

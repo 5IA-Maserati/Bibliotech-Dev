@@ -27,7 +27,7 @@ if (!$user) {
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     if (isset($_POST['return_loan_id'])) {
         $loanId = filter_input(INPUT_POST, 'return_loan_id', FILTER_VALIDATE_INT);
         if ($loanId) {
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'UPDATE loans SET return_date = CURDATE() WHERE id = ? AND user_id = ? AND return_date IS NULL',
                     [$loanId, $userId]
                 );
-                header('Location: ' . $_SERVER['REQUEST_URI']);
+                header('Location: ' . ($_SERVER['REQUEST_URI'] ?? ''));
                 exit;
             } catch (Exception $e) {
                 // Handle error, maybe add a message
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'DELETE FROM favorites WHERE user_id = ? AND book_id = ?',
                     [$userId, $favoriteId]
                 );
-                header('Location: ' . $_SERVER['REQUEST_URI']);
+                header('Location: ' . ($_SERVER['REQUEST_URI'] ?? ''));
                 exit;
             } catch (Exception $e) {
                 // Handle error, maybe add a message
@@ -121,7 +121,7 @@ $renderBookList = function (
         if ($showReturn && $loanId) {
             $html .= '<form method="post" style="display: inline;">';
             $html .= '<input type="hidden" name="return_loan_id" value="'
-                . htmlspecialchars($loanId, ENT_QUOTES, 'UTF-8') . '">';
+                . htmlspecialchars((string)$loanId, ENT_QUOTES, 'UTF-8') . '">';
             $html .= '<button type="submit" class="btn-return">Restituisci</button>';
             $html .= '</form>';
         }

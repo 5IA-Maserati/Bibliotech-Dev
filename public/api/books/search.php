@@ -116,7 +116,7 @@ try {
     $books = $db->query($query, $params);
 
     foreach ($books as &$book) {
-        if (!isset($book['isbn']) || $book['isbn'] === null) {
+        if (!isset($book['isbn'])) {
             $book['isbn'] = '';
         }
     }

@@ -96,7 +96,7 @@ try {
     $relatedBooks = array_slice($relatedBooks, 0, 6);
 
     foreach ($relatedBooks as &$relatedBook) {
-        if (!isset($relatedBook['isbn']) || $relatedBook['isbn'] === null) {
+        if (!isset($relatedBook['isbn'])) {
             $relatedBook['isbn'] = '';
         }
     }
